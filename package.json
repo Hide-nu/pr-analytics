@@ -11,7 +11,12 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "update-data": "node scripts/update-weekly-data.mjs",
-    "update-data:force": "FORCE_UPDATE=true node scripts/update-weekly-data.mjs"
+    "update-data:force": "FORCE_UPDATE=true node scripts/update-weekly-data.mjs",
+    "test:local": "node scripts/local-test.mjs",
+    "test:local:dry": "DRY_RUN=true node scripts/local-test.mjs",
+    "test:local:force": "FORCE_UPDATE=true node scripts/local-test.mjs",
+    "debug:server": "node scripts/debug-server.mjs",
+    "update-data:fixed": "node scripts/update-weekly-data-fixed.mjs"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7",
