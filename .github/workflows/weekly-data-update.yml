@@ -1,0 +1,68 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # 毎週月曜日の午前1時（UTC）に実行
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+    # 手動実行も可能
+    inputs:
+      force_update:
+        description: "強制更新（既存データを上書き）"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update weekly data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_UPDATE: ${{ github.event.inputs.force_update }}
+        run: node scripts/update-weekly-data.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/ || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git commit -m "chore: 週次データ更新 $(date -u '+%Y-W%V')"
+          git push
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '週次データ更新に失敗しました',
+              body: `週次データ更新ワークフローが失敗しました。\n\n実行時刻: ${new Date().toISOString()}\nワークフロー: ${context.workflow}\n実行ID: ${context.runId}`,
+              labels: ['bug', 'automation']
+            })
