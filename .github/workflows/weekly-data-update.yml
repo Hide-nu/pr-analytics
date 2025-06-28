@@ -58,7 +58,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
           FORCE_UPDATE: ${{ github.event.inputs.force_update }}
           TARGET_REPOSITORIES: ${{ github.event.inputs.repositories || env.DEFAULT_REPOSITORIES }}
-        run: node scripts/update-weekly-data-fixed.mjs
+        run: node scripts/update-weekly-data.mjs
 
       - name: Check for changes
         id: changes
