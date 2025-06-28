@@ -19,7 +19,6 @@ jobs:
     permissions:
       contents: write
       actions: read
-      metadata: read
       pull-requests: read
       issues: write
       repository-projects: read
