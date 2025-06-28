@@ -47,14 +47,14 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet data/ || echo "changes=true" >> $GITHUB_OUTPUT
+          git add data/
+          git diff --cached --quiet || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
         if: steps.changes.outputs.changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/
           git commit -m "chore: 週次データ更新 $(date -u '+%Y-W%V')"
           git push
 
