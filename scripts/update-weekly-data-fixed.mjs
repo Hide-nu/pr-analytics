@@ -159,16 +159,36 @@ async function getCurrentWeek() {
   return `${year}-W${week.toString().padStart(2, "0")}`;
 }
 
-async function getRegisteredRepositories() {
+async function getTargetRepositories() {
   try {
-    const response = await fetch("http://localhost:3000/api/repositories");
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    // 環境変数からリポジトリ配列を取得
+    const repositoriesEnv = process.env.TARGET_REPOSITORIES;
+    if (!repositoriesEnv) {
+      console.error("TARGET_REPOSITORIES environment variable is not set");
+      return [];
     }
-    const data = await response.json();
-    return data.repositories;
+
+    const repositories = JSON.parse(repositoriesEnv);
+
+    if (!Array.isArray(repositories)) {
+      console.error("TARGET_REPOSITORIES must be a JSON array");
+      return [];
+    }
+
+    // 配列の各要素がowner/repo形式になっているかを検証
+    const validRepositories = repositories.filter((repo) => {
+      if (!repo.owner || !repo.repo) {
+        console.warn(
+          `Invalid repository format: ${JSON.stringify(repo)} - skipping`
+        );
+        return false;
+      }
+      return true;
+    });
+
+    return validRepositories;
   } catch (error) {
-    console.error("Failed to fetch repositories:", error);
+    console.error("Failed to parse TARGET_REPOSITORIES:", error);
     return [];
   }
 }
@@ -238,17 +258,17 @@ async function main() {
   try {
     console.log("🚀 Starting weekly data update process...");
 
-    // サーバー起動
+    // サーバー起動（データ収集API用）
     await startServer();
 
     // サーバー接続確認
     await waitForServer();
 
-    // 登録済みリポジトリを取得
-    const repositories = await getRegisteredRepositories();
+    // 環境変数から対象リポジトリを取得
+    const repositories = await getTargetRepositories();
 
     if (repositories.length === 0) {
-      console.log("No repositories found to update");
+      console.log("No target repositories configured or found");
       return;
     }
 
