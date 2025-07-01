@@ -1,11 +1,10 @@
-name: Weekly Data Update
+name: Weekly Data Update & Integrity Check
 
 on:
   schedule:
     # 毎週月曜日の午前1時（UTC）に実行
     - cron: "0 1 * * 1"
   workflow_dispatch:
-    # 手動実行も可能
     inputs:
       force_update:
         description: "強制更新（既存データを上書き）"
@@ -13,76 +12,727 @@ on:
         default: false
         type: boolean
       repositories:
-        description: '対象リポジトリ（JSON配列形式、例: [{"owner":"org1","repo":"repo1"},{"owner":"org2","repo":"repo2"}]）'
+        description: "対象リポジトリ（JSON配列形式）"
         required: false
         default: ""
         type: string
+      check_integrity:
+        description: "データ整合性チェックを実行"
+        required: false
+        default: true
+        type: boolean
+      run_mode:
+        description: "実行モード"
+        required: false
+        default: "update_and_check"
+        type: choice
+        options:
+          - update_only
+          - check_only
+          - update_and_check
+      debug_mode:
+        description: "デバッグモード（詳細ログ出力）"
+        required: false
+        default: false
+        type: boolean
 
 env:
-  # デフォルトのリポジトリ配列（JSON形式）
-  DEFAULT_REPOSITORIES: |
-    [
-      {
-        "owner": "***REMOVED***",
-        "repo": "***REMOVED***"
-      }
-    ]
+  NODE_VERSION: "20"
+  # SLI目標値
+  MAX_EXECUTION_TIME_MINUTES: 30
+  MAX_API_RESPONSE_TIME_SECONDS: 10
+  MIN_SUCCESS_RATE_PERCENT: 95
 
 jobs:
-  update-data:
+  data-update-and-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 35 # SREベストプラクティス: 明示的タイムアウト
+
+    # 並行実行制御（同時実行を1つに制限）
+    concurrency:
+      group: weekly-data-update-${{ github.ref }}
+      cancel-in-progress: false
+
     permissions:
       contents: write
       actions: read
       pull-requests: read
       issues: write
       repository-projects: read
+      id-token: write # OIDCトークン用
+
+    # 環境固有の設定
+    environment:
+      name: production
+      url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
     steps:
-      - name: Checkout repository
+      - name: 📋 Workflow Information
+        run: |
+          echo "::notice title=Workflow Start::Weekly Data Update & Integrity Check started"
+          echo "🚀 **Workflow Execution Details**"
+          echo "- Repository: ${{ github.repository }}"
+          echo "- Run ID: ${{ github.run_id }}"
+          echo "- Actor: ${{ github.actor }}"
+          echo "- Event: ${{ github.event_name }}"
+          echo "- Ref: ${{ github.ref }}"
+          echo "- SHA: ${{ github.sha }}"
+          echo "- Run Mode: ${{ github.event.inputs.run_mode || 'update_and_check' }}"
+          echo "- Debug Mode: ${{ github.event.inputs.debug_mode || 'false' }}"
+
+          # メトリクス用のタイムスタンプ
+          echo "WORKFLOW_START_TIME=$(date +%s)" >> $GITHUB_ENV
+          echo "::group::Environment Variables"
+          env | grep -E '^(GITHUB_|RUNNER_)' | sort
+          echo "::endgroup::"
+
+      - name: 🔐 Security Scan
+        run: |
+          echo "::group::Security Pre-checks"
+
+          # ワークフロー実行時のセキュリティチェック
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            echo "✅ Scheduled execution - trusted trigger"
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "✅ Manual execution by: ${{ github.actor }}"
+          else
+            echo "⚠️ Unexpected trigger: ${{ github.event_name }}"
+          fi
+
+          # リポジトリ入力の基本検証
+          if [[ -n "${{ github.event.inputs.repositories }}" ]]; then
+            echo "📝 Custom repositories specified - validating JSON format"
+            echo '${{ github.event.inputs.repositories }}' | jq empty || {
+              echo "::error::Invalid JSON format in repositories input"
+              exit 1
+            }
+          fi
+
+          echo "::endgroup::"
+
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 2 # 変更検知用に過去1コミット取得
 
-      - name: Setup Node.js
+      - name: 🔧 Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
+          cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
+      - name: 📦 Install Dependencies with Audit
+        run: |
+          echo "::group::Dependencies Installation"
 
-      - name: Update weekly data
+          # セキュリティ監査
+          npm audit --audit-level=high || {
+            echo "::warning::High severity vulnerabilities detected"
+            npm audit fix --audit-level=high || echo "::warning::Some vulnerabilities could not be auto-fixed"
+          }
+
+          # 依存関係インストール
+          npm ci --prefer-offline
+
+          # インストール後の検証
+          echo "📋 Installed packages:"
+          npm list --depth=0
+
+          echo "::endgroup::"
+
+      - name: 🔍 Pre-execution Health Check
+        id: health_check
+        run: |
+          echo "::group::System Health Check"
+
+          # システムリソースチェック
+          echo "💾 System Resources:"
+          echo "- Memory: $(free -h | grep Mem | awk '{print $3 "/" $2}')"
+          echo "- Disk: $(df -h / | tail -1 | awk '{print $3 "/" $2 " (" $5 " used)"}')"
+          echo "- CPU: $(nproc) cores"
+
+          # Node.js環境確認
+          echo "🟢 Node.js Environment:"
+          echo "- Node.js: $(node --version)"
+          echo "- npm: $(npm --version)"
+
+          # プロジェクト構造確認
+          echo "📁 Project Structure:"
+          ls -la
+
+          # 設定ファイル存在確認
+          required_files=("package.json" "next.config.ts" "scripts/common-utils.mjs" "scripts/update-weekly-data.mjs")
+          missing_files=()
+
+          for file in "${required_files[@]}"; do
+            if [[ ! -f "$file" ]]; then
+              missing_files+=("$file")
+            fi
+          done
+
+          if [[ ${#missing_files[@]} -gt 0 ]]; then
+            echo "::error::Missing required files: ${missing_files[*]}"
+            exit 1
+          fi
+
+          echo "health_status=healthy" >> $GITHUB_OUTPUT
+          echo "::endgroup::"
+
+      - name: 📊 Pre-update Data Integrity Check
+        id: pre_check
+        if: github.event.inputs.check_integrity != 'false' && github.event.inputs.run_mode != 'update_only'
+        timeout-minutes: 5
+        run: |
+          echo "::group::Pre-update Integrity Analysis"
+
+          # 専用スクリプトでデータ整合性チェック
+          cat > integrity-check.mjs << 'EOF'
+          import { checkDataIntegrity } from './scripts/common-utils.mjs';
+
+          try {
+            console.log('🔍 Starting pre-update data integrity check...');
+            const result = await checkDataIntegrity();
+            
+            console.log('📋 Pre-check Summary:');
+            console.log(`- Total files: ${result.totalFiles}`);
+            console.log(`- Valid files: ${result.validFiles}`);
+            console.log(`- Issues found: ${result.issues.length}`);
+            
+            if (result.issues.length > 0) {
+              console.log('⚠️ Issues detected:');
+              result.issues.slice(0, 5).forEach((issue, i) => {
+                console.log(`  ${i + 1}. ${issue}`);
+              });
+              
+              if (result.issues.length > 5) {
+                console.log(`  ... and ${result.issues.length - 5} more issues`);
+              }
+            } else {
+              console.log('✅ No integrity issues detected');
+            }
+            
+            // GitHub環境変数に結果を保存
+            console.log(`::set-output name=issues_count::${result.issues.length}`);
+            console.log(`::set-output name=total_files::${result.totalFiles}`);
+            console.log(`::set-output name=valid_files::${result.validFiles}`);
+            
+          } catch (error) {
+            console.error('❌ Pre-check failed:', error);
+            process.exit(1);
+          }
+          EOF
+
+          node integrity-check.mjs
+          rm integrity-check.mjs
+
+          echo "::endgroup::"
+
+      - name: 🔧 Load Repository Configuration
+        id: config
+        run: |
+          echo "::group::Repository Configuration"
+
+          # 設定ファイルから動的にリポジトリ設定を読み込み
+          if [[ -n "${{ github.event.inputs.repositories }}" ]]; then
+            echo "📝 Using custom repositories from input"
+            echo "repositories_json=${{ github.event.inputs.repositories }}" >> $GITHUB_OUTPUT
+          else
+            echo "📂 Loading default repositories from config"
+            repositories_json=$(node scripts/config-loader.mjs json)
+            echo "repositories_json=$repositories_json" >> $GITHUB_OUTPUT
+          fi
+
+          echo "🔍 Repository configuration loaded:"
+          echo "$repositories_json" | jq '.'
+
+          echo "::endgroup::"
+
+      - name: 🔄 Update Weekly Data
+        id: data_update
+        if: github.event.inputs.run_mode != 'check_only'
+        timeout-minutes: 25
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
           FORCE_UPDATE: ${{ github.event.inputs.force_update }}
-          TARGET_REPOSITORIES: ${{ github.event.inputs.repositories || env.DEFAULT_REPOSITORIES }}
-        run: node scripts/update-weekly-data.mjs
+          TARGET_REPOSITORIES: ${{ steps.config.outputs.repositories_json }}
+          DEBUG_MODE: ${{ github.event.inputs.debug_mode }}
+        run: |
+          echo "::group::Data Update Process"
 
-      - name: Check for changes
+          # 開始時刻記録
+          echo "UPDATE_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
+          # デバッグモードの設定
+          if [[ "$DEBUG_MODE" == "true" ]]; then
+            export DEBUG=*
+            echo "🐛 Debug mode enabled"
+          fi
+
+          # データ更新の実行
+          echo "🚀 Starting data update process..."
+
+          if node scripts/update-weekly-data.mjs; then
+            echo "update_status=success" >> $GITHUB_OUTPUT
+            echo "::notice title=Data Update::Data update completed successfully"
+          else
+            echo "update_status=failed" >> $GITHUB_OUTPUT
+            echo "::error title=Data Update Failed::Data update process failed"
+            exit 1
+          fi
+
+          # 実行時間計測
+          update_duration=$(($(date +%s) - $UPDATE_START_TIME))
+          echo "update_duration=$update_duration" >> $GITHUB_OUTPUT
+          echo "⏱️ Update duration: ${update_duration}s"
+
+          echo "::endgroup::"
+
+      - name: 📝 Detect Data Changes
         id: changes
+        if: github.event.inputs.run_mode != 'check_only'
         run: |
+          echo "::group::Change Detection"
+
           git add data/
-          git diff --cached --quiet || echo "changes=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push changes
-        if: steps.changes.outputs.changes == 'true'
+          # 変更があるかチェック
+          if git diff --cached --quiet; then
+            echo "📊 No data changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "changed_files=0" >> $GITHUB_OUTPUT
+          else
+            echo "📊 Data changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            
+            # 変更されたファイル数をカウント
+            changed_files=$(git diff --cached --name-only data/ | wc -l)
+            echo "changed_files=$changed_files" >> $GITHUB_OUTPUT
+            echo "📁 Changed files: $changed_files"
+            
+            # 変更されたファイルリストを表示
+            echo "📋 Changed files list:"
+            git diff --cached --name-only data/ | head -20
+            
+            if [[ $changed_files -gt 20 ]]; then
+              echo "... and $((changed_files - 20)) more files"
+            fi
+          fi
+
+          echo "::endgroup::"
+
+      - name: 📤 Commit and Push Changes
+        if: steps.changes.outputs.has_changes == 'true' && github.event.inputs.run_mode != 'check_only'
+        timeout-minutes: 3
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "chore: 週次データ更新 $(date -u '+%Y-W%V')"
-          git push
+          echo "::group::Git Operations"
 
-      - name: Create issue on failure
+          # Git設定
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # コミットメッセージの生成
+          week_number=$(date -u '+%Y-W%V')
+          commit_message="chore: 週次データ更新 $week_number
+
+          - 変更ファイル数: ${{ steps.changes.outputs.changed_files }}
+          - 実行モード: ${{ github.event.inputs.run_mode || 'update_and_check' }}
+          - 実行者: ${{ github.actor }}
+          - 実行ID: ${{ github.run_id }}"
+
+          # コミット実行
+          git commit -m "$commit_message"
+
+          # プッシュ（リトライ機能付き）
+          max_retries=3
+          retry_count=0
+
+          while [[ $retry_count -lt $max_retries ]]; do
+            if git push; then
+              echo "✅ Changes pushed successfully"
+              break
+            else
+              retry_count=$((retry_count + 1))
+              echo "⚠️ Push failed (attempt $retry_count/$max_retries)"
+              if [[ $retry_count -lt $max_retries ]]; then
+                echo "🔄 Retrying in 10 seconds..."
+                sleep 10
+                git pull --rebase
+              else
+                echo "::error::Failed to push after $max_retries attempts"
+                exit 1
+              fi
+            fi
+          done
+
+          echo "::endgroup::"
+
+      - name: 🔍 Post-update Comprehensive Check
+        id: post_check
+        if: github.event.inputs.check_integrity != 'false' && github.event.inputs.run_mode != 'update_only'
+        timeout-minutes: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          echo "::group::Post-update Validation"
+
+          # 専用スクリプトで包括的チェック
+          cat > post-check.mjs << 'EOF'
+          import { 
+            checkDataIntegrity, 
+            testApiEndpoints, 
+            startServer, 
+            waitForServer, 
+            stopServer, 
+            setupProcessHandlers 
+          } from './scripts/common-utils.mjs';
+          import { execSync } from 'child_process';
+
+          let serverProcess = null;
+          let checkResults = {
+            integrity: null,
+            apiTest: false,
+            serverStarted: false,
+            errors: []
+          };
+
+          try {
+            console.log('🚀 Starting comprehensive post-update check...');
+            
+            // ビルド実行
+            console.log('📦 Building application...');
+            execSync('npm run build', { stdio: 'inherit' });
+            
+            // サーバー起動
+            console.log('🌐 Starting server for API validation...');
+            serverProcess = await startServer();
+            setupProcessHandlers(serverProcess);
+            checkResults.serverStarted = true;
+            
+            // サーバー応答待機（改善されたタイムアウト）
+            await waitForServer(15);
+            
+            // リポジトリ情報取得
+            const repoResponse = await fetch('http://localhost:3000/api/repositories');
+            if (!repoResponse.ok) {
+              throw new Error(`Repository API failed: ${repoResponse.status}`);
+            }
+            const repoData = await repoResponse.json();
+            console.log(`📊 Found ${repoData.repositories?.length || 0} repositories`);
+            
+            // APIテスト実行
+            checkResults.apiTest = await testApiEndpoints(repoData.repositories || []);
+            console.log(`🧪 API test result: ${checkResults.apiTest ? 'PASS' : 'FAIL'}`);
+            
+            // データ整合性チェック
+            checkResults.integrity = await checkDataIntegrity();
+            console.log(`🔍 Integrity check: ${checkResults.integrity.validFiles}/${checkResults.integrity.totalFiles} files valid`);
+            
+            // 結果の保存
+            const fs = await import('fs');
+            const report = {
+              timestamp: new Date().toISOString(),
+              workflow: {
+                runId: process.env.GITHUB_RUN_ID,
+                actor: process.env.GITHUB_ACTOR,
+                event: process.env.GITHUB_EVENT_NAME
+              },
+              checks: {
+                apiTest: checkResults.apiTest,
+                integrity: {
+                  totalFiles: checkResults.integrity.totalFiles,
+                  validFiles: checkResults.integrity.validFiles,
+                  issuesCount: checkResults.integrity.issues.length,
+                  issues: checkResults.integrity.issues.slice(0, 10)
+                }
+              },
+              summary: {
+                overallStatus: checkResults.apiTest && checkResults.integrity.issues.length === 0 ? 'PASS' : 'FAIL',
+                criticalIssues: checkResults.integrity.issues.length,
+                apiWorking: checkResults.apiTest
+              }
+            };
+            
+            fs.writeFileSync('integrity-report.json', JSON.stringify(report, null, 2));
+            
+            // 結果判定
+            if (checkResults.integrity.issues.length > 0) {
+              console.log(`❌ Data integrity issues detected: ${checkResults.integrity.issues.length}`);
+              console.log('::error title=Data Integrity Issues::Critical data integrity issues found');
+              process.exit(1);
+            } else if (!checkResults.apiTest) {
+              console.log('❌ API functionality test failed');
+              console.log('::error title=API Test Failed::API functionality validation failed');
+              process.exit(1);
+            } else {
+              console.log('✅ All post-update checks passed');
+              console.log('::notice title=Validation Success::All integrity and functionality checks passed');
+            }
+            
+          } catch (error) {
+            checkResults.errors.push(error.message);
+            console.error('❌ Post-update check failed:', error);
+            console.log(`::error title=Post-update Check Failed::${error.message}`);
+            process.exit(1);
+          } finally {
+            if (serverProcess) {
+              stopServer(serverProcess);
+            }
+          }
+          EOF
+
+          node post-check.mjs
+          rm post-check.mjs
+
+          echo "::endgroup::"
+
+      - name: 📈 Generate Comprehensive Report
+        id: report
+        if: always()
+        timeout-minutes: 2
+        run: |
+          echo "::group::Report Generation"
+
+          # 実行時間計算
+          total_duration=$(($(date +%s) - $WORKFLOW_START_TIME))
+
+          # SLI計算
+          sli_execution_time=$([[ $total_duration -le $((MAX_EXECUTION_TIME_MINUTES * 60)) ]] && echo "PASS" || echo "FAIL")
+
+          # レポート生成
+          cat > update-summary.md << EOF
+          # 📊 Weekly Data Update Report
+
+          **Generated:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')  
+          **Run ID:** [\`${{ github.run_id }}\`](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})  
+          **Actor:** ${{ github.actor }}  
+          **Event:** ${{ github.event_name }}
+
+          ## 🎯 Execution Summary
+
+          | Metric | Value | Status |
+          |--------|-------|--------|
+          | Run Mode | ${{ github.event.inputs.run_mode || 'update_and_check' }} | ℹ️ |
+          | Force Update | ${{ github.event.inputs.force_update || 'false' }} | ℹ️ |
+          | Total Duration | ${total_duration}s | $sli_execution_time |
+          | Health Check | ${{ steps.health_check.outputs.health_status || 'unknown' }} | $([[ "${{ steps.health_check.outputs.health_status }}" == "healthy" ]] && echo "✅" || echo "❌") |
+          | Data Update | ${{ steps.data_update.outputs.update_status || 'skipped' }} | $([[ "${{ steps.data_update.outputs.update_status }}" == "success" ]] && echo "✅" || echo "❌") |
+          | Changes Detected | ${{ steps.changes.outputs.has_changes || 'false' }} | ℹ️ |
+          | Files Changed | ${{ steps.changes.outputs.changed_files || '0' }} | ℹ️ |
+
+          ## 📊 Data Analysis
+
+          EOF
+
+          # データ変更の詳細
+          if [[ "${{ steps.changes.outputs.has_changes }}" == "true" ]]; then
+            cat >> update-summary.md << EOF
+          ### ✅ Data Updates
+
+          - **New data was collected and committed**
+          - **Changed Files:** ${{ steps.changes.outputs.changed_files }}
+          - **Update Duration:** ${{ steps.data_update.outputs.update_duration || 'N/A' }}s
+
+          EOF
+          else
+            cat >> update-summary.md << EOF
+          ### ℹ️ No Data Changes
+
+          All data was already up to date. No new information was collected.
+
+          EOF
+          fi
+
+          # 整合性チェック結果
+          if [[ -f "integrity-report.json" ]]; then
+            issues_count=$(jq -r '.checks.integrity.issuesCount // 0' integrity-report.json)
+            total_files=$(jq -r '.checks.integrity.totalFiles // 0' integrity-report.json)
+            valid_files=$(jq -r '.checks.integrity.validFiles // 0' integrity-report.json)
+            api_working=$(jq -r '.checks.apiTest // false' integrity-report.json)
+            
+            cat >> update-summary.md << EOF
+          ### 🔍 Integrity & Functionality Check
+
+          | Check Type | Result | Details |
+          |------------|--------|---------|
+          | API Functionality | $([[ "$api_working" == "true" ]] && echo "✅ PASS" || echo "❌ FAIL") | All endpoints responding |
+          | Data Files | $valid_files/$total_files valid | $([[ $issues_count -eq 0 ]] && echo "✅ No issues" || echo "⚠️ $issues_count issues") |
+          | Overall Status | $([[ "$api_working" == "true" && $issues_count -eq 0 ]] && echo "✅ HEALTHY" || echo "❌ ISSUES DETECTED") | System operational status |
+
+          EOF
+            
+            if [[ $issues_count -gt 0 ]]; then
+              cat >> update-summary.md << EOF
+          #### 🚨 Issues Detected
+
+          \`\`\`
+          $(jq -r '.checks.integrity.issues[]' integrity-report.json | head -10)
+          \`\`\`
+
+          EOF
+              
+              if [[ $issues_count -gt 10 ]]; then
+                echo "_... and $((issues_count - 10)) more issues_" >> update-summary.md
+              fi
+            fi
+          fi
+
+          # SLI/SLO情報
+          cat >> update-summary.md << EOF
+          ## 📈 Service Level Indicators (SLI)
+
+          | SLI | Target | Actual | Status |
+          |-----|--------|--------|--------|
+          | Execution Time | ≤ ${{ env.MAX_EXECUTION_TIME_MINUTES }}m | $(($total_duration / 60))m $(($total_duration % 60))s | $sli_execution_time |
+          | Success Rate | ≥ ${{ env.MIN_SUCCESS_RATE_PERCENT }}% | $([[ "${{ job.status }}" == "success" ]] && echo "100%" || echo "0%") | $([[ "${{ job.status }}" == "success" ]] && echo "✅" || echo "❌") |
+
+          ---
+
+          > 🤖 This report was automatically generated by GitHub Actions  
+          > 📅 Next scheduled run: $(date -d 'next monday 01:00 UTC' -u '+%Y-%m-%d %H:%M UTC')
+          EOF
+
+          # レポート内容をログに出力
+          cat update-summary.md
+
+          echo "::endgroup::"
+          echo "report_generated=true" >> $GITHUB_OUTPUT
+
+      - name: 🚨 Handle Critical Failures
         if: failure()
+        timeout-minutes: 2
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.rest.issues.create({
+            const fs = require('fs');
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            // レポート内容の読み込み
+            let reportContent = 'Weekly data update process failed without detailed report.';
+            let issueLabels = ['bug', 'data-update', 'automation', 'sre-alert'];
+            let issuePriority = 'P2';
+
+            try {
+              if (fs.existsSync('update-summary.md')) {
+                reportContent = fs.readFileSync('update-summary.md', 'utf8');
+              } else if (fs.existsSync('integrity-report.json')) {
+                const report = JSON.parse(fs.readFileSync('integrity-report.json', 'utf8'));
+                const issuesCount = report.checks?.integrity?.issuesCount || 0;
+                
+                if (issuesCount > 0) {
+                  issuePriority = 'P1';
+                  issueLabels.push('data-corruption');
+                }
+                
+                reportContent = `## Data Integrity Alert
+                
+                **Issues Detected:** ${issuesCount}
+                **API Status:** ${report.checks?.apiTest ? 'Working' : 'Failed'}
+                
+                ### Details
+                \`\`\`json
+                ${JSON.stringify(report.checks?.integrity?.issues?.slice(0, 5) || [], null, 2)}
+                \`\`\``;
+              }
+            } catch (error) {
+              console.log('Could not read report files:', error);
+            }
+
+            // 障害の重要度判定
+            const jobStatus = '${{ job.status }}';
+            const stepStatuses = {
+              health_check: '${{ steps.health_check.outcome }}',
+              data_update: '${{ steps.data_update.outcome }}',
+              post_check: '${{ steps.post_check.outcome }}'
+            };
+
+            // クリティカルな障害かどうかの判定
+            const isCritical = stepStatuses.health_check === 'failure' || 
+                              (stepStatuses.data_update === 'failure' && stepStatuses.post_check === 'failure');
+
+            if (isCritical) {
+              issuePriority = 'P0';
+              issueLabels.push('critical', 'incident');
+            }
+
+            const issueTitle = `🚨 [${issuePriority}] Weekly Data Update Failed - ${new Date().toISOString().split('T')[0]}`;
+
+            const issueBody = `## ${isCritical ? '🔥 CRITICAL' : '⚠️'} Weekly Data Update Failure
+
+            ${reportContent}
+
+            ## 🔍 Failure Analysis
+
+            **Job Status:** ${jobStatus}
+            **Step Results:**
+            - Health Check: ${stepStatuses.health_check}
+            - Data Update: ${stepStatuses.data_update}
+            - Post-update Check: ${stepStatuses.post_check}
+
+            ## 📋 Incident Details
+
+            - **Priority:** ${issuePriority}
+            - **Timestamp:** ${new Date().toISOString()}
+            - **Actor:** ${{ github.actor }}
+            - **Run ID:** [${context.runId}](${runUrl})
+            - **Repository:** ${context.repo.owner}/${context.repo.repo}
+
+            ## 🔧 Next Steps
+
+            ${isCritical ? 
+              '1. **IMMEDIATE ACTION REQUIRED** - Check system health\n2. Investigate root cause\n3. Consider manual data collection\n4. Update monitoring alerts' :
+              '1. Review workflow logs\n2. Check for temporary issues\n3. Re-run if needed\n4. Monitor next scheduled run'
+            }
+
+            ---
+
+            > 🤖 Auto-generated by SRE monitoring system`;
+
+            // Issue作成
+            await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: '週次データ更新に失敗しました',
-              body: `週次データ更新ワークフローが失敗しました。\n\n実行時刻: ${new Date().toISOString()}\nワークフロー: ${context.workflow}\n実行ID: ${context.runId}`,
-              labels: ['bug', 'automation']
-            })
+              title: issueTitle,
+              body: issueBody,
+              labels: issueLabels
+            });
+
+            console.log(`Created ${isCritical ? 'CRITICAL' : 'standard'} incident issue with priority ${issuePriority}`);
+
+      - name: 📤 Upload Artifacts & Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-update-reports-${{ github.run_id }}
+          path: |
+            update-summary.md
+            integrity-report.json
+            *.log
+          retention-days: 90 # SREベストプラクティス: 長期保存
+
+      - name: 📊 Final Metrics & Summary
+        if: always()
+        run: |
+          echo "::group::Execution Metrics"
+
+          # 最終メトリクスの計算
+          total_duration=$(($(date +%s) - $WORKFLOW_START_TIME))
+
+          echo "🎯 **Final Execution Summary**"
+          echo "- Total Duration: ${total_duration}s"
+          echo "- Job Status: ${{ job.status }}"
+          echo "- Run ID: ${{ github.run_id }}"
+          echo "- Files Changed: ${{ steps.changes.outputs.changed_files || '0' }}"
+
+          # 成功/失敗のメトリクス
+          if [[ "${{ job.status }}" == "success" ]]; then
+            echo "✅ Weekly data update completed successfully"
+            echo "::notice title=Success::Weekly data update and integrity check completed successfully in ${total_duration}s"
+          else
+            echo "❌ Weekly data update failed"
+            echo "::error title=Failure::Weekly data update process failed after ${total_duration}s"
+          fi
+
+          echo "::endgroup::"

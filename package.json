@@ -16,6 +16,10 @@
     "test:local:dry": "DRY_RUN=true node scripts/local-test.mjs",
     "test:local:force": "FORCE_UPDATE=true node scripts/local-test.mjs",
     "debug:server": "node scripts/debug-server.mjs",
+    "validate:data": "node scripts/common-utils.mjs validate",
+    "config:validate": "node scripts/config-loader.mjs validate",
+    "config:show": "node scripts/config-loader.mjs load",
+    "config:json": "node scripts/config-loader.mjs json",
     "update-data:fixed": "node scripts/update-weekly-data-fixed.mjs"
   },
   "dependencies": {

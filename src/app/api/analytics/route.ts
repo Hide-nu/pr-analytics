@@ -8,6 +8,9 @@ export type {
   WeeklyTrend,
   OverallTrend,
   LabelStats,
+  LabelTimelineData,
+  CycleTimeBreakdownData,
+  CodeChurnData,
   AnalyticsResult,
 } from "./_libs/types";
 

@@ -1,0 +1,18 @@
+{
+  "default": [
+    {
+      "owner": "***REMOVED***",
+      "repo": "***REMOVED***"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "description": "PR Analytics対象リポジトリ設定",
+    "lastUpdated": "2025-01-17T00:00:00Z",
+    "maintainer": "SRE Team"
+  },
+  "validation": {
+    "requiredFields": ["owner", "repo"],
+    "maxRepositories": 10
+  }
+}

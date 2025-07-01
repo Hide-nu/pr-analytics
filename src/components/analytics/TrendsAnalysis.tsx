@@ -12,6 +12,7 @@ import {
   Bar,
 } from "recharts";
 import { AnalyticsData } from "@/types/analytics";
+import { formatWeekDisplay } from "@/lib/weekFormat";
 
 interface TrendsAnalysisProps {
   data: AnalyticsData;
@@ -20,6 +21,7 @@ interface TrendsAnalysisProps {
 
 interface WeeklyChartData {
   week: string;
+  weekDisplay: string;
   count: number;
   avgChanges: number;
   avgMergeTime: number;
@@ -40,6 +42,7 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
 
     return {
       week: trend.week,
+      weekDisplay: formatWeekDisplay(trend.week),
       count: trend.totalPRs,
       avgChanges: trend.avgChanges,
       avgMergeTime: trend.avgMergeTime,
@@ -98,7 +101,13 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={weeklyChartData}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="week" />
+              <XAxis
+                dataKey="weekDisplay"
+                tick={{ fontSize: 11 }}
+                angle={-45}
+                textAnchor="end"
+                height={60}
+              />
               <YAxis
                 domain={maxChanges ? [0, maxChanges] : undefined}
                 tickFormatter={(value) =>
@@ -150,7 +159,13 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={weeklyChartData}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="week" />
+              <XAxis
+                dataKey="weekDisplay"
+                tick={{ fontSize: 11 }}
+                angle={-45}
+                textAnchor="end"
+                height={60}
+              />
               <YAxis
                 domain={maxMergeTime ? [0, maxMergeTime] : undefined}
                 tickFormatter={(value) =>
@@ -198,7 +213,13 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
         <ResponsiveContainer width="100%" height={400}>
           <ComposedChart data={weeklyChartData}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="week" />
+            <XAxis
+              dataKey="weekDisplay"
+              tick={{ fontSize: 11 }}
+              angle={-45}
+              textAnchor="end"
+              height={60}
+            />
             <YAxis
               yAxisId="left"
               tickFormatter={(value) =>

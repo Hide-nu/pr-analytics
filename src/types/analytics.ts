@@ -3,6 +3,9 @@ import {
   OverallTrend,
   WeeklyTrend,
   LabelStats,
+  LabelTimelineData,
+  CycleTimeBreakdownData,
+  CodeChurnData,
 } from "@/app/api/analytics/route";
 
 export interface AnalyticsData {
@@ -17,6 +20,9 @@ export interface AnalyticsData {
   weeklyTrends: WeeklyTrend[];
   overallTrend: OverallTrend;
   labelStats: LabelStats;
+  labelTimeline: LabelTimelineData[];
+  cycleTimeBreakdown: CycleTimeBreakdownData[];
+  codeChurn: CodeChurnData[];
 }
 
 export interface DateRange {
@@ -40,4 +46,12 @@ export interface CommentInteraction {
   count: number;
 }
 
-export type { MemberStats, OverallTrend, WeeklyTrend, LabelStats };
+export type {
+  MemberStats,
+  OverallTrend,
+  WeeklyTrend,
+  LabelStats,
+  LabelTimelineData,
+  CycleTimeBreakdownData,
+  CodeChurnData,
+};

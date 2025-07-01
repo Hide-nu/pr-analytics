@@ -12,6 +12,7 @@ import {
   Bar,
 } from "recharts";
 import { AnalyticsData, DateRange, MemberStats } from "@/types/analytics";
+import { formatWeekDisplay } from "@/lib/weekFormat";
 
 interface MemberDetailViewProps {
   member: MemberStats;
@@ -36,6 +37,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
   // メイン期間のチャートデータを作成
   const memberChartData = member.weeklyTrends.map((trend, index) => ({
     week: trend.week,
+    weekDisplay: formatWeekDisplay(trend.week),
     relativeWeek: `Week ${index + 1}`,
     prs: trend.prs,
     changes: trend.changes,
@@ -46,6 +48,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
   const comparisonChartData =
     comparisonMember?.weeklyTrends.map((trend, index) => ({
       week: trend.week,
+      weekDisplay: formatWeekDisplay(trend.week),
       relativeWeek: `Week ${index + 1}`,
       prs: trend.prs,
       changes: trend.changes,
@@ -125,7 +128,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                   labelFormatter={(label) =>
                     `${label} (${
                       memberChartData.find((d) => d.relativeWeek === label)
-                        ?.week
+                        ?.weekDisplay
                     })`
                   }
                 />
@@ -162,7 +165,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                       `${label} (${
                         comparisonChartData.find(
                           (d) => d.relativeWeek === label
-                        )?.week
+                        )?.weekDisplay
                       })`
                     }
                   />
@@ -206,7 +209,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                   labelFormatter={(label) =>
                     `${label} (${
                       memberChartData.find((d) => d.relativeWeek === label)
-                        ?.week
+                        ?.weekDisplay
                     })`
                   }
                 />
@@ -246,7 +249,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                       `${label} (${
                         comparisonChartData.find(
                           (d) => d.relativeWeek === label
-                        )?.week
+                        )?.weekDisplay
                       })`
                     }
                   />
@@ -292,7 +295,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                   labelFormatter={(label) =>
                     `${label} (${
                       memberChartData.find((d) => d.relativeWeek === label)
-                        ?.week
+                        ?.weekDisplay
                     })`
                   }
                 />
@@ -332,7 +335,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                       `${label} (${
                         comparisonChartData.find(
                           (d) => d.relativeWeek === label
-                        )?.week
+                        )?.weekDisplay
                       })`
                     }
                   />
@@ -412,7 +415,8 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
               <Tooltip
                 labelFormatter={(label) =>
                   `${label} (${
-                    memberChartData.find((d) => d.relativeWeek === label)?.week
+                    memberChartData.find((d) => d.relativeWeek === label)
+                      ?.weekDisplay
                   })`
                 }
               />
@@ -463,7 +467,7 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                   labelFormatter={(label) =>
                     `${label} (${
                       comparisonChartData.find((d) => d.relativeWeek === label)
-                        ?.week
+                        ?.weekDisplay
                     })`
                   }
                 />

@@ -10,6 +10,7 @@ import {
   Legend,
 } from "recharts";
 import { AnalyticsData } from "@/types/analytics";
+import { formatWeekDisplay } from "@/lib/weekFormat";
 
 interface WeeklyTrendsProps {
   data: AnalyticsData;
@@ -18,6 +19,7 @@ interface WeeklyTrendsProps {
 const WeeklyTrends: React.FC<WeeklyTrendsProps> = ({ data }) => {
   const weeklyChartData = data.weeklyTrends.map((trend) => ({
     week: trend.week,
+    weekDisplay: formatWeekDisplay(trend.week),
     count: trend.totalPRs,
     avgChanges: trend.avgChanges,
     avgMergeTime: trend.avgMergeTime,
@@ -31,7 +33,13 @@ const WeeklyTrends: React.FC<WeeklyTrendsProps> = ({ data }) => {
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={weeklyChartData}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="week" />
+          <XAxis
+            dataKey="weekDisplay"
+            tick={{ fontSize: 11 }}
+            angle={-45}
+            textAnchor="end"
+            height={60}
+          />
           <YAxis
             tickFormatter={(value) =>
               Number(value).toFixed(value % 1 === 0 ? 0 : 1)

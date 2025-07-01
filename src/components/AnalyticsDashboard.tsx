@@ -8,8 +8,12 @@ import { useAnalyticsFilters } from "@/hooks/useAnalyticsFilters";
 import UserExcludeSettings from "./analytics/UserExcludeSettings";
 import ComparisonSummary from "./analytics/ComparisonSummary";
 import OverallMetrics from "./analytics/OverallMetrics";
+import OverallMetricsChart from "./analytics/OverallMetricsChart";
 import TrendsAnalysis from "./analytics/TrendsAnalysis";
 import LabelStatistics from "./analytics/LabelStatistics";
+import { LabelTimelineChart } from "./analytics/LabelTimelineChart";
+import { CycleTimeBreakdown } from "./analytics/CycleTimeBreakdown";
+import { CodeChurnAnalysis } from "./analytics/CodeChurnAnalysis";
 import WeeklyTrends from "./analytics/WeeklyTrends";
 import MemberStatistics from "./analytics/MemberStatistics";
 import MemberDetailView from "./analytics/MemberDetailView";
@@ -110,6 +114,14 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
         comparisonData={filteredComparisonData}
       />
 
+      {/* 全体指標グラフ比較 */}
+      {comparisonData && (
+        <OverallMetricsChart
+          data={filteredData}
+          comparisonData={filteredComparisonData!}
+        />
+      )}
+
       {/* 全体トレンド分析 */}
       <TrendsAnalysis
         data={filteredData}
@@ -118,6 +130,60 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
 
       {/* ラベル統計 */}
       <LabelStatistics data={filteredData} />
+
+      {/* ラベル時系列分析 */}
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          🏷️ ラベル分類の時系列分析
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">
+          バグ修正、技術的負債、リファクタリングなど、PR分類の推移を追跡します。
+          品質改善や負債返済への投資状況を可視化できます。
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              📊 件数ベース
+            </h3>
+            <LabelTimelineChart
+              data={filteredData.labelTimeline}
+              showPercentage={false}
+              chartType="bar"
+            />
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              📈 割合ベース
+            </h3>
+            <LabelTimelineChart
+              data={filteredData.labelTimeline}
+              showPercentage={true}
+              chartType="line"
+            />
+          </div>
+        </div>
+
+        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+          <h4 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-2">
+            💡 活用のヒント
+          </h4>
+          <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+            <li>• バグ修正PRの増加は品質問題の兆候として早期対応を検討</li>
+            <li>
+              • 技術的負債やリファクタリングPRが継続的にあることで健全性を保持
+            </li>
+            <li>• 機能追加PRの割合から新機能開発のペースを把握</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* サイクルタイム分解分析 */}
+      <CycleTimeBreakdown data={filteredData} />
+
+      {/* 手戻り率（Code Churn）分析 */}
+      <CodeChurnAnalysis data={filteredData} />
 
       {/* 週次トレンド */}
       <WeeklyTrends data={filteredData} />

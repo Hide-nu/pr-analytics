@@ -4,6 +4,9 @@ import type {
   OverallTrend,
   WeeklyTrend,
   LabelStats,
+  LabelTimelineData,
+  CycleTimeBreakdownData,
+  CodeChurnData,
 } from "@/app/api/analytics/route";
 
 export interface DateRange {
@@ -30,6 +33,9 @@ interface AnalyticsData {
   weeklyTrends: WeeklyTrend[];
   overallTrend: OverallTrend;
   labelStats: LabelStats;
+  labelTimeline: LabelTimelineData[];
+  cycleTimeBreakdown: CycleTimeBreakdownData[];
+  codeChurn: CodeChurnData[];
 }
 
 const fetcher = async (url: string): Promise<AnalyticsData> => {

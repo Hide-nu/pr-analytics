@@ -31,6 +31,9 @@ export default function DataManager({
     null
   );
 
+  // ローカル環境でのみデータ収集機能を有効化
+  const isLocalEnvironment = process.env.NODE_ENV === "development";
+
   const {
     data: dataInfo,
     error,
@@ -136,7 +139,13 @@ export default function DataManager({
     <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
       <h3 className="font-semibold text-blue-800 mb-4">📊 データ管理</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+      <div
+        className={`grid grid-cols-1 gap-4 mb-4 ${
+          isLocalEnvironment
+            ? "md:grid-cols-2 lg:grid-cols-4"
+            : "md:grid-cols-3"
+        }`}
+      >
         <div className="bg-white rounded-lg p-3 border">
           <div className="text-sm text-gray-600">現在の週</div>
           <div className="font-semibold">{dataInfo.currentWeek}</div>
@@ -151,37 +160,41 @@ export default function DataManager({
           <div className="text-sm text-gray-600">保存済み週数</div>
           <div className="font-semibold">{dataInfo.totalWeeks}週</div>
         </div>
-        <div className="bg-white rounded-lg p-3 border">
-          <div className="text-sm text-gray-600">未収集週数</div>
-          <div className="font-semibold text-orange-600">
-            {missingWeeks.length}週
+        {isLocalEnvironment && (
+          <div className="bg-white rounded-lg p-3 border">
+            <div className="text-sm text-gray-600">未収集週数</div>
+            <div className="font-semibold text-orange-600">
+              {missingWeeks.length}週
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap gap-3 mb-4">
-        <button
-          onClick={() => collectWeekData()}
-          disabled={collecting}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-        >
-          {collecting ? "収集中..." : "今週のデータを収集"}
-        </button>
-
-        {missingWeeks.length > 0 && (
-          <button
-            onClick={collectMultipleWeeks}
-            disabled={collecting}
-            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-          >
-            {collecting
-              ? "収集中..."
-              : `未収集データを一括収集 (${missingWeeks.length}週)`}
-          </button>
         )}
       </div>
 
-      {missingWeeks.length > 0 && (
+      {isLocalEnvironment && (
+        <div className="flex flex-wrap gap-3 mb-4">
+          <button
+            onClick={() => collectWeekData()}
+            disabled={collecting}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          >
+            {collecting ? "収集中..." : "今週のデータを収集"}
+          </button>
+
+          {missingWeeks.length > 0 && (
+            <button
+              onClick={collectMultipleWeeks}
+              disabled={collecting}
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+            >
+              {collecting
+                ? "収集中..."
+                : `未収集データを一括収集 (${missingWeeks.length}週)`}
+            </button>
+          )}
+        </div>
+      )}
+
+      {isLocalEnvironment && missingWeeks.length > 0 && (
         <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
           <h4 className="font-medium text-orange-800 mb-2">未収集の週:</h4>
           <div className="flex flex-wrap gap-2">
@@ -222,7 +235,7 @@ export default function DataManager({
         </div>
       )}
 
-      {collectResult && (
+      {isLocalEnvironment && collectResult && (
         <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
           <h4 className="font-medium text-green-800">✅ 収集完了</h4>
           <p className="text-green-700 text-sm">
