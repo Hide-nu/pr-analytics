@@ -1,6 +1,6 @@
 # 📊 PR Analytics
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhidetoshitai%2Fpr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=pr-analytics&repository-name=pr-analytics)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhidetoshitai%2Feasy-pr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=easy-pr-analytics&repository-name=easy-pr-analytics)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **あなたのチームの開発プロセスを、データで解き明かそう。**
@@ -21,11 +21,11 @@ PR Analytics は、GitHub リポジトリの Pull Request を自動で分析し�
 
 最も簡単な方法は Vercel を使うことです。
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhidetoshitai%2Fpr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=pr-analytics&repository-name=pr-analytics)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhidetoshitai%2Feasy-pr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=easy-pr-analytics&repository-name=easy-pr-analytics)
 
 ボタンをクリックすると、Vercel の画面が開きます。
 
-1.  あなたの GitHub アカウントに `pr-analytics` リポジトリが作成されます。
+1.  あなたの GitHub アカウントに `easy-pr-analytics` リポジトリが作成されます。
 2.  環境変数 `GITHUB_TOKEN` の入力を求められます。データ収集用の[GitHub Personal Access Token](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) (`repo` スコープを持つもの) を設定してください。
 3.  「Deploy」ボタンを押せば、数分後にあなた専用の PR Analytics ダッシュボードが利用可能になります。
 
@@ -35,8 +35,8 @@ PR Analytics は、GitHub リポジトリの Pull Request を自動で分析し�
 1.  リポジトリをクローン:
 
     ```bash
-    git clone https://github.com/hidetoshitai/pr-analytics.git
-    cd pr-analytics
+    git clone https://github.com/hidetoshitai/easy-pr-analytics.git
+    cd easy-pr-analytics
     ```
 
 2.  `.env.local` ファイルを作成:
@@ -192,8 +192,8 @@ graph TD
 ### 1. リポジトリクローン
 
 ```bash
-git clone https://github.com/hidetoshitai/pr-analytics.git
-cd pr-analytics
+git clone https://github.com/hidetoshitai/easy-pr-analytics.git
+cd easy-pr-analytics
 ```
 
 ### 2. 依存関係インストール
@@ -382,7 +382,7 @@ npm run debug:server
 ### ディレクトリ構造
 
 ```
-pr-analytics/
+easy-pr-analytics/
 ├── .github/workflows/          # CI/CDワークフロー
 │   ├── weekly-data-update.yml  # 定期データ更新
 │   └── pr-data-validation.yml  # PR検証
