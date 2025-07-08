@@ -9,27 +9,19 @@ PR Analytics は、GitHub リポジトリの Pull Request を自動で分析し�
 
 ---
 
-[**➡️ ライブデモを試す**](https://your-demo-url.com) | [**📄 ドキュメント**](https://your-docs-url.com) | [**💬 コミュニティ (GitHub Discussions)**](https://github.com/your-org/pr-analytics/discussions)
-
----
-
-![Dashboard Screenshot](https://user-images.githubusercontent.com/xxxx/xxxxx.png)  
-_(ここにダッシュボードのスクリーンショットを挿入)_
-
 ## ✨ 主な特徴 (Features)
 
 - **🚀 ワンクリック・デプロイ:** サーバー管理は不要。Vercel に数分でデプロイ完了。
 - **🤖 完全自動のデータ更新:** 一度設定すれば、GitHub Actions が毎週自動でデータを収集・更新。
 - **👀 直感的なダッシュボード:** PR 数、マージ時間、レビューのやり取りなど、重要な指標を分かりやすく可視化。
 - **👥 チームと個人のインサイト:** チーム全体の傾向から、メンバー一人ひとりの活動状況までドリルダウン。
-- **💻 UI で完結する設定:** 分析したいリポジトリの追加・削除は、すべて Web サイト上で完結。設定ファイルの手動編集は不要です。
 - **🔓 オープンソース:** すべてのコードが公開されており、無料で利用可能。必要に応じて自由にカスタマイズできます。
 
 ## 🚀 3 分で始める (Getting Started)
 
 最も簡単な方法は Vercel を使うことです。
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-org%2Fpr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=pr-analytics&repository-name=pr-analytics)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhidetoshitai%2Fpr-analytics&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20is%20required%20for%20fetching%20data.&project-name=pr-analytics&repository-name=pr-analytics)
 
 ボタンをクリックすると、Vercel の画面が開きます。
 
@@ -43,22 +35,27 @@ _(ここにダッシュボードのスクリーンショットを挿入)_
 1.  リポジトリをクローン:
 
     ```bash
-    git clone https://github.com/your-org/pr-analytics.git
+    git clone https://github.com/hidetoshitai/pr-analytics.git
     cd pr-analytics
     ```
 
-2.  `.env` ファイルを作成:
+2.  `.env.local` ファイルを作成:
 
     ```bash
-    cp .env.example .env
+    # GitHub Personal Access Token (repo権限が必要)
+    GITHUB_TOKEN=your_github_token_here
     ```
 
-3.  `.env` ファイルを編集し、`GITHUB_TOKEN` を設定します。
-
-4.  Docker Compose を起動:
+3.  依存関係をインストール:
 
     ```bash
-    docker-compose up
+    npm install
+    ```
+
+4.  開発サーバーを起動:
+
+    ```bash
+    npm run dev
     ```
 
 5.  ブラウザで [http://localhost:3000](http://localhost:3000) を開きます。
@@ -67,9 +64,9 @@ _(ここにダッシュボードのスクリーンショットを挿入)_
 
 ## 使い方 (How to Use)
 
-1.  **リポジトリの追加:** デプロイしたサイトにアクセスし、ダッシュボード上の「リポジトリを追加」ボタンから、分析したいリポジトリ（例: `owner/repo-name`）を追加します。
-2.  **データ収集:** リポジトリを追加すると、初期データの収集がバックグラウンドで自動的に開始されます。
-3.  **分析:** データ収集が完了すると、ダッシュボードに分析結果が表示されます。データは毎週自動で更新されます。
+1.  **リポジトリの設定:** `config/repositories.json` に分析したいリポジトリを設定します。
+2.  **データ収集:** ローカル環境で手動データ収集を実行するか、GitHub Actions の自動収集を利用します。
+3.  **分析:** デプロイしたサイトにアクセスし、ダッシュボードで分析結果を確認します。
 
 ## 🔧 簡単な仕組み (How It Works)
 
@@ -77,54 +74,43 @@ _(ここにダッシュボードのスクリーンショットを挿入)_
 
 ```mermaid
 graph TD
-    subgraph "ユーザーのブラウザ"
-        A[1. リポジトリ追加を指示] --> B(APIリクエスト)
-    end
-
-    subgraph "Vercel上のNext.jsサーバー"
-        B --> C{2. データ収集スクリプト実行}
-        C --> D[3. GitHub API経由で<br>JSONデータをGitリポジトリにCommit & Push]
+    subgraph "ローカル開発環境"
+        A[データ収集スクリプト実行] --> B[GitHub API経由でデータ取得]
     end
 
     subgraph "GitHub"
-        D --> E[Gitリポジトリ<br>data/weekly/*.json]
-        E --> F{4. PushをVercelに通知}
+        B --> C[data/weekly/*.json<br/>にデータ保存]
+        C --> D[自動的にCommit & Push]
+        D --> E{GitHub Actions<br/>週次実行}
     end
 
-    subgraph "Vercel CI/CD"
-        F --> G[5. 自動で再ビルド & デプロイ]
+    subgraph "Vercel"
+        D --> F[自動デプロイ]
+        F --> G[ダッシュボード更新]
     end
 
-    G --> H((新しいサイトが公開))
-
-    subgraph "GitHub Actions (週次実行)"
-        I[定期実行] --> J[更新スクリプト実行]
-        J --> D
-    end
+    E --> B
 ```
 
-1.  ユーザーが UI からリポジトリを追加すると、API が PR データを収集し、JSON ファイルとして**あなたの GitHub リポジトリに直接コミット**します。
+1.  ローカル環境または GitHub Actions が PR データを収集し、JSON ファイルとして**Git リポジトリに直接コミット**します。
 2.  リポジトリへのプッシュを検知した Vercel が、**自動的にサイトを再ビルド**し、最新のデータを反映させます。
 3.  毎週、GitHub Actions がこのプロセスを自動で繰り返し、常にデータを最新の状態に保ちます。
 
 ## 🔄 自動化と CI/CD (Automation & CI/CD)
 
-このプロジェクトは完全な自動化をサポートしています：
-
 ### GitHub Actions ワークフロー
 
 - **📊 PR Data Validation (`pr-data-validation.yml`)**:
 
-  - プルリクエスト作成・更新時と main/develop ブランチへのプッシュ時に自動実行
+  - プルリクエスト作成・更新時と main ブランチへのプッシュ時に自動実行
   - TypeScript 型チェック、ESLint、テスト、ビルドチェックを実行
   - データ収集 API の動作確認
   - データファイル整合性の基本チェック
   - PR に検証結果を詳細コメント
 
 - **⏰ Weekly Data Update & Integrity Check (`weekly-data-update.yml`)**:
-
-  - 毎週月曜日午前 1 時（UTC）に自動実行（**唯一の定期実行ワークフロー**）
-  - 手動実行も可能（update_only、check_only、update_and_check の 3 モード選択可能）
+  - 毎週月曜日午前 1 時（UTC）に自動実行
+  - 手動実行も可能
   - すべての登録済みリポジトリのデータを最新に更新
   - 更新前後でデータ整合性を包括的にチェック
   - API 機能の動作確認
@@ -135,49 +121,66 @@ graph TD
 
 データ収集機能は、セキュリティ上の理由から**ローカル環境（`NODE_ENV=development`）でのみ動作**します。本番環境では、データの閲覧・分析機能のみが利用可能です。
 
-## 🤝 コミュニティに参加する (Contributing)
-
-このプロジェクトはコミュニティによって支えられています。バグ報告、機能提案、改善など、あらゆる形のコントリビューションを歓迎します！
-
-- **💬 質問やアイデアの共有:** [GitHub Discussions](https://github.com/your-org/pr-analytics/discussions) が最適な場所です。
-- **🐞 バグ報告:** [GitHub Issues](https://github.com/your-org/pr-analytics/issues) から報告してください。
-- **✍️ 開発への参加:** `CONTRIBUTING.md`（作成予定）を読んで、ぜひ Pull Request を送ってください！
-
 ## 🛠 技術スタック (Tech Stack)
 
-- **Framework**: Next.js
+- **Framework**: Next.js 15.3.4 (App Router)
 - **Language**: TypeScript
-- **UI**: React, Tailwind CSS
+- **Runtime**: React 19
+- **UI**: Tailwind CSS 4
 - **Data Visualization**: Recharts
+- **API Client**: Octokit (GitHub REST API)
+- **Testing**: Vitest, Testing Library
 - **CI/CD & Hosting**: Vercel, GitHub Actions
-- **Testing**: Vitest
 
-## 📄 ライセンス (License)
+## 📊 主要機能と分析項目
 
-このプロジェクトは [MIT License](LICENSE) の下で公開されています。
+### 🎯 ダッシュボード機能
 
-## 🏗️ アーキテクチャ
+- **📈 全体メトリクス (Overall Metrics)**:
 
-- **フロントエンド**: Next.js 15 + TypeScript + Tailwind CSS
-- **データ収集**: GitHub REST API + 週次バッチ処理
-- **CI/CD**: GitHub Actions（SRE ベストプラクティス準拠）
-- **データストレージ**: ローカル JSON ファイル + クライアントサイドキャッシュ
+  - 総 PR 数、マージ率、平均マージ時間
+  - アクティブ開発者数、週次平均値
 
-## 🚀 主要機能
+- **📊 週次トレンド分析 (Weekly Trends)**:
 
-### 📊 分析機能
+  - PR 数、変更行数、マージ時間の推移
+  - 期間比較機能
 
-- **PR メトリクス**: 作成数、マージ率、サイクルタイム分析
-- **メンバー統計**: 個人別パフォーマンス分析とトレンド
-- **コード変更分析**: 追加・削除行数、チャーンレート
-- **レビュー分析**: コメント傾向、インタラクション分析
-- **ラベル統計**: ラベル別分析とタイムライン可視化
+- **👥 メンバー統計 (Member Statistics)**:
 
-### 🔄 自動化
+  - 個人別パフォーマンス分析
+  - PR 数、マージ時間、コメント数
+  - 詳細なメンバービュー
 
-- **定期データ収集**: 毎週月曜日午前 1 時（UTC）自動実行
-- **品質保証**: PR 作成時の自動検証（コード品質・機能・データ整合性）
-- **障害対応**: 自動 Issue 作成・SLI 監視・段階的復旧
+- **🏷️ ラベル分析 (Label Analytics)**:
+
+  - バグ、技術的負債、機能追加の分類
+  - 時系列での推移と割合分析
+
+- **⏱️ サイクルタイム分析 (Cycle Time Breakdown)**:
+
+  - 作成からマージまでの詳細時間分解
+  - ボトルネック特定
+
+- **🔄 コード手戻り率分析 (Code Churn Analysis)**:
+
+  - コミット数とレビューラウンド分析
+  - 品質指標としての活用
+
+- **💬 コメント相互作用分析 (Comment Interactions)**:
+
+  - レビューの相互作用パターン
+  - チーム内コミュニケーション分析
+
+- **📤 データエクスポート (Data Export)**:
+  - JSON/CSV 形式でのデータ出力
+
+### 🎨 UI/UX 機能
+
+- **🌙 ダークモード対応**
+- **📱 レスポンシブデザイン**
+- **👤 ユーザー除外設定**
+- **📅 期間選択とフィルタリング**
 
 ## 📋 前提条件
 
@@ -189,7 +192,7 @@ graph TD
 ### 1. リポジトリクローン
 
 ```bash
-git clone https://github.com/your-org/pr-analytics.git
+git clone https://github.com/hidetoshitai/pr-analytics.git
 cd pr-analytics
 ```
 
@@ -202,33 +205,13 @@ npm install
 ### 3. 環境設定
 
 ```bash
-# GitHub Personal Access Tokenを設定
-export GITHUB_TOKEN="your_github_token_here"
-
-# 対象リポジトリを設定
-export TARGET_REPOSITORIES='[{"owner":"your-org","repo":"your-repo"}]'
+# .env.local ファイルを作成
+echo "GITHUB_TOKEN=your_github_token_here" > .env.local
 ```
 
-### 4. 開発サーバー起動
+### 4. リポジトリ設定
 
-```bash
-npm run dev
-```
-
-アプリケーションは http://localhost:3000 でアクセスできます。
-
-## 🔧 設定
-
-### GitHub Token 設定
-
-以下の権限が必要です：
-
-- `repo`: プライベートリポジトリアクセス
-- `read:org`: Organization 情報読み取り（オプション）
-
-### リポジトリ設定（一元管理）
-
-**設定ファイル**: `config/repositories.json`
+`config/repositories.json` を編集:
 
 ```json
 {
@@ -251,6 +234,25 @@ npm run dev
 }
 ```
 
+### 5. 開発サーバー起動
+
+```bash
+npm run dev
+```
+
+アプリケーションは http://localhost:3000 でアクセスできます。
+
+## 🔧 設定管理
+
+### GitHub Token 設定
+
+以下の権限が必要です：
+
+- `repo`: プライベートリポジトリアクセス
+- `read:org`: Organization 情報読み取り（オプション）
+
+### リポジトリ設定の管理
+
 **管理コマンド**:
 
 ```bash
@@ -264,121 +266,71 @@ npm run config:show
 npm run config:json
 ```
 
-**利点**:
+## 🤖 データ収集とスクリプト
 
-- ✅ **DRY 原則**: 1 箇所での一元管理
-- ✅ **バリデーション**: 自動的な設定検証
-- ✅ **保守性**: 型安全な設定管理
-- ✅ **可視性**: 設定変更の透明性
+### 利用可能なスクリプト
 
-## 🤖 自動化システム（SRE ベストプラクティス準拠）
+```bash
+# 開発サーバー起動（Turbopack使用）
+npm run dev
 
-### 📅 定期データ更新
+# プロダクションビルド
+npm run build
 
-**ワークフロー**: `.github/workflows/weekly-data-update.yml`
+# プロダクションサーバー起動
+npm run start
 
-- **スケジュール**: 毎週月曜日午前 1 時（UTC）
-- **機能**:
-  - 包括的データ収集と整合性チェック
-  - API 機能動作確認
-  - 自動障害検知・Issue 作成
-  - 詳細レポート生成
-- **SLI 目標**:
-  - 実行時間: ≤30 分
-  - 成功率: ≥95%
-  - API 応答時間: ≤10 秒
+# リンター実行
+npm run lint
 
-**実行モード**:
+# テスト実行
+npm run test
+npm run test:ui        # UIモード
+npm run test:run       # 一回実行
 
-- `update_and_check`: データ更新 + 整合性チェック（デフォルト）
-- `update_only`: データ更新のみ
-- `check_only`: 整合性チェックのみ
+# データ収集（ローカル環境のみ）
+npm run update-data
+npm run update-data:force    # 強制更新
 
-### 🧪 PR 検証システム
+# ローカルテスト
+npm run test:local
+npm run test:local:dry       # ドライラン
+npm run test:local:force     # 強制実行
 
-**ワークフロー**: `.github/workflows/pr-data-validation.yml`
+# デバッグ
+npm run debug:server
 
-**並列検証項目**:
+# データ検証
+npm run validate:data
+```
 
-1. **⚡ 高速事前チェック**:
+### データ収集の流れ
 
-   - 変更ファイル分析
-   - セキュリティスキャン
-   - 大容量ファイル検知
+1. **手動収集（ローカル環境）**:
 
-2. **🔍 コード品質** (並列実行):
+   ```bash
+   npm run update-data
+   ```
 
-   - TypeScript 型チェック
-   - ESLint 品質チェック
-   - 単体テスト実行
+2. **自動収集（GitHub Actions）**:
 
-3. **🚀 機能テスト**:
+   - 毎週月曜日午前 1 時（UTC）に自動実行
+   - 手動実行も可能
 
-   - アプリケーションビルド
-   - API 動作確認
-   - 性能チェック
+3. **データ検証**:
+   ```bash
+   npm run validate:data
+   ```
 
-4. **📊 データ整合性**:
+## 🚨 トラブルシューティング
 
-   - JSON ファイル構造検証
-   - データ内容検証
-
-5. **🔒 セキュリティスキャン**:
-   - 依存関係脆弱性チェック
-   - 機密情報検知
-
-### 🚨 障害対応システム
-
-**自動 Issue 作成**:
-
-- **P0 (Critical)**: システム健全性チェック失敗
-- **P1 (High)**: データ更新・API 機能失敗
-- **P2 (Medium)**: 一般的な実行エラー
-
-**監視メトリクス**:
-
-- 実行時間（SLI）
-- 成功率
-- データ整合性ステータス
-- API 応答時間
-
-## 📊 運用・監視
-
-### 🎯 Service Level Indicators (SLI)
-
-| SLI              | 目標値 | 監視方法             |
-| ---------------- | ------ | -------------------- |
-| データ更新成功率 | ≥95%   | GitHub Actions 結果  |
-| 実行時間         | ≤30 分 | ワークフロー実行時間 |
-| API 応答時間     | ≤10 秒 | 機能テスト内計測     |
-| データ整合性     | 100%   | 自動チェック         |
-
-### 📈 ダッシュボード
-
-**メトリクス可視化**:
-
-- PR サイクルタイム（作成〜マージ）
-- レビュー効率（コメント数/PR）
-- コード変更量（追加/削除行数）
-- チーム生産性指標
-
-**トレンド分析**:
-
-- 週次/月次パフォーマンス比較
-- メンバー別貢献度分析
-- ラベル使用頻度とタイムライン
-
-### 🔍 トラブルシューティング
-
-#### よくある問題と解決方法
+### よくある問題と解決方法
 
 **1. GitHub API Rate Limit**
 
 ```bash
 # 現在のレート制限確認
 curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/rate_limit
-
-# 解決方法: Personal Access Tokenの使用、リクエスト頻度調整
 ```
 
 **2. データ整合性エラー**
@@ -386,9 +338,6 @@ curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/rate_limit
 ```bash
 # データ整合性チェック実行
 npm run validate:data
-
-# 特定ファイルの検証
-node -e "import('./scripts/common-utils.mjs').then(async ({checkDataIntegrity}) => console.log(await checkDataIntegrity()))"
 ```
 
 **3. サーバー起動失敗**
@@ -399,56 +348,17 @@ lsof -i :3000
 
 # 環境変数確認
 echo $GITHUB_TOKEN
-echo $TARGET_REPOSITORIES
 ```
 
-#### ログとデバッグ
-
-**詳細ログ有効化**:
+### デバッグモード
 
 ```bash
-export DEBUG=*
-npm run dev
+# 詳細ログ有効化
+DEBUG=* npm run dev
+
+# デバッグサーバー起動
+npm run debug:server
 ```
-
-**GitHub Actions デバッグ**:
-
-- ワークフロー実行時に`debug_mode: true`を設定
-- アーティファクトからレポートファイルをダウンロード
-
-#### 緊急時対応
-
-**データ復旧**:
-
-1. バックアップからの復元（GitHub Actions アーティファクト）
-2. 手動データ収集実行
-3. 整合性チェック実行
-
-**システム復旧**:
-
-1. ワークフロー手動実行
-2. 環境変数・シークレット確認
-3. 必要に応じてホットフィックス適用
-
-## 🔐 セキュリティ
-
-### 認証・認可
-
-- GitHub Personal Access Token 使用
-- 最小権限の原則（`repo`権限のみ）
-- 本番環境でのデータ収集機能制限
-
-### データ保護
-
-- 機密情報のログ出力防止
-- 依存関係脆弱性監視
-- 定期的なセキュリティ監査
-
-### 運用セキュリティ
-
-- OIDC 認証対応
-- 並行実行制御
-- タイムアウト設定
 
 ## 📱 環境別制限
 
@@ -469,31 +379,6 @@ npm run dev
 
 ## 🛠️ 開発
 
-### スクリプト
-
-```bash
-# 開発サーバー起動
-npm run dev
-
-# プロダクションビルド
-npm run build
-
-# 型チェック
-npm run type-check
-
-# リンター実行
-npm run lint
-
-# テスト実行
-npm run test
-
-# データ整合性チェック
-npm run validate:data
-
-# 週次データ更新（手動）
-node scripts/update-weekly-data.mjs
-```
-
 ### ディレクトリ構造
 
 ```
@@ -501,18 +386,58 @@ pr-analytics/
 ├── .github/workflows/          # CI/CDワークフロー
 │   ├── weekly-data-update.yml  # 定期データ更新
 │   └── pr-data-validation.yml  # PR検証
+├── config/                     # 設定ファイル
+│   └── repositories.json       # リポジトリ設定
 ├── data/weekly/               # 週次データストレージ
 ├── scripts/                   # 自動化スクリプト
 │   ├── common-utils.mjs      # 共通ユーティリティ
+│   ├── config-loader.mjs     # 設定ローダー
+│   ├── debug-server.mjs      # デバッグサーバー
+│   ├── local-test.mjs        # ローカルテスト
 │   └── update-weekly-data.mjs # データ更新スクリプト
 ├── src/
 │   ├── app/                  # Next.js App Router
+│   │   ├── api/             # API Routes
+│   │   │   ├── analytics/   # 分析API
+│   │   │   ├── collect-data/ # データ収集API
+│   │   │   ├── export/      # エクスポートAPI
+│   │   │   └── repositories/ # リポジトリAPI
+│   │   ├── globals.css      # グローバルスタイル
+│   │   ├── layout.tsx       # ルートレイアウト
+│   │   └── page.tsx         # メインページ
 │   ├── components/           # Reactコンポーネント
+│   │   ├── analytics/       # 分析コンポーネント
+│   │   ├── AnalyticsDashboard.tsx
+│   │   ├── Dashboard.tsx
+│   │   ├── DataManager.tsx
+│   │   ├── DateRangeSelector.tsx
+│   │   └── Header.tsx
 │   ├── hooks/               # カスタムフック
+│   │   ├── useAnalyticsFilters.ts
+│   │   ├── useDarkMode.ts
+│   │   └── useGitHubData.ts
 │   ├── lib/                 # ユーティリティライブラリ
+│   │   ├── cookies.ts
+│   │   ├── dataStorage.ts
+│   │   ├── github.ts
+│   │   └── weekFormat.ts
 │   └── types/               # TypeScript型定義
+│       └── analytics.ts
 └── docs/                    # ドキュメント
+    └── LOCAL_SETUP.md
 ```
+
+### API エンドポイント
+
+- **`GET /api/analytics`**: 分析データ取得
+  - クエリパラメータ: `owner`, `repo`, `from`, `to`
+- **`POST /api/collect-data`**: データ収集（ローカル環境のみ）
+  - ボディ: `{owner, repo, week?}`
+- **`GET /api/collect-data`**: 利用可能週データ一覧
+  - クエリパラメータ: `owner`, `repo`
+- **`GET /api/export`**: データエクスポート
+  - クエリパラメータ: `owner`, `repo`, `format`
+- **`GET /api/repositories`**: 設定済みリポジトリ一覧
 
 ### 品質保証
 
@@ -533,9 +458,9 @@ pr-analytics/
 ### フロントエンド
 
 - Next.js 15 の最新機能活用
+- Turbopack による高速開発
 - クライアントサイドキャッシュ
-- 画像最適化
-- 遅延ローディング
+- レスポンシブデザイン
 
 ### バックエンド
 
@@ -573,8 +498,6 @@ MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 ### ドキュメント
 
 - [ローカルセットアップガイド](docs/LOCAL_SETUP.md)
-- [API 仕様書](docs/API.md)（予定）
-- [運用手順書](docs/OPERATIONS.md)（予定）
 
 ### 問題報告
 
@@ -582,12 +505,6 @@ MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 - 機能要望：GitHub Discussions
 - セキュリティ問題：プライベート報告
 
-### 監視・アラート
-
-- GitHub Actions 失敗時の自動 Issue 作成
-- SLI 違反時のアラート
-- 週次実行結果レポート
-
 ---
 
-> 🤖 **SRE 準拠**: このプロジェクトは Site Reliability Engineering のベストプラクティスに準拠し、高い可用性、拡張性、保守性を実現しています。
+> 🚀 **高品質な開発体験**: このプロジェクトはモダンな開発手法とベストプラクティスを採用し、高い保守性と拡張性を実現しています。
