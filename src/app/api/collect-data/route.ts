@@ -11,10 +11,24 @@ import {
   CollectDataResponse,
   AvailableWeeksResponse,
 } from "./_libs/types";
+import { isRestrictedEnvironment } from "@/lib/environment";
 
 const dataStorage = new DataStorage();
 
 export async function POST(request: NextRequest) {
+  // 制限環境ではデータ収集を無効化
+  if (isRestrictedEnvironment()) {
+    return NextResponse.json(
+      {
+        error:
+          "データ収集は本番環境では利用できません。ローカル環境でデータを収集してからデプロイしてください。",
+        suggestion:
+          "npm run update-data をローカルで実行してからデプロイしてください",
+      },
+      { status: 403 }
+    );
+  }
+
   try {
     const { owner, repo, week }: CollectDataRequest = await request.json();
 

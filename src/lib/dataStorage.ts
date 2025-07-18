@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { formatISO, getISOWeek, getYear } from "date-fns";
+import { isRestrictedEnvironment } from "./environment";
 
 export interface WeeklyPRData {
   week: string;
@@ -54,6 +55,11 @@ export class DataStorage {
   }
 
   private async ensureDirectoryExists(dirPath: string): Promise<void> {
+    if (isRestrictedEnvironment()) {
+      // 制限環境ではディレクトリ作成をスキップ
+      return;
+    }
+
     try {
       await fs.access(dirPath);
     } catch {
@@ -76,6 +82,11 @@ export class DataStorage {
     repo: string,
     weeklyData: WeeklyPRData
   ): Promise<void> {
+    if (isRestrictedEnvironment()) {
+      console.warn("Data saving is disabled in restricted environment");
+      return;
+    }
+
     const filePath = this.getFilePath(owner, repo, weeklyData.week);
     const dirPath = path.dirname(filePath);
 
@@ -108,7 +119,13 @@ export class DataStorage {
   async getAllWeeksData(owner: string, repo: string): Promise<WeeklyPRData[]> {
     try {
       const repoDir = path.join(this.baseDir, owner, repo);
-      await this.ensureDirectoryExists(repoDir);
+
+      if (isRestrictedEnvironment()) {
+        // 制限環境では既存のデータのみ読み取り
+        await this.ensureDirectoryExists(repoDir);
+      } else {
+        await this.ensureDirectoryExists(repoDir);
+      }
 
       const files = await fs.readdir(repoDir);
       const weeklyDataList: WeeklyPRData[] = [];
@@ -204,6 +221,13 @@ export class DataStorage {
     try {
       // まず設定ファイルからリポジトリを取得
       const configRepositories = await this.getConfiguredRepositories();
+
+      if (isRestrictedEnvironment()) {
+        // 制限環境では設定ファイルからのみ取得
+        return configRepositories.sort((a, b) =>
+          `${a.owner}/${a.repo}`.localeCompare(`${b.owner}/${b.repo}`)
+        );
+      }
 
       // データディレクトリからも取得（既存のロジック）
       await this.ensureDirectoryExists(this.baseDir);

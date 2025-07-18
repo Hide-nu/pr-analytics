@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { DataStorage } from "@/lib/dataStorage";
 import { promises as fs } from "fs";
 import path from "path";
+import { isRestrictedEnvironment } from "@/lib/environment";
 
 interface Repository {
   owner: string;
@@ -38,6 +39,19 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  // 制限環境ではリポジトリ追加を無効化
+  if (isRestrictedEnvironment()) {
+    return NextResponse.json(
+      {
+        error:
+          "リポジトリの追加は本番環境では利用できません。ローカル環境で設定ファイルを更新してください。",
+        suggestion:
+          "config/repositories.json を直接編集してデプロイしてください",
+      },
+      { status: 403 }
+    );
+  }
+
   try {
     const { owner, repo }: Repository = await request.json();
 

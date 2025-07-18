@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import useSWR from "swr";
 
 interface DataInfo {
@@ -17,7 +17,10 @@ interface CollectionResult {
   message: string;
   week: string;
   prCount: number;
+  data: unknown;
 }
+
+import { isRestrictedEnvironment } from "@/lib/environment";
 
 export default function DataManager({
   owner,
@@ -31,8 +34,8 @@ export default function DataManager({
     null
   );
 
-  // ローカル環境でのみデータ収集機能を有効化
-  const isLocalEnvironment = process.env.NODE_ENV === "development";
+  // ローカル環境でのみデータ収集機能を有効化（現在は使用していない）
+  // const isLocalEnvironment = process.env.NODE_ENV === "development";
 
   const {
     data: dataInfo,
@@ -44,6 +47,13 @@ export default function DataManager({
   );
 
   const collectWeekData = async (week?: string) => {
+    if (isRestrictedEnvironment()) {
+      alert(
+        "データ収集は本番環境では利用できません。ローカル環境でデータを収集してからデプロイしてください。"
+      );
+      return;
+    }
+
     setCollecting(true);
     setCollectResult(null);
 
@@ -74,176 +84,189 @@ export default function DataManager({
     }
   };
 
-  const collectMultipleWeeks = async () => {
+  const collectAllRecentData = async () => {
+    if (isRestrictedEnvironment()) {
+      alert(
+        "データ収集は本番環境では利用できません。ローカル環境でデータを収集してからデプロイしてください。"
+      );
+      return;
+    }
+
     if (!dataInfo) return;
 
     setCollecting(true);
-    const results: CollectionResult[] = [];
+    setCollectResult(null);
 
-    for (const week of dataInfo.recentWeeks) {
-      if (!dataInfo.availableWeeks.includes(week)) {
-        try {
-          const response = await fetch("/api/collect-data", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ owner, repo, week }),
-          });
+    try {
+      // 未収集の週を特定
+      const collectedWeeks = new Set(dataInfo.availableWeeks);
+      const uncollectedWeeks = dataInfo.recentWeeks.filter(
+        (week) => !collectedWeeks.has(week)
+      );
 
-          const result = await response.json();
-          if (response.ok) {
-            results.push(result);
-          }
-        } catch (error) {
-          console.error(`週 ${week} のデータ収集エラー:`, error);
-        }
+      if (uncollectedWeeks.length === 0) {
+        alert("収集可能なデータはありません。");
+        return;
       }
-    }
 
-    setCollecting(false);
-    mutate();
+      // 各週のデータを順次収集
+      for (const week of uncollectedWeeks) {
+        console.log(`Collecting data for week ${week}...`);
+        await collectWeekData(week);
+        // 少し待機してAPI制限を回避
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
 
-    if (results.length > 0) {
-      alert(`${results.length}週のデータを収集しました`);
+      alert(`${uncollectedWeeks.length}週間のデータ収集が完了しました。`);
+      mutate(); // データ情報を再取得
+    } catch (error) {
+      console.error("一括データ収集エラー:", error);
+      alert("一括データ収集に失敗しました。");
+    } finally {
+      setCollecting(false);
     }
   };
 
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-        <h3 className="font-semibold text-red-800">
-          データ情報の取得に失敗しました
+      <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+        <h3 className="font-semibold text-red-800 mb-2">
+          ❌ データ情報の取得に失敗しました
         </h3>
-        <p className="text-red-600">{error.message}</p>
+        <p className="text-red-700 text-sm">エラー: {error.message}</p>
       </div>
     );
   }
 
   if (!dataInfo) {
     return (
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
         <div className="animate-pulse">
-          <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
-          <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/4 mb-2"></div>
+          <div className="h-3 bg-gray-200 rounded w-1/2"></div>
         </div>
       </div>
     );
   }
 
-  const missingWeeks = dataInfo.recentWeeks.filter(
-    (week) => !dataInfo.availableWeeks.includes(week)
-  );
-
   return (
-    <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-      <h3 className="font-semibold text-blue-800 mb-4">📊 データ管理</h3>
-
-      <div
-        className={`grid grid-cols-1 gap-4 mb-4 ${
-          isLocalEnvironment
-            ? "md:grid-cols-2 lg:grid-cols-4"
-            : "md:grid-cols-3"
-        }`}
-      >
-        <div className="bg-white rounded-lg p-3 border">
-          <div className="text-sm text-gray-600">現在の週</div>
-          <div className="font-semibold">{dataInfo.currentWeek}</div>
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+          📊 データ管理
+        </h2>
+        <div className="text-sm text-gray-500 dark:text-gray-400">
+          {dataInfo.totalWeeks}週間のデータ
         </div>
-        <div className="bg-white rounded-lg p-3 border">
-          <div className="text-sm text-gray-600">最後に収集した週</div>
-          <div className="font-semibold">
-            {dataInfo.lastCollectedWeek || "未収集"}
-          </div>
-        </div>
-        <div className="bg-white rounded-lg p-3 border">
-          <div className="text-sm text-gray-600">保存済み週数</div>
-          <div className="font-semibold">{dataInfo.totalWeeks}週</div>
-        </div>
-        {isLocalEnvironment && (
-          <div className="bg-white rounded-lg p-3 border">
-            <div className="text-sm text-gray-600">未収集週数</div>
-            <div className="font-semibold text-orange-600">
-              {missingWeeks.length}週
-            </div>
-          </div>
-        )}
       </div>
 
-      {isLocalEnvironment && (
-        <div className="flex flex-wrap gap-3 mb-4">
-          <button
-            onClick={() => collectWeekData()}
-            disabled={collecting}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-          >
-            {collecting ? "収集中..." : "今週のデータを収集"}
-          </button>
-
-          {missingWeeks.length > 0 && (
-            <button
-              onClick={collectMultipleWeeks}
-              disabled={collecting}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-            >
-              {collecting
-                ? "収集中..."
-                : `未収集データを一括収集 (${missingWeeks.length}週)`}
-            </button>
-          )}
-        </div>
-      )}
-
-      {isLocalEnvironment && missingWeeks.length > 0 && (
-        <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
-          <h4 className="font-medium text-orange-800 mb-2">未収集の週:</h4>
-          <div className="flex flex-wrap gap-2">
-            {missingWeeks.map((week) => (
-              <button
-                key={week}
-                onClick={() => collectWeekData(week)}
-                disabled={collecting}
-                className="px-2 py-1 text-xs bg-orange-100 text-orange-800 rounded hover:bg-orange-200 disabled:bg-gray-200"
-              >
-                {week}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {dataInfo.availableWeeks.length > 0 && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-          <h4 className="font-medium text-green-800 mb-2">
-            収集済みの週 (最新20週):
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {dataInfo.availableWeeks.slice(-20).map((week) => (
-              <span
-                key={week}
-                className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded"
-              >
-                {week}
-              </span>
-            ))}
-            {dataInfo.availableWeeks.length > 20 && (
-              <span className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded">
-                他{dataInfo.availableWeeks.length - 20}週
-              </span>
-            )}
-          </div>
-        </div>
-      )}
-
-      {isLocalEnvironment && collectResult && (
-        <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
-          <h4 className="font-medium text-green-800">✅ 収集完了</h4>
-          <p className="text-green-700 text-sm">
-            週 {collectResult.week}: {collectResult.prCount}{" "}
-            件のPRを収集しました
+      {isRestrictedEnvironment() && (
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mb-4">
+          <h3 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+            ⚠️ 本番環境での制限
+          </h3>
+          <p className="text-yellow-700 dark:text-yellow-300 text-sm mb-2">
+            データ収集機能は本番環境では利用できません。
+          </p>
+          <p className="text-yellow-700 dark:text-yellow-300 text-sm">
+            ローカル環境で{" "}
+            <code className="bg-yellow-100 dark:bg-yellow-800 px-1 rounded">
+              npm run update-data
+            </code>{" "}
+            を実行してからデプロイしてください。
           </p>
         </div>
       )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+          <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-2">
+            現在の状況
+          </h3>
+          <div className="space-y-1 text-sm text-blue-700 dark:text-blue-300">
+            <div>現在の週: {dataInfo.currentWeek}</div>
+            <div>最新データ: {dataInfo.lastCollectedWeek || "なし"}</div>
+            <div>利用可能週数: {dataInfo.totalWeeks}</div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+          <h3 className="font-medium text-green-800 dark:text-green-200 mb-2">
+            クイックアクション
+          </h3>
+          <div className="space-y-2">
+            <button
+              onClick={() => collectWeekData()}
+              disabled={collecting || isRestrictedEnvironment()}
+              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
+            >
+              {collecting ? "収集中..." : "今週のデータを収集"}
+            </button>
+            <button
+              onClick={collectAllRecentData}
+              disabled={collecting || isRestrictedEnvironment()}
+              className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
+            >
+              {collecting ? "収集中..." : "未収集データを一括収集"}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {collectResult && (
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-4">
+          <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2">
+            ✅ データ収集完了
+          </h3>
+          <p className="text-green-700 dark:text-green-300 text-sm">
+            {collectResult.message} ({collectResult.prCount}件のPR)
+          </p>
+        </div>
+      )}
+
+      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-3">
+          週別データ状況
+        </h3>
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-1">
+          {dataInfo.recentWeeks.slice(-24).map((week) => {
+            const isCollected = dataInfo.availableWeeks.includes(week);
+            const isCurrent = week === dataInfo.currentWeek;
+            return (
+              <button
+                key={week}
+                onClick={() => !isCollected && collectWeekData(week)}
+                disabled={collecting || isRestrictedEnvironment()}
+                className={`
+                  p-2 text-xs rounded transition-colors
+                  ${
+                    isCollected
+                      ? "bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200"
+                      : "bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-500"
+                  }
+                  ${isCurrent ? "ring-2 ring-blue-500" : ""}
+                  ${
+                    collecting || isRestrictedEnvironment()
+                      ? "cursor-not-allowed opacity-50"
+                      : "cursor-pointer"
+                  }
+                `}
+                title={`${week}${isCollected ? " (収集済み)" : " (未収集)"}`}
+              >
+                {week.split("-W")[1]}
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+          <span className="inline-block w-3 h-3 bg-green-100 dark:bg-green-800 rounded mr-1"></span>
+          収集済み
+          <span className="inline-block w-3 h-3 bg-gray-100 dark:bg-gray-600 rounded ml-3 mr-1"></span>
+          未収集
+          <span className="inline-block w-3 h-3 bg-blue-500 rounded ml-3 mr-1 ring-2 ring-blue-500"></span>
+          現在の週
+        </div>
+      </div>
     </div>
   );
 }

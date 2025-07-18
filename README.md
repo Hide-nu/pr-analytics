@@ -1,210 +1,62 @@
-# 📊 PR Analytics
+# PR Analytics - チーム開発効率可視化ダッシュボード
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+GitHub リポジトリの Pull Request を分析して、チームの開発効率とボトルネックを可視化するダッシュボードです。
 
-**Unlock your team's development process with data.**
+## 機能
 
-PR Analytics is an open-source dashboard that automatically analyzes Pull Requests from GitHub repositories, visualizing team productivity and development cycle bottlenecks.
+- 📊 **週次 PR 分析**: PR 数、マージ時間、レビュー数の推移を可視化
+- 👥 **チームメンバー比較**: メンバー別のパフォーマンス分析
+- ⏱️ **サイクルタイム分析**: 開発からマージまでの時間分解
+- 🔄 **手戻り率分析**: Code Churn による品質指標
+- 🏷️ **ラベル分析**: 技術的負債やタスク分類の追跡
+- 📈 **トレンド分析**: 期間比較による改善傾向の把握
 
----
+## セットアップ
 
-## ✨ Key Features
+### 前提条件
 
-- **🤖 Fully Automated Data Updates:** Set it up once, and GitHub Actions automatically collects and updates data weekly.
-- **👀 Intuitive Dashboard:** Visualize key metrics like PR count, merge time, and review interactions in an easy-to-understand format.
-- **👥 Team and Individual Insights:** Drill down from overall team trends to individual member activity.
-- **🔓 Open Source:** All code is publicly available and free to use. Customize as needed for your requirements.
+- Node.js 18 以上
+- npm または yarn
+- GitHub Personal Access Token
 
-## 🚀 Get Started in 3 Minutes
-
-Easy setup in your local environment.
-
-<details>
-<summary>🐳 Running Locally with Docker</summary>
-
-1.  Clone the repository:
-
-    ```bash
-    git clone https://github.com/hidetoshitai/easy-pr-analytics.git
-    cd easy-pr-analytics
-    ```
-
-2.  Create `.env.local` file:
-
-    ```bash
-    # GitHub Personal Access Token (repo permission required)
-    GITHUB_TOKEN=your_github_token_here
-    ```
-
-3.  Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-4.  Start development server:
-
-    ```bash
-    npm run dev
-    ```
-
-5.  Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-</details>
-
-## How to Use
-
-1.  **Repository Configuration:** Set up repositories to analyze in `config/repositories.json`.
-2.  **Data Collection:** Execute manual data collection in local environment or use GitHub Actions automatic collection.
-3.  **Analysis:** Access the deployed site and review analysis results in the dashboard.
-
-## 🔧 How It Works
-
-This tool adopts a "GitOps" approach, using Git as a database.
-
-```mermaid
-graph TD
-    subgraph "Local Development Environment"
-        A[Data Collection Script Execution] --> B[Data Retrieval via GitHub API]
-    end
-
-    subgraph "GitHub"
-        B --> C[Save Data to data/weekly/*.json]
-        C --> D[Automatically Commit & Push]
-        D --> E{GitHub Actions<br/>Weekly Execution}
-    end
-
-    subgraph "Local Environment"
-        D --> F[Manual Deployment]
-        F --> G[Dashboard Update]
-    end
-
-    E --> B
-```
-
-1.  Local environment or GitHub Actions collects PR data and commits it directly to the **Git repository as JSON files**.
-2.  Manually build the site in local environment to reflect the latest data.
-3.  Every week, GitHub Actions automatically repeats this process, keeping data always up to date.
-
-## 🔄 Automation & CI/CD
-
-### GitHub Actions Workflows
-
-- **📊 PR Data Validation (`pr-data-validation.yml`)**:
-
-  - Automatically executes on pull request creation/update and pushes to main branch
-  - Runs TypeScript type checking, ESLint, tests, and build checks
-  - Verifies data collection API functionality
-  - Basic data file integrity checks
-  - Posts detailed validation results as PR comments
-
-- **⏰ Weekly Data Update & Integrity Check (`weekly-data-update.yml`)**:
-  - Automatically executes every Monday at 1 AM (UTC)
-  - Manual execution also available
-  - Updates data for all registered repositories to latest
-  - Comprehensive data integrity checks before and after updates
-  - API functionality verification
-  - Automatic issue creation when problems are detected
-  - Automatic generation and saving of detailed reports
-
-### Environment Restrictions
-
-Data collection functionality operates only in **local environment (`NODE_ENV=development`)** for security reasons. In production environment, only data viewing and analysis functions are available.
-
-## 📊 Key Features and Analysis Items
-
-### 🎯 Dashboard Features
-
-- **📈 Overall Metrics**:
-
-  - Total PR count, merge rate, average merge time
-  - Active developer count, weekly averages
-
-- **📊 Weekly Trend Analysis**:
-
-  - PR count, lines changed, merge time trends
-  - Period comparison functionality
-
-- **👥 Member Statistics**:
-
-  - Individual performance analysis
-  - PR count, merge time, comment count
-  - Detailed member view
-
-- **🏷️ Label Analytics**:
-
-  - Classification of bugs, technical debt, feature additions
-  - Time series trends and ratio analysis
-
-- **⏱️ Cycle Time Analysis**:
-
-  - Detailed time breakdown from creation to merge
-  - Bottleneck identification
-
-- **🔄 Code Churn Analysis**:
-
-  - Commit count and review round analysis
-  - Utilization as quality metrics
-
-- **💬 Comment Interaction Analysis**:
-
-  - Review interaction patterns
-  - Team communication analysis
-
-- **📤 Data Export**:
-  - Data output in JSON/CSV format
-
-### 🎨 UI/UX Features
-
-- **🌙 Dark Mode Support**
-- **📱 Responsive Design**
-- **👤 User Exclusion Settings**
-- **📅 Period Selection and Filtering**
-
-## 📋 Prerequisites
-
-- Node.js 20 or higher
-- GitHub Personal Access Token (with `repo` permission)
-
-## 🛠️ Setup
-
-### 1. Clone Repository
+### 1. リポジトリのクローン
 
 ```bash
-git clone https://github.com/hidetoshitai/easy-pr-analytics.git
-cd easy-pr-analytics
+git clone <repository-url>
+cd pr-analytics
 ```
 
-### 2. Install Dependencies
+### 2. 依存関係のインストール
 
 ```bash
 npm install
 ```
 
-### 3. Environment Configuration
+### 3. 環境変数の設定
 
-```bash
-# Create .env.local file
-echo "GITHUB_TOKEN=your_github_token_here" > .env.local
+`.env.local`ファイルを作成し、GitHub Personal Access Token を設定：
+
+```env
+GITHUB_TOKEN=your_github_personal_access_token_here
 ```
 
-### 4. Repository Configuration
+### 4. リポジトリ設定
 
-Edit `config/repositories.json`:
+`config/repositories.json`を編集して分析対象のリポジトリを追加：
 
 ```json
 {
   "default": [
     {
-      "owner": "your-organization",
+      "owner": "your-username",
       "repo": "your-repository"
     }
   ],
   "metadata": {
     "version": "1.0.0",
-    "description": "PR Analytics target repository configuration",
-    "lastUpdated": "2025-01-17T00:00:00Z",
-    "maintainer": "SRE Team"
+    "description": "PR Analytics対象リポジトリ設定",
+    "lastUpdated": "2024-01-01T00:00:00.000Z",
+    "maintainer": "Your Team"
   },
   "validation": {
     "requiredFields": ["owner", "repo"],
@@ -213,89 +65,156 @@ Edit `config/repositories.json`:
 }
 ```
 
-### 5. Start Development Server
+### 5. データ収集
+
+ローカル環境でデータを収集：
+
+```bash
+# 最新の週のデータを収集
+npm run update-data
+
+# 強制的に全データを再収集
+npm run update-data:force
+```
+
+### 6. 開発サーバーの起動
 
 ```bash
 npm run dev
 ```
 
-The application will be accessible at http://localhost:3000.
+http://localhost:3000 でアプリケーションにアクセスできます。
 
-## 🔧 Configuration Management
+## デプロイ
 
-### GitHub Token Configuration
+### Vercel へのデプロイ
 
-The following permissions are required:
+⚠️ **重要な注意事項**: Vercel はサーバーレス環境のため、以下の制限があります：
 
-- `repo`: Private repository access
-- `read:org`: Organization information read access (optional)
+1. **ファイルシステム書き込み不可**: 実行時にデータファイルを作成・更新できません
+2. **データ収集機能無効**: 本番環境ではデータ収集 API が無効化されます
+3. **静的データのみ**: デプロイ時に含まれるデータのみが利用可能です
 
-### Repository Configuration Management
+#### デプロイ手順
 
-**Management Commands**:
-
-```bash
-# Validate configuration
-npm run config:validate
-
-# Display configuration content
-npm run config:show
-
-# Output in JSON format (for GitHub Actions)
-npm run config:json
-```
-
-## 🤖 Data Collection and Scripts
-
-### Data Collection Flow
-
-1. **Manual Collection (Local Environment)**:
+1. **ローカルでデータ収集**:
 
    ```bash
    npm run update-data
    ```
 
-2. **Automatic Collection (GitHub Actions)**:
+2. **Vercel にデプロイ**:
 
-   - Automatically executes every Monday at 1 AM (UTC)
-   - Manual execution also available
-
-3. **Data Validation**:
    ```bash
-   npm run validate:data
+   vercel --prod
    ```
 
-## 📱 Environment Restrictions
+3. **環境変数の設定**:
+   Vercel のダッシュボードで`GITHUB_TOKEN`を設定
 
-### Development Environment (localhost)
+#### トラブルシューティング
 
-- ✅ All features available
-- ✅ Data collection functionality
-- ✅ Manual data updates
+**404 エラーが発生する場合**:
 
-### Production Environment
+- データファイルが存在することを確認
+- `data/weekly/`ディレクトリに JSON ファイルがあることを確認
+- リポジトリ設定が正しいことを確認
 
-- ✅ Dashboard viewing
-- ✅ Data analysis and visualization
-- ❌ Data collection functionality (hidden)
-- ❌ Manual update buttons (hidden)
+**データが表示されない場合**:
 
-> **Security Consideration**: Production environment provides only data viewing and analysis functions, with data collection executed solely through GitHub Actions automation.
+- ローカルでデータ収集を実行してからデプロイ
+- GitHub Token の権限を確認
+- リポジトリのアクセス権限を確認
 
-## 🤝 Contributing
+### その他のプラットフォーム
 
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Create a Pull Request
+Docker、Railway、Render 等のプラットフォームでも同様の制限があります。データ収集はローカル環境で行い、静的ファイルとしてデプロイしてください。
 
-## 📄 License
+## 使用方法
 
-MIT License - See [LICENSE](LICENSE) file for details
+### 1. リポジトリ選択
 
-## Issue Reporting
+ヘッダーから分析対象のリポジトリを選択します。
 
-- Bug Reports: GitHub Issues
-- Feature Requests: GitHub Discussions
-- Security Issues: Private reporting
+### 2. 期間設定
+
+日付範囲セレクターで分析期間を設定できます。
+
+### 3. 比較分析
+
+期間比較機能で改善傾向を確認できます。
+
+### 4. データエクスポート
+
+CSV/JSON 形式でデータをエクスポートできます。
+
+## 開発
+
+### テスト
+
+```bash
+# 単体テスト
+npm run test
+
+# テストUI
+npm run test:ui
+
+# テスト実行
+npm run test:run
+```
+
+### ローカルテスト
+
+```bash
+# ローカル環境でのテスト
+npm run test:local
+
+# ドライラン（実際のAPI呼び出しなし）
+npm run test:local:dry
+```
+
+### デバッグ
+
+```bash
+# デバッグサーバー起動
+npm run debug:server
+```
+
+## アーキテクチャ
+
+### フロントエンド
+
+- **Next.js 15**: React フレームワーク
+- **TypeScript**: 型安全性
+- **Tailwind CSS**: スタイリング
+- **Chart.js**: グラフ描画
+- **SWR**: データフェッチング
+
+### バックエンド
+
+- **Next.js API Routes**: サーバーサイド API
+- **Octokit**: GitHub API クライアント
+- **date-fns**: 日付処理
+
+### データ管理
+
+- **ファイルシステム**: 週次データの保存
+- **JSON**: 設定とデータの形式
+- **Cookie**: ユーザー設定の保存
+
+## ライセンス
+
+MIT License
+
+## 貢献
+
+プルリクエストやイシューの報告を歓迎します。
+
+## サポート
+
+問題が発生した場合は、以下の手順でトラブルシューティングしてください：
+
+1. ローカル環境で動作確認
+2. データファイルの存在確認
+3. GitHub Token の権限確認
+4. リポジトリ設定の確認
