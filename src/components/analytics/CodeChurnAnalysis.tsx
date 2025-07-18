@@ -359,7 +359,15 @@ export function CodeChurnAnalysis({ data }: CodeChurnAnalysisProps) {
                     }}
                     className="text-xs"
                   />
-                  <Tooltip formatter={formatTooltip} />
+                  <Tooltip
+                    formatter={formatTooltip}
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
+                  />
                   <Legend />
                   <Line
                     type="monotone"
@@ -403,7 +411,15 @@ export function CodeChurnAnalysis({ data }: CodeChurnAnalysisProps) {
                     }}
                     className="text-xs"
                   />
-                  <Tooltip formatter={formatTooltip} />
+                  <Tooltip
+                    formatter={formatTooltip}
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
+                  />
                   <Legend />
                   <Bar
                     dataKey="avgCommitsPerPR"

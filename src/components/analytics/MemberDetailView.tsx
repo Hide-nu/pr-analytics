@@ -131,6 +131,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         ?.weekDisplay
                     })`
                   }
+                  contentStyle={{
+                    backgroundColor: "white",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    color: "#333",
+                  }}
                 />
                 <Line
                   type="monotone"
@@ -168,6 +174,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         )?.weekDisplay
                       })`
                     }
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
                   />
                   <Line
                     type="monotone"
@@ -212,6 +224,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         ?.weekDisplay
                     })`
                   }
+                  contentStyle={{
+                    backgroundColor: "white",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    color: "#333",
+                  }}
                 />
                 <Line
                   type="monotone"
@@ -252,6 +270,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         )?.weekDisplay
                       })`
                     }
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
                   />
                   <Line
                     type="monotone"
@@ -298,6 +322,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         ?.weekDisplay
                     })`
                   }
+                  contentStyle={{
+                    backgroundColor: "white",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    color: "#333",
+                  }}
                 />
                 <Line
                   type="monotone"
@@ -338,6 +368,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         )?.weekDisplay
                       })`
                     }
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
                   />
                   <Line
                     type="monotone"
@@ -419,6 +455,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                       ?.weekDisplay
                   })`
                 }
+                contentStyle={{
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  color: "#333",
+                }}
               />
               <Legend />
               <Bar yAxisId="left" dataKey="prs" fill="#0088FE" name="PR数" />
@@ -470,6 +512,12 @@ const MemberDetailView: React.FC<MemberDetailViewProps> = ({
                         ?.weekDisplay
                     })`
                   }
+                  contentStyle={{
+                    backgroundColor: "white",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    color: "#333",
+                  }}
                 />
                 <Legend />
                 <Bar yAxisId="left" dataKey="prs" fill="#FFB366" name="PR数" />

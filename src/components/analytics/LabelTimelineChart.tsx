@@ -102,7 +102,15 @@ export function LabelTimelineChart({
               label={{ value: yAxisLabel, angle: -90, position: "insideLeft" }}
               className="text-xs"
             />
-            <Tooltip formatter={formatTooltip} />
+            <Tooltip
+              formatter={formatTooltip}
+              contentStyle={{
+                backgroundColor: "white",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                color: "#333",
+              }}
+            />
             <Legend />
 
             {Object.entries(LABEL_COLORS).map(([label, color]) => (
@@ -139,7 +147,15 @@ export function LabelTimelineChart({
             label={{ value: yAxisLabel, angle: -90, position: "insideLeft" }}
             className="text-xs"
           />
-          <Tooltip formatter={formatTooltip} />
+          <Tooltip
+            formatter={formatTooltip}
+            contentStyle={{
+              backgroundColor: "white",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              color: "#333",
+            }}
+          />
           <Legend />
 
           {Object.entries(LABEL_COLORS).map(([label, color]) => (

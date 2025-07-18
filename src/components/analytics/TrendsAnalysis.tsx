@@ -121,6 +121,12 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
                     ? "平均変更行数 (メイン)"
                     : "平均変更行数 (比較)",
                 ]}
+                contentStyle={{
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  color: "#333",
+                }}
               />
               <Legend />
               <Line
@@ -179,6 +185,12 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
                     ? "平均マージ時間 (メイン)"
                     : "平均マージ時間 (比較)",
                 ]}
+                contentStyle={{
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  color: "#333",
+                }}
               />
               <Legend />
               <Line
@@ -233,7 +245,14 @@ const TrendsAnalysis: React.FC<TrendsAnalysisProps> = ({
                 Number(value).toFixed(value % 1 === 0 ? 0 : 1)
               }
             />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "white",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                color: "#333",
+              }}
+            />
             <Legend />
             <Bar yAxisId="left" dataKey="count" fill="#0088FE" name="PR数" />
             <Line

@@ -62,7 +62,14 @@ const LabelStatistics: React.FC<LabelStatisticsProps> = ({ data }) => {
                   />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "white",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  color: "#333",
+                }}
+              />
             </PieChart>
           </ResponsiveContainer>
         </div>

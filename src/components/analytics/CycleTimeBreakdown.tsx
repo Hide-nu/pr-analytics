@@ -224,7 +224,15 @@ export function CycleTimeBreakdown({ data }: CycleTimeBreakdownProps) {
                   label={{ value: "時間", angle: -90, position: "insideLeft" }}
                   className="text-xs"
                 />
-                <Tooltip formatter={formatTooltip} />
+                <Tooltip
+                  formatter={formatTooltip}
+                  contentStyle={{
+                    backgroundColor: "white",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    color: "#333",
+                  }}
+                />
                 <Legend />
                 <Bar
                   dataKey="avgTimeToFirstReview"
@@ -312,7 +320,15 @@ export function CycleTimeBreakdown({ data }: CycleTimeBreakdownProps) {
                     }}
                     className="text-xs"
                   />
-                  <Tooltip formatter={formatTooltip} />
+                  <Tooltip
+                    formatter={formatTooltip}
+                    contentStyle={{
+                      backgroundColor: "white",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      color: "#333",
+                    }}
+                  />
                   <Line
                     type="monotone"
                     dataKey="avgTotalCycleTime"

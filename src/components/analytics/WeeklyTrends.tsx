@@ -45,7 +45,14 @@ const WeeklyTrends: React.FC<WeeklyTrendsProps> = ({ data }) => {
               Number(value).toFixed(value % 1 === 0 ? 0 : 1)
             }
           />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "white",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              color: "#333",
+            }}
+          />
           <Legend />
           <Bar dataKey="count" fill="#0088FE" name="PR Count" />
         </BarChart>
