@@ -202,9 +202,13 @@ export class DataStorage {
     Array<{ owner: string; repo: string }>
   > {
     try {
+      // まず設定ファイルからリポジトリを取得
+      const configRepositories = await this.getConfiguredRepositories();
+
+      // データディレクトリからも取得（既存のロジック）
       await this.ensureDirectoryExists(this.baseDir);
       const ownerDirs = await fs.readdir(this.baseDir);
-      const repositories: Array<{ owner: string; repo: string }> = [];
+      const dataRepositories: Array<{ owner: string; repo: string }> = [];
 
       for (const owner of ownerDirs) {
         const ownerPath = path.join(this.baseDir, owner);
@@ -223,16 +227,47 @@ export class DataStorage {
               const hasData = files.some((file) => file.endsWith(".json"));
 
               if (hasData) {
-                repositories.push({ owner, repo });
+                dataRepositories.push({ owner, repo });
               }
             }
           }
         }
       }
 
-      return repositories.sort((a, b) =>
+      // 設定ファイルとデータディレクトリからのリポジトリをマージ（重複排除）
+      const allRepositories = [...configRepositories];
+
+      for (const dataRepo of dataRepositories) {
+        const exists = allRepositories.some(
+          (repo) => repo.owner === dataRepo.owner && repo.repo === dataRepo.repo
+        );
+        if (!exists) {
+          allRepositories.push(dataRepo);
+        }
+      }
+
+      return allRepositories.sort((a, b) =>
         `${a.owner}/${a.repo}`.localeCompare(`${b.owner}/${b.repo}`)
       );
+    } catch {
+      return [];
+    }
+  }
+
+  // 設定ファイルからリポジトリ一覧を取得
+  private async getConfiguredRepositories(): Promise<
+    Array<{ owner: string; repo: string }>
+  > {
+    try {
+      const configPath = path.join(
+        process.cwd(),
+        "config",
+        "repositories.json"
+      );
+      const configData = await fs.readFile(configPath, "utf-8");
+      const config = JSON.parse(configData);
+
+      return config.default || [];
     } catch {
       return [];
     }

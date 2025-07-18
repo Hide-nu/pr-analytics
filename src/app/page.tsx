@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Dashboard from "@/components/Dashboard";
 import Header from "@/components/Header";
+import AddRepositoryModal from "@/components/AddRepositoryModal";
 import { saveSelectedRepository, getSelectedRepository } from "@/lib/cookies";
 
 interface Repository {
@@ -18,6 +19,21 @@ const Home: React.FC = () => {
     useState<Repository | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [dataLoading, setDataLoading] = useState<boolean>(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
+
+  // リポジトリ一覧を取得する関数
+  const fetchRepositories = async () => {
+    try {
+      const response = await fetch("/api/repositories");
+      const data = await response.json();
+      const repositories = data.repositories || [];
+      setAvailableRepositories(repositories);
+      return repositories;
+    } catch (error) {
+      console.error("Failed to fetch repositories:", error);
+      return [];
+    }
+  };
 
   // コンポーネントマウント時にリポジトリ一覧とCookieから選択状態を取得
   useEffect(() => {
@@ -25,10 +41,7 @@ const Home: React.FC = () => {
       setLoading(true);
       try {
         // リポジトリ一覧を取得
-        const response = await fetch("/api/repositories");
-        const data = await response.json();
-        const repositories = data.repositories || [];
-        setAvailableRepositories(repositories);
+        const repositories = await fetchRepositories();
 
         // Cookieから前回選択されたリポジトリを取得
         const savedRepository = getSelectedRepository();
@@ -43,7 +56,7 @@ const Home: React.FC = () => {
           setSelectedRepository(savedRepository);
         }
       } catch (error) {
-        console.error("Failed to fetch repositories:", error);
+        console.error("Failed to initialize app:", error);
       } finally {
         setLoading(false);
       }
@@ -64,6 +77,23 @@ const Home: React.FC = () => {
 
     // データ読み込み状態を少し表示してからクリア
     setTimeout(() => setDataLoading(false), 500);
+  };
+
+  const handleAddRepositorySuccess = async () => {
+    // リポジトリ追加成功時にリストを再取得
+    const repositories = await fetchRepositories();
+
+    // 選択されたリポジトリが削除されていた場合はクリア
+    if (
+      selectedRepository &&
+      !repositories.some(
+        (repo: Repository) =>
+          repo.owner === selectedRepository.owner &&
+          repo.repo === selectedRepository.repo
+      )
+    ) {
+      setSelectedRepository(null);
+    }
   };
 
   // 初期ローディング中
@@ -113,11 +143,18 @@ const Home: React.FC = () => {
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   🚀 はじめに
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-left">
+                <p className="text-gray-600 dark:text-gray-400 text-left mb-4">
                   現在、分析対象のリポジトリが登録されていません。
                   <br />
-                  管理者にお問い合わせいただき、分析したいリポジトリを登録してもらってください。
+                  下のボタンから分析したいリポジトリを追加してください。
                 </p>
+
+                <button
+                  onClick={() => setIsAddModalOpen(true)}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium mb-4"
+                >
+                  📁 リポジトリを追加
+                </button>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
@@ -135,6 +172,12 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <AddRepositoryModal
+          isOpen={isAddModalOpen}
+          onClose={() => setIsAddModalOpen(false)}
+          onSuccess={handleAddRepositorySuccess}
+        />
       </div>
     );
   }
@@ -167,9 +210,17 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                利用可能なリポジトリ
-              </h2>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  利用可能なリポジトリ
+                </h2>
+                <button
+                  onClick={() => setIsAddModalOpen(true)}
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+                >
+                  ➕ 追加
+                </button>
+              </div>
               <div className="grid gap-3">
                 {availableRepositories.map((repository) => (
                   <button
@@ -192,6 +243,12 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}
+
+      <AddRepositoryModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onSuccess={handleAddRepositorySuccess}
+      />
     </div>
   );
 };
