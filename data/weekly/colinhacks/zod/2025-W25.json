@@ -1,0 +1,479 @@
+{
+  "week": "2025-W25",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2609744871,
+      "number": 4755,
+      "state": "open",
+      "created_at": "2025-06-22T13:53:46Z",
+      "merged_at": null,
+      "title": "build: tsdown [still wip]",
+      "user": {
+        "login": "TheAlexLichter",
+        "avatar_url": "https://avatars.githubusercontent.com/u/640208?v=4"
+      },
+      "labels": [],
+      "additions": 357,
+      "deletions": 29,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2609139775,
+      "number": 4752,
+      "state": "closed",
+      "created_at": "2025-06-21T17:07:09Z",
+      "merged_at": null,
+      "title": "chore: improve library authors doc",
+      "user": {
+        "login": "lawvs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18554747?v=4"
+      },
+      "labels": [],
+      "additions": 13,
+      "deletions": 7,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2607348888,
+      "number": 4746,
+      "state": "closed",
+      "created_at": "2025-06-20T12:30:41Z",
+      "merged_at": "2025-07-08T21:38:10Z",
+      "title": "Docs: Fix typo in core.mdx",
+      "user": {
+        "login": "kilavvy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/140459108?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2602572121,
+      "number": 4743,
+      "state": "closed",
+      "created_at": "2025-06-18T18:23:18Z",
+      "merged_at": "2025-07-03T21:39:10Z",
+      "title": "feat(locale): Add Esperanto (eo) locale",
+      "user": {
+        "login": "behilam",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73665457?v=4"
+      },
+      "labels": [],
+      "additions": 127,
+      "deletions": 0,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2940316790,
+          "node_id": "PRR_kwDODqUnoM6vQax2",
+          "user": {
+            "login": "Velua",
+            "id": 8017434,
+            "node_id": "MDQ6VXNlcjgwMTc0MzQ=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8017434?u=b9f81eebb3bfd605f1ddeb8c5aab2132198e084f&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Velua",
+            "html_url": "https://github.com/Velua",
+            "followers_url": "https://api.github.com/users/Velua/followers",
+            "following_url": "https://api.github.com/users/Velua/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Velua/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Velua/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Velua/subscriptions",
+            "organizations_url": "https://api.github.com/users/Velua/orgs",
+            "repos_url": "https://api.github.com/users/Velua/repos",
+            "events_url": "https://api.github.com/users/Velua/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Velua/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4743#pullrequestreview-2940316790",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4743",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4743#pullrequestreview-2940316790"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4743"
+            }
+          },
+          "submitted_at": "2025-06-18T18:45:55Z",
+          "commit_id": "a2f159eb5893527cef7bad6e0928a692cbf830da"
+        }
+      ],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2602087565,
+      "number": 4740,
+      "state": "open",
+      "created_at": "2025-06-18T15:08:05Z",
+      "merged_at": null,
+      "title": "Allow JWT extension typ values",
+      "user": {
+        "login": "hitsthings",
+        "avatar_url": "https://avatars.githubusercontent.com/u/631812?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 1,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2939684368,
+          "node_id": "PRR_kwDODqUnoM6vOAYQ",
+          "user": {
+            "login": "hitsthings",
+            "id": 631812,
+            "node_id": "MDQ6VXNlcjYzMTgxMg==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/631812?u=ae391b14011f1ecb650dd4ced08bf3bda9d2b392&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hitsthings",
+            "html_url": "https://github.com/hitsthings",
+            "followers_url": "https://api.github.com/users/hitsthings/followers",
+            "following_url": "https://api.github.com/users/hitsthings/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hitsthings/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hitsthings/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hitsthings/subscriptions",
+            "organizations_url": "https://api.github.com/users/hitsthings/orgs",
+            "repos_url": "https://api.github.com/users/hitsthings/repos",
+            "events_url": "https://api.github.com/users/hitsthings/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hitsthings/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4740#pullrequestreview-2939684368",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4740",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4740#pullrequestreview-2939684368"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4740"
+            }
+          },
+          "submitted_at": "2025-06-18T15:16:32Z",
+          "commit_id": "8f0089fba2ea5650d6f3fd3347b6964397957fb3"
+        }
+      ],
+      "comment_list": [],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "hitsthings",
+            "avatar_url": "https://avatars.githubusercontent.com/u/631812?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2601756181,
+      "number": 4739,
+      "state": "closed",
+      "created_at": "2025-06-18T13:24:24Z",
+      "merged_at": null,
+      "title": "Typo",
+      "user": {
+        "login": "zirkelc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/950244?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2600466522,
+      "number": 4737,
+      "state": "closed",
+      "created_at": "2025-06-18T04:19:56Z",
+      "merged_at": "2025-06-18T04:42:23Z",
+      "title": "Add `z.stringFormat()`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 206,
+      "deletions": 49,
+      "changed_files": 8,
+      "comments": 0,
+      "review_comments": 1,
+      "commits": 4,
+      "reviews": [
+        {
+          "id": 2937701239,
+          "node_id": "PRR_kwDODqUnoM6vGcN3",
+          "user": {
+            "login": "colinhacks",
+            "id": 3084745,
+            "node_id": "MDQ6VXNlcjMwODQ3NDU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?u=00ba705b6a5ceaa3b4c5f3582ddb944f891f8847&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/colinhacks",
+            "html_url": "https://github.com/colinhacks",
+            "followers_url": "https://api.github.com/users/colinhacks/followers",
+            "following_url": "https://api.github.com/users/colinhacks/following{/other_user}",
+            "gists_url": "https://api.github.com/users/colinhacks/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/colinhacks/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/colinhacks/subscriptions",
+            "organizations_url": "https://api.github.com/users/colinhacks/orgs",
+            "repos_url": "https://api.github.com/users/colinhacks/repos",
+            "events_url": "https://api.github.com/users/colinhacks/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/colinhacks/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4737#pullrequestreview-2937701239",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4737",
+          "author_association": "OWNER",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4737#pullrequestreview-2937701239"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4737"
+            }
+          },
+          "submitted_at": "2025-06-18T04:38:42Z",
+          "commit_id": "6026dc1bb8f57f1f0973b2f762613831126c3953"
+        }
+      ],
+      "comment_list": [],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2600137801,
+      "number": 4736,
+      "state": "open",
+      "created_at": "2025-06-17T23:42:06Z",
+      "merged_at": null,
+      "title": "fix: use static components",
+      "user": {
+        "login": "anubra266",
+        "avatar_url": "https://avatars.githubusercontent.com/u/30869823?v=4"
+      },
+      "labels": [],
+      "additions": 10,
+      "deletions": 71,
+      "changed_files": 10,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2598960517,
+      "number": 4733,
+      "state": "closed",
+      "created_at": "2025-06-17T14:08:43Z",
+      "merged_at": null,
+      "title": "Add Zod Mini example for destructuring extension",
+      "user": {
+        "login": "alloy-d",
+        "avatar_url": "https://avatars.githubusercontent.com/u/78450?v=4"
+      },
+      "labels": [],
+      "additions": 12,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "alloy-d",
+            "avatar_url": "https://avatars.githubusercontent.com/u/78450?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2597433810,
+      "number": 4730,
+      "state": "closed",
+      "created_at": "2025-06-17T03:35:57Z",
+      "merged_at": null,
+      "title": "fix: api.mdx to use hostname regex",
+      "user": {
+        "login": "rolandsaven",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5774580?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2596440460,
+      "number": 4724,
+      "state": "closed",
+      "created_at": "2025-06-16T17:50:49Z",
+      "merged_at": "2025-06-16T18:51:07Z",
+      "title": "Fix typo in comment: \"defaults\" instead of \"defaults\"",
+      "user": {
+        "login": "leopardracer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/136604165?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2595712925,
+      "number": 4722,
+      "state": "closed",
+      "created_at": "2025-06-16T13:15:34Z",
+      "merged_at": "2025-06-16T18:53:58Z",
+      "title": "chore(docs): include zod-validation-error lib to Ecosystem page",
+      "user": {
+        "login": "NikosTsompanides",
+        "avatar_url": "https://avatars.githubusercontent.com/u/26706846?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2932107823,
+          "node_id": "PRR_kwDODqUnoM6uxGov",
+          "user": {
+            "login": "thanoskrg",
+            "id": 22836902,
+            "node_id": "MDQ6VXNlcjIyODM2OTAy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/22836902?u=20e0b8a2c0452e2ee5223f73ae4de1592ac7700e&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/thanoskrg",
+            "html_url": "https://github.com/thanoskrg",
+            "followers_url": "https://api.github.com/users/thanoskrg/followers",
+            "following_url": "https://api.github.com/users/thanoskrg/following{/other_user}",
+            "gists_url": "https://api.github.com/users/thanoskrg/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/thanoskrg/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/thanoskrg/subscriptions",
+            "organizations_url": "https://api.github.com/users/thanoskrg/orgs",
+            "repos_url": "https://api.github.com/users/thanoskrg/repos",
+            "events_url": "https://api.github.com/users/thanoskrg/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/thanoskrg/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "Thanks for taking care of that @NikosTsompanides ",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4722#pullrequestreview-2932107823",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4722",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4722#pullrequestreview-2932107823"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4722"
+            }
+          },
+          "submitted_at": "2025-06-16T13:19:32Z",
+          "commit_id": "e37716afe4a370c3e4c97c55391d7784382d84a9"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:20+09:00"
+}

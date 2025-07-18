@@ -1,0 +1,254 @@
+{
+  "week": "2024-W37",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2072107390,
+      "number": 3755,
+      "state": "closed",
+      "created_at": "2024-09-14T10:13:57Z",
+      "merged_at": "2024-10-16T21:28:17Z",
+      "title": "refactor: Rename IP version types",
+      "user": {
+        "login": "wataryooou",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 4,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2072102333,
+      "number": 3754,
+      "state": "open",
+      "created_at": "2024-09-14T10:09:11Z",
+      "merged_at": null,
+      "title": "feat(#2758): z.string().ipRange() - add support for IP address range",
+      "user": {
+        "login": "wataryooou",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+      },
+      "labels": [],
+      "additions": 400,
+      "deletions": 28,
+      "changed_files": 8,
+      "comments": 4,
+      "review_comments": 2,
+      "commits": 10,
+      "reviews": [
+        {
+          "id": 2458674813,
+          "node_id": "PRR_kwDODqUnoM6SjGZ9",
+          "user": {
+            "login": "fredboutin",
+            "id": 10170290,
+            "node_id": "MDQ6VXNlcjEwMTcwMjkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10170290?u=f99d8945dd5bba02b9fc6a5530c5143066d15149&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/fredboutin",
+            "html_url": "https://github.com/fredboutin",
+            "followers_url": "https://api.github.com/users/fredboutin/followers",
+            "following_url": "https://api.github.com/users/fredboutin/following{/other_user}",
+            "gists_url": "https://api.github.com/users/fredboutin/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/fredboutin/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/fredboutin/subscriptions",
+            "organizations_url": "https://api.github.com/users/fredboutin/orgs",
+            "repos_url": "https://api.github.com/users/fredboutin/repos",
+            "events_url": "https://api.github.com/users/fredboutin/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/fredboutin/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2458674813",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3754",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2458674813"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3754"
+            }
+          },
+          "submitted_at": "2024-11-25T14:53:57Z",
+          "commit_id": "45428a3959375fe8a8b5eaa82902ed78ba7dc313"
+        },
+        {
+          "id": 2458802071,
+          "node_id": "PRR_kwDODqUnoM6SjleX",
+          "user": {
+            "login": "gdostie",
+            "id": 35579930,
+            "node_id": "MDQ6VXNlcjM1NTc5OTMw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35579930?u=d91858812ea3a3aa14bd732245df8fc08b3be95c&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/gdostie",
+            "html_url": "https://github.com/gdostie",
+            "followers_url": "https://api.github.com/users/gdostie/followers",
+            "following_url": "https://api.github.com/users/gdostie/following{/other_user}",
+            "gists_url": "https://api.github.com/users/gdostie/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/gdostie/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/gdostie/subscriptions",
+            "organizations_url": "https://api.github.com/users/gdostie/orgs",
+            "repos_url": "https://api.github.com/users/gdostie/repos",
+            "events_url": "https://api.github.com/users/gdostie/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/gdostie/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2458802071",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3754",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2458802071"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3754"
+            }
+          },
+          "submitted_at": "2024-11-25T15:37:25Z",
+          "commit_id": "45428a3959375fe8a8b5eaa82902ed78ba7dc313"
+        },
+        {
+          "id": 2503570028,
+          "node_id": "PRR_kwDODqUnoM6VOXJs",
+          "user": {
+            "login": "wataryooou",
+            "id": 13196870,
+            "node_id": "MDQ6VXNlcjEzMTk2ODcw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13196870?u=f753eb9005c8e8627c492dcbc265fb2917124462&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/wataryooou",
+            "html_url": "https://github.com/wataryooou",
+            "followers_url": "https://api.github.com/users/wataryooou/followers",
+            "following_url": "https://api.github.com/users/wataryooou/following{/other_user}",
+            "gists_url": "https://api.github.com/users/wataryooou/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/wataryooou/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/wataryooou/subscriptions",
+            "organizations_url": "https://api.github.com/users/wataryooou/orgs",
+            "repos_url": "https://api.github.com/users/wataryooou/repos",
+            "events_url": "https://api.github.com/users/wataryooou/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/wataryooou/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2503570028",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3754",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3754#pullrequestreview-2503570028"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3754"
+            }
+          },
+          "submitted_at": "2024-12-14T05:12:14Z",
+          "commit_id": "deb9393b9cec14f46d44d5ba9fdfd5f435ac36c4"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Tamas-hi",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36476318?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "clarkmcc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6639685?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "wataryooou",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "wataryooou",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "wataryooou",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2060425534,
+      "number": 3748,
+      "state": "closed",
+      "created_at": "2024-09-09T07:57:45Z",
+      "merged_at": "2024-12-11T01:53:30Z",
+      "title": "Bump micromatch from 4.0.7 to 4.0.8",
+      "user": {
+        "login": "dependabot[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4"
+      },
+      "labels": [
+        {
+          "name": "dependencies",
+          "color": "0366d6"
+        }
+      ],
+      "additions": 11,
+      "deletions": 19,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:04+09:00"
+}

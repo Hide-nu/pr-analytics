@@ -1,0 +1,1264 @@
+{
+  "week": "2025-W20",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2526580927,
+      "number": 4397,
+      "state": "closed",
+      "created_at": "2025-05-18T03:28:42Z",
+      "merged_at": null,
+      "title": "Update zod",
+      "user": {
+        "login": "ElYaiko",
+        "avatar_url": "https://avatars.githubusercontent.com/u/11238160?v=4"
+      },
+      "labels": [],
+      "additions": 969,
+      "deletions": 262,
+      "changed_files": 23,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 13,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2526414559,
+      "number": 4396,
+      "state": "closed",
+      "created_at": "2025-05-17T23:57:02Z",
+      "merged_at": "2025-05-17T23:57:18Z",
+      "title": "Preserve shape key ordering in result",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 115,
+      "deletions": 45,
+      "changed_files": 5,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2526264885,
+      "number": 4395,
+      "state": "closed",
+      "created_at": "2025-05-17T18:38:06Z",
+      "merged_at": null,
+      "title": "chore: add `path` back to `ctx`",
+      "user": {
+        "login": "jeffsee55",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5414297?v=4"
+      },
+      "labels": [],
+      "additions": 37,
+      "deletions": 17,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525995810,
+      "number": 4391,
+      "state": "closed",
+      "created_at": "2025-05-17T10:52:30Z",
+      "merged_at": null,
+      "title": "feat: add z.looseEnum for flexible enum validation",
+      "user": {
+        "login": "Lavdewangan1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/67494351?v=4"
+      },
+      "labels": [],
+      "additions": 31032,
+      "deletions": 3938,
+      "changed_files": 12,
+      "comments": 8,
+      "review_comments": 17,
+      "commits": 6,
+      "reviews": [
+        {
+          "id": 2848240703,
+          "node_id": "PRR_kwDODqUnoM6pxLQ_",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 3**\n\n<details>\n<summary>🔭 Outside diff range comments (3)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/looseEnum.test.ts (1)</summary><blockquote>\n\n`1-92`: _🧹 Nitpick (assertive)_\n\n**Consider adding a test for error message customization**\n\nWhile your test coverage is solid, it might be worth adding a test for custom error messages with the new validator. This would ensure users can customize validation error messages as they can with other Zod validators.\n\n\n```typescript\ntest(\"supports custom error messages\", () => {\n  const schema = z.looseEnum([\"A\", \"B\"] as const, {\n    errorMap: (issue, ctx) => ({\n      message: \"Not a valid option!\",\n    }),\n  });\n  \n  try {\n    schema.parse(123);\n    fail(\"Should have thrown\");\n  } catch (error) {\n    expect(error instanceof ZodError).toBe(true);\n    expect(error.errors[0].message).toBe(\"Not a valid option!\");\n  }\n});\n```\n\n</blockquote></details>\n<details>\n<summary>deno/lib/__tests__/looseEnum.test.ts (2)</summary><blockquote>\n\n`1-92`: _⚠️ Potential issue_\n\n**Fix TypeScript errors in the test file**\n\nThere are TypeScript errors in this file about missing types for `describe`, `test`, and `expect`. Since this is a Deno test file, you'll need to add the appropriate type imports for the test runner.\n\n\nAdd the following import at the top of the file:\n\n```diff\n-import { z, ZodError } from \"../index.ts\";\n+import { z, ZodError } from \"../index.ts\";\n+import { describe, expect, test } from \"https://deno.land/std/testing/bdd.ts\";\n```\n\nThis will resolve the type errors and make sure the tests can run properly in the Deno environment.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n[error] 3-89: TS2582 and TS2304 errors: Cannot find names 'describe', 'test', and 'expect'. Suggest installing type definitions for a test runner, e.g., '@types/jest' or '@types/mocha'. Found 38 errors in total.\n\n</details>\n\n</details>\n\n---\n\n`1-92`: _🧹 Nitpick (assertive)_\n\n**Test duplication between src and deno directories**\n\nThe tests in this file are identical to those in `src/__tests__/looseEnum.test.ts` except for the import path. Consider creating a shared test utility or helper to avoid duplicating test logic, which will make maintenance easier in the future.\n\n\nYou could create a shared test generator function that both test files could import and use. This would centralize the test logic while allowing for environment-specific imports.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n[error] 3-89: TS2582 and TS2304 errors: Cannot find names 'describe', 'test', and 'expect'. Suggest installing type definitions for a test runner, e.g., '@types/jest' or '@types/mocha'. Found 38 errors in total.\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n**Cache: Disabled due to data retention organization setting**\n**Knowledge Base: Disabled due to data retention organization setting**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 3782fe29920c311984004c350b9fefaf0ae4c54a and f3334d96e014cd9c2b0086fac4bd8d71d9f4f26e.\n\n</details>\n\n<details>\n<summary>⛔ Files ignored due to path filters (2)</summary>\n\n* `package-lock.json` is excluded by `!**/package-lock.json`\n* `yarn.lock` is excluded by `!**/yarn.lock`, `!**/*.lock`\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (10)</summary>\n\n* `deno/lib/README.md` (1 hunks)\n* `deno/lib/__tests__/firstparty.test.ts` (1 hunks)\n* `deno/lib/__tests__/looseEnum.test.ts` (1 hunks)\n* `deno/lib/__tests__/standard-schema.test.ts` (1 hunks)\n* `deno/lib/types.ts` (3 hunks)\n* `package.json` (2 hunks)\n* `src/__tests__/firstparty.test.ts` (1 hunks)\n* `src/__tests__/looseEnum.test.ts` (1 hunks)\n* `src/__tests__/standard-schema.test.ts` (1 hunks)\n* `src/types.ts` (3 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n<details>\n<summary>deno/lib/README.md</summary>\n\n322-322: Inline HTML\nElement: a\n\n(MD033, no-inline-html)\n\n</details>\n\n</details>\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n<details>\n<summary>deno/lib/__tests__/looseEnum.test.ts</summary>\n\n[error] 3-89: TS2582 and TS2304 errors: Cannot find names 'describe', 'test', and 'expect'. Suggest installing type definitions for a test runner, e.g., '@types/jest' or '@types/mocha'. Found 38 errors in total.\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (13)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/standard-schema.test.ts (1)</summary>\n\n`3-4`: **Suppress unused type import warning**  \nAdding `// @ts-ignore TS6133` before the `import type { StandardSchemaV1 }` line cleanly suppresses the unused import warning without impacting functionality.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/standard-schema.test.ts (1)</summary>\n\n`4-5`: **Suppress unused type import warning**  \nThe `// @ts-ignore TS6133` directive before importing `StandardSchemaV1` properly silences the unused-type warning in Deno.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/firstparty.test.ts (1)</summary>\n\n`63-64`: **Include ZodLooseEnum in first-party switch**  \nNice catch adding the `ZodLooseEnum` case so the type kind switch stays exhaustive with the new schema.\n\n</details>\n<details>\n<summary>src/__tests__/firstparty.test.ts (1)</summary>\n\n`62-63`: **Include ZodLooseEnum in first-party switch**  \nThe new `ZodLooseEnum` branch keeps the exhaustive switch aligned with the updated `ZodFirstPartyTypeKind`. All good here!\n\n</details>\n<details>\n<summary>package.json (1)</summary>\n\n`17-17`: **Dependency updates look good!**\n\nNice work updating the dependency versions. The upgrade from beta to full release for `@standard-schema/spec` and adding the V8 coverage reporter for Vitest will help with testing stability.\n\n\n\nAlso applies to: 25-25, 28-28\n\n</details>\n<details>\n<summary>src/__tests__/looseEnum.test.ts (3)</summary>\n\n`1-39`: **Great test coverage for the core looseEnum functionality!**\n\nThe tests comprehensively cover basic functionality of the new `z.looseEnum()` validator - handling valid enum values, accepting arbitrary strings, rejecting non-strings, and working with schema refinements. The TypeScript inference test is also a nice touch to ensure type safety.\n\n---\n\n`41-72`: **Good integration tests with other Zod features**\n\nNice work testing how `looseEnum` works in combination with objects, unions, and transforms. These tests help ensure the new validator plays well with the rest of the Zod ecosystem.\n\n---\n\n`74-91`: **Well-thought-out edge case testing**\n\nI like how you've covered important edge cases like empty strings, single-value enums, and very long strings. This thorough approach will help prevent unexpected behavior in real-world usage.\n\n</details>\n<details>\n<summary>src/types.ts (2)</summary>\n\n`5365-5365`: **Correctly added to ZodFirstPartyTypeKind enum 👍**\n\nThe new ZodLooseEnum type is properly registered in the enum.\n\n---\n\n`5403-5403`: **Correctly added to ZodFirstPartySchemaTypes union 👍**\n\nAdding the type to this union ensures it's recognized throughout the codebase.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (3)</summary>\n\n`4346-4388`: **Looks great! Clean implementation of the new ZodLooseEnum.**\n\nThe new `ZodLooseEnum` implementation nicely complements the existing `ZodEnum` by providing a more permissive validation that accepts any string while still preserving TypeScript type hints for the predefined values. The code follows Zod's established patterns and structure, making it fit in seamlessly with the rest of the library.\n\n---\n\n`5365-5365`: **Good addition to the enum.**\n\nAdding `ZodLooseEnum` to the `ZodFirstPartyTypeKind` enum is exactly what's needed for proper type registration.\n\n---\n\n`5403-5403`: **Perfect addition to the union type.**\n\nIncluding `ZodLooseEnum<any>` in the `ZodFirstPartySchemaTypes` union ensures that the new type is recognized throughout the system.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848240703",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848240703"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-17T10:55:18Z",
+          "commit_id": "f3334d96e014cd9c2b0086fac4bd8d71d9f4f26e"
+        },
+        {
+          "id": 2848245611,
+          "node_id": "PRR_kwDODqUnoM6pxMdr",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 7**\n\n<details>\n<summary>♻️ Duplicate comments (1)</summary><blockquote>\n\n<details>\n<summary>package.json (1)</summary><blockquote>\n\n`123-125`: **Move yarn from dependencies to devDependencies**\n\nHey there! Looks like you've added `yarn` as a runtime dependency, but it's typically a dev tool rather than something your app needs to run. It would be better to move it to `devDependencies` instead.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n**Cache: Disabled due to data retention organization setting**\n**Knowledge Base: Disabled due to data retention organization setting**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between f3334d96e014cd9c2b0086fac4bd8d71d9f4f26e and 30bc07a903fe0da8cb1ba464864e32a7b9e606b9.\n\n</details>\n\n<details>\n<summary>⛔ Files ignored due to path filters (2)</summary>\n\n* `package-lock.json` is excluded by `!**/package-lock.json`\n* `yarn.lock` is excluded by `!**/yarn.lock`, `!**/*.lock`\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (5)</summary>\n\n* `deno/lib/__tests__/looseEnum.test.ts` (1 hunks)\n* `deno/lib/types.ts` (3 hunks)\n* `package.json` (2 hunks)\n* `src/__tests__/looseEnum.test.ts` (1 hunks)\n* `src/types.ts` (3 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (6)</summary><blockquote>\n\n<details>\n<summary>package.json (2)</summary>\n\n`17-17`: **Nice update to a stable version 👍**\n\nUpgrading `@standard-schema/spec` from a beta version to a stable release is a solid improvement for reliability.\n\n---\n\n`25-25`: **Good addition for test coverage**\n\nAdding `@vitest/coverage-v8` will help with tracking test coverage for the new `looseEnum` feature.\n\n</details>\n<details>\n<summary>src/__tests__/looseEnum.test.ts (1)</summary>\n\n`4-87`: **Great test coverage for the new looseEnum feature**\n\nThe tests are comprehensive and cover all the important aspects of the new feature:\n- Accepting valid enum values\n- Accepting arbitrary strings (the key feature!)\n- Rejecting non-string values\n- Integration with other Zod features (refine, objects, unions, transforms)\n- Handling edge cases like empty strings and very long strings\n\nThis thorough testing will help ensure the feature works reliably across different scenarios.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/looseEnum.test.ts (1)</summary>\n\n`1-88`: **Well-implemented Deno test counterpart**\n\nNice work adapting the tests for the Deno environment while maintaining the same comprehensive test coverage. Having consistent tests across both Node.js and Deno ensures the feature works reliably in both environments.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (1)</summary>\n\n`5363-5404`: **Enum and union wiring looks good** 🌟  \n\nNice job adding the new `ZodLooseEnum` kind into both `ZodFirstPartyTypeKind` and the `ZodFirstPartySchemaTypes` union – everything compiles & type-narrows correctly.\n\n</details>\n<details>\n<summary>src/types.ts (1)</summary>\n\n`5365-5365`: **Enum entry added – double-check downstream switches**\n\n`ZodFirstPartyTypeKind` now contains `ZodLooseEnum`. Make sure any exhaustive switch-statements (e.g. formatter or visitor utilities) get updated, otherwise they’ll hit the `default` branch unexpectedly.  \n <!-- review_comment_end -->\n\n<!-- file_end -->\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848245611",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848245611"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-17T11:17:17Z",
+          "commit_id": "30bc07a903fe0da8cb1ba464864e32a7b9e606b9"
+        },
+        {
+          "id": 2848256162,
+          "node_id": "PRR_kwDODqUnoM6pxPCi",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 3**\n\n<details>\n<summary>♻️ Duplicate comments (1)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (1)</summary><blockquote>\n\n`4266-4277`: **Style nits resolved**  \n\nBoth `ZodLiteral` and `ZodNaN` now delegate to the `OK()` helper, matching the rest of the codebase. Thanks for tidying those up.  \n\n\n\n\nAlso applies to: 5078-5091\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n**Cache: Disabled due to data retention organization setting**\n**Knowledge Base: Disabled due to data retention organization setting**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 30bc07a903fe0da8cb1ba464864e32a7b9e606b9 and 0f4754f14e648a9df8ded20a939ab764b55a3b09.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `deno/lib/__tests__/looseEnum.test.ts` (1 hunks)\n* `deno/lib/types.ts` (6 hunks)\n* `src/__tests__/looseEnum.test.ts` (1 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (17)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/looseEnum.test.ts (11)</summary>\n\n`1-4`: **Imports look good**\n\nThe imports are properly organized - Jest testing utilities first, then the module under test with a blank line separating them.\n\n---\n\n`5-7`: **Nice setup for the test subject**\n\nThe test enum and schema setup is clean and readable. Using `as const` is the right approach here to preserve the literal types.\n\n---\n\n`8-12`: **Good coverage of valid enum values**\n\nThis test properly verifies that all the predefined enum values are accepted, which is essential for the basic functionality.\n\n---\n\n`14-19`: **Key functionality test looks good**\n\nThis test nicely demonstrates the core functionality of the loose enum - accepting strings outside the predefined values, including empty strings. This is the main differentiator from regular enums.\n\n---\n\n`20-26`: **Good boundary testing**\n\nTesting rejection of non-string values is important to maintain type safety while being flexible with string values.\n\n---\n\n`27-34`: **Nice integration test with refine()**\n\nThis shows the validator plays well with other Zod features, which is crucial for real-world usage.\n\n---\n\n`35-39`: **Type inference test is valuable**\n\nConfirming TypeScript inference works properly is important, especially for a type-focused library like Zod.\n\n---\n\n`40-55`: **Good object schema integration test**\n\nThis effectively shows how the loose enum works within object schemas, which is a common use case.\n\n---\n\n`56-62`: **Union type compatibility looks good**\n\nDemonstrating compatibility with unions is important for complex schema compositions.\n\n---\n\n`63-70`: **Transform test is well-crafted**\n\nThis shows the validator works seamlessly with transformations, which is another key Zod feature.\n\n---\n\n`71-87`: **Good edge case coverage**\n\nThe tests for empty strings, single-value enums, and very long strings provide solid coverage of edge cases that could potentially cause issues.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/looseEnum.test.ts (2)</summary>\n\n`1-4`: **Deno imports are properly adapted**\n\nThe imports correctly use Deno's URL-based import system for expect, and the built-in Deno test runner.\n\n---\n\n`6-87`: **Great cross-platform test consistency**\n\nThe test cases match the Node.js version, providing consistent coverage across both platforms. This ensures the feature works the same way regardless of the runtime environment.\n\n</details>\n<details>\n<summary>src/types.ts (3)</summary>\n\n`3227-3233`: **Nice! discriminator branch added**  \n\nHooking `ZodLooseEnum` into `getDiscriminator` means it now works in `z.discriminatedUnion()`. Good catch.\n\n---\n\n`4270-4277`: **Consistency win – swapped raw objects for `OK()` helper**  \n\nThe refactor in `ZodLiteral` and `ZodNaN` keeps the codebase uniform and a tad cleaner.  \n\n\n\nAlso applies to: 5088-5092\n\n---\n\n`5407-5410`: **Union type updated**  \n\n`ZodFirstPartySchemaTypes` now includes `ZodLooseEnum`, so downstream helper code stays in sync.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (1)</summary>\n\n`4379-4388`: **Nice – `create()` now forwards customisation params 👌**  \n\nForwarding `...processCreateParams(params)` fixes the limitation raised in the previous review and keeps the API symmetrical with other Zod types. Looks good.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848256162",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848256162"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-17T11:41:08Z",
+          "commit_id": "0f4754f14e648a9df8ded20a939ab764b55a3b09"
+        },
+        {
+          "id": 2848261224,
+          "node_id": "PRR_kwDODqUnoM6pxQRo",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 2**\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n**Cache: Disabled due to data retention organization setting**\n**Knowledge Base: Disabled due to data retention organization setting**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 0f4754f14e648a9df8ded20a939ab764b55a3b09 and 5eb4337eccb601a4686cf22492612e76ab7cc1b3.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (2)</summary>\n\n* `deno/lib/types.ts` (6 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (5)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (4)</summary>\n\n`3227-3232`: **Nice one – discriminator helper now groks `ZodLooseEnum`**\n\nAdding the `instanceof ZodLooseEnum` branch keeps discriminated-union support consistent with the other enum flavours. Looks good.\n\n---\n\n`4266-4277`: **Switched to the `OK()` helper – tidy ✅**\n\nReturning via `OK(input.data)` keeps the style uniform with the rest of the file. No concerns here.\n\n---\n\n`5370-5372`: **Enum-kind registry updated – ✔️**\n\n`ZodFirstPartyTypeKind` now contains `ZodLooseEnum`, keeping internal reflection happy.\n\n---\n\n`5408-5411`: **Union of first-party schema types got its new member – all good**\n\n`ZodLooseEnum<any>` now joins the big union, so helper utilities that rely on this type stay exhaustive.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (1)</summary>\n\n`5409-5410`: **Nice touch adding `ZodLooseEnum` to the public union 👍**\n\nIncluding the new type in `ZodFirstPartySchemaTypes` ensures helpers and downstream lib consumers pick it up automatically. Looks clean.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848261224",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848261224"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-17T12:00:59Z",
+          "commit_id": "5eb4337eccb601a4686cf22492612e76ab7cc1b3"
+        },
+        {
+          "id": 2848263757,
+          "node_id": "PRR_kwDODqUnoM6pxQ5N",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 2**\n\n<details>\n<summary>♻️ Duplicate comments (1)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`4354-4373`: _⚠️ Potential issue_\n\n**Compile-time type mismatch in `_parse` – breaks soundness**\n\n`ZodLooseEnum` advertises an **output type of `string`**, yet `_parse` is declared to return `ParseReturnType<T[number]>` (the *narrow* tuple union).  \nTS will flag this as an incompatible override and, even if forced, downstream code will believe the value is the strict union while any string slips through at runtime.\n\nFix by aligning the method’s return type with the class’ output type:\n\n```diff\n-  _parse(input: ParseInput): ParseReturnType<T[number]> {\n+  _parse(input: ParseInput): ParseReturnType<string> {\n     const parsedType = getParsedType(input.data);\n@@\n     return OK(input.data);\n   }\n```\n\nAfter the change both runtime and compile-time views agree the result is `string`, restoring type safety and compiler happiness.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n**Cache: Disabled due to data retention organization setting**\n**Knowledge Base: Disabled due to data retention organization setting**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 5eb4337eccb601a4686cf22492612e76ab7cc1b3 and d0cd4716d3beab29095ab49f3c2aeef365887fca.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (2)</summary>\n\n* `deno/lib/types.ts` (6 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (10)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (4)</summary>\n\n`3230-3232`: **Nice touch – discriminator extraction updated**\n\nGood call adding `ZodLooseEnum` to the `getDiscriminator` helper; this keeps discriminated-union inference in sync with the new type.\n\n---\n\n`4276-4276`: **Nit resolved – now using `OK()`**\n\nSwitching to the `OK()` helper keeps this branch consistent with the rest of Zod. Looks clean.\n\n---\n\n`5090-5090`: **Same here – `OK()` makes it tidy**\n\nConsistency FTW.\n\n---\n\n`5371-5410`: **Registry update checks out**\n\n`ZodLooseEnum` is now registered in `ZodFirstPartyTypeKind` and the big union type. Everything compiles together – once the earlier generic hiccup is patched 😉\n\n</details>\n<details>\n<summary>src/types.ts (6)</summary>\n\n`3230-3232`: **Loose enums now work as discriminators – nice!**\n\nAdding `ZodLooseEnum` to `getDiscriminator` means `z.discriminatedUnion()` can finally accept the loose flavour out-of-the-box. Good call.\n\n---\n\n`4276-4276`: **Swapping to `OK()` keeps things tidy**\n\nReturning via the shared helper matches the rest of the file. Looks good.\n\n---\n\n`4390-4394`: **Helper overload mirrors `z.enum` API – 👍**\n\nThe `looseEnum` helper accepts a readonly tuple and returns a writable version, matching the standard `z.enum` experience.\n\n---\n\n`5090-5090`: **Consistent OK() usage in `ZodNaN`**\n\nCool – brings `ZodNaN` in line with the other scalar schemas.\n\n---\n\n`5371-5371`: **Enum of kinds updated**\n\n`ZodFirstPartyTypeKind` now includes `ZodLooseEnum`; essential for introspection tooling.\n\n---\n\n`5409-5410`: **`ZodFirstPartySchemaTypes` union extended**\n\nAdding `ZodLooseEnum<any>` completes the public surface – no objections.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848263757",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2848263757"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-17T12:12:32Z",
+          "commit_id": "d0cd4716d3beab29095ab49f3c2aeef365887fca"
+        },
+        {
+          "id": 2852886529,
+          "node_id": "PRR_kwDODqUnoM6qC5gB",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2852886529",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4391",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4391#pullrequestreview-2852886529"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4391"
+            }
+          },
+          "submitted_at": "2025-05-20T06:50:23Z",
+          "commit_id": "d0cd4716d3beab29095ab49f3c2aeef365887fca"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Lavdewangan1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/67494351?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "samchungy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Lavdewangan1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/67494351?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Lavdewangan1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/67494351?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2525860894,
+      "number": 4390,
+      "state": "closed",
+      "created_at": "2025-05-17T07:33:26Z",
+      "merged_at": "2025-05-17T07:35:03Z",
+      "title": "Add `$schema` in `z.toJSONSchema`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 131,
+      "deletions": 6,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525860712,
+      "number": 4389,
+      "state": "closed",
+      "created_at": "2025-05-17T07:32:59Z",
+      "merged_at": null,
+      "title": "Add `$schema` in `z.toJSONSchema()`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 67054,
+      "deletions": 22265,
+      "changed_files": 522,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 488,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525824119,
+      "number": 4388,
+      "state": "closed",
+      "created_at": "2025-05-17T06:52:13Z",
+      "merged_at": "2025-05-17T07:00:56Z",
+      "title": "Improve min/max in JSON Schema",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 294,
+      "deletions": 132,
+      "changed_files": 12,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 7,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525673772,
+      "number": 4387,
+      "state": "closed",
+      "created_at": "2025-05-17T04:06:12Z",
+      "merged_at": "2025-05-17T04:07:29Z",
+      "title": "Simplify object generics, add test for empty objects",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 96,
+      "deletions": 84,
+      "changed_files": 7,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525580249,
+      "number": 4386,
+      "state": "closed",
+      "created_at": "2025-05-17T02:17:30Z",
+      "merged_at": "2025-05-17T02:31:43Z",
+      "title": "Improve base64 perf. Disallow padding in base64url.",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 75,
+      "deletions": 24,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 5,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525527074,
+      "number": 4385,
+      "state": "closed",
+      "created_at": "2025-05-17T01:09:40Z",
+      "merged_at": "2025-05-17T01:13:15Z",
+      "title": "`z.toJSONSchema`: Defer execution of `override`, improve ref handling",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 196,
+      "deletions": 115,
+      "changed_files": 5,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2525220945,
+      "number": 4384,
+      "state": "closed",
+      "created_at": "2025-05-16T19:52:43Z",
+      "merged_at": "2025-05-16T19:54:59Z",
+      "title": "Improve discriminateduion errors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 67,
+      "deletions": 73,
+      "changed_files": 7,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2524472873,
+      "number": 4382,
+      "state": "closed",
+      "created_at": "2025-05-16T12:52:16Z",
+      "merged_at": "2025-05-17T04:05:25Z",
+      "title": "Fix: $ZodCatch schema catchValue handling on validation error",
+      "user": {
+        "login": "chimame",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7520815?v=4"
+      },
+      "labels": [],
+      "additions": 16,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2523529172,
+      "number": 4380,
+      "state": "closed",
+      "created_at": "2025-05-16T03:49:02Z",
+      "merged_at": "2025-05-17T04:10:22Z",
+      "title": "Fix typo in json-schema.mdx",
+      "user": {
+        "login": "fabian-hiller",
+        "avatar_url": "https://avatars.githubusercontent.com/u/35291865?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2523355980,
+      "number": 4379,
+      "state": "closed",
+      "created_at": "2025-05-16T00:40:22Z",
+      "merged_at": "2025-05-16T00:44:26Z",
+      "title": "Allow generic on coerce functions",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 35,
+      "deletions": 57,
+      "changed_files": 5,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "erlandsona",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10421138?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2523119401,
+      "number": 4377,
+      "state": "closed",
+      "created_at": "2025-05-15T21:09:49Z",
+      "merged_at": "2025-05-15T21:09:56Z",
+      "title": "Defer initialization to avoid crashes with z.lazy. Closes #4324.",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 46,
+      "deletions": 16,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2523074014,
+      "number": 4376,
+      "state": "closed",
+      "created_at": "2025-05-15T20:39:38Z",
+      "merged_at": "2025-05-15T20:41:21Z",
+      "title": "Implement `z.prefault`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 210,
+      "deletions": 18,
+      "changed_files": 10,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2522811455,
+      "number": 4375,
+      "state": "closed",
+      "created_at": "2025-05-15T18:06:40Z",
+      "merged_at": "2025-05-15T18:32:51Z",
+      "title": "v4 docs: Escape `.` in example Regex for `z.url` with `hostname`",
+      "user": {
+        "login": "LorisSigrist",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43482866?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2522611676,
+      "number": 4374,
+      "state": "closed",
+      "created_at": "2025-05-15T16:30:18Z",
+      "merged_at": "2025-05-17T05:27:33Z",
+      "title": "fix: use JSON.stringify to escape toDotPath keys w/ quotes",
+      "user": {
+        "login": "mmkal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15040698?v=4"
+      },
+      "labels": [],
+      "additions": 11,
+      "deletions": 3,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2521054726,
+      "number": 4368,
+      "state": "closed",
+      "created_at": "2025-05-15T06:11:02Z",
+      "merged_at": "2025-05-15T06:13:35Z",
+      "title": "Add `jitless` flag to avoid `eval`/`new Function`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 23,
+      "deletions": 17,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "robfig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/536325?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2520984528,
+      "number": 4367,
+      "state": "closed",
+      "created_at": "2025-05-15T05:36:22Z",
+      "merged_at": "2025-05-15T05:38:15Z",
+      "title": "Improve `z.url()`: support `hostname` and `protocol` regexes",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 164,
+      "deletions": 14,
+      "changed_files": 7,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2518694215,
+      "number": 4365,
+      "state": "closed",
+      "created_at": "2025-05-14T09:15:51Z",
+      "merged_at": "2025-05-15T07:26:28Z",
+      "title": "v4: set `additionalProperties` to `false` when catchall is never",
+      "user": {
+        "login": "jecquas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25390037?v=4"
+      },
+      "labels": [],
+      "additions": 5,
+      "deletions": 7,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2518474288,
+      "number": 4364,
+      "state": "closed",
+      "created_at": "2025-05-14T07:47:37Z",
+      "merged_at": "2025-05-14T19:40:22Z",
+      "title": "Drop `@zod/core`. Switch to subpaths for Zod 4 (`\"zod/v4\"` and `\"zod/v4-mini\"`)",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 16005,
+      "deletions": 1253,
+      "changed_files": 297,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 5,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2515042467,
+      "number": 4359,
+      "state": "closed",
+      "created_at": "2025-05-12T22:22:50Z",
+      "merged_at": "2025-05-13T18:27:33Z",
+      "title": "fix(core): prototype pollution in `generateFastpass`",
+      "user": {
+        "login": "ahrjarrett",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15133992?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2834762238,
+          "node_id": "PRR_kwDODqUnoM6o9wn-",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "> [!CAUTION]\n> Inline review comments failed to post. This is likely due to GitHub's limits when posting large numbers of comments.  If you are seeing this consistently it is likely a permissions issue. Please check \"Moderation\" -> \"Code review limits\" under your organization settings.\n\n**Actionable comments posted: 18**\n\n<details>\n<summary>🔭 Outside diff range comments (3)</summary><blockquote>\n\n<details>\n<summary>README.md (2)</summary><blockquote>\n\n`113-120`: _🧹 Nitpick (assertive)_\n\n**Fix Markdown link fragment for ZodTransform anchor**  \nThe anchor link `#zodtype-with-ZodTransform` should be lowercase to match GitHub’s automatic fragment generation.  \nApply this diff:\n```diff\n- - [ZodType with ZodTransform](#zodtype-with-ZodTransform)\n+ - [ZodType with ZodTransform](#zodtype-with-zodtransform)\n```\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n117-117: Link fragments should be valid\nExpected: #zodtype-with-zodtransform; Actual: #zodtype-with-ZodTransform\n\n(MD051, link-fragments)\n\n</details>\n\n</details>\n\n---\n\n`765-772`: _🧹 Nitpick (assertive)_\n\n**Typo: IPv6 formatting**  \nChange \"IP 6\" to \"IPv6\" for consistency:\n```diff\n- The `z.string().ip()` method by default validate IPv4 and IP 6.\n+ The `z.string().ip()` method by default validates IPv4 and IPv6.\n```\n\n</blockquote></details>\n<details>\n<summary>.configs/rollup.config.js (1)</summary><blockquote>\n\n`1-26`: _🧹 Nitpick (assertive)_\n\n**Consider enabling sourcemaps for debugging**  \nYou’ve got the `sourcemap` option commented out. It can be super handy during development:  \n```diff\n-output: {\n-  file: \"./scratch/out_rollup.js\", // Output file\n-  format: \"esm\", // ES module format to enable tree-shaking\n-  // sourcemap: true, // Generate sourcemaps for easier debugging\n-},\n+output: {\n+  file: \"./scratch/out_rollup.js\", // Output file\n+  format: \"esm\", // ES module format to enable tree-shaking\n+  sourcemap: true, // Generate sourcemaps for easier debugging\n+},\n```  \nIf you’d rather keep it off by default, consider gating it behind an env var or CLI flag. Otherwise, this config looks solid.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>🛑 Comments failed to post (18)</summary><blockquote>\n\n<details>\n<summary>ERROR_HANDLING.md (3)</summary><blockquote>\n\n188-197: _🧹 Nitpick (assertive)_\n\n**Fix typo in Locales section**  \nThere's a small typo in the Locales intro: \"deafult\" should be \"default\".  \n  \n```diff\n-There are locale-specific error maps built into Zod for various languages. To set the deafult error map based on your locale, you can import...\n+There are locale-specific error maps built into Zod for various languages. To set the default error map based on your locale, you can import...\n```\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n## Locales\n\nThere are locale-specific error maps built into Zod for various languages. To set the default error map based on your locale, you can import the error map from the `zod/locales` directory.\n\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn ERROR_HANDLING.md around lines 188 to 197, fix the typo in the Locales\nsection by changing \"deafult\" to \"default\" in the sentence describing setting\nthe default error map based on locale.\n```\n\n</details>\n\n---\n\n43-57: _🧹 Nitpick (assertive)_\n\n**Remove inline HTML `<br>` tags for cleaner Markdown**  \nThe `<br>` tags flagged by markdownlint can be replaced with Markdown-native line breaks (two spaces + newline) or list items. This will improve portability and linting compliance without altering the table content.  \n  \nSuggested diff for one case (apply similarly to other rows):\n```diff\n-| ZodIssueCode.invalid_type               | `expected: ZodParsedType` <br> `received: ZodParsedType` |\n+| ZodIssueCode.invalid_type               | `expected: ZodParsedType`  \\\n+                                       `received: ZodParsedType` |\n```\n\n\n> Committable suggestion skipped: line range outside the PR's diff.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[style] ~57-~57: As a shorter alternative for ‘able to’, consider using “can”.\nContext: ...hrow issues of any `ZodIssueCode`). You are able to pass in a `params` object here that is ...\n\n(BE_ABLE_TO)\n\n</details>\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n47-47: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n48-48: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n49-49: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n50-50: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n52-52: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Link fragments should be valid\nExpected: #customizing-errors-with-zoderrormap; Actual: #Customizing-errors-with-ZodErrorMap\n\n(MD051, link-fragments)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn ERROR_HANDLING.md between lines 43 and 57, the table uses inline HTML <br>\ntags for line breaks, which markdownlint flags as non-compliant. Replace all\n<br> tags with Markdown-native line breaks by adding two spaces at the end of\nthe line followed by a newline, or convert the content into proper list items\nwithin the table cells. Apply this change consistently across all rows to\nimprove Markdown portability and linting compliance without changing the\ncontent.\n```\n\n</details>\n\n---\n\n43-57: _🧹 Nitpick (assertive)_\n\n**Fix link fragment to match actual heading ID**  \nThe reference to `#Customizing-errors-with-ZodErrorMap` won’t work with GitHub’s slugging. Use a lowercase slug `#customizing-errors-with-zoderrormap` to ensure the link jumps correctly.  \n  \nExample diff:\n```diff\n-(see [ZodErrorMap](#Customizing-errors-with-ZodErrorMap) below for details)\n+(see [ZodErrorMap](#customizing-errors-with-zoderrormap) below for details)\n```\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n| ZodIssueCode.custom                     | `params: { [k: string]: any }` <br> This is the error code throw by refinements (unless you are using `superRefine` in which case it's possible to throw issues of any `ZodIssueCode`). You are able to pass in a `params` object here that is available in your custom error maps (see [ZodErrorMap](#customizing-errors-with-zoderrormap) below for details on error maps)                                 |\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[style] ~57-~57: As a shorter alternative for ‘able to’, consider using “can”.\nContext: ...hrow issues of any `ZodIssueCode`). You are able to pass in a `params` object here that is ...\n\n(BE_ABLE_TO)\n\n</details>\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n47-47: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n48-48: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n49-49: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n50-50: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n52-52: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Link fragments should be valid\nExpected: #customizing-errors-with-zoderrormap; Actual: #Customizing-errors-with-ZodErrorMap\n\n(MD051, link-fragments)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn ERROR_HANDLING.md around lines 43 to 57, the link fragment\n`#Customizing-errors-with-ZodErrorMap` does not match GitHub's slugging rules\nand will not navigate correctly. Change the fragment to lowercase\n`#customizing-errors-with-zoderrormap` to ensure the link works properly.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.nvmrc (1)</summary><blockquote>\n\n1-1: _🧹 Nitpick (assertive)_\n\n**Use an LTS-friendly version specifier**  \nLocking to `22` could mismatch the current Node LTS schedule. Consider using `lts/*` or pinning to a released LTS (e.g., `20`) to ensure contributors don’t accidentally run on an unsupported version.\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn the .nvmrc file at line 1, the Node version is locked to \"22\", which may not\nalign with the current LTS schedule. Replace \"22\" with \"lts/*\" to always use the\nlatest LTS version or pin it to a specific released LTS version like \"20\" to\nensure consistency and avoid using unsupported Node versions.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.gitignore (1)</summary><blockquote>\n\n9-22: _🧹 Nitpick (assertive)_\n\n**Anchor ignore patterns to the repo root**  \nPatterns like `scratch`, `out.png`, `logos`, etc., will match those names anywhere in the tree. To avoid unintended ignores, prefix them with `/` (e.g., `/scratch`, `/out.png`, `/logos/`).\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn the .gitignore file from lines 9 to 22, the ignore patterns are not anchored\nto the repository root, causing them to match files or directories with the same\nnames anywhere in the project tree. To fix this, prefix each pattern with a\nslash (/) to anchor it to the root, for example, change \"scratch\" to \"/scratch\"\nand \"logos\" to \"/logos/\". This ensures only the intended files or directories at\nthe root are ignored.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>README_ZH.md (1)</summary><blockquote>\n\n1250-1251: _🧹 Nitpick (assertive)_\n\n**Translate inline English comments**  \nThis Chinese README includes an English comment `// cast to z.ZodType<Category>`. For consistency, either translate it into Chinese or remove it if it’s redundant for readers.\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn README_ZH.md around lines 1250 to 1251, the inline English comment \"// cast\nto z.ZodType<Category>\" should be translated into Chinese for consistency with\nthe rest of the document or removed if it is redundant. Update the comment to a\nclear Chinese equivalent or delete it to maintain language uniformity in the\nREADME.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.changeset/config.json (1)</summary><blockquote>\n\n1-11: _🧹 Nitpick (assertive)_\n\n**Confirm changeset commit behavior**  \nWith `\"commit\": false`, changesets won’t be auto-committed by the CLI. If you’d prefer automation, you might toggle this to `true`.\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .changeset/config.json from lines 1 to 11, the \"commit\" property is set to\nfalse, which disables automatic committing of changesets by the CLI. To enable\nautomated commits of changesets, change the value of \"commit\" from false to\ntrue.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/pull_request_template.md (1)</summary><blockquote>\n\n3-3: _🧹 Nitpick (assertive)_\n\n**Fix typo in PR template**  \nThere's a small spelling slip—“contribting” should be “contributing.”  \n```diff\n- Thanks for contribting to OSS!\n+ Thanks for contributing to OSS!\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\nDevelopment of the next major version of Zod (`v4`) is currently underway. During this phase, only bugfixes and documentation improvements are being accepted into the `main` branch. All other PRs should target the `v4` branch. Thanks for contributing to OSS!\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/pull_request_template.md at line 3, fix the typo by changing\n\"contribting\" to \"contributing\" to correct the spelling error in the PR template\nmessage.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>CONTRIBUTING.md (3)</summary><blockquote>\n\n73-75: _🧹 Nitpick (assertive)_\n\n**Tighten wording and drop extra punctuation**  \nReduce unnecessary parentheses and smooth out line 75:  \n```diff\n- > Zod uses git hooks to execute tests before `git push`. Before submitting your PR, run `pnpm test` to make sure there are no (unintended) breaking changes.\n+ > Zod uses git hooks to execute tests before `git push`. Before submitting your PR, run `pnpm test` to make sure there are no unintended breaking changes.\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\nZod uses Vitest for testing. After implementing your contribution, write tests for it. Just create a new file in the `tests` directory of any workspace, or add additional tests to an existing file if appropriate.\n\n> Zod uses git hooks to execute tests before `git push`. Before submitting your PR, run `pnpm test` to make sure there are no unintended breaking changes.\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~75-~75: You might be missing the article “the” here.\nContext: ...t push`. Before submitting your PR, run `pnpm test` to make sure there are no (un...\n\n(AI_EN_LECTOR_MISSING_DETERMINER_THE)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn CONTRIBUTING.md lines 73 to 75, improve clarity by tightening the wording and\nremoving extra punctuation. Specifically, rephrase line 75 to eliminate\nunnecessary parentheses around \"unintended\" and smooth the sentence flow for\nbetter readability without changing the meaning.\n```\n\n</details>\n\n---\n\n30-32: _🧹 Nitpick (assertive)_\n\n**Unify install command for consistency**  \nThe guide currently says `pnpm i`, but elsewhere we use `pnpm install`. Let’s stick to the full form for clarity:  \n```diff\n- 3. Run `pnpm i` to install dependencies.\n+ 3. Run `pnpm install` to install dependencies.\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n3. Run `pnpm install` to install dependencies.\n\n4. Start playing with the code! You can do some simple experimentation in [`playground.ts`](playground.ts) (see `pnpm play` below) or start implementing a feature right away.\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn CONTRIBUTING.md around lines 30 to 32, replace the shorthand command `pnpm i`\nwith the full command `pnpm install` to maintain consistency and clarity\nthroughout the documentation.\n```\n\n</details>\n\n---\n\n47-57: _🧹 Nitpick (assertive)_\n\n**Clarify test command descriptions**  \nThe description for `pnpm test:watch` is cut off, and the `pnpm test` line is missing an article. Here’s a tweak:  \n```diff\n- **`pnpm test:watch`**\n- - runs all Vitest tests and\n+ **`pnpm test:watch`**\n+ - runs all Vitest tests in watch mode\n\n- - runs all Vitest tests and generates coverage badge\n+ - runs all Vitest tests and generates a coverage badge\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n**`pnpm build`**\n\n- deletes `lib` and re-compiles `src` to `lib`\n\n**`pnpm test`**\n\n- runs all Vitest tests and generates a coverage badge\n\n**`pnpm test:watch`**\n\n- runs all Vitest tests in watch mode\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~53-~53: You might be missing the article “a” here.\nContext: ...  - runs all Vitest tests and generates coverage badge  **`pnpm test:watch`**  - runs al...\n\n(AI_EN_LECTOR_MISSING_DETERMINER_A)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn CONTRIBUTING.md around lines 47 to 57, the description for the `pnpm\ntest:watch` command is incomplete and the `pnpm test` description is missing an\narticle. Complete the `pnpm test:watch` description to fully explain its\nbehavior and add the missing article (\"runs all the Vitest tests\") in the `pnpm\ntest` description for clarity and correctness.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/release-beta.yaml (4)</summary><blockquote>\n\n21-21: _🧹 Nitpick (assertive)_\n\n**Remove trailing whitespace**  \nLine 21 has extra spaces triggering YAML lint errors—please trim them.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[error] 21-21: trailing spaces\n\n(trailing-spaces)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/release-beta.yaml at line 21, there are trailing whitespace\ncharacters causing YAML lint errors. Remove all extra spaces at the end of this\nline to fix the linting issue.\n```\n\n</details>\n\n---\n\n32-32: _🧹 Nitpick (assertive)_\n\n**Remove trailing whitespace**  \nLine 32 ends with unwanted spaces; please delete them to satisfy the linter.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[error] 32-32: trailing spaces\n\n(trailing-spaces)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/release-beta.yaml at line 32, remove the trailing\nwhitespace characters at the end of the line to comply with the linter\nrequirements.\n```\n\n</details>\n\n---\n\n26-26: _🧹 Nitpick (assertive)_\n\n**Remove trailing whitespace**  \nLine 26 also has stray spaces at the end—let’s clean that up.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[error] 26-26: trailing spaces\n\n(trailing-spaces)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/release-beta.yaml at line 26, remove any trailing\nwhitespace characters at the end of the line to clean up stray spaces.\n```\n\n</details>\n\n---\n\n1-3: _🧹 Nitpick (assertive)_\n\n**Correct workflow header comment**  \nThe top comment mentions `release.yml`, but this file is `release-beta.yaml`. Let’s update it:  \n```diff\n- # .github/release.yml\n+ # .github/workflows/release-beta.yaml\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n# .github/workflows/release-beta.yaml\n\nname: Release betas\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/release-beta.yaml at lines 1 to 3, the top comment\nincorrectly references release.yml instead of release-beta.yaml. Update the\ncomment to correctly reflect the current file name as release-beta.yaml.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/test.yml (1)</summary><blockquote>\n\n24-26: _🧹 Nitpick (assertive)_\n\n**🚀 Speed up CI with pnpm cache**  \nConsider caching the pnpm store to cut install times. For example:  \n```diff\n+      - name: Cache pnpm store\n+        uses: actions/cache@v3\n+        with:\n+          path: ~/.pnpm-store\n+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}\n+          restore-keys: |\n+            ${{ runner.os }}-pnpm-\n```\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/test.yml around lines 24 to 26, the pnpm install step does\nnot use caching, which slows down CI. Add a cache step for the pnpm store before\nrunning pnpm install by using actions/cache with the path set to the pnpm store\ndirectory and a key based on the OS and pnpm lockfile. This will speed up\nsubsequent installs by reusing cached dependencies.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/release.yml (1)</summary><blockquote>\n\n22-22: _🧹 Nitpick (assertive)_\n\n**🧹 Remove trailing spaces**  \nYAMLlint flagged trailing spaces on these lines. Cleaning them up will keep the file tidy.  \n\n\n\nAlso applies to: 51-51\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[error] 22-22: trailing spaces\n\n(trailing-spaces)\n\n</details>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .github/workflows/release.yml at lines 22 and 51, there are trailing spaces\nthat cause YAMLlint warnings. Remove any trailing whitespace characters at the\nend of these lines to clean up the file and comply with YAML formatting\nstandards.\n```\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.configs/tsconfig.base.json (1)</summary><blockquote>\n\n15-15: _🧹 Nitpick (assertive)_\n\n**⚡️ Consider enabling noUnusedLocals**  \nYou’ve set `\"noUnusedLocals\": false` to avoid noise, but turning it on could catch dead code and improve maintainability down the line.\n\n<details>\n<summary>🤖 Prompt for AI Agents (early access)</summary>\n\n```\nIn .configs/tsconfig.base.json at line 15, the \"noUnusedLocals\" option is set to\nfalse, which disables detection of unused local variables. To improve code\nquality and maintainability, change the value of \"noUnusedLocals\" from false to\ntrue to enable this compiler check.\n```\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4359#pullrequestreview-2834762238",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4359",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4359#pullrequestreview-2834762238"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4359"
+            }
+          },
+          "submitted_at": "2025-05-12T22:28:19Z",
+          "commit_id": "7a910c9950aa699afe8fa18f7edd3cfd60e22e93"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ahrjarrett",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15133992?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2514353291,
+      "number": 4354,
+      "state": "closed",
+      "created_at": "2025-05-12T16:27:25Z",
+      "merged_at": null,
+      "title": "fix(core): `z.enum` filters out members whose key maps to an unrelated numeric value",
+      "user": {
+        "login": "ahrjarrett",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15133992?v=4"
+      },
+      "labels": [],
+      "additions": 19,
+      "deletions": 6,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 5,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2514223422,
+      "number": 4352,
+      "state": "closed",
+      "created_at": "2025-05-12T15:29:30Z",
+      "merged_at": null,
+      "title": "Added Parent property to RefinementCtx",
+      "user": {
+        "login": "callmeyaz",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153041297?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "callmeyaz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/153041297?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:10+09:00"
+}

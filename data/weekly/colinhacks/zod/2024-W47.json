@@ -1,0 +1,343 @@
+{
+  "week": "2024-W47",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2192648753,
+      "number": 3866,
+      "state": "open",
+      "created_at": "2024-11-21T16:00:32Z",
+      "merged_at": null,
+      "title": "feat(v3): Added file type",
+      "user": {
+        "login": "obha",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7314116?v=4"
+      },
+      "labels": [],
+      "additions": 244,
+      "deletions": 12,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 2,
+      "commits": 7,
+      "reviews": [
+        {
+          "id": 2904434210,
+          "node_id": "PRR_kwDODqUnoM6tHiYi",
+          "user": {
+            "login": "m10rten",
+            "id": 57992191,
+            "node_id": "MDQ6VXNlcjU3OTkyMTkx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?u=905b53658455f179e5cc76a6d40ad8f560f1be6a&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/m10rten",
+            "html_url": "https://github.com/m10rten",
+            "followers_url": "https://api.github.com/users/m10rten/followers",
+            "following_url": "https://api.github.com/users/m10rten/following{/other_user}",
+            "gists_url": "https://api.github.com/users/m10rten/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/m10rten/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/m10rten/subscriptions",
+            "organizations_url": "https://api.github.com/users/m10rten/orgs",
+            "repos_url": "https://api.github.com/users/m10rten/repos",
+            "events_url": "https://api.github.com/users/m10rten/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/m10rten/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3866#pullrequestreview-2904434210",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3866",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3866#pullrequestreview-2904434210"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3866"
+            }
+          },
+          "submitted_at": "2025-06-06T09:55:30Z",
+          "commit_id": "a462132667bea4ee67817699f67f4a2fa7148198"
+        },
+        {
+          "id": 2907287554,
+          "node_id": "PRR_kwDODqUnoM6tSbAC",
+          "user": {
+            "login": "obha",
+            "id": 7314116,
+            "node_id": "MDQ6VXNlcjczMTQxMTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7314116?u=afc1311b6123580ae59d0685655903e5cf95a465&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/obha",
+            "html_url": "https://github.com/obha",
+            "followers_url": "https://api.github.com/users/obha/followers",
+            "following_url": "https://api.github.com/users/obha/following{/other_user}",
+            "gists_url": "https://api.github.com/users/obha/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/obha/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/obha/subscriptions",
+            "organizations_url": "https://api.github.com/users/obha/orgs",
+            "repos_url": "https://api.github.com/users/obha/repos",
+            "events_url": "https://api.github.com/users/obha/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/obha/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3866#pullrequestreview-2907287554",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3866",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3866#pullrequestreview-2907287554"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3866"
+            }
+          },
+          "submitted_at": "2025-06-07T11:16:18Z",
+          "commit_id": "a462132667bea4ee67817699f67f4a2fa7148198"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "m10rten",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "obha",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7314116?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2192238918,
+      "number": 3865,
+      "state": "open",
+      "created_at": "2024-11-21T13:20:59Z",
+      "merged_at": null,
+      "title": "feat: export enumUtil",
+      "user": {
+        "login": "AlexChadwickP",
+        "avatar_url": "https://avatars.githubusercontent.com/u/42715369?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2188179418,
+      "number": 3862,
+      "state": "open",
+      "created_at": "2024-11-19T18:10:51Z",
+      "merged_at": null,
+      "title": "Feat/add guard",
+      "user": {
+        "login": "oberbeck",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20164654?v=4"
+      },
+      "labels": [],
+      "additions": 730,
+      "deletions": 307,
+      "changed_files": 7,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [
+        {
+          "id": 2510871604,
+          "node_id": "PRR_kwDODqUnoM6VqNw0",
+          "user": {
+            "login": "ahrjarrett",
+            "id": 15133992,
+            "node_id": "MDQ6VXNlcjE1MTMzOTky",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15133992?u=eadbc978e760db810b59ab308395fc80afb71655&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ahrjarrett",
+            "html_url": "https://github.com/ahrjarrett",
+            "followers_url": "https://api.github.com/users/ahrjarrett/followers",
+            "following_url": "https://api.github.com/users/ahrjarrett/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ahrjarrett/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ahrjarrett/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ahrjarrett/subscriptions",
+            "organizations_url": "https://api.github.com/users/ahrjarrett/orgs",
+            "repos_url": "https://api.github.com/users/ahrjarrett/repos",
+            "events_url": "https://api.github.com/users/ahrjarrett/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ahrjarrett/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "Cool PR! I've done something similar in the past, so it's cool to see others have a similar use case.\r\n\r\nI have a suggestion for this PR, and a recommendation that I thought you might find interesting.\r\n\r\n#### Suggestion:\r\n\r\nIt might be worth exploring a solution that doesn't \"crowd\" existing behavior for users that don't care about this feature. \r\n\r\nFor example, adding a type parameter to all string schemas means all users will now see that type parameter everywhere they use `z.string` in their schemas, which adds noise. It wouldn't _break_ anything, but it does get pretty noisy, and could hurt the DX overall.\r\n\r\n#### Recommendation\r\n\r\nIf this is something you're needing, here's a pattern you can use to extend any library's behavior. YMMV ofc, and I've found libraries that ship combinators (like zod) are especially good fits for this approach.\r\n\r\nYou'd probably want to use a class so you can extend the existing behavior, but in general I've found this approach to be more flexible than it might appear at first glance.\r\n\r\nhttps://tsplay.dev/W4DBBW\r\n\r\n_Edit:_ fixed a bug in the playground",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3862#pullrequestreview-2510871604",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3862",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3862#pullrequestreview-2510871604"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3862"
+            }
+          },
+          "submitted_at": "2024-12-18T05:57:19Z",
+          "commit_id": "1afd01039f514b9d209336b5156eecd21fc258f0"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "oberbeck",
+            "avatar_url": "https://avatars.githubusercontent.com/u/20164654?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "psychedelicious",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4822129?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2187330109,
+      "number": 3861,
+      "state": "open",
+      "created_at": "2024-11-19T11:21:57Z",
+      "merged_at": null,
+      "title": "Feat/add convert",
+      "user": {
+        "login": "oberbeck",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20164654?v=4"
+      },
+      "labels": [],
+      "additions": 818,
+      "deletions": 211,
+      "changed_files": 7,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2187320257,
+      "number": 3859,
+      "state": "closed",
+      "created_at": "2024-11-19T11:16:43Z",
+      "merged_at": "2024-12-10T01:30:20Z",
+      "title": "Simplifying installation guide now that Deno supports installing from npm",
+      "user": {
+        "login": "philhawksworth",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5865?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 30,
+      "changed_files": 2,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "philhawksworth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5865?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2185454250,
+      "number": 3857,
+      "state": "closed",
+      "created_at": "2024-11-18T15:21:25Z",
+      "merged_at": "2024-12-10T01:25:04Z",
+      "title": "docs: Remove invalid semicolon in ERROR_HANDLING.md",
+      "user": {
+        "login": "kamilogorek",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1523305?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:19+09:00"
+}

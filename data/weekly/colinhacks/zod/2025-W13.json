@@ -1,0 +1,362 @@
+{
+  "week": "2025-W13",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2427102947,
+      "number": 4060,
+      "state": "closed",
+      "created_at": "2025-03-29T17:46:43Z",
+      "merged_at": "2025-03-29T17:47:11Z",
+      "title": "Add Fern",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 9,
+      "deletions": 8,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2426962007,
+      "number": 4059,
+      "state": "closed",
+      "created_at": "2025-03-29T14:54:02Z",
+      "merged_at": "2025-04-03T01:33:30Z",
+      "title": "removed unnecessary console logs",
+      "user": {
+        "login": "Sumaanyu-Nayak",
+        "avatar_url": "https://avatars.githubusercontent.com/u/71727265?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2426465359,
+      "number": 4058,
+      "state": "open",
+      "created_at": "2025-03-28T23:18:47Z",
+      "merged_at": null,
+      "title": "Improve performance with inline typecheck for string parsing",
+      "user": {
+        "login": "mattyhempstead",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15044549?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 4,
+      "changed_files": 2,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2422073409,
+      "number": 4055,
+      "state": "closed",
+      "created_at": "2025-03-27T11:07:18Z",
+      "merged_at": "2025-03-28T01:52:21Z",
+      "title": "docs: add TanStack Form to Ecosystem/Form integrations",
+      "user": {
+        "login": "muningis",
+        "avatar_url": "https://avatars.githubusercontent.com/u/28229273?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2720874135,
+          "node_id": "PRR_kwDODqUnoM6iLT6X",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (1)</summary><blockquote>\n\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`537-539`: **Ensure the TanStack Form entry is spot on.**  \nThe new bullet for TanStack Form is clear and follows the established style. The description (\"Headless, performant, and type-safe form state management for TS/JS, React, Vue, Angular, Solid, and Lit\") is succinct and informative. Please verify that the linked URL (https://github.com/TanStack/form) is the official repository for TanStack Form. Additionally, consider a very minor stylistic tweak for consistency—for example, you might add the word “solution” after “form state management” (i.e. “...type-safe form state management solution for …”) if that aligns with similar entries elsewhere.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~537-~537: Loose punctuation mark.\nContext: ...ithub.com/react-hook-form/resolvers#zod): A first-party Zod resolver for React Ho...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n---\n\n[uncategorized] ~538-~538: Loose punctuation mark.\nContext: ...Form`](https://github.com/TanStack/form): Headless, performant, and type-safe for...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 5041dfa3521ec98066e60f97681adf9604b66e52 and 3525d6a3b05a7f3b90b9a44515932ac35488f5b9.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README.md` (1 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>README.md</summary>\n\n[uncategorized] ~538-~538: Loose punctuation mark.\nContext: ...Form`](https://github.com/TanStack/form): Headless, performant, and type-safe for...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4055#pullrequestreview-2720874135",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4055",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4055#pullrequestreview-2720874135"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4055"
+            }
+          },
+          "submitted_at": "2025-03-27T11:09:42Z",
+          "commit_id": "3525d6a3b05a7f3b90b9a44515932ac35488f5b9"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2421969413,
+      "number": 4054,
+      "state": "closed",
+      "created_at": "2025-03-27T10:33:45Z",
+      "merged_at": null,
+      "title": "feat: `z.envbool()` - coerce string inputs to boolean",
+      "user": {
+        "login": "Jay-Karia",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86977383?v=4"
+      },
+      "labels": [],
+      "additions": 594,
+      "deletions": 0,
+      "changed_files": 6,
+      "comments": 5,
+      "review_comments": 2,
+      "commits": 15,
+      "reviews": [
+        {
+          "id": 2720761941,
+          "node_id": "PRR_kwDODqUnoM6iK4hV",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 2**\n\n<details>\n<summary>🧹 Nitpick comments (5)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/string.test.ts (3)</summary><blockquote>\n\n`954-955`: **Consider adding specific value cases to the test.**\n\nThe invalid test cases are broad, but I suggest adding some edge cases to better test error handling, such as:\n- Numeric values outside of 0/1\n- Words that partially match valid values (e.g., \"truex\", \"falsely\")\n- Mixed case combinations that might be challenging to parse\n\n---\n\n`922-982`: **Add test for error message customization.**\n\nThe test doesn't verify custom error messages for the `envbool` validator. Consider adding tests that verify that custom error messages are properly applied when validation fails.\n\n\nYou could add code like:\n\n```typescript\n// Test custom error message\nconst boolWithCustomError = z.envbool({ \n  message: \"Custom error message for invalid boolean value\" \n});\nconst result = boolWithCustomError.safeParse(\"invalid\");\nexpect(result.success).toBe(false);\nif (!result.success) {\n  expect(result.error.issues[0].message).toEqual(\"Custom error message for invalid boolean value\");\n}\n```\n\n---\n\n`922-948`: **Improve test case organization.**\n\nWhile comprehensive, the test setup is quite verbose. Consider using a parametrized test approach to reduce repetition and make the test more maintainable.\n\n\nYou could use a helper function like:\n\n```typescript\nfunction testEnvBoolValues(schema: ZodType, values: { true: string[], false: string[], invalid?: string[] }) {\n  expect(values.true.every(val => schema.safeParse(val).success)).toBe(true);\n  expect(values.false.every(val => schema.safeParse(val).success)).toBe(true);\n  if (values.invalid) {\n    expect(values.invalid.every(val => schema.safeParse(val).success === false)).toBe(true);\n  }\n}\n```\n\nThen use it throughout the test to make it more concise.\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`1965-2068`: **Consider caching normalized sets for improved performance.**\n\nCurrently, each parsing call lowercases the `true`/`false` arrays for case-insensitive comparisons. You could cache the normalized sets (or store them within `_def`) to avoid repeated transformations during `_parse`, especially in scenarios where users parse multiple environment variables in quick succession.\n\n</blockquote></details>\n<details>\n<summary>deno/lib/types.ts (1)</summary><blockquote>\n\n`1940-2051`: **Consider trimming leading/trailing whitespace for environment strings.**\n\nWhile the current implementation handles case-sensitivity properly, consider whether it should also trim whitespace from environment variable strings to avoid unexpected parsing failures if a user has trailing or leading whitespace in their environment variables. If you’d like to implement trimming, you could do so in the `_parse` method:\n\n```diff\n    const inputValue = isCaseSensitive\n-      ? input.data\n-      : input.data.toLowerCase();\n+      ? input.data.trim()\n+      : input.data.trim().toLowerCase();\n```\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 5041dfa3521ec98066e60f97681adf9604b66e52 and 14c437e7f677d7b8c9098b4eaa030ede455b6a62.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (6)</summary>\n\n* `deno/lib/ZodError.ts` (1 hunks)\n* `deno/lib/__tests__/string.test.ts` (1 hunks)\n* `deno/lib/types.ts` (4 hunks)\n* `src/ZodError.ts` (1 hunks)\n* `src/__tests__/string.test.ts` (1 hunks)\n* `src/types.ts` (4 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🧬 Code Definitions (2)</summary>\n\n<details>\n<summary>src/types.ts (2)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (10)</summary>\n\n* `CaseSensitivity` (1947-1947)\n* `truthyValues` (1948-1955)\n* `falsyValues` (1956-1962)\n* `caseSensitivity` (1963-1963)\n* `ZodEnvBoolDef` (1965-1970)\n* `ZodTypeDef` (57-60)\n* `ZodEnvBool` (1996-2067)\n* `value` (4405-4407)\n* `ZodType` (5416-5416)\n* `ZodType` (5416-5416)\n\n</details>\n<details>\n<summary>src/helpers/parseUtil.ts (7)</summary>\n\n* `ParseInput` (66-70)\n* `ParseReturnType` (179-181)\n* `addIssueToContext` (72-89)\n* `INVALID` (166-166)\n* `INVALID` (167-169)\n* `OK` (174-174)\n* `OK` (175-175)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>deno/lib/types.ts (4)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (13)</summary>\n\n* `CaseSensitivity` (1947-1947)\n* `truthyValues` (1948-1955)\n* `falsyValues` (1956-1962)\n* `caseSensitivity` (1963-1963)\n* `ZodEnvBoolDef` (1965-1970)\n* `ZodTypeDef` (57-60)\n* `ZodEnvBool` (1996-2067)\n* `value` (4405-4407)\n* `ZodType` (5416-5416)\n* `ZodType` (5416-5416)\n* `input` (52-52)\n* `RawCreateParams` (117-125)\n* `envboolType` (5575-5575)\n\n</details>\n<details>\n<summary>deno/lib/helpers/parseUtil.ts (7)</summary>\n\n* `ParseInput` (66-70)\n* `ParseReturnType` (179-181)\n* `addIssueToContext` (72-89)\n* `INVALID` (166-166)\n* `INVALID` (167-169)\n* `OK` (174-174)\n* `OK` (175-175)\n\n</details>\n<details>\n<summary>deno/lib/helpers/util.ts (2)</summary>\n\n* `ZodParsedType` (141-162)\n* `ZodParsedType` (164-164)\n\n</details>\n<details>\n<summary>deno/lib/ZodError.ts (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (10)</summary><blockquote>\n\n<details>\n<summary>deno/lib/ZodError.ts (1)</summary>\n\n`110-110`: **Add \"envbool\" to StringValidation type**\n\nThis change correctly adds the new \"envbool\" string validation type to the StringValidation union type, enabling proper error handling for the new envbool validation feature.\n\n</details>\n<details>\n<summary>src/ZodError.ts (1)</summary>\n\n`110-110`: **Add \"envbool\" to StringValidation type**\n\nThis change correctly adds the new \"envbool\" string validation type to the StringValidation union type, maintaining consistency with the Deno implementation.\n\n</details>\n<details>\n<summary>src/types.ts (4)</summary>\n\n`1940-1964`: **Well-structured definitions for environment boolean usage.**\n\nThe union type `CaseSensitivity` and default sets (`truthyValues`, `falsyValues`, `caseSensitivity`) are clearly named and well-implemented. They provide flexibility for the new `ZodEnvBool` functionality.\n\n---\n\n`5459-5459`: **New enum entry aligns with naming patterns.**\n\nAdding `ZodEnvBool` to the `ZodFirstPartyTypeKind` enum is consistent with the existing naming scheme and keeps the codebase organized.\n\n---\n\n`5545-5545`: **Convenient alias mirrors the library’s naming style.**\n\nDefining `envboolType = ZodEnvBool.create` matches how other Zod types are aliased (e.g. `stringType`, `numberType`) and improves library consistency.\n\n---\n\n`5575-5575`: **Export reuses established naming conventions.**\n\nRe-exporting `envboolType` as `envbool` parallels the convention seen with other type exports (e.g. `functionType as function`).\n\n</details>\n<details>\n<summary>deno/lib/types.ts (4)</summary>\n\n`2052-2067`: **Defaults for custom truthy/falsy arrays are well-structured.**\n\nThe `create` static method is consistent with other constructors in the library and cleanly merges default sets with user-provided arrays, preventing duplicates. The handling of empty strings by ignoring them is a useful safeguard.\n\n---\n\n`5459-5459`: **New enum constant added for ZodEnvBool.**\n\nAdding this constant in `ZodFirstPartyTypeKind` aligns with the library’s existing pattern for introducing new schema types.\n\n---\n\n`5545-5545`: **Expose envboolType for library usage.**\n\nDefining `const envboolType = ZodEnvBool.create;` matches the typical approach of binding the create function for simpler usage in user code.\n\n---\n\n`5575-5575`: **Export envbool utility.**\n\nExporting `envboolType as envbool` follows the convention of providing a short alias. This makes the new feature accessible under a succinct name.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4054#pullrequestreview-2720761941",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4054",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4054#pullrequestreview-2720761941"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4054"
+            }
+          },
+          "submitted_at": "2025-03-27T10:38:38Z",
+          "commit_id": "14c437e7f677d7b8c9098b4eaa030ede455b6a62"
+        },
+        {
+          "id": 2720830974,
+          "node_id": "PRR_kwDODqUnoM6iLJX-",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (5)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/string.test.ts (2)</summary><blockquote>\n\n`964-965`: **Minor: Duplicate value in `sensitiveValues.invalid` array.**\n\n\"On\" appears twice in consecutive lines which is redundant. You can remove one of these entries.\n\n\n```diff\n      \"Yes\",\n      \"YES\",\n-     \"On\",\n      \"On\",\n      \"ON\",\n```\n\n---\n\n`922-1083`: **Consider adding direct `parse()` method tests.**\n\nWhile the test covers `safeParse()` extensively, it would be good to also include direct tests of the `parse()` method to verify it throws the appropriate errors when validation fails.\n\n\n```diff\n  // Add a test like this:\n+ // Verify parse() throws errors\n+ expect(() => \n+   insensitiveBool.parse(\"invalidValue\")\n+ ).toThrow(/Invalid/);\n+ \n+ // Optionally, check specific error message\n+ try {\n+   insensitiveBool.parse(\"invalidValue\");\n+ } catch (error) {\n+   expect((error as z.ZodError).issues[0].message).toEqual(\"Invalid\");\n+ }\n```\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`1996-2031`: **Consider trimming whitespace for robust parsing.**\nThe `_parse()` method correctly handles case-sensitivity but may fail if an environment variable contains leading/trailing spaces. A slight enhancement could be to trim the input first:\n```diff\n- const inputValue = isCaseSensitive ? input.data : input.data.toLowerCase();\n+ const rawInput = input.data.trim();\n+ const inputValue = isCaseSensitive ? rawInput : rawInput.toLowerCase();\n```\n\n</blockquote></details>\n<details>\n<summary>deno/lib/types.ts (2)</summary><blockquote>\n\n`1997-2030`: **Enhance error messaging in _parse method**\n\nThe parsing logic is sound, but the error message when validation fails doesn't provide information about which values are accepted, making debugging difficult for users.\n\n```diff\n  addIssueToContext(ctx, {\n    code: ZodIssueCode.invalid_string,\n    validation: \"envbool\",\n+   message: `Invalid boolean string. Expected one of: ${[...trueValues, ...falseValues].join(\", \")}`,\n  });\n```\n\n---\n\n`2053-2068`: **Consider validating for conflicting values in create method**\n\nThe current implementation prioritizes truthy values over falsy ones when checking. This could lead to unexpected behavior if the same string appears in both sets.\n\nConsider adding validation to detect and prevent the same string from appearing in both true and false values:\n\n```diff\n  static create = (\n    params?: RawCreateParams & {\n      true?: string[];\n      false?: string[];\n      case?: CaseSensitivity;\n    }\n  ): ZodEnvBool => {\n+   const trueValues = safeMergeTruthy(params?.true);\n+   const falseValues = safeMergeFalsy(params?.false);\n+   \n+   // Check for conflicting values\n+   const conflicts = trueValues.filter(v => \n+     params?.case === \"sensitive\" \n+       ? falseValues.includes(v)\n+       : falseValues.map(f => f.toLowerCase()).includes(v.toLowerCase())\n+   );\n+   \n+   if (conflicts.length > 0) {\n+     throw new Error(`Conflicting values found in both true and false sets: ${conflicts.join(\", \")}`);\n+   }\n+   \n    return new ZodEnvBool({\n      typeName: ZodFirstPartyTypeKind.ZodEnvBool,\n-     true: safeMergeTruthy(params?.true),\n-     false: safeMergeFalsy(params?.false),\n+     true: trueValues,\n+     false: falseValues,\n      case: params?.case || caseSensitivity,\n      ...processCreateParams(params),\n    });\n  };\n```\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 14c437e7f677d7b8c9098b4eaa030ede455b6a62 and 39242d067c5d3480256cd877c5ac2414f017d05b.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `deno/lib/__tests__/string.test.ts` (1 hunks)\n* `deno/lib/types.ts` (4 hunks)\n* `src/__tests__/string.test.ts` (1 hunks)\n* `src/types.ts` (4 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🧬 Code Definitions (2)</summary>\n\n<details>\n<summary>deno/lib/types.ts (4)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (10)</summary>\n\n* `CaseSensitivity` (1947-1947)\n* `truthyValues` (1948-1955)\n* `falsyValues` (1956-1963)\n* `caseSensitivity` (1964-1964)\n* `ZodEnvBoolDef` (1966-1971)\n* `ZodTypeDef` (57-60)\n* `ZodEnvBool` (1997-2068)\n* `value` (4406-4408)\n* `ZodType` (5417-5417)\n* `ZodType` (5417-5417)\n\n</details>\n<details>\n<summary>deno/lib/helpers/parseUtil.ts (7)</summary>\n\n* `ParseInput` (66-70)\n* `ParseReturnType` (179-181)\n* `addIssueToContext` (72-89)\n* `INVALID` (166-166)\n* `INVALID` (167-169)\n* `OK` (174-174)\n* `OK` (175-175)\n\n</details>\n<details>\n<summary>deno/lib/helpers/util.ts (2)</summary>\n\n* `ZodParsedType` (141-162)\n* `ZodParsedType` (164-164)\n\n</details>\n<details>\n<summary>deno/lib/ZodError.ts (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (4)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (10)</summary>\n\n* `CaseSensitivity` (1947-1947)\n* `truthyValues` (1948-1955)\n* `falsyValues` (1956-1963)\n* `caseSensitivity` (1964-1964)\n* `ZodEnvBoolDef` (1966-1971)\n* `ZodTypeDef` (57-60)\n* `ZodEnvBool` (1997-2068)\n* `value` (4406-4408)\n* `ZodType` (5417-5417)\n* `ZodType` (5417-5417)\n\n</details>\n<details>\n<summary>src/helpers/parseUtil.ts (2)</summary>\n\n* `ParseInput` (66-70)\n* `ParseReturnType` (179-181)\n\n</details>\n<details>\n<summary>src/helpers/util.ts (2)</summary>\n\n* `ZodParsedType` (141-162)\n* `ZodParsedType` (164-164)\n\n</details>\n<details>\n<summary>src/ZodError.ts (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (22)</summary><blockquote>\n\n<details>\n<summary>deno/lib/__tests__/string.test.ts (1)</summary>\n\n`923-1084`: **Fix boolean value verification in envbool tests**\n\nThe test case is thorough in checking different configurations of envbool validation. However, it doesn't properly verify that values are parsed to the correct boolean result.\n\nIn multiple places throughout the test (e.g., lines 988-991, 993-995, 1006-1007, etc.), the code only checks that parsing succeeds but doesn't verify the actual boolean value produced:\n\n```diff\n- expect(\n-   insensitiveValues.true.every(\n-     (val) => insensitiveBool.safeParse(val).success\n-   )\n- ).toBe(true);\n+ expect(\n+   insensitiveValues.true.every(\n+     (val) => {\n+       const result = insensitiveBool.safeParse(val);\n+       return result.success && result.data === true;\n+     }\n+   )\n+ ).toBe(true);\n```\n\nApply the same pattern to all similar checks to ensure not only that parsing succeeds, but also that it produces the correct boolean value.\n\n</details>\n<details>\n<summary>src/__tests__/string.test.ts (2)</summary>\n\n`922-1083`: **New `envbool` function test looks comprehensive and well-structured.**\n\nThe test thoroughly covers all expected functionality for the `z.envbool()` method including:\n- Default case-insensitive validation\n- Case-sensitive validation\n- Custom truth/falsy values\n- Combinations of custom values and sensitivity settings\n\n---\n\n`987-994`: **Verification of assertion fix from previous review.**\n\nThe assertion syntax has been correctly implemented using `safeParse(val).success` as suggested in the previous review.\n\n</details>\n<details>\n<summary>src/types.ts (12)</summary>\n\n`1940-1945`: **No action needed for commented lines.**\n\n---\n\n`1946-1947`: **New `CaseSensitivity` type looks correct.**\nThese lines provide a simple union type for case sensitivity, which appears well-defined.\n\n---\n\n`1948-1955`: **Defaults for truthy values are well-defined.**\nThe code effectively establishes a base set of environment-specific truthy strings.\n\n---\n\n`1956-1963`: **Defaults for falsy values are well-defined.**\nSimilarly covers a sensible range of environment-specific falsy strings.\n\n---\n\n`1964-1965`: **Default case sensitivity setting is appropriate.**\nEstablishes “insensitive” as a practical default to handle variations in environment variable values.\n\n---\n\n`1966-1971`: **`ZodEnvBoolDef` interface is properly structured.**\nThe interface cleanly extends `ZodTypeDef` and declares the additional properties, ensuring clarity.\n\n---\n\n`1972-1983`: **Merging logic for truthy values looks solid.**\nFilters out empty strings and merges user-specified values with defaults.\n\n---\n\n`1984-1995`: **Merging logic for falsy values looks consistent.**\nMirrors the approach taken for truthy values, ensuring consistency.\n\n---\n\n`2032-2053`: **Getter methods provide clarity on defaults.**\nThese custom getters expose the default sets and default case sensitivity in a well-structured manner.\n\n---\n\n`2053-2068`: **Factory method properly merges user overrides with defaults.**\nThis makes the type extensible, allowing for custom truthy/falsy sets and case sensitivity.\n\n---\n\n`2069-2069`: **No meaningful changes in this empty line.**\n\n---\n\n`5546-5547`: **Exporting `envboolType` is appropriate.**\nProvides a convenient top-level factory reference for `ZodEnvBool`.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (7)</summary>\n\n`1947-1964`: **Good implementation of constants and types for ZodEnvBool**\n\nThe implementation defines the core types and default values needed for the envbool functionality. The CaseSensitivity type and the default sets for truthy and falsy values are well-designed with appropriate values.\n\n---\n\n`1966-1971`: **Interface looks good**\n\nThe ZodEnvBoolDef interface properly extends ZodTypeDef with the necessary properties for true/false values and case sensitivity.\n\n---\n\n`1973-1995`: **Well-implemented helper functions for safely merging values**\n\nThe safeMergeTruthy and safeMergeFalsy functions properly combine default values with custom values while filtering out empty strings. This approach ensures a clean set of validation options.\n\n---\n\n`2031-2051`: **Getter methods properly returning default values**\n\nThese getter methods provide a convenient way to access the default values and case sensitivity.\n\n---\n\n`5460-5460`: **Properly added to ZodFirstPartyTypeKind enum**\n\nThe ZodEnvBool type is correctly integrated into the Zod type system.\n\n---\n\n`5546-5546`: **Factory function properly implemented**\n\nThe envboolType factory function follows the pattern of other Zod types.\n\n---\n\n`5576-5576`: **API export follows Zod naming conventions**\n\nThe export of the envbool function follows the pattern used by other Zod types.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4054#pullrequestreview-2720830974",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4054",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4054#pullrequestreview-2720830974"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4054"
+            }
+          },
+          "submitted_at": "2025-03-27T10:58:10Z",
+          "commit_id": "39242d067c5d3480256cd877c5ac2414f017d05b"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Jay-Karia",
+            "avatar_url": "https://avatars.githubusercontent.com/u/86977383?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:56+09:00"
+}

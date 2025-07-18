@@ -1,0 +1,451 @@
+{
+  "week": "2025-W19",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2511977373,
+      "number": 4350,
+      "state": "closed",
+      "created_at": "2025-05-11T07:26:40Z",
+      "merged_at": null,
+      "title": "Remove check for JWT typ header",
+      "user": {
+        "login": "scottanderson",
+        "avatar_url": "https://avatars.githubusercontent.com/u/662325?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "scottanderson",
+            "avatar_url": "https://avatars.githubusercontent.com/u/662325?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2511944332,
+      "number": 4349,
+      "state": "closed",
+      "created_at": "2025-05-11T06:13:19Z",
+      "merged_at": "2025-05-18T22:04:16Z",
+      "title": "chore: add oRPC to the API Libraries ecosystem",
+      "user": {
+        "login": "unnoq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64189902?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2511817522,
+      "number": 4348,
+      "state": "closed",
+      "created_at": "2025-05-11T00:31:37Z",
+      "merged_at": null,
+      "title": "docs: add zod-playground to the list of ecosystem utilities",
+      "user": {
+        "login": "marilari88",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32909388?v=4"
+      },
+      "labels": [],
+      "additions": 9,
+      "deletions": 2,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2511274702,
+      "number": 4347,
+      "state": "closed",
+      "created_at": "2025-05-10T10:01:18Z",
+      "merged_at": null,
+      "title": "Extending \"Powered by Zod\" section with KOTYK pattern",
+      "user": {
+        "login": "KiT-Maverik",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20772046?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 1,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2830704445,
+          "node_id": "PRR_kwDODqUnoM6ouR89",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 3**\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between e62341b1aaf720709ee5f31785db25d5c0491659 and df3b99a4b0cd7e1986151631c9d628014ed50ed9.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README.md` (1 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>README.md</summary>\n\n[uncategorized] ~607-~607: Loose punctuation mark.\nContext: ...`](https://github.com/KiT-Maverik/kotyk): 🇺🇦 Ukrainian-grade configuration laye...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>⏰ Context from checks skipped due to timeout of 90000ms (1)</summary>\n\n* GitHub Check: Test with Deno v1.x\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4347#pullrequestreview-2830704445",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4347",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4347#pullrequestreview-2830704445"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4347"
+            }
+          },
+          "submitted_at": "2025-05-10T10:03:41Z",
+          "commit_id": "df3b99a4b0cd7e1986151631c9d628014ed50ed9"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2509347371,
+      "number": 4341,
+      "state": "open",
+      "created_at": "2025-05-09T11:10:18Z",
+      "merged_at": null,
+      "title": "Improve the performance of z.nativeEnum",
+      "user": {
+        "login": "sluukkonen",
+        "avatar_url": "https://avatars.githubusercontent.com/u/39655?v=4"
+      },
+      "labels": [],
+      "additions": 74,
+      "deletions": 8,
+      "changed_files": 4,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "kibertoad",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1847934?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "sluukkonen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/39655?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2506400336,
+      "number": 4337,
+      "state": "closed",
+      "created_at": "2025-05-08T08:23:32Z",
+      "merged_at": "2025-05-13T18:51:55Z",
+      "title": "Update Speakeasy sponsor URL",
+      "user": {
+        "login": "ndimares",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6267663?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 1,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2824251268,
+          "node_id": "PRR_kwDODqUnoM6oVqeE",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 1**\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between e62341b1aaf720709ee5f31785db25d5c0491659 and 02c442dedaad04c720ba6bb1e46372b2b68b5df7.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README.md` (1 hunks)\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4337#pullrequestreview-2824251268",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4337",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4337#pullrequestreview-2824251268"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4337"
+            }
+          },
+          "submitted_at": "2025-05-08T08:26:08Z",
+          "commit_id": "02c442dedaad04c720ba6bb1e46372b2b68b5df7"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2506211378,
+      "number": 4335,
+      "state": "closed",
+      "created_at": "2025-05-08T06:51:27Z",
+      "merged_at": null,
+      "title": "fix(docs): edited the link to the stars icon",
+      "user": {
+        "login": "Olexandr88",
+        "avatar_url": "https://avatars.githubusercontent.com/u/93856062?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Olexandr88",
+            "avatar_url": "https://avatars.githubusercontent.com/u/93856062?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2502035958,
+      "number": 4330,
+      "state": "closed",
+      "created_at": "2025-05-06T16:00:39Z",
+      "merged_at": "2025-05-13T18:52:34Z",
+      "title": "fix(v4): use input, not output, for input of `$ZodUnionInternals`",
+      "user": {
+        "login": "rikbrown",
+        "avatar_url": "https://avatars.githubusercontent.com/u/2906188?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2498633822,
+      "number": 4323,
+      "state": "closed",
+      "created_at": "2025-05-05T12:33:54Z",
+      "merged_at": null,
+      "title": "fix(v4): retaining `optionality` for transformations",
+      "user": {
+        "login": "RobinTail",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+      },
+      "labels": [],
+      "additions": 9,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:59+09:00"
+}

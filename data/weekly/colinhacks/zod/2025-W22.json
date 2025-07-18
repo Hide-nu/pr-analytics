@@ -1,0 +1,1028 @@
+{
+  "week": "2025-W22",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2557929920,
+      "number": 4594,
+      "state": "closed",
+      "created_at": "2025-06-01T09:34:59Z",
+      "merged_at": "2025-06-10T03:31:26Z",
+      "title": "feat(locale): Add Pashto (ps) locale support",
+      "user": {
+        "login": "sediqzada94",
+        "avatar_url": "https://avatars.githubusercontent.com/u/29443310?v=4"
+      },
+      "labels": [],
+      "additions": 135,
+      "deletions": 0,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557915347,
+      "number": 4593,
+      "state": "closed",
+      "created_at": "2025-06-01T09:17:58Z",
+      "merged_at": "2025-06-02T09:14:49Z",
+      "title": "Removing `console.dir` from `$ZodDiscriminatedUnion`",
+      "user": {
+        "login": "RobinTail",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557858154,
+      "number": 4591,
+      "state": "closed",
+      "created_at": "2025-06-01T08:31:02Z",
+      "merged_at": "2025-06-03T18:48:09Z",
+      "title": "fix(v4): reflect inclusive boundaries in minLength/maxLength issue objects",
+      "user": {
+        "login": "wancup",
+        "avatar_url": "https://avatars.githubusercontent.com/u/62416191?v=4"
+      },
+      "labels": [],
+      "additions": 25,
+      "deletions": 11,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557748548,
+      "number": 4590,
+      "state": "closed",
+      "created_at": "2025-06-01T06:38:36Z",
+      "merged_at": "2025-06-02T23:01:17Z",
+      "title": "fix: add type to literal enum",
+      "user": {
+        "login": "imranbarbhuiya",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74945038?v=4"
+      },
+      "labels": [],
+      "additions": 26,
+      "deletions": 4,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557734331,
+      "number": 4589,
+      "state": "closed",
+      "created_at": "2025-06-01T06:23:08Z",
+      "merged_at": null,
+      "title": "fix: allow coerce date in to-json-schema",
+      "user": {
+        "login": "imranbarbhuiya",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74945038?v=4"
+      },
+      "labels": [],
+      "additions": 13,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "imranbarbhuiya",
+            "avatar_url": "https://avatars.githubusercontent.com/u/74945038?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557631046,
+      "number": 4588,
+      "state": "closed",
+      "created_at": "2025-06-01T04:38:57Z",
+      "merged_at": "2025-06-10T03:31:49Z",
+      "title": "refactor: remove unused import & imported multiple times",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 4,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557628733,
+      "number": 4587,
+      "state": "closed",
+      "created_at": "2025-06-01T04:36:12Z",
+      "merged_at": "2025-06-02T21:26:28Z",
+      "title": "fix(docs): remove z.literal(Symbol)",
+      "user": {
+        "login": "jeremy-code",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43259194?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "jeremy-code",
+            "avatar_url": "https://avatars.githubusercontent.com/u/43259194?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557388858,
+      "number": 4586,
+      "state": "closed",
+      "created_at": "2025-06-01T00:27:59Z",
+      "merged_at": "2025-06-01T00:38:33Z",
+      "title": "Loosen and expand metadata typing",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 10,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2557001563,
+      "number": 4584,
+      "state": "closed",
+      "created_at": "2025-05-31T17:21:08Z",
+      "merged_at": "2025-06-01T00:51:59Z",
+      "title": "minor grammar typo fix",
+      "user": {
+        "login": "sculli-net",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102782086?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2556500658,
+      "number": 4579,
+      "state": "closed",
+      "created_at": "2025-05-31T09:18:04Z",
+      "merged_at": "2025-05-31T22:16:50Z",
+      "title": "Ecosystem: Add Express Zod API",
+      "user": {
+        "login": "RobinTail",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2555734664,
+      "number": 4577,
+      "state": "closed",
+      "created_at": "2025-05-30T21:30:21Z",
+      "merged_at": "2025-06-01T00:59:51Z",
+      "title": "fix(JSONSchema): add type for enum",
+      "user": {
+        "login": "imranbarbhuiya",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74945038?v=4"
+      },
+      "labels": [],
+      "additions": 35,
+      "deletions": 14,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2554948613,
+      "number": 4574,
+      "state": "closed",
+      "created_at": "2025-05-30T14:42:57Z",
+      "merged_at": null,
+      "title": "Fix isPlainObject util",
+      "user": {
+        "login": "antoinechassagne",
+        "avatar_url": "https://avatars.githubusercontent.com/u/28099629?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 5,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2553959629,
+      "number": 4569,
+      "state": "closed",
+      "created_at": "2025-05-30T07:21:15Z",
+      "merged_at": "2025-05-30T07:42:58Z",
+      "title": "Improve tree shaking for esbuild/webpack",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 3909,
+      "deletions": 4761,
+      "changed_files": 47,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2553939618,
+      "number": 4568,
+      "state": "closed",
+      "created_at": "2025-05-30T07:10:11Z",
+      "merged_at": "2025-05-30T08:27:27Z",
+      "title": "Fix type inference in ZodMiniType check method",
+      "user": {
+        "login": "rphlmr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20722140?v=4"
+      },
+      "labels": [],
+      "additions": 37,
+      "deletions": 28,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2553494202,
+      "number": 4567,
+      "state": "closed",
+      "created_at": "2025-05-30T00:37:33Z",
+      "merged_at": "2025-05-30T01:15:55Z",
+      "title": "Implement OpenAPI-friendly JSON Schema for File schemas",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 114,
+      "deletions": 10,
+      "changed_files": 8,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2551555144,
+      "number": 4559,
+      "state": "closed",
+      "created_at": "2025-05-29T08:43:16Z",
+      "merged_at": null,
+      "title": "feat: Configurable references for `toJSONSchema()`",
+      "user": {
+        "login": "RobinTail",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+      },
+      "labels": [],
+      "additions": 228,
+      "deletions": 9,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 3,
+      "commits": 6,
+      "reviews": [
+        {
+          "id": 2877586820,
+          "node_id": "PRR_kwDODqUnoM6rhH2E",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877586820",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4559",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877586820"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4559"
+            }
+          },
+          "submitted_at": "2025-05-29T08:56:09Z",
+          "commit_id": "8796dc6a8ec195db07ac24fc264ff6336a567639"
+        },
+        {
+          "id": 2877605405,
+          "node_id": "PRR_kwDODqUnoM6rhMYd",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877605405",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4559",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877605405"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4559"
+            }
+          },
+          "submitted_at": "2025-05-29T09:03:18Z",
+          "commit_id": "8796dc6a8ec195db07ac24fc264ff6336a567639"
+        },
+        {
+          "id": 2877608250,
+          "node_id": "PRR_kwDODqUnoM6rhNE6",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877608250",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4559",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4559#pullrequestreview-2877608250"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4559"
+            }
+          },
+          "submitted_at": "2025-05-29T09:04:31Z",
+          "commit_id": "8796dc6a8ec195db07ac24fc264ff6336a567639"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2551356773,
+      "number": 4557,
+      "state": "closed",
+      "created_at": "2025-05-29T07:04:43Z",
+      "merged_at": "2025-05-29T07:05:45Z",
+      "title": "Remove defaults from JSON Schema for transforming schemas",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 154,
+      "deletions": 8,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550816089,
+      "number": 4556,
+      "state": "closed",
+      "created_at": "2025-05-28T23:36:30Z",
+      "merged_at": "2025-05-28T23:59:41Z",
+      "title": "Improve discriminated union implementation",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 611,
+      "deletions": 2300,
+      "changed_files": 17,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550736811,
+      "number": 4555,
+      "state": "closed",
+      "created_at": "2025-05-28T22:25:07Z",
+      "merged_at": "2025-05-28T22:25:19Z",
+      "title": "Abort further processing when transform is skipped",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 38,
+      "deletions": 4,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550733773,
+      "number": 4554,
+      "state": "closed",
+      "created_at": "2025-05-28T22:22:51Z",
+      "merged_at": "2025-05-28T22:23:30Z",
+      "title": "Abort further processing when transform is skipped",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 38,
+      "deletions": 4,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550731690,
+      "number": 4553,
+      "state": "closed",
+      "created_at": "2025-05-28T22:21:48Z",
+      "merged_at": "2025-05-28T22:25:26Z",
+      "title": "Use output type for preprocess",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 12,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550716641,
+      "number": 4552,
+      "state": "closed",
+      "created_at": "2025-05-28T22:13:36Z",
+      "merged_at": "2025-05-28T22:15:00Z",
+      "title": "Use output type for preprocess",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 58,
+      "deletions": 13,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2550079158,
+      "number": 4549,
+      "state": "closed",
+      "created_at": "2025-05-28T16:44:01Z",
+      "merged_at": "2025-05-28T21:29:37Z",
+      "title": "docs: fix typos in \"Per-parse error customization\"",
+      "user": {
+        "login": "olecom",
+        "avatar_url": "https://avatars.githubusercontent.com/u/243627?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 4,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2549773286,
+      "number": 4547,
+      "state": "closed",
+      "created_at": "2025-05-28T14:38:11Z",
+      "merged_at": "2025-05-28T21:30:26Z",
+      "title": "docs: fix mini-v4 docs related to min/max validation",
+      "user": {
+        "login": "wancup",
+        "avatar_url": "https://avatars.githubusercontent.com/u/62416191?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 6,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2549096780,
+      "number": 4543,
+      "state": "closed",
+      "created_at": "2025-05-28T10:29:15Z",
+      "merged_at": "2025-05-28T21:31:24Z",
+      "title": "chore: fix typos",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 6,
+      "changed_files": 5,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2548989373,
+      "number": 4542,
+      "state": "closed",
+      "created_at": "2025-05-28T09:48:12Z",
+      "merged_at": "2025-05-28T22:06:01Z",
+      "title": "fix: basics.mdx error typo",
+      "user": {
+        "login": "akuul",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53496062?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 4,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2547965705,
+      "number": 4539,
+      "state": "closed",
+      "created_at": "2025-05-28T00:18:55Z",
+      "merged_at": "2025-05-28T00:19:27Z",
+      "title": "Fix default & prefault object handling",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 200,
+      "deletions": 10,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2547134574,
+      "number": 4536,
+      "state": "closed",
+      "created_at": "2025-05-27T17:23:39Z",
+      "merged_at": "2025-05-28T01:57:37Z",
+      "title": "test: clarify test description for recursive types",
+      "user": {
+        "login": "sonsu95",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127682098?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2546020783,
+      "number": 4533,
+      "state": "closed",
+      "created_at": "2025-05-27T10:15:41Z",
+      "merged_at": "2025-05-28T01:58:09Z",
+      "title": "chore: fix comment for packages/docs/content/v4/index.mdx",
+      "user": {
+        "login": "tongjicoder",
+        "avatar_url": "https://avatars.githubusercontent.com/u/171417830?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 1,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2870509294,
+          "node_id": "PRR_kwDODqUnoM6rGH7u",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 1**\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 3503f1b5286bc3226eef28cd23539256d9ac82f4 and 76a5a70f386782e41096ab40064afc40eda79b03.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `packages/docs/content/v4/index.mdx` (1 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>packages/docs/content/v4/index.mdx</summary>\n\n[grammar] ~17-~17: The modal verb ‘will’ requires the verb’s base form.\nContext: ...ociated libraries, Zod 4 will initially published alongside Zod 3 as part of the `zod@3.2...\n\n(MD_BASEFORM)\n\n</details>\n\n</details>\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4533#pullrequestreview-2870509294",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4533",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4533#pullrequestreview-2870509294"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4533"
+            }
+          },
+          "submitted_at": "2025-05-27T10:20:17Z",
+          "commit_id": "76a5a70f386782e41096ab40064afc40eda79b03"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2543812109,
+      "number": 4525,
+      "state": "closed",
+      "created_at": "2025-05-26T11:37:16Z",
+      "merged_at": "2025-05-28T07:22:34Z",
+      "title": "(V4) fix: Add check for requiredKeys before assigning to json.required",
+      "user": {
+        "login": "Bram-dc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13683918?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:15+09:00"
+}

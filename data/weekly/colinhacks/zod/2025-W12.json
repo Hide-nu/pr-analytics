@@ -1,0 +1,590 @@
+{
+  "week": "2025-W12",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2410766122,
+      "number": 4045,
+      "state": "closed",
+      "created_at": "2025-03-22T00:02:27Z",
+      "merged_at": "2025-03-22T00:03:07Z",
+      "title": "Add Chromatic as feature sponsor",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 10,
+      "deletions": 10,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2409683963,
+      "number": 4044,
+      "state": "open",
+      "created_at": "2025-03-21T14:31:00Z",
+      "merged_at": null,
+      "title": "refactor: remove recursion from schema utilities to prevent call stack overflows",
+      "user": {
+        "login": "MegaManSec",
+        "avatar_url": "https://avatars.githubusercontent.com/u/2505339?v=4"
+      },
+      "labels": [],
+      "additions": 302,
+      "deletions": 198,
+      "changed_files": 4,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [
+        {
+          "id": 2706184072,
+          "node_id": "PRR_kwDODqUnoM6hTReI",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🔭 Outside diff range comments (1)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`3415-3505`: _⚠️ Potential issue_\n\n**Risk of infinite looping on cyclical references.**\n\nWhile the iterative approach in `mergeValues` prevents stack overflows from recursion, there is no mechanism for detecting or breaking out of cyclical references. If either input contains objects with circular links, the loop could become infinite when repeatedly merging shared keys, arrays, or nested structures. \n\nTo mitigate this, track visited pairs of objects or otherwise detect cycles. This will ensure reliable merging without the risk of hanging the process.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>🧹 Nitpick comments (3)</summary><blockquote>\n\n<details>\n<summary>deno/lib/ZodError.ts (1)</summary><blockquote>\n\n`248-271`: **Consider removing obsolete commented code**  \nLines 257-263 are commented out. If no longer needed, removing them would simplify the code and improve readability. Otherwise, clarify under which conditions you might need to reintroduce that logic.  \n\n```diff\n-                // if (typeof el === \"string\") {\n-                //   curr[el] = curr[el] || { _errors: [] };\n-                // } else if (typeof el === \"number\") {\n-                //   const errorArray: any = [];\n-                //   errorArray._errors = [];\n-                //   curr[el] = curr[el] || errorArray;\n-                // }\n```\n\n</blockquote></details>\n<details>\n<summary>src/ZodError.ts (1)</summary><blockquote>\n\n`248-271`: **Remove or clarify commented mapping code**  \nThe commented code in lines 257-263 looks like a remnant from the previous implementation. For maintainability, remove this block if it’s not needed, or document why it must remain.  \n\n```diff\n-                // if (typeof el === \"string\") {\n-                //   curr[el] = curr[el] || { _errors: [] };\n-                // } else if (typeof el === \"number\") {\n-                //   const errorArray: any = [];\n-                //   errorArray._errors = [];\n-                //   curr[el] = curr[el] || errorArray;\n-                // }\n```\n\n</blockquote></details>\n<details>\n<summary>deno/lib/types.ts (1)</summary><blockquote>\n\n`3419-3501`: **Validate partial merges for objects with unequal key sets.**\n\nThe iterative strategy merges two structures only when their types align (objects with objects, arrays with arrays), handling shared keys recursively. This works well for symmetrical objects. However, spread merging objects (`const newObj = { ...a, ...b }`) silently includes extra properties from the second object that aren't in the first. This is acceptable unless you require strict structural equality. If that’s the case, you might want to explicitly flag differences in object keys.\n\nAdditionally, consider adding a mechanism to short-circuit early if either structure is extremely large or deeply nested, as the stack-based merging can become costly.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between f204123863a3524a5659ec696ffd38952e20e4ac and f8a4a42927bd2f2eb841e2927616ef7bee952784.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `deno/lib/ZodError.ts` (1 hunks)\n* `deno/lib/types.ts` (2 hunks)\n* `src/ZodError.ts` (1 hunks)\n* `src/types.ts` (2 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🧬 Code Definitions (3)</summary>\n\n<details>\n<summary>src/ZodError.ts (1)</summary><blockquote>\n\n<details>\n<summary>deno/lib/ZodError.ts (1) (1)</summary>\n\n* `ZodError` (200-332)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>deno/lib/ZodError.ts (1)</summary><blockquote>\n\n<details>\n<summary>src/ZodError.ts (1) (1)</summary>\n\n* `ZodError` (200-332)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (3)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (5) (5)</summary>\n\n* `ZodTypeAny` (50-50)\n* `ZodLazy` (4266-4291)\n* `ZodEffects` (4656-4821)\n* `ZodEffects` (4823-4823)\n* `ZodCatch` (4981-5055)\n\n</details>\n<details>\n<summary>deno/lib/helpers/util.ts (3) (3)</summary>\n\n* `getParsedType` (166-220)\n* `ZodParsedType` (141-162)\n* `ZodParsedType` (164-164)\n\n</details>\n<details>\n<summary>src/helpers/util.ts (3) (3)</summary>\n\n* `getParsedType` (166-220)\n* `ZodParsedType` (141-162)\n* `ZodParsedType` (164-164)\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (8)</summary><blockquote>\n\n<details>\n<summary>deno/lib/ZodError.ts (3)</summary>\n\n`230-233`: **Rename parameter to improve clarity**  \nThe new parameter name `rootError` clarifies the purpose more effectively compared to a generic `error`. Initializing the `stack` with `[rootError]` is a good setup for the following iterative approach.\n\n---\n\n`234-245`: **Check for potential infinite loops in error stacks**  \nThe new `while (stack.length > 0)` iteration is clear and should avoid deep recursion. However, if there's a cyclical reference in `unionErrors`, `returnTypeError`, or `argumentsError`, you could risk an infinite loop. Consider adding a mechanism (e.g. a visited set) to guard against cycles if it’s possible in practice.  \n\nCould you confirm whether cyclical references across union errors can occur in real scenarios?\n\n---\n\n`246-247`: **Appending errors with no path**  \nStoring top-level issues in `fieldErrors._errors` ensures clarity and consistency. This straightforward approach aligns with existing logic.\n\n</details>\n<details>\n<summary>src/ZodError.ts (3)</summary>\n\n`230-233`: **Rename parameter to rootError**  \nSwitching from `error` to `rootError` makes the code more understandable. Initializing the stack with a single root error is a clean entry point to the iterative approach.\n\n---\n\n`234-245`: **Avoid infinite loops with nested or cyclical errors**  \nThe `while (stack.length > 0)` logic properly replaces deep recursion. As a best practice, guard against potential cycles if the library or user code can produce self-referential error graphs.  \n\nIf cyclic error graphs are possible, consider a visited set or similar mechanism to avoid infinite loops.\n\n---\n\n`246-247`: **Top-level errors appended to _errors**  \nPlacing top-level issues in `fieldErrors._errors` mirrors the preexisting approach and keeps the handling of pathless issues consistent.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (1)</summary>\n\n`3221-3260`: **Ensure cyclic references are handled to avoid infinite loops.**\n\nThis iterative approach replaces recursion with a stack-based procedure for extracting potential discriminator values. While it correctly unwinds complex types (lazy schemas, optional/nullable wrappers, etc.), there's no check for cyclic or repeated references. If a schema refers to itself (directly or indirectly), the while loop can run indefinitely. Consider introducing a visited set or similar mechanism to prevent infinite loops when encountering cyclic references.\n\nDo you want me to provide a helper function or script to identify potential self-referential schemas in your codebase?\n\n</details>\n<details>\n<summary>src/types.ts (1)</summary>\n\n`3220-3260`: **Iterative refactor approved with a minor caveat regarding potential loops.**\n\nThis iterative approach in `getDiscriminator` is a clean replacement for recursion and effectively avoids stack overflows. However, be mindful of cyclical or deeply nested schemas that might repeatedly push the same item to the stack. Consider a safeguard (e.g., a visited set) to prevent infinite loops if future changes allow cycles.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4044#pullrequestreview-2706184072",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4044",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4044#pullrequestreview-2706184072"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4044"
+            }
+          },
+          "submitted_at": "2025-03-21T14:34:41Z",
+          "commit_id": "f8a4a42927bd2f2eb841e2927616ef7bee952784"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2408370995,
+      "number": 4042,
+      "state": "closed",
+      "created_at": "2025-03-21T02:14:51Z",
+      "merged_at": "2025-03-28T01:53:22Z",
+      "title": "docs: add oRPC to Ecosystem",
+      "user": {
+        "login": "unnoq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64189902?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2407896476,
+      "number": 4041,
+      "state": "closed",
+      "created_at": "2025-03-20T20:03:03Z",
+      "merged_at": null,
+      "title": "Docs pass",
+      "user": {
+        "login": "devin-ai-integration[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/811515?v=4"
+      },
+      "labels": [],
+      "additions": 2345,
+      "deletions": 8,
+      "changed_files": 6,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "devin-ai-integration[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/811515?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "devin-ai-integration[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/811515?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2403926303,
+      "number": 4037,
+      "state": "open",
+      "created_at": "2025-03-19T14:09:51Z",
+      "merged_at": null,
+      "title": "feat: v3/v4 z.string.creditCard()/z.creditCard() - support Credit Card Validation",
+      "user": {
+        "login": "ysknsid25",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44870505?v=4"
+      },
+      "labels": [],
+      "additions": 502,
+      "deletions": 15,
+      "changed_files": 13,
+      "comments": 4,
+      "review_comments": 5,
+      "commits": 4,
+      "reviews": [
+        {
+          "id": 2698640313,
+          "node_id": "PRR_kwDODqUnoM6g2fu5",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🔭 Outside diff range comments (1)</summary><blockquote>\n\n<details>\n<summary>deno/lib/__tests__/validations.test.ts (1)</summary><blockquote>\n\n`143-158`: _💡 Verification agent_\n\n<details>\n<summary>🧩 Analysis chain</summary>\n\n**Verify implementation of credit card validation logic.**\n\nThe PR mentions using the Luhn algorithm and regex for validation, but the implementation details aren't visible in these files. Ensure the actual validation logic is implemented in the corresponding type files and is thoroughly tested with both valid and invalid credit card numbers.\n\n---\n\n🏁 Script executed:\n\n```shell\n#!/bin/bash\n# Check for the implementation of creditCard validation logic\necho \"Searching for creditCard implementation in types files:\"\nrg -A 10 \"creditCard\\s*\\(\" --glob \"**/*types*.ts\"\n\necho \"Searching for Luhn algorithm implementation:\"\nrg -A 10 \"luhn|isValidCreditCard\" --glob \"**/*.ts\"\n\necho \"Checking for credit card validation tests:\"\nrg \"test.*creditCard\" --glob \"**/*test*.ts\"\n```\n\nLength of output: 4373\n\n---\n\n\n\n</details>\n\n**Action Required: Enhance Credit Card Validation Testing**\n\nThe credit card validation logic has been correctly implemented in the type files (evident in both `deno/lib/types.ts` and `src/types.ts`, where the `creditCard` method and the Luhn algorithm via `isValidCreditCard` are present). However, dedicated tests verifying the correctness of this logic—particularly tests for both valid and invalid credit card inputs—are missing from the test suite. \n\n- **Location of Implementation:**  \n  - `deno/lib/types.ts` and `src/types.ts` include the `creditCard` method and the Luhn algorithm logic.\n  \n- **Testing Coverage:**  \n  - The existing test file (`deno/lib/__tests__/validations.test.ts`) instantiates the credit card validation but does not provide explicit test cases that validate the behavior for valid versus invalid card numbers.\n\nPlease add comprehensive tests targeting the credit card validation, covering edge cases with both correctly formatted (and valid per Luhn) credit card numbers and deliberately invalid inputs.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>🧹 Nitpick comments (2)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary><blockquote>\n\n`932-996`: **Comprehensive test coverage for credit card validation!**\n\nYour test suite for credit card validation is thorough and well-structured. It includes:\n- Various card types (American Express, Diners Club, Discover, JCB, MasterCard, UnionPay, Visa)\n- Different formats (with spaces, with dashes)\n- Numerous error cases (invalid numbers, wrong length, letters, mixed dividers, invalid providers, etc.)\n\nThe test assertion pattern is consistent with other validation tests in the file.\n\n\nConsider using Jest's `test.each` for more concise parameterized testing in the future:\n\n```typescript\ntest.each([\n  [\"378282246310005\", \"American Express\"],\n  [\"371449635398431\", \"American Express\"],\n  // ...other valid cards\n])('should validate %s (%s)', (cardNumber, cardType) => {\n  expect(creditCard.safeParse(cardNumber).success).toEqual(true);\n});\n```\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`694-726`: **Consider adding JSDoc comments to improve documentation**\n\nIt would be helpful to add JSDoc comments explaining the purpose and behavior of the credit card validation, particularly noting which card providers are supported and any limitations.\n\n```diff\n/**\n * Validates a credit card number using format checks and the Luhn algorithm.\n * Supports major providers: Visa, Mastercard, American Express, Discover, JCB, UnionPay, and Diners Club.\n * Accepts numbers with or without spaces/hyphens as separators.\n * @param cardNumber The credit card number to validate\n * @returns boolean indicating if the card number is valid\n */\nfunction isValidCreditCard(cardNumber: string): boolean {\n```\n\n\nAlso applies to: 810-839\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between f204123863a3524a5659ec696ffd38952e20e4ac and 39af1e622dec0673cf91766ec7f7bc82b5eceb67.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (8)</summary>\n\n* `deno/lib/ZodError.ts` (1 hunks)\n* `deno/lib/__tests__/string.test.ts` (2 hunks)\n* `deno/lib/__tests__/validations.test.ts` (1 hunks)\n* `deno/lib/types.ts` (6 hunks)\n* `src/ZodError.ts` (1 hunks)\n* `src/__tests__/string.test.ts` (2 hunks)\n* `src/__tests__/validations.test.ts` (1 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🧬 Code Definitions (2)</summary>\n\n<details>\n<summary>deno/lib/types.ts (4)</summary><blockquote>\n\n<details>\n<summary>deno/lib/helpers/parseUtil.ts (1) (1)</summary>\n\n* `addIssueToContext` (72-89)\n\n</details>\n<details>\n<summary>src/helpers/parseUtil.ts (1) (1)</summary>\n\n* `addIssueToContext` (72-89)\n\n</details>\n<details>\n<summary>deno/lib/ZodError.ts (2) (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n<details>\n<summary>src/ZodError.ts (2) (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (2)</summary><blockquote>\n\n<details>\n<summary>src/helpers/parseUtil.ts (1) (1)</summary>\n\n* `addIssueToContext` (72-89)\n\n</details>\n<details>\n<summary>src/ZodError.ts (2) (2)</summary>\n\n* `ZodIssueCode` (18-35)\n* `ZodIssueCode` (37-37)\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (21)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/validations.test.ts (2)</summary>\n\n`149-149`: **LGTM: `creditCard()` validation method properly added.**\n\nThe addition of `z.string().creditCard()` follows the same pattern as other string validation methods like email() and url(), maintaining API consistency.\n\n---\n\n`156-156`: **LGTM: Custom error message parameter implemented correctly.**\n\nThe implementation allows for custom error messages following the same pattern as other validation methods.\n\n</details>\n<details>\n<summary>deno/lib/ZodError.ts (1)</summary>\n\n`112-113`: **LGTM: String validation type properly extended.**\n\nThe `StringValidation` type has been correctly extended to include \"creditCard\" as a valid option, ensuring proper error handling for credit card validation.\n\n</details>\n<details>\n<summary>src/ZodError.ts (1)</summary>\n\n`112-113`: **LGTM: String validation type properly extended in sync with Deno version.**\n\nThe `StringValidation` type has been correctly extended to include \"creditCard\" as a valid option, maintaining consistency between the Node.js and Deno versions of the library.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/validations.test.ts (2)</summary>\n\n`150-150`: **LGTM: `creditCard()` validation method added consistently.**\n\nThe addition of the creditCard validation method follows the same pattern as in the Node.js version.\n\n---\n\n`157-157`: **LGTM: Custom error message parameter implemented consistently.**\n\nThe custom error message implementation is consistent with the Node.js version and other validation methods.\n\n</details>\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary>\n\n`547-557`: **Well-implemented property checks for the new credit card validator!**\n\nThe getter tests follow the existing pattern and correctly verify that `isCreditCard` is set to true while ensuring all other validation properties remain false. This maintains consistency with the other string validators.\n\n</details>\n<details>\n<summary>deno/lib/__tests__/string.test.ts (2)</summary>\n\n`548-558`: **Well implemented property validation checks**\n\nThese assertions correctly establish that a string with credit card validation maintains the expected type check state, consistent with other validation types in the codebase.\n\n---\n\n`933-997`: **Comprehensive credit card validation tests**\n\nThe test suite for credit card validation is very thorough, covering:\n- Various card providers (American Express, Diners Club, Discover, JCB, MasterCard, UnionPay, Visa)\n- Formatted numbers with spaces and dashes\n- Diverse error cases including invalid checksums, wrong formats, and illegal characters\n- Custom error message verification\n\nThe validation tests handle common real-world scenarios like spaces and dashes in card numbers, which users often include when entering their information.\n\n</details>\n<details>\n<summary>src/types.ts (6)</summary>\n\n`629-629`: **Clean type extension for credit card validation**\n\nThe addition of a \"creditCard\" kind to the ZodStringCheck type is well-structured and consistent with other validation types.\n\n---\n\n`694-726`: **Well-structured regex patterns for credit card validation**\n\nThe implementation includes comprehensive regex patterns for different card providers (Visa, Mastercard, Amex, etc.) which will ensure robust validation. The approach of having separate regexes for general format, sanitization, and provider-specific validation is thorough.\n\n---\n\n`810-839`: **Solid implementation of credit card validation with Luhn algorithm**\n\nThe `isValidCreditCard` function is well-implemented with:\n1. Proper sanitization of input\n2. Format validation using regex\n3. Provider-specific pattern matching\n4. Luhn algorithm validation for checksum verification\n\nThis multi-layered approach ensures robust credit card validation beyond simple format checks.\n\n---\n\n`1143-1153`: **Proper integration into the parsing logic**\n\nThe credit card validation is correctly integrated into the `_parse` method, following the same pattern as other string validations.\n\n---\n\n`1377-1382`: **Clean implementation of the creditCard method**\n\nThe `creditCard()` method follows the same pattern as other validation methods, allowing for optional custom error messages.\n\n---\n\n`1440-1442`: **Consistent getter implementation**\n\nThe `isCreditCard` getter follows the same pattern as other validation getters, maintaining consistency throughout the codebase.\n\n</details>\n<details>\n<summary>deno/lib/types.ts (6)</summary>\n\n`628-629`: **Addition of creditCard validation type looks good!**\n\nThe new string validation type for credit cards is properly integrated into the existing ZodStringCheck type union.\n\n---\n\n`691-725`: **Well-structured regex patterns for credit card validation.**\n\nThe regex patterns are comprehensive and handle different credit card formats:\n- Main pattern validates both separated and non-separated formats\n- Sanitize regex properly handles removing spaces and hyphens \n- Provider-specific patterns accurately cover major card issuers\n\nThe commenting style and organization also fit well with the codebase.\n\n---\n\n`810-839`: **Solid implementation of the Luhn algorithm for credit card validation.**\n\nThe implementation:\n1. Correctly sanitizes card numbers\n2. Follows an optimized version of the Luhn algorithm using a lookup table for the digit operations\n3. Verifies against known provider patterns before running the more expensive Luhn check\n4. Properly handles various card number formats\n\nThis is a clean and efficient approach to credit card validation.\n\n---\n\n`1143-1153`: **Clean integration with the _parse method.**\n\nThe credit card validation check is correctly integrated into the string parsing logic, following the same pattern as other validation types. The code properly:\n1. Checks if validation passes\n2. Gets context and adds appropriate issue data when validation fails\n3. Marks status as dirty on validation failure\n\nThis maintains consistency with existing validation implementations.\n\n---\n\n`1377-1382`: **The creditCard method is well implemented.**\n\nThis method follows the established pattern for adding validators to the string type. It correctly:\n1. Uses _addCheck to add the validation\n2. Handles optional error messages\n3. Returns a new ZodString instance with the check applied\n\nThis is consistent with other validation methods in the class.\n\n---\n\n`1440-1442`: **The isCreditCard getter matches the library's pattern.**\n\nThe getter method follows the established pattern for checking if specific validations are applied to a string instance. This consistency makes the API intuitive for users who are already familiar with Zod.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2698640313",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2698640313"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-03-19T14:15:25Z",
+          "commit_id": "39af1e622dec0673cf91766ec7f7bc82b5eceb67"
+        },
+        {
+          "id": 2702731428,
+          "node_id": "PRR_kwDODqUnoM6hGGik",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (4)</summary><blockquote>\n\n<details>\n<summary>README_ZH.md (1)</summary><blockquote>\n\n`478-479`: **New Credit Card Validation Documentation**\n\nThe addition of `z.string().creditCard();` extends the string validation methods as intended. To improve user clarity, please consider adding a brief note (or an inline comment) that explains the method’s behavior—such as mentioning that it validates numbers via the Luhn algorithm and supports custom error messages—similar to how other validations are documented.\n\n</blockquote></details>\n<details>\n<summary>deno/lib/README.md (1)</summary><blockquote>\n\n`833-833`: **New Credit Card Validation Method Documentation**\n\nThe addition of the `z.string().creditCard();` line clearly documents the new credit card validation feature in the string validation list. This aligns with the PR objective of introducing credit card checks (based on the Luhn algorithm as noted in the PR description). \n\nIt would be beneficial to include a brief inline note or a link to the relevant Luhn algorithm reference so that users immediately understand this method’s purpose and implementation details—especially since similar methods in this section often include hint text (e.g., for `.email()`, `.url()`, etc.).\n\n</blockquote></details>\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`833-833`: **Announce New Credit Card Validation Method**\n\nThe new `creditCard()` method added to the string validations is clearly visible at line 833. Consider adding a brief inline comment or accompanying documentation that explains what validation rules are applied (e.g. based on regex and the Luhn algorithm) and what error message users can expect upon failure. This extra context could be very helpful for users adopting this new feature.\n\n</blockquote></details>\n<details>\n<summary>README_KO.md (1)</summary><blockquote>\n\n`783-783`: **Documentation Update: Credit Card Validation Addition**\n\nThe new `z.string().creditCard()` method is now listed alongside the other string validation methods. It’s clear and consistent with the rest of the examples. To improve clarity for users, consider adding a brief note (or a comment in the docs) that mentions this method uses the Luhn algorithm for validating credit card numbers and supports custom error messages. This additional context could help users immediately understand the underlying mechanism and usage options.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 39af1e622dec0673cf91766ec7f7bc82b5eceb67 and b457e557d4a27ea6e38d7707242952fec930e7c1.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `README.md` (1 hunks)\n* `README_KO.md` (1 hunks)\n* `README_ZH.md` (1 hunks)\n* `deno/lib/README.md` (1 hunks)\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2702731428",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2702731428"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-03-20T13:23:58Z",
+          "commit_id": "b457e557d4a27ea6e38d7707242952fec930e7c1"
+        },
+        {
+          "id": 2880266658,
+          "node_id": "PRR_kwDODqUnoM6rrWGi",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880266658",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880266658"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-30T06:05:52Z",
+          "commit_id": "b457e557d4a27ea6e38d7707242952fec930e7c1"
+        },
+        {
+          "id": 2880277811,
+          "node_id": "PRR_kwDODqUnoM6rrY0z",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880277811",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880277811"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-30T06:13:14Z",
+          "commit_id": "b457e557d4a27ea6e38d7707242952fec930e7c1"
+        },
+        {
+          "id": 2880449005,
+          "node_id": "PRR_kwDODqUnoM6rsCnt",
+          "user": {
+            "login": "ysknsid25",
+            "id": 44870505,
+            "node_id": "MDQ6VXNlcjQ0ODcwNTA1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?u=998b9394b6dda1c7f3e04c3a2998abdb494a8635&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ysknsid25",
+            "html_url": "https://github.com/ysknsid25",
+            "followers_url": "https://api.github.com/users/ysknsid25/followers",
+            "following_url": "https://api.github.com/users/ysknsid25/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ysknsid25/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ysknsid25/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ysknsid25/subscriptions",
+            "organizations_url": "https://api.github.com/users/ysknsid25/orgs",
+            "repos_url": "https://api.github.com/users/ysknsid25/repos",
+            "events_url": "https://api.github.com/users/ysknsid25/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ysknsid25/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880449005",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880449005"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-30T07:40:46Z",
+          "commit_id": "b457e557d4a27ea6e38d7707242952fec930e7c1"
+        },
+        {
+          "id": 2880478314,
+          "node_id": "PRR_kwDODqUnoM6rsJxq",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880478314",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880478314"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-30T07:50:34Z",
+          "commit_id": "5db000aed415bdaf511e5d05d1b81feeb082817e"
+        },
+        {
+          "id": 2880495460,
+          "node_id": "PRR_kwDODqUnoM6rsN9k",
+          "user": {
+            "login": "ysknsid25",
+            "id": 44870505,
+            "node_id": "MDQ6VXNlcjQ0ODcwNTA1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?u=998b9394b6dda1c7f3e04c3a2998abdb494a8635&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ysknsid25",
+            "html_url": "https://github.com/ysknsid25",
+            "followers_url": "https://api.github.com/users/ysknsid25/followers",
+            "following_url": "https://api.github.com/users/ysknsid25/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ysknsid25/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ysknsid25/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ysknsid25/subscriptions",
+            "organizations_url": "https://api.github.com/users/ysknsid25/orgs",
+            "repos_url": "https://api.github.com/users/ysknsid25/repos",
+            "events_url": "https://api.github.com/users/ysknsid25/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ysknsid25/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880495460",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2880495460"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-30T07:57:32Z",
+          "commit_id": "5db000aed415bdaf511e5d05d1b81feeb082817e"
+        },
+        {
+          "id": 2884026689,
+          "node_id": "PRR_kwDODqUnoM6r5sFB",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "I believe it's a nice and useful feature, but as a recently [found out](https://github.com/colinhacks/zod/pull/4391#issuecomment-2921619876), v3 might no longer accept ones while being in a maintenance mode after releasing v4.\r\nPerhaps it would worth it to move it into v4 as a `ZodCheck`, @ysknsid25 ?",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2884026689",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4037",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4037#pullrequestreview-2884026689"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4037"
+            }
+          },
+          "submitted_at": "2025-05-31T12:29:24Z",
+          "commit_id": "f2652712000abd9451fdb026a941068d29571d15"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ysknsid25",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ysknsid25",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ysknsid25",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ysknsid25",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44870505?v=4"
+          }
+        }
+      ]
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:54+09:00"
+}

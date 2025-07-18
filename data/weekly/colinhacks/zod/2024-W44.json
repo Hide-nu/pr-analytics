@@ -1,0 +1,295 @@
+{
+  "week": "2024-W44",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2158940948,
+      "number": 3829,
+      "state": "closed",
+      "created_at": "2024-11-02T01:12:34Z",
+      "merged_at": "2024-12-10T01:28:54Z",
+      "title": "Update README.md",
+      "user": {
+        "login": "wdjcodes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10762704?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2158763188,
+      "number": 3828,
+      "state": "closed",
+      "created_at": "2024-11-01T21:03:34Z",
+      "merged_at": "2024-11-01T21:06:48Z",
+      "title": "Add LibLab as Platinum sponsor",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 40,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2150293851,
+      "number": 3822,
+      "state": "closed",
+      "created_at": "2024-10-28T22:52:37Z",
+      "merged_at": "2024-12-10T01:26:39Z",
+      "title": "fix: bigint coerce crash",
+      "user": {
+        "login": "kodemon",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1998130?v=4"
+      },
+      "labels": [],
+      "additions": 32,
+      "deletions": 16,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 4,
+      "commits": 3,
+      "reviews": [
+        {
+          "id": 2456213928,
+          "node_id": "PRR_kwDODqUnoM6SZtmo",
+          "user": {
+            "login": "hdsuperman",
+            "id": 50064165,
+            "node_id": "MDQ6VXNlcjUwMDY0MTY1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50064165?u=0d071d85b4d0ee176fa6fb997fcfe705549bf30c&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hdsuperman",
+            "html_url": "https://github.com/hdsuperman",
+            "followers_url": "https://api.github.com/users/hdsuperman/followers",
+            "following_url": "https://api.github.com/users/hdsuperman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hdsuperman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hdsuperman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hdsuperman/subscriptions",
+            "organizations_url": "https://api.github.com/users/hdsuperman/orgs",
+            "repos_url": "https://api.github.com/users/hdsuperman/repos",
+            "events_url": "https://api.github.com/users/hdsuperman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hdsuperman/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456213928",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3822",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456213928"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3822"
+            }
+          },
+          "submitted_at": "2024-11-23T03:05:18Z",
+          "commit_id": "4d05e521afeb18f607fb70d1cb3901ae66e39cda"
+        },
+        {
+          "id": 2456214401,
+          "node_id": "PRR_kwDODqUnoM6SZtuB",
+          "user": {
+            "login": "hdsuperman",
+            "id": 50064165,
+            "node_id": "MDQ6VXNlcjUwMDY0MTY1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50064165?u=0d071d85b4d0ee176fa6fb997fcfe705549bf30c&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hdsuperman",
+            "html_url": "https://github.com/hdsuperman",
+            "followers_url": "https://api.github.com/users/hdsuperman/followers",
+            "following_url": "https://api.github.com/users/hdsuperman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hdsuperman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hdsuperman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hdsuperman/subscriptions",
+            "organizations_url": "https://api.github.com/users/hdsuperman/orgs",
+            "repos_url": "https://api.github.com/users/hdsuperman/repos",
+            "events_url": "https://api.github.com/users/hdsuperman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hdsuperman/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456214401",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3822",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456214401"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3822"
+            }
+          },
+          "submitted_at": "2024-11-23T03:05:39Z",
+          "commit_id": "4d05e521afeb18f607fb70d1cb3901ae66e39cda"
+        },
+        {
+          "id": 2456747311,
+          "node_id": "PRR_kwDODqUnoM6Sbv0v",
+          "user": {
+            "login": "kodemon",
+            "id": 1998130,
+            "node_id": "MDQ6VXNlcjE5OTgxMzA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1998130?u=2dcd66126b4b76fa1718bab2781ad57ce5463548&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kodemon",
+            "html_url": "https://github.com/kodemon",
+            "followers_url": "https://api.github.com/users/kodemon/followers",
+            "following_url": "https://api.github.com/users/kodemon/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kodemon/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kodemon/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kodemon/subscriptions",
+            "organizations_url": "https://api.github.com/users/kodemon/orgs",
+            "repos_url": "https://api.github.com/users/kodemon/repos",
+            "events_url": "https://api.github.com/users/kodemon/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kodemon/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456747311",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3822",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456747311"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3822"
+            }
+          },
+          "submitted_at": "2024-11-24T16:18:40Z",
+          "commit_id": "4d05e521afeb18f607fb70d1cb3901ae66e39cda"
+        },
+        {
+          "id": 2456747323,
+          "node_id": "PRR_kwDODqUnoM6Sbv07",
+          "user": {
+            "login": "kodemon",
+            "id": 1998130,
+            "node_id": "MDQ6VXNlcjE5OTgxMzA=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1998130?u=2dcd66126b4b76fa1718bab2781ad57ce5463548&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kodemon",
+            "html_url": "https://github.com/kodemon",
+            "followers_url": "https://api.github.com/users/kodemon/followers",
+            "following_url": "https://api.github.com/users/kodemon/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kodemon/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kodemon/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kodemon/subscriptions",
+            "organizations_url": "https://api.github.com/users/kodemon/orgs",
+            "repos_url": "https://api.github.com/users/kodemon/repos",
+            "events_url": "https://api.github.com/users/kodemon/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kodemon/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456747323",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3822",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3822#pullrequestreview-2456747323"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3822"
+            }
+          },
+          "submitted_at": "2024-11-24T16:18:45Z",
+          "commit_id": "4d05e521afeb18f607fb70d1cb3901ae66e39cda"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "hdsuperman",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50064165?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "hdsuperman",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50064165?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "kodemon",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1998130?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "kodemon",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1998130?v=4"
+          }
+        }
+      ]
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:14+09:00"
+}

@@ -50,12 +50,7 @@ export function loadRepositories(type = "default") {
     console.error("❌ Failed to load repository configuration:", error.message);
 
     // フォールバック設定
-    const fallback = [
-      {
-        owner: "***REMOVED***",
-        repo: "***REMOVED***",
-      },
-    ];
+    const fallback = [];
 
     console.warn("⚠️ Using fallback repository configuration");
     return fallback;
@@ -185,7 +180,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     case "load":
       const type = process.argv[3] || "default";
       console.log(JSON.stringify(loadRepositories(type), null, 2));
-      break;
 
     case "json":
       const jsonType = process.argv[3] || "default";

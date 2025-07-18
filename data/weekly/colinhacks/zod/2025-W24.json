@@ -1,0 +1,933 @@
+{
+  "week": "2025-W24",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2593583490,
+      "number": 4718,
+      "state": "closed",
+      "created_at": "2025-06-15T13:22:44Z",
+      "merged_at": "2025-06-16T22:37:33Z",
+      "title": "feat: add zod-xlsx back to the ecosystem.tsx",
+      "user": {
+        "login": "sidwebworks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58144379?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2593014887,
+      "number": 4716,
+      "state": "closed",
+      "created_at": "2025-06-14T21:16:11Z",
+      "merged_at": "2025-06-16T19:06:32Z",
+      "title": "fix(docs): prevent FOUC on website homepage logo",
+      "user": {
+        "login": "xabierlameiro",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44481156?v=4"
+      },
+      "labels": [],
+      "additions": 88,
+      "deletions": 10,
+      "changed_files": 6,
+      "comments": 5,
+      "review_comments": 4,
+      "commits": 11,
+      "reviews": [
+        {
+          "id": 2928852037,
+          "node_id": "PRR_kwDODqUnoM6ukrxF",
+          "user": {
+            "login": "ByteEVM",
+            "id": 155392541,
+            "node_id": "U_kgDOCUMaHQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?u=6e3b4a350a837083598d47b603790e4da28f7326&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ByteEVM",
+            "html_url": "https://github.com/ByteEVM",
+            "followers_url": "https://api.github.com/users/ByteEVM/followers",
+            "following_url": "https://api.github.com/users/ByteEVM/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ByteEVM/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ByteEVM/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ByteEVM/subscriptions",
+            "organizations_url": "https://api.github.com/users/ByteEVM/orgs",
+            "repos_url": "https://api.github.com/users/ByteEVM/repos",
+            "events_url": "https://api.github.com/users/ByteEVM/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ByteEVM/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "CHANGES_REQUESTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928852037",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4716",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928852037"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4716"
+            }
+          },
+          "submitted_at": "2025-06-14T21:23:38Z",
+          "commit_id": "0c7d4ee159b425216b7c6b161a84035b2dc0f60c"
+        },
+        {
+          "id": 2928854727,
+          "node_id": "PRR_kwDODqUnoM6uksbH",
+          "user": {
+            "login": "xabierlameiro",
+            "id": 44481156,
+            "node_id": "MDQ6VXNlcjQ0NDgxMTU2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44481156?u=80ebc95ae51f6283b91877bd8ff07ea325621ea2&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xabierlameiro",
+            "html_url": "https://github.com/xabierlameiro",
+            "followers_url": "https://api.github.com/users/xabierlameiro/followers",
+            "following_url": "https://api.github.com/users/xabierlameiro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xabierlameiro/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xabierlameiro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xabierlameiro/subscriptions",
+            "organizations_url": "https://api.github.com/users/xabierlameiro/orgs",
+            "repos_url": "https://api.github.com/users/xabierlameiro/repos",
+            "events_url": "https://api.github.com/users/xabierlameiro/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xabierlameiro/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928854727",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4716",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928854727"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4716"
+            }
+          },
+          "submitted_at": "2025-06-14T21:29:32Z",
+          "commit_id": "0c7d4ee159b425216b7c6b161a84035b2dc0f60c"
+        },
+        {
+          "id": 2928912339,
+          "node_id": "PRR_kwDODqUnoM6uk6fT",
+          "user": {
+            "login": "ByteEVM",
+            "id": 155392541,
+            "node_id": "U_kgDOCUMaHQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?u=6e3b4a350a837083598d47b603790e4da28f7326&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ByteEVM",
+            "html_url": "https://github.com/ByteEVM",
+            "followers_url": "https://api.github.com/users/ByteEVM/followers",
+            "following_url": "https://api.github.com/users/ByteEVM/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ByteEVM/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ByteEVM/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ByteEVM/subscriptions",
+            "organizations_url": "https://api.github.com/users/ByteEVM/orgs",
+            "repos_url": "https://api.github.com/users/ByteEVM/repos",
+            "events_url": "https://api.github.com/users/ByteEVM/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ByteEVM/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "CHANGES_REQUESTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928912339",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4716",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4716#pullrequestreview-2928912339"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4716"
+            }
+          },
+          "submitted_at": "2025-06-15T00:16:15Z",
+          "commit_id": "76cc0b72fd56f14f5b2816b34b72b238798e39c1"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "xabierlameiro",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44481156?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "xabierlameiro",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44481156?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2591886586,
+      "number": 4710,
+      "state": "closed",
+      "created_at": "2025-06-14T03:53:23Z",
+      "merged_at": null,
+      "title": "Add typing back to examples",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2591775237,
+      "number": 4708,
+      "state": "closed",
+      "created_at": "2025-06-14T01:17:45Z",
+      "merged_at": "2025-06-16T22:43:29Z",
+      "title": "chore: remove unused octokit",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 321,
+      "changed_files": 3,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2591238739,
+      "number": 4707,
+      "state": "open",
+      "created_at": "2025-06-13T20:10:35Z",
+      "merged_at": null,
+      "title": "feat(v4): Port v3 `discriminator` type inference",
+      "user": {
+        "login": "ByteEVM",
+        "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+      },
+      "labels": [],
+      "additions": 56,
+      "deletions": 29,
+      "changed_files": 5,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ByteEVM",
+            "avatar_url": "https://avatars.githubusercontent.com/u/155392541?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2590732428,
+      "number": 4705,
+      "state": "closed",
+      "created_at": "2025-06-13T16:22:51Z",
+      "merged_at": null,
+      "title": "Remove unused find function from util namespace",
+      "user": {
+        "login": "tupe12334",
+        "avatar_url": "https://avatars.githubusercontent.com/u/61761153?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changed_files": 0,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2590566862,
+      "number": 4703,
+      "state": "closed",
+      "created_at": "2025-06-13T15:14:46Z",
+      "merged_at": "2025-06-16T22:37:46Z",
+      "title": "chore: update lint-staged from v12 to v16",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 138,
+      "deletions": 250,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2590426314,
+      "number": 4701,
+      "state": "closed",
+      "created_at": "2025-06-13T14:20:23Z",
+      "merged_at": "2025-06-13T17:03:46Z",
+      "title": "fix #4700: Use array as argument of templateLiteral",
+      "user": {
+        "login": "martin-ragan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64463239?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2588405031,
+      "number": 4692,
+      "state": "closed",
+      "created_at": "2025-06-12T20:18:37Z",
+      "merged_at": null,
+      "title": "support react native not setting userAgent on navigator global (#4690)",
+      "user": {
+        "login": "jwandrews",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7916874?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "jwandrews",
+            "avatar_url": "https://avatars.githubusercontent.com/u/7916874?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2587248537,
+      "number": 4689,
+      "state": "closed",
+      "created_at": "2025-06-12T12:50:04Z",
+      "merged_at": null,
+      "title": "docs: added v4 support for `regle` library",
+      "user": {
+        "login": "victorgarciaesgi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15092120?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2586597316,
+      "number": 4685,
+      "state": "closed",
+      "created_at": "2025-06-12T09:04:08Z",
+      "merged_at": "2025-06-13T17:04:12Z",
+      "title": "chore: remove deprecated @types/chalk",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 12,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2586578878,
+      "number": 4684,
+      "state": "closed",
+      "created_at": "2025-06-12T08:56:57Z",
+      "merged_at": null,
+      "title": "Fixed allowsEval for RN",
+      "user": {
+        "login": "V1RE",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20016103?v=4"
+      },
+      "labels": [],
+      "additions": 5,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2586094398,
+      "number": 4682,
+      "state": "closed",
+      "created_at": "2025-06-12T05:20:42Z",
+      "merged_at": "2025-06-12T06:52:42Z",
+      "title": "chore: update husky from v7 to v9",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 19,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2585637256,
+      "number": 4680,
+      "state": "closed",
+      "created_at": "2025-06-11T23:38:08Z",
+      "merged_at": "2025-06-12T06:47:09Z",
+      "title": "Improve ISO second handling",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 835,
+      "deletions": 708,
+      "changed_files": 14,
+      "comments": 1,
+      "review_comments": 2,
+      "commits": 5,
+      "reviews": [
+        {
+          "id": 2918984878,
+          "node_id": "PRR_kwDODqUnoM6t_Cyu",
+          "user": {
+            "login": "copilot-pull-request-reviewer[bot]",
+            "id": 175728472,
+            "node_id": "BOT_kgDOCnlnWA",
+            "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+            "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+            "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "## Pull Request Overview\n\nThis PR improves the handling of ISO datetime strings, especially regarding seconds normalization and proper support for the local and offset options. Key changes include:\n- Enabling the simultaneous use of local and offset options in z.iso.datetime.\n- Updating regex patterns and normalization logic in the core schema and regex files.\n- Adjusting tests and docs to validate and document the improved behavior.\n\n### Reviewed Changes\n\nCopilot reviewed 10 out of 11 changed files in this pull request and generated 1 comment.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\r\n| ---- | ----------- |\r\n| play.ts | Updated datetime initialization with local and offset options; added debug logging and additional parse tests. |\r\n| packages/zod/src/v4/core/schemas.ts | Enhanced normalization logic for ISO datetime and time schemas by appending missing seconds. |\r\n| packages/zod/src/v4/core/regexes.ts | Revised time and datetime regex generation to accommodate new precision and local options. |\r\n| packages/zod/src/v4/classic/tests/* | Expanded test coverage for datetime, time, and duration handling. |\r\n| packages/docs/content/api.mdx | Updated API examples and comments on allowed/disallowed formats. |\r\n| package.json | Added the \"recheck\" dependency for regex safety checks. |\n</details>\n\n\n<details>\n<summary>Files not reviewed (1)</summary>\n\n* **pnpm-lock.yaml**: Language not supported\n</details>\n\n<details>\n<summary>Comments suppressed due to low confidence (2)</summary>\n\n**packages/zod/src/v4/core/schemas.ts:623**\n* Add an inline comment explaining why appending ':00' to times missing seconds improves normalization, to aid future maintainers.\n```\nelse if (/T\\d{2}:\\d{2}$/.test(curr)) { payload.value = curr + \":00\"; }\n```\n**packages/docs/content/api.mdx:360**\n* Clarify the API documentation to clearly distinguish between allowed and disallowed formats when using offsets versus local times, so users can easily understand the intended behavior.\n```\ndatetime.parse(\"2020-01-01T00:00:00+02:00\"); // ❌ (no offsets allowed)\n```\n</details>\n\n",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4680#pullrequestreview-2918984878",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4680",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4680#pullrequestreview-2918984878"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4680"
+            }
+          },
+          "submitted_at": "2025-06-11T23:40:46Z",
+          "commit_id": "d45b42d375777890829a272dd1bdaf7a5ab16ca8"
+        },
+        {
+          "id": 2919699444,
+          "node_id": "PRR_kwDODqUnoM6uBxP0",
+          "user": {
+            "login": "copilot-pull-request-reviewer[bot]",
+            "id": 175728472,
+            "node_id": "BOT_kgDOCnlnWA",
+            "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D",
+            "html_url": "https://github.com/apps/copilot-pull-request-reviewer",
+            "followers_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/copilot-pull-request-reviewer%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "## Pull Request Overview\n\nThis PR enhances ISO date/time handling by updating regex patterns, introducing a `TimePrecision` enum, and ensuring consistent behavior across parsing, testing, and documentation.\n\n- Refactors `timeSource` and `datetime` regex logic to support configurable precision, local times, and offsets.\n- Removes old timezone‐normalization hook in schema and cleans up related core code.\n- Adds `TimePrecision` constants to public API, updates tests and docs, and adds `recheck` for ReDoS checking.\n\n### Reviewed Changes\n\nCopilot reviewed 13 out of 14 changed files in this pull request and generated 1 comment.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File                                               | Description                                            |\r\n|----------------------------------------------------|--------------------------------------------------------|\r\n| play.ts                                            | Added console logs for pattern inspection (debug code) |\r\n| packages/zod/src/v4/core/schemas.ts                | Removed old ISODateTime normalization; left unused `_super` |\r\n| packages/zod/src/v4/core/regexes.ts                | Rewrote `timeSource` and `datetime` regex construction |\r\n| packages/zod/src/v4/core/api.ts                    | Exported `TimePrecision` constants                     |\r\n| packages/zod/src/v4/mini/external.ts               | Added `TimePrecision` to external exports              |\r\n| packages/zod/src/v4/classic/external.ts            | Added `TimePrecision` to classic external exports      |\r\n| packages/zod/src/v4/classic/tests/…                | Updated snapshots to match new patterns; added datetime/time/duration tests |\r\n| packages/docs/content/api.mdx                      | Updated docs for `z.iso.datetime()` and `z.iso.time()` |\r\n| package.json                                       | Added `recheck` dependency for regex safety tests      |\n</details>\n\n\n<details>\n<summary>Files not reviewed (1)</summary>\n\n* **pnpm-lock.yaml**: Language not supported\n</details>\n\n<details>\n<summary>Comments suppressed due to low confidence (3)</summary>\n\n**packages/docs/content/api.mdx:409**\n* [nitpick] This line appears to be stray markup. Remove the leading `->` (and the following `-` line) or convert them into proper MDX headings/bullets so the docs render cleanly.\n```\n-> Added in Zod 3.23\n```\n**play.ts:6**\n* [nitpick] These `console.log` statements appear to be debug instrumentation; consider removing them or gating them behind a debug flag before merging.\n```\nconsole.log(\"z.iso.datetime()\");\n```\n**packages/zod/src/v4/core/schemas.ts:649**\n* The `_super` variable is assigned but never used; you can remove this line to avoid confusion or complete the override logic if intended.\n```\nconst _super = inst._zod.check;\n```\n</details>\n\n",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4680#pullrequestreview-2919699444",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4680",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4680#pullrequestreview-2919699444"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4680"
+            }
+          },
+          "submitted_at": "2025-06-12T06:30:52Z",
+          "commit_id": "d8fbb832e2ed9961ab1bd11e982df7e5b69fec35"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "Copilot",
+            "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Copilot",
+            "avatar_url": "https://avatars.githubusercontent.com/in/946600?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2585584540,
+      "number": 4679,
+      "state": "closed",
+      "created_at": "2025-06-11T22:52:15Z",
+      "merged_at": "2025-06-12T06:47:25Z",
+      "title": "Docs - Use consistent variable names for IP examples",
+      "user": {
+        "login": "lb7",
+        "avatar_url": "https://avatars.githubusercontent.com/u/4951334?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2585327213,
+      "number": 4676,
+      "state": "closed",
+      "created_at": "2025-06-11T20:25:18Z",
+      "merged_at": "2025-06-11T20:25:54Z",
+      "title": "Allow hours-only datetime offsets w/ normalization",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 50,
+      "deletions": 6,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2583923343,
+      "number": 4672,
+      "state": "closed",
+      "created_at": "2025-06-11T11:23:01Z",
+      "merged_at": "2025-06-12T06:49:10Z",
+      "title": "refactor: remove unnecessary assertion",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 20,
+      "deletions": 20,
+      "changed_files": 8,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "noritaka1166",
+            "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2581641396,
+      "number": 4667,
+      "state": "closed",
+      "created_at": "2025-06-10T14:47:41Z",
+      "merged_at": null,
+      "title": "feat: allow setting transform input and output JSON schema",
+      "user": {
+        "login": "DASPRiD",
+        "avatar_url": "https://avatars.githubusercontent.com/u/233300?v=4"
+      },
+      "labels": [],
+      "additions": 44,
+      "deletions": 3,
+      "changed_files": 6,
+      "comments": 5,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "DASPRiD",
+            "avatar_url": "https://avatars.githubusercontent.com/u/233300?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "DASPRiD",
+            "avatar_url": "https://avatars.githubusercontent.com/u/233300?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2580694352,
+      "number": 4664,
+      "state": "closed",
+      "created_at": "2025-06-10T09:38:39Z",
+      "merged_at": "2025-06-11T00:07:51Z",
+      "title": "refactor: change if in else to else if",
+      "user": {
+        "login": "noritaka1166",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189505037?v=4"
+      },
+      "labels": [],
+      "additions": 5,
+      "deletions": 9,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2579879583,
+      "number": 4661,
+      "state": "closed",
+      "created_at": "2025-06-10T02:24:27Z",
+      "merged_at": "2025-06-10T02:25:04Z",
+      "title": "Improve stringbool",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 74,
+      "deletions": 128,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2579387627,
+      "number": 4659,
+      "state": "closed",
+      "created_at": "2025-06-09T20:19:23Z",
+      "merged_at": "2025-06-09T23:44:43Z",
+      "title": "fix: issc type at ZodCheckLessThan",
+      "user": {
+        "login": "tonghohin",
+        "avatar_url": "https://avatars.githubusercontent.com/u/103472449?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2578911008,
+      "number": 4657,
+      "state": "closed",
+      "created_at": "2025-06-09T16:55:15Z",
+      "merged_at": null,
+      "title": "fix: zodMiniPartial can't use record type",
+      "user": {
+        "login": "lucasporrini",
+        "avatar_url": "https://avatars.githubusercontent.com/u/50617944?v=4"
+      },
+      "labels": [],
+      "additions": 66,
+      "deletions": 9,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "lucasporrini",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50617944?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2578671509,
+      "number": 4655,
+      "state": "closed",
+      "created_at": "2025-06-09T15:07:44Z",
+      "merged_at": "2025-06-10T03:07:11Z",
+      "title": "Add Zod Sockets to Ecosystem",
+      "user": {
+        "login": "RobinTail",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:19+09:00"
+}

@@ -1,0 +1,74 @@
+{
+  "week": "2024-W38",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2079533760,
+      "number": 3762,
+      "state": "open",
+      "created_at": "2024-09-18T20:30:11Z",
+      "merged_at": null,
+      "title": "fix: add the formatted type in `ZodFormattedError` type recursion",
+      "user": {
+        "login": "HugoMendes98",
+        "avatar_url": "https://avatars.githubusercontent.com/u/37412330?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 8,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2079185159,
+      "number": 3760,
+      "state": "closed",
+      "created_at": "2024-09-18T17:01:44Z",
+      "merged_at": "2024-12-10T01:40:17Z",
+      "title": "docs: add info on unqualified local datetime strings",
+      "user": {
+        "login": "MattSidor",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6138182?v=4"
+      },
+      "labels": [],
+      "additions": 16,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:05+09:00"
+}

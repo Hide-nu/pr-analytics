@@ -1,0 +1,509 @@
+{
+  "week": "2025-W28",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2661116956,
+      "number": 4876,
+      "state": "open",
+      "created_at": "2025-07-12T09:49:59Z",
+      "merged_at": null,
+      "title": "Include export to `zod/core` + update documentation and tests",
+      "user": {
+        "login": "alexmarqs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53876147?v=4"
+      },
+      "labels": [],
+      "additions": 52,
+      "deletions": 34,
+      "changed_files": 18,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657884501,
+      "number": 4870,
+      "state": "closed",
+      "created_at": "2025-07-11T04:51:34Z",
+      "merged_at": "2025-07-11T05:28:04Z",
+      "title": "Unwiden catch input type",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 9,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "schiller-manuel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6340397?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "niba",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2017454?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657856079,
+      "number": 4869,
+      "state": "open",
+      "created_at": "2025-07-11T04:30:57Z",
+      "merged_at": null,
+      "title": "Add console output guard",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 72,
+      "deletions": 10,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657855616,
+      "number": 4868,
+      "state": "open",
+      "created_at": "2025-07-11T04:30:34Z",
+      "merged_at": null,
+      "title": "Update docs for custom string formats",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 15,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657855165,
+      "number": 4867,
+      "state": "open",
+      "created_at": "2025-07-11T04:30:24Z",
+      "merged_at": null,
+      "title": "Add z.jwt documentation",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 10,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657855039,
+      "number": 4866,
+      "state": "open",
+      "created_at": "2025-07-11T04:30:18Z",
+      "merged_at": null,
+      "title": "Allow closure in object.extend",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 27,
+      "deletions": 4,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657854851,
+      "number": 4865,
+      "state": "open",
+      "created_at": "2025-07-11T04:30:08Z",
+      "merged_at": null,
+      "title": "Add safeExtend for objects",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 70,
+      "deletions": 0,
+      "changed_files": 5,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657854314,
+      "number": 4864,
+      "state": "open",
+      "created_at": "2025-07-11T04:29:56Z",
+      "merged_at": null,
+      "title": "Add z.typeid validator",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 154,
+      "deletions": 0,
+      "changed_files": 47,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657853915,
+      "number": 4863,
+      "state": "open",
+      "created_at": "2025-07-11T04:29:33Z",
+      "merged_at": null,
+      "title": "Update docs for z.property check",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 15,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657181726,
+      "number": 4861,
+      "state": "closed",
+      "created_at": "2025-07-10T21:11:54Z",
+      "merged_at": "2025-07-10T22:32:58Z",
+      "title": "Support pipes in discriminated unions. Closes #4856",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 40,
+      "deletions": 45,
+      "changed_files": 4,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2657004651,
+      "number": 4860,
+      "state": "closed",
+      "created_at": "2025-07-10T20:00:06Z",
+      "merged_at": "2025-07-10T20:00:29Z",
+      "title": "improve changelog",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 87,
+      "deletions": 26,
+      "changed_files": 6,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2654354886,
+      "number": 4848,
+      "state": "open",
+      "created_at": "2025-07-10T01:16:01Z",
+      "merged_at": null,
+      "title": "Add eslint-plugin-import-zod",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2651586329,
+      "number": 4844,
+      "state": "closed",
+      "created_at": "2025-07-09T04:19:23Z",
+      "merged_at": "2025-07-09T18:46:23Z",
+      "title": "v4.0.0",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 439,
+      "deletions": 231,
+      "changed_files": 56,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 12,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2651157914,
+      "number": 4843,
+      "state": "closed",
+      "created_at": "2025-07-08T22:48:43Z",
+      "merged_at": "2025-07-08T22:49:57Z",
+      "title": "Fix treeifyError type for branded primitives. Add test. Closes #4840",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 53,
+      "deletions": 31,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2647773583,
+      "number": 4838,
+      "state": "closed",
+      "created_at": "2025-07-07T20:13:19Z",
+      "merged_at": "2025-07-08T09:06:05Z",
+      "title": "v3.25.76",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 419,
+      "deletions": 90,
+      "changed_files": 15,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2647271107,
+      "number": 4837,
+      "state": "closed",
+      "created_at": "2025-07-07T16:10:21Z",
+      "merged_at": "2025-07-07T20:13:58Z",
+      "title": "fix: cleanup _idmap of $ZodRegistry",
+      "user": {
+        "login": "safareli",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1932383?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "safareli",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1932383?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2647150903,
+      "number": 4836,
+      "state": "open",
+      "created_at": "2025-07-07T15:22:51Z",
+      "merged_at": null,
+      "title": "feat: `strict: boolean` on `.brand()`",
+      "user": {
+        "login": "KATT",
+        "avatar_url": "https://avatars.githubusercontent.com/u/459267?v=4"
+      },
+      "labels": [],
+      "additions": 137,
+      "deletions": 8,
+      "changed_files": 7,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 8,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2647139525,
+      "number": 4835,
+      "state": "closed",
+      "created_at": "2025-07-07T15:18:47Z",
+      "merged_at": "2025-07-08T09:10:38Z",
+      "title": "docs: add zod2md to zodToXConverters",
+      "user": {
+        "login": "matejchalk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/34691111?v=4"
+      },
+      "labels": [],
+      "additions": 14,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2646831874,
+      "number": 4833,
+      "state": "closed",
+      "created_at": "2025-07-07T13:33:24Z",
+      "merged_at": "2025-07-08T08:33:35Z",
+      "title": "docs: fix typo in flattenError example on error-formatting page (#4819)",
+      "user": {
+        "login": "sarwanazhar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153606377?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 5,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "sarwanazhar",
+            "avatar_url": "https://avatars.githubusercontent.com/u/153606377?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:25+09:00"
+}

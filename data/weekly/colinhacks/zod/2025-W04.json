@@ -1,0 +1,103 @@
+{
+  "week": "2025-W04",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2297714637,
+      "number": 3961,
+      "state": "closed",
+      "created_at": "2025-01-24T22:24:25Z",
+      "merged_at": "2025-01-24T22:25:25Z",
+      "title": "Add Courier to README",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 42,
+      "deletions": 3,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2293598755,
+      "number": 3956,
+      "state": "open",
+      "created_at": "2025-01-23T04:50:12Z",
+      "merged_at": null,
+      "title": "Extend `z.discriminatedUnion` to support intersections, unions, and discriminated unions of objects as options",
+      "user": {
+        "login": "spinda",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7958605?v=4"
+      },
+      "labels": [],
+      "additions": 444,
+      "deletions": 57,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2290074435,
+      "number": 3949,
+      "state": "closed",
+      "created_at": "2025-01-21T14:01:24Z",
+      "merged_at": "2025-01-24T07:41:49Z",
+      "title": "Update comparison with Runtypes in `README.md`",
+      "user": {
+        "login": "yuhr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18474125?v=4"
+      },
+      "labels": [],
+      "additions": 5,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:29+09:00"
+}

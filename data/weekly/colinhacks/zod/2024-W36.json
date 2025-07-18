@@ -1,0 +1,39 @@
+{
+  "week": "2024-W36",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2052227715,
+      "number": 3738,
+      "state": "closed",
+      "created_at": "2024-09-03T23:05:14Z",
+      "merged_at": "2024-09-03T23:10:04Z",
+      "title": "Add Val Town as sponsor",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 27,
+      "deletions": 10,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:02+09:00"
+}

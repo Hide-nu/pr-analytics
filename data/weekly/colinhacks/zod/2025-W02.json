@@ -1,0 +1,68 @@
+{
+  "week": "2025-W02",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2271875372,
+      "number": 3939,
+      "state": "closed",
+      "created_at": "2025-01-11T08:16:57Z",
+      "merged_at": "2025-02-11T20:04:40Z",
+      "title": "fix: redirect url to correct url",
+      "user": {
+        "login": "bestlyg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/51100990?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2264609418,
+      "number": 3937,
+      "state": "closed",
+      "created_at": "2025-01-07T20:06:47Z",
+      "merged_at": null,
+      "title": "Add comment to ZodError.message getter noting that it returns JSON",
+      "user": {
+        "login": "aaronhipple",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10441729?v=4"
+      },
+      "labels": [],
+      "additions": 14,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:27+09:00"
+}

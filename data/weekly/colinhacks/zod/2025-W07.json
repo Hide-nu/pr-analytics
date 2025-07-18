@@ -1,0 +1,39 @@
+{
+  "week": "2025-W07",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2329524049,
+      "number": 3981,
+      "state": "closed",
+      "created_at": "2025-02-11T19:07:17Z",
+      "merged_at": "2025-02-11T20:03:53Z",
+      "title": "Add CodeRabbit at Platinum",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 30,
+      "deletions": 28,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:45+09:00"
+}

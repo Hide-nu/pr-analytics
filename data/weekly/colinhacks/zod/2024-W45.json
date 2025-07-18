@@ -1,0 +1,180 @@
+{
+  "week": "2024-W45",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2168212802,
+      "number": 3841,
+      "state": "open",
+      "created_at": "2024-11-07T20:12:10Z",
+      "merged_at": null,
+      "title": "fix(types): fix type cache crash",
+      "user": {
+        "login": "odbol",
+        "avatar_url": "https://avatars.githubusercontent.com/u/550985?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 2,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2424711517,
+          "node_id": "PRR_kwDODqUnoM6Qhild",
+          "user": {
+            "login": "m10rten",
+            "id": 57992191,
+            "node_id": "MDQ6VXNlcjU3OTkyMTkx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?u=905b53658455f179e5cc76a6d40ad8f560f1be6a&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/m10rten",
+            "html_url": "https://github.com/m10rten",
+            "followers_url": "https://api.github.com/users/m10rten/followers",
+            "following_url": "https://api.github.com/users/m10rten/following{/other_user}",
+            "gists_url": "https://api.github.com/users/m10rten/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/m10rten/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/m10rten/subscriptions",
+            "organizations_url": "https://api.github.com/users/m10rten/orgs",
+            "repos_url": "https://api.github.com/users/m10rten/repos",
+            "events_url": "https://api.github.com/users/m10rten/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/m10rten/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3841#pullrequestreview-2424711517",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3841",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3841#pullrequestreview-2424711517"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3841"
+            }
+          },
+          "submitted_at": "2024-11-08T19:17:02Z",
+          "commit_id": "f2815768ae389c9b47065a6741116b9e2d3589a8"
+        },
+        {
+          "id": 2428300836,
+          "node_id": "PRR_kwDODqUnoM6QvO4k",
+          "user": {
+            "login": "odbol",
+            "id": 550985,
+            "node_id": "MDQ6VXNlcjU1MDk4NQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/550985?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/odbol",
+            "html_url": "https://github.com/odbol",
+            "followers_url": "https://api.github.com/users/odbol/followers",
+            "following_url": "https://api.github.com/users/odbol/following{/other_user}",
+            "gists_url": "https://api.github.com/users/odbol/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/odbol/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/odbol/subscriptions",
+            "organizations_url": "https://api.github.com/users/odbol/orgs",
+            "repos_url": "https://api.github.com/users/odbol/repos",
+            "events_url": "https://api.github.com/users/odbol/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/odbol/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3841#pullrequestreview-2428300836",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3841",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3841#pullrequestreview-2428300836"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3841"
+            }
+          },
+          "submitted_at": "2024-11-11T23:03:45Z",
+          "commit_id": "f2815768ae389c9b47065a6741116b9e2d3589a8"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "odbol",
+            "avatar_url": "https://avatars.githubusercontent.com/u/550985?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "m10rten",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "odbol",
+            "avatar_url": "https://avatars.githubusercontent.com/u/550985?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "m10rten",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "odbol",
+            "avatar_url": "https://avatars.githubusercontent.com/u/550985?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2166444512,
+      "number": 3838,
+      "state": "closed",
+      "created_at": "2024-11-07T03:00:35Z",
+      "merged_at": "2024-11-07T03:02:32Z",
+      "title": "Sponsorship tweaks",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 12,
+      "deletions": 12,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:15+09:00"
+}

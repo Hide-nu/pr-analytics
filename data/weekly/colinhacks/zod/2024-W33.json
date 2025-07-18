@@ -1,0 +1,699 @@
+{
+  "week": "2024-W33",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2023677249,
+      "number": 3713,
+      "state": "open",
+      "created_at": "2024-08-16T22:16:21Z",
+      "merged_at": null,
+      "title": "[Zod 4] RFC: `ZodIssue` formats",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 12057,
+      "deletions": 28509,
+      "changed_files": 274,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 73,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2023571733,
+      "number": 3712,
+      "state": "closed",
+      "created_at": "2024-08-16T20:34:58Z",
+      "merged_at": "2024-12-10T02:16:33Z",
+      "title": "Add support for `base64url` strings",
+      "user": {
+        "login": "marvinruder",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+      },
+      "labels": [],
+      "additions": 225,
+      "deletions": 94,
+      "changed_files": 10,
+      "comments": 5,
+      "review_comments": 11,
+      "commits": 5,
+      "reviews": [
+        {
+          "id": 2273190307,
+          "node_id": "PRR_kwDODqUnoM6HfiGj",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273190307",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273190307"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T17:52:04Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273200469,
+          "node_id": "PRR_kwDODqUnoM6HfklV",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273200469",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273200469"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T17:57:58Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273204579,
+          "node_id": "PRR_kwDODqUnoM6Hfllj",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273204579",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273204579"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T18:00:27Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273260757,
+          "node_id": "PRR_kwDODqUnoM6HfzTV",
+          "user": {
+            "login": "marvinruder",
+            "id": 18495294,
+            "node_id": "MDQ6VXNlcjE4NDk1Mjk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?u=ec319d4b8bb3129f58245cb286c335230c8eb715&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marvinruder",
+            "html_url": "https://github.com/marvinruder",
+            "followers_url": "https://api.github.com/users/marvinruder/followers",
+            "following_url": "https://api.github.com/users/marvinruder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marvinruder/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marvinruder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marvinruder/subscriptions",
+            "organizations_url": "https://api.github.com/users/marvinruder/orgs",
+            "repos_url": "https://api.github.com/users/marvinruder/repos",
+            "events_url": "https://api.github.com/users/marvinruder/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marvinruder/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273260757",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273260757"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T18:30:57Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273311515,
+          "node_id": "PRR_kwDODqUnoM6Hf_sb",
+          "user": {
+            "login": "marvinruder",
+            "id": 18495294,
+            "node_id": "MDQ6VXNlcjE4NDk1Mjk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?u=ec319d4b8bb3129f58245cb286c335230c8eb715&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marvinruder",
+            "html_url": "https://github.com/marvinruder",
+            "followers_url": "https://api.github.com/users/marvinruder/followers",
+            "following_url": "https://api.github.com/users/marvinruder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marvinruder/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marvinruder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marvinruder/subscriptions",
+            "organizations_url": "https://api.github.com/users/marvinruder/orgs",
+            "repos_url": "https://api.github.com/users/marvinruder/repos",
+            "events_url": "https://api.github.com/users/marvinruder/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marvinruder/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273311515",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273311515"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T18:59:08Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273325448,
+          "node_id": "PRR_kwDODqUnoM6HgDGI",
+          "user": {
+            "login": "marvinruder",
+            "id": 18495294,
+            "node_id": "MDQ6VXNlcjE4NDk1Mjk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?u=ec319d4b8bb3129f58245cb286c335230c8eb715&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marvinruder",
+            "html_url": "https://github.com/marvinruder",
+            "followers_url": "https://api.github.com/users/marvinruder/followers",
+            "following_url": "https://api.github.com/users/marvinruder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marvinruder/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marvinruder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marvinruder/subscriptions",
+            "organizations_url": "https://api.github.com/users/marvinruder/orgs",
+            "repos_url": "https://api.github.com/users/marvinruder/repos",
+            "events_url": "https://api.github.com/users/marvinruder/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marvinruder/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273325448",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273325448"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T19:07:28Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273518530,
+          "node_id": "PRR_kwDODqUnoM6HgyPC",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273518530",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273518530"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T21:24:41Z",
+          "commit_id": "05c4922fa36a225b5671d9b4c5d160d5ef563cd1"
+        },
+        {
+          "id": 2273530250,
+          "node_id": "PRR_kwDODqUnoM6Hg1GK",
+          "user": {
+            "login": "marvinruder",
+            "id": 18495294,
+            "node_id": "MDQ6VXNlcjE4NDk1Mjk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?u=ec319d4b8bb3129f58245cb286c335230c8eb715&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marvinruder",
+            "html_url": "https://github.com/marvinruder",
+            "followers_url": "https://api.github.com/users/marvinruder/followers",
+            "following_url": "https://api.github.com/users/marvinruder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marvinruder/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marvinruder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marvinruder/subscriptions",
+            "organizations_url": "https://api.github.com/users/marvinruder/orgs",
+            "repos_url": "https://api.github.com/users/marvinruder/repos",
+            "events_url": "https://api.github.com/users/marvinruder/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marvinruder/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273530250",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273530250"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T21:38:33Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2273558758,
+          "node_id": "PRR_kwDODqUnoM6Hg8Dm",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273558758",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273558758"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-30T22:05:33Z",
+          "commit_id": "13bc1db58b893bd837196c24ddb76649cb2faef3"
+        },
+        {
+          "id": 2273791302,
+          "node_id": "PRR_kwDODqUnoM6Hh01G",
+          "user": {
+            "login": "marvinruder",
+            "id": 18495294,
+            "node_id": "MDQ6VXNlcjE4NDk1Mjk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?u=ec319d4b8bb3129f58245cb286c335230c8eb715&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/marvinruder",
+            "html_url": "https://github.com/marvinruder",
+            "followers_url": "https://api.github.com/users/marvinruder/followers",
+            "following_url": "https://api.github.com/users/marvinruder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marvinruder/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/marvinruder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marvinruder/subscriptions",
+            "organizations_url": "https://api.github.com/users/marvinruder/orgs",
+            "repos_url": "https://api.github.com/users/marvinruder/repos",
+            "events_url": "https://api.github.com/users/marvinruder/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/marvinruder/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273791302",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2273791302"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-08-31T08:47:25Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        },
+        {
+          "id": 2274196608,
+          "node_id": "PRR_kwDODqUnoM6HjXyA",
+          "user": {
+            "login": "rotu",
+            "id": 119948,
+            "node_id": "MDQ6VXNlcjExOTk0OA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/rotu",
+            "html_url": "https://github.com/rotu",
+            "followers_url": "https://api.github.com/users/rotu/followers",
+            "following_url": "https://api.github.com/users/rotu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/rotu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/rotu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/rotu/subscriptions",
+            "organizations_url": "https://api.github.com/users/rotu/orgs",
+            "repos_url": "https://api.github.com/users/rotu/repos",
+            "events_url": "https://api.github.com/users/rotu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/rotu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2274196608",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3712",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3712#pullrequestreview-2274196608"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3712"
+            }
+          },
+          "submitted_at": "2024-09-01T03:05:12Z",
+          "commit_id": "070c899e906c2722e2ca4f57115d35fe6fb3fd13"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marvinruder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18495294?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "rotu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/119948?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2018680456,
+      "number": 3709,
+      "state": "open",
+      "created_at": "2024-08-14T07:48:09Z",
+      "merged_at": null,
+      "title": "feat: added support for type negation with z.not() and .not() method …",
+      "user": {
+        "login": "Kumar06Lav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+      },
+      "labels": [],
+      "additions": 446,
+      "deletions": 2,
+      "changed_files": 7,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Kumar06Lav",
+            "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2017371804,
+      "number": 3706,
+      "state": "closed",
+      "created_at": "2024-08-13T14:55:15Z",
+      "merged_at": "2024-08-17T06:21:36Z",
+      "title": "Update Neon logo",
+      "user": {
+        "login": "m-abdelwahab",
+        "avatar_url": "https://avatars.githubusercontent.com/u/27310414?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2014607478,
+      "number": 3705,
+      "state": "closed",
+      "created_at": "2024-08-12T09:33:52Z",
+      "merged_at": null,
+      "title": "Update README.md",
+      "user": {
+        "login": "jubar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1234695?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:26:59+09:00"
+}

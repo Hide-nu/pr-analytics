@@ -1,0 +1,385 @@
+{
+  "week": "2025-W14",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2440983387,
+      "number": 4071,
+      "state": "closed",
+      "created_at": "2025-04-05T07:46:39Z",
+      "merged_at": "2025-04-07T22:06:15Z",
+      "title": "Update alt tag for Retool and Stainless URL",
+      "user": {
+        "login": "mrlubos",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12529395?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2436914276,
+      "number": 4069,
+      "state": "open",
+      "created_at": "2025-04-03T12:33:30Z",
+      "merged_at": null,
+      "title": "docs: add jwt string validator",
+      "user": {
+        "login": "kotkoroid",
+        "avatar_url": "https://avatars.githubusercontent.com/u/185821290?v=4"
+      },
+      "labels": [],
+      "additions": 25,
+      "deletions": 8,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2739692059,
+          "node_id": "PRR_kwDODqUnoM6jTGIb",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (1)</summary><blockquote>\n\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`1012-1019`: **Documentation Update: JWT String Validator**\n\nThe new JWT section clearly explains the addition of the `z.string().jwt()` method introduced in Zod 3.24. It effectively details that this method validates the format of a 3-part JWT and notes that it does not perform cryptographic verification. The provided example showing how to constrain the JWT to a specific algorithm (e.g., RS256) is clear and valuable.\n\nA couple of minor suggestions:\n- **Clarify the required claim:** Consider specifying that the JWT’s protected header is expected to include a “typ” (type) claim. For example, update the sentence to:  \n  _\"The `z.string().jwt()` method validates that the string is a valid 3-part JWT. The JWT must contain a `typ` claim in its protected header.\"_  \n  This change may reduce ambiguity for readers.\n- **Grammar nitpick:** On line 1015, the phrase  \n  _\"It merely ensures its in the proper format.\"_  \n  should be corrected to  \n  _\"It merely ensures it's in the proper format.\"_  \n  to improve clarity.  \n  Here’s a suggested diff:\n  \n  ```diff\n  - This does not verify your JWT cryptographically! It merely ensures its in the proper format.\n  + This does not verify your JWT cryptographically! It merely ensures it's in the proper format.\n  ```\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~1018-~1018: “its” (belonging to it) seems less likely than “it’s” (it is)\nContext: ...WT cryptographically! It merely ensures its in the proper format. Use a library lik...\n\n(AI_HYDRA_LEO_CPT_ITS_ITIS)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 91dcd30ff85f92bc2140c26d7b1294e394ff0ea4 and 6783fd586edcbdb9e16bd61660e26199f34e0c46.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README.md` (10 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>README.md</summary>\n\n[uncategorized] ~1018-~1018: “its” (belonging to it) seems less likely than “it’s” (it is)\nContext: ...WT cryptographically! It merely ensures its in the proper format. Use a library lik...\n\n(AI_HYDRA_LEO_CPT_ITS_ITIS)\n\n</details>\n\n</details>\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4069#pullrequestreview-2739692059",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4069",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4069#pullrequestreview-2739692059"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4069"
+            }
+          },
+          "submitted_at": "2025-04-03T12:36:06Z",
+          "commit_id": "6783fd586edcbdb9e16bd61660e26199f34e0c46"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2436751032,
+      "number": 4068,
+      "state": "closed",
+      "created_at": "2025-04-03T11:21:16Z",
+      "merged_at": null,
+      "title": "Fixed missing CIDR suffix in CIDR version example in README.md.",
+      "user": {
+        "login": "wrnotc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178905185?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2436653086,
+      "number": 4067,
+      "state": "closed",
+      "created_at": "2025-04-03T10:42:10Z",
+      "merged_at": null,
+      "title": "Fix: Accept object or string for date string validation error message",
+      "user": {
+        "login": "DavidSemke",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64165880?v=4"
+      },
+      "labels": [],
+      "additions": 36,
+      "deletions": 4,
+      "changed_files": 4,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2436538739,
+      "number": 4066,
+      "state": "closed",
+      "created_at": "2025-04-03T10:04:16Z",
+      "merged_at": null,
+      "title": "Fix: Accept object or string for date string validation error message",
+      "user": {
+        "login": "DavidSemke",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64165880?v=4"
+      },
+      "labels": [],
+      "additions": 36,
+      "deletions": 4,
+      "changed_files": 4,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2433679594,
+      "number": 4065,
+      "state": "closed",
+      "created_at": "2025-04-02T09:34:32Z",
+      "merged_at": null,
+      "title": "Add runtypes to zod codemod",
+      "user": {
+        "login": "tadhglewis",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53756558?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2431101737,
+      "number": 4064,
+      "state": "closed",
+      "created_at": "2025-04-01T09:47:32Z",
+      "merged_at": null,
+      "title": "fix #3907: allow custom error message on invalid_date issue code",
+      "user": {
+        "login": "DavidSemke",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64165880?v=4"
+      },
+      "labels": [],
+      "additions": 30,
+      "deletions": 2,
+      "changed_files": 4,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2430250903,
+      "number": 4062,
+      "state": "closed",
+      "created_at": "2025-04-01T01:40:47Z",
+      "merged_at": "2025-04-01T01:50:12Z",
+      "title": "Update Fern art/link",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 8,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:57+09:00"
+}

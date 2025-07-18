@@ -1,0 +1,39 @@
+{
+  "week": "2024-W31",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 1997976697,
+      "number": 3686,
+      "state": "open",
+      "created_at": "2024-08-01T08:48:37Z",
+      "merged_at": null,
+      "title": "Add lowercase and uppercase validator",
+      "user": {
+        "login": "nekiro",
+        "avatar_url": "https://avatars.githubusercontent.com/u/14142246?v=4"
+      },
+      "labels": [],
+      "additions": 101,
+      "deletions": 2,
+      "changed_files": 8,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:26:56+09:00"
+}

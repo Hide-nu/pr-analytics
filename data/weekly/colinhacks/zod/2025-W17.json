@@ -1,0 +1,1217 @@
+{
+  "week": "2025-W17",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2483570668,
+      "number": 4287,
+      "state": "closed",
+      "created_at": "2025-04-26T21:18:04Z",
+      "merged_at": "2025-05-13T20:28:30Z",
+      "title": "feat(locales): add Catalan locale support and update documentation",
+      "user": {
+        "login": "pmontp19",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1065202?v=4"
+      },
+      "labels": [],
+      "additions": 130,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2480979094,
+      "number": 4282,
+      "state": "closed",
+      "created_at": "2025-04-25T08:31:50Z",
+      "merged_at": "2025-04-30T18:42:16Z",
+      "title": "Add \"zod-config\" to ecosystem.tsx (v4 support via pre-release)",
+      "user": {
+        "login": "alexmarqs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53876147?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2480274042,
+      "number": 4277,
+      "state": "closed",
+      "created_at": "2025-04-24T22:05:40Z",
+      "merged_at": null,
+      "title": "[v4 beta] Properly support branded keys in records",
+      "user": {
+        "login": "jthemphill",
+        "avatar_url": "https://avatars.githubusercontent.com/u/887446?v=4"
+      },
+      "labels": [],
+      "additions": 48,
+      "deletions": 9,
+      "changed_files": 5,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "jthemphill",
+            "avatar_url": "https://avatars.githubusercontent.com/u/887446?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "jthemphill",
+            "avatar_url": "https://avatars.githubusercontent.com/u/887446?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2478275940,
+      "number": 4272,
+      "state": "closed",
+      "created_at": "2025-04-24T07:32:54Z",
+      "merged_at": null,
+      "title": ".catchall() method should accept undefined",
+      "user": {
+        "login": "called-d",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17776279?v=4"
+      },
+      "labels": [],
+      "additions": 14,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2477560849,
+      "number": 4271,
+      "state": "closed",
+      "created_at": "2025-04-24T00:01:35Z",
+      "merged_at": "2025-05-04T21:23:39Z",
+      "title": "Support recursive types in `z.object()`, drop `z.interface()`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 1912,
+      "deletions": 3692,
+      "changed_files": 30,
+      "comments": 5,
+      "review_comments": 15,
+      "commits": 15,
+      "reviews": [
+        {
+          "id": 2789151571,
+          "node_id": "PRR_kwDODqUnoM6mPxNT",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 15**\n\n<details>\n<summary>🔭 Outside diff range comments (7)</summary><blockquote>\n\n<details>\n<summary>packages/zod/tests/interface.test.ts (1)</summary><blockquote>\n\n`159-177`: _⚠️ Potential issue_\n\n**Failing assertion – `safeParse` now succeeds**\n\nCI reports that line 173 (`expect(c.safeParse(aData).success).toEqual(false)`) is red.  \nBecause the merged `c` schema inherits optionality from `a.shape` ➕ `b.shape`, `aData` actually satisfies `c`, so `safeParse().success` comes back `true`.\n\nEither:\n1. The behaviour is correct → update the expectation to `true`.\n2. The behaviour should be “fail” → we need to strip `\"b\"` from `a.shape` before merging.\n\n```diff\n-  expect(c.safeParse(aData).success).toEqual(false);\n+  expect(c.safeParse(aData).success).toEqual(true);\n```\n\nDouble-check the intended semantics and adjust accordingly.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 GitHub Check: Test with TypeScript 5.5 on Node latest</summary>\n\n[failure] 173-173: tests/interface.test.ts > extend overrides with .shape\nAssertionError: expected true to deeply equal false\n\n- Expected\n+ Received\n\n- false\n+ true\n\n ❯ tests/interface.test.ts:173:38\n\n\n\n</details>\n<details>\n<summary>🪛 GitHub Check: Test with TypeScript latest on Node latest</summary>\n\n[failure] 173-173: tests/interface.test.ts > extend overrides with .shape\nAssertionError: expected true to deeply equal false\n\n- Expected\n+ Received\n\n- false\n+ true\n\n ❯ tests/interface.test.ts:173:38\n\n\n\n</details>\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n[error] 173-173: AssertionError: expected true to deeply equal false in test 'extend overrides with .shape'\n\n</details>\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>packages/core/src/util.ts (1)</summary><blockquote>\n\n`770-786`: _🧹 Nitpick (assertive)_\n\n**`extendObjectLike()` double-copies shape – consider `objectShapeMeta`**\n\n`extendObjectLike()` merges two already-meta-fied shapes, but it *doesn’t*\npass the incoming `b`’s raw additions through `objectShapeMeta`.  \nIf a caller mutates `b`’s shape after creation, `extendObjectLike()` will\nnot reflect the updated optionality flags. Re-using the helper keeps things\nDRY and future-proof:\n\n```diff\n-      const _shape = { ...a._zod.def.shape, ...b._zod.def.shape };\n+      const _shape = {\n+        ...a._zod.def.shape,\n+        ...b._zod.def.shape,\n+      };\n```\n\nbecomes\n\n```ts\nconst _shape = {\n  ...a._zod.def.shape,\n  ...util.objectShapeMeta(\n    Object.fromEntries(Object.entries(b._zod.def.shape).map(([k, v]) => [k, v.type]))\n  ),\n};\n```\n\nUp to you whether the extra allocation is worth it.\n\n</blockquote></details>\n<details>\n<summary>packages/core/src/api.ts (1)</summary><blockquote>\n\n`1016-1028`: _🧹 Nitpick (assertive)_\n\n**Commented-out `shapeMeta` blocks – remove or revive**\n\nThe new design drops `shapeMeta`, but leaving the commented code around\nadds noise and invites confusion. If the plan is to re-introduce it, add a\n`TODO` comment with context; otherwise, nuke the dead code.\n\n</blockquote></details>\n<details>\n<summary>packages/core/src/schemas.ts (1)</summary><blockquote>\n\n`1516-1524`: _⚠️ Potential issue_\n\n**Debug `console.log` sneaked in**\n\nLooks like a stray `console.log({ optionalKeys })` slipped past the goalie. 🥅  \nLeaving debug logs in published code makes noise and can hurt performance in hot paths.\n\n```diff\n-      console.log({ optionalKeys });\n```\n\nKill it with fire (or just delete it). ☠️\n\n</blockquote></details>\n<details>\n<summary>packages/zod/src/schemas.ts (3)</summary><blockquote>\n\n`290-301`: _🛠️ Refactor suggestion_\n\n**Duplicate `guid()` assignment – drop the second alias**\n\n`inst.guid` is assigned twice (`line 294` and again on `line 300`).  \nThe second assignment is redundant and risks masking the first one if the implementation is ever changed independently.\n\n```diff\n  inst.guid = (params) => inst.check(core._guid(ZodGUID, params));\n@@\n- inst.guid = (params) => inst.check(core._guid(ZodGUID, params));\n```\n\n---\n\n`813-818`: _🛠️ Refactor suggestion_\n\n**Repeated method wiring in `ZodBigInt`**\n\n`gt/gte/min` are wired twice. Besides the noise, this can confuse stack-traces and IDE “go-to-definition”.\n\n```diff\n-  inst.gte = (value, params) => inst.check(checks.gte(value, params));\n-  inst.min = (value, params) => inst.check(checks.gte(value, params));\n-  inst.gt = (value, params) => inst.check(checks.gt(value, params));\n-  inst.gte = (value, params) => inst.check(checks.gte(value, params));\n-  inst.min = (value, params) => inst.check(checks.gte(value, params));\n+  // gt / gte / min already assigned above – second pass removed\n```\n\n---\n\n`1025-1034`: _🧹 Nitpick (assertive)_\n\n**Minor: could avoid eager `cleanInterfaceShape` in `keyof()`**\n\nEvery `keyof()` call recalculates `cleanInterfaceShape`.  \nConsider caching the result (e.g. on `schema._zod`) to avoid unnecessary work inside hot-paths.\n\nThis isn’t blocking, just something to keep in mind if profiling shows `keyof()` getting hit a lot.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>♻️ Duplicate comments (1)</summary><blockquote>\n\n<details>\n<summary>packages/mini/tests/interface.test.ts (1)</summary><blockquote>\n\n`261-266`: **Assertion relies on `shape.b` being optional – CI currently red**\n\nThe failing pipeline shows that `shape.b` is coming back as a plain\n`ZodString`, not a `ZodOptional`. This ties back to the bug in\n`partialObjectLike()` and possibly `extend()`. Once that fix lands, this\nassertion should pass; until then, expect this test to fail.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: ASSERTIVE**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 7051967def6ffa75c267e16c6e55094441e63929 and 2b18cea5a20f1fad713de8f19fd689854d0ec0af.\n\n</details>\n\n<details>\n<summary>⛔ Files ignored due to path filters (1)</summary>\n\n* `pnpm-lock.yaml` is excluded by `!**/pnpm-lock.yaml`\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (19)</summary>\n\n* `packages/core/src/api.ts` (8 hunks)\n* `packages/core/src/json-schema.ts` (0 hunks)\n* `packages/core/src/schemas.ts` (25 hunks)\n* `packages/core/src/to-json-schema.ts` (3 hunks)\n* `packages/core/src/util.ts` (6 hunks)\n* `packages/mini/src/schemas.ts` (11 hunks)\n* `packages/mini/tests/interface.test.ts` (2 hunks)\n* `packages/mini/tests/object.test.ts` (2 hunks)\n* `packages/tsc/bisect.ts` (1 hunks)\n* `packages/tsc/generate.ts` (1 hunks)\n* `packages/tsc/package.json` (1 hunks)\n* `packages/zod/src/schemas.ts` (11 hunks)\n* `packages/zod/tests/interface.test.ts` (3 hunks)\n* `packages/zod/tests/json-schema.test.ts` (2 hunks)\n* `packages/zod/tests/lazy.test.ts` (2 hunks)\n* `packages/zod/tests/partial-interface.test.ts` (6 hunks)\n* `packages/zod/tests/pickomit-interface.test.ts` (2 hunks)\n* `packages/zod/tests/pickomit-object.test.ts` (2 hunks)\n* `play.ts` (1 hunks)\n\n</details>\n\n<details>\n<summary>💤 Files with no reviewable changes (1)</summary>\n\n* packages/core/src/json-schema.ts\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🧬 Code Graph Analysis (2)</summary>\n\n<details>\n<summary>packages/zod/tests/partial-interface.test.ts (3)</summary><blockquote>\n\n<details>\n<summary>packages/mini/tests/interface.test.ts (1)</summary>\n\n* `z` (174-176)\n\n</details>\n<details>\n<summary>packages/mini/src/schemas.ts (1)</summary>\n\n* `object` (820-836)\n\n</details>\n<details>\n<summary>packages/zod/src/schemas.ts (1)</summary>\n\n* `object` (1408-1424)\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>packages/core/src/api.ts (3)</summary><blockquote>\n\n<details>\n<summary>packages/core/src/schemas.ts (3)</summary>\n\n* `$ZodInterface` (1917-1922)\n* `$ZodInterface` (1924-1929)\n* `$ZodInterfaceDef` (1893-1897)\n\n</details>\n<details>\n<summary>packages/core/src/util.ts (3)</summary>\n\n* `shape` (741-745)\n* `shape` (758-763)\n* `shape` (776-781)\n\n</details>\n<details>\n<summary>packages/mini/src/schemas.ts (6)</summary>\n\n* `shape` (741-746)\n* `shape` (765-770)\n* `shape` (789-794)\n* `shape` (827-829)\n* `shape` (847-849)\n* `shape` (867-869)\n\n</details>\n\n</blockquote></details>\n\n</details><details>\n<summary>🪛 GitHub Check: Test with TypeScript 5.5 on Node latest</summary>\n\n<details>\n<summary>packages/zod/tests/interface.test.ts</summary>\n\n[failure] 220-220: tests/interface.test.ts > .partial\nAssertionError: expected ZodString{ _zod: { …(11) }, …(75) } to be an instance of ZodOptional\n ❯ tests/interface.test.ts:220:42\n\n\n\n</details>\n\n</details>\n<details>\n<summary>🪛 GitHub Check: Test with TypeScript latest on Node latest</summary>\n\n<details>\n<summary>packages/zod/tests/interface.test.ts</summary>\n\n[failure] 220-220: tests/interface.test.ts > .partial\nAssertionError: expected ZodString{ _zod: { …(11) }, …(75) } to be an instance of ZodOptional\n ❯ tests/interface.test.ts:220:42\n\n\n\n</details>\n\n</details>\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n<details>\n<summary>packages/zod/tests/interface.test.ts</summary>\n\n[error] 173-173: AssertionError: expected true to deeply equal false in test 'extend overrides with .shape'\n\n---\n\n[error] 220-220: AssertionError: expected ZodString instance to be an instance of ZodOptional in test '.partial'\n\n</details>\n<details>\n<summary>packages/mini/tests/interface.test.ts</summary>\n\n[error] 173-173: AssertionError: expected true to deeply equal false in test 'extend overrides with .shape'\n\n---\n\n[error] 220-220: AssertionError: expected ZodString instance to be an instance of ZodOptional in test '.partial'\n\n</details>\n<details>\n<summary>packages/zod/tests/json-schema.test.ts</summary>\n\n[error] 634-634: ReferenceError: Cannot access 'categorySchema' before initialization\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (31)</summary><blockquote>\n\n<details>\n<summary>packages/tsc/bisect.ts (1)</summary>\n\n`51-51`: **Switched from ZOD to ARKTYPE schemas in bisect testing**\n\nThe change from ZOD to ARKTYPE in the bisect script aligns with similar changes elsewhere in the codebase. It's part of a coordinated update to use ArkType instead of Zod for performance testing.\n\n</details>\n<details>\n<summary>packages/tsc/generate.ts (1)</summary>\n\n`28-30`: **Updated schema generation to use ArkType with fewer test schemas**\n\nThe shift from ZOD to ARKTYPE configuration and reducing the test schema count from 40 to 25 makes sense as part of the larger testing strategy changes. This should make the tests run faster while still providing meaningful performance data.\n\n</details>\n<details>\n<summary>packages/tsc/package.json (2)</summary>\n\n`11-11`: **Updated ArkType dependency to stable version**\n\nGood move switching from what was likely a release candidate to the stable version with caret range. This allows for compatible updates without being locked to a specific RC.\n\n---\n\n`17-17`: <details>\n<summary>✅ Verification successful</summary>\n\n**Updated Zod4 dependency to newer beta**\n\nThe update to a newer beta version of Zod4 makes sense alongside the other dependency changes. Just be aware this is still using a beta version with a timestamp.\n\n\n---\n\n🏁 Script executed:\n\n```shell\n#!/bin/bash\n# Check if this beta version is still the latest available\nnpm view zod dist-tags --json | grep beta\n```\n\nLength of output: 109\n\n---\n\n\n\n</details>\n\n**zod4 bump confirmed as latest beta**\n\nNice work! I checked `npm view zod dist-tags --json` and the `next` tag points to 4.0.0-beta.20250420T053007, so you’re on the freshest Zod4 beta.\n\n</details>\n<details>\n<summary>play.ts (2)</summary>\n\n`2-2`: **Added English locale configuration**\n\nNice addition of explicit locale configuration - makes the examples clearer by ensuring consistent error messages.\n\n---\n\n`4-13`: **Added helpful example comment for interface schemas**\n\nThe multi-line comment with an example of using `z.interface` provides valuable context for the optionality changes in this PR. The example clearly demonstrates the new syntax for optional properties using the `\"b?\"` notation.\n\n</details>\n<details>\n<summary>packages/zod/tests/lazy.test.ts (2)</summary>\n\n`5-5`: **Updated test name to match the new optionality model**\n\nThe test name has been updated from \"qin qout passthrough\" to \"opt passthrough\", aligning with the refactoring that consolidates the separate input/output optionality flags into a single unified opt property.\n\n---\n\n`39-41`: **Updated assertions to verify the new optionality model**\n\nNice job updating the assertions to check the new `_zod.opt` property values instead of the previous `qin`/`qout` flags. This correctly validates that lazy schemas preserve optionality information with the new unified representation.\n\n</details>\n<details>\n<summary>packages/mini/tests/object.test.ts (3)</summary>\n\n`13-13`: **Updated access path to reflect new shape metadata structure**\n\nThe assertion has been correctly updated to use the new nested `.type._zod.opt` property path instead of the previous direct `.points._zod.qout` access. This aligns with the core refactoring of optionality representation.\n\n---\n\n`127-127`: **Fixed missing closing brace**\n\nAdded the missing closing brace and parenthesis for the \"z.partial\" test. Good catch!\n\n---\n\n`129-139`: **Added test for partial with mask functionality**\n\nCool new test case that verifies the behavior of `z.partial` when used with a mask object. This ensures that selective optional property transformation works correctly with the new shape metadata structure.\n\n</details>\n<details>\n<summary>packages/zod/tests/pickomit-object.test.ts (2)</summary>\n\n`46-52`: **Updated optionality assertions to use the new shape metadata structure**\n\nThe test now correctly creates interface schemas with explicit optionality markers (using \"b?\") and verifies optionality via the `.optionality` property instead of checking a separate optional keys array. This properly tests the new shape metadata approach.\n\n---\n\n`87-90`: **Updated omit test to use the new shape metadata structure**\n\nSimilar to the pick test, this correctly updates the omit test to align with the new optionality representation in shape metadata.\n\n</details>\n<details>\n<summary>packages/zod/tests/partial-interface.test.ts (5)</summary>\n\n`45-55`: **Updated required object assertions to use the new shape metadata structure**\n\nThe test now accesses schema types through the new `.type` property and uses `.unwrap()` to check underlying types. This properly verifies that the required object transformation works with the new shape metadata structure.\n\n---\n\n`89-92`: **Updated required with mask assertions to use shape metadata**\n\nTests for masked required transformations have been correctly updated to check types through the `.type` property, consistent with the new shape metadata approach.\n\n---\n\n`105-108`: **Updated assertions for required with falsy mask values**\n\nThese assertions properly verify that falsy mask values are ignored when applying required transformations, using the new shape metadata structure.\n\n---\n\n`121-128`: **Updated partial with mask assertions to check both type and optionality**\n\nGreat job updating these assertions to verify both the `.type` and `.optionality` properties. This comprehensive check ensures that the partial masking functionality correctly transforms properties while preserving their underlying types.\n\n---\n\n`145-148`: **Added verification of optionality states before and after transformation**\n\nNice addition to validate both the original and transformed optionality states when applying partial transformations with falsy mask values. This ensures the masking logic correctly preserves required properties.\n\n</details>\n<details>\n<summary>packages/zod/tests/interface.test.ts (3)</summary>\n\n`148-154`: **👍 New “extend with .shape” pattern looks good**\n\nNice switch to the spread-merge idiom – reads clearly and avoids the removed `extend()` semantics.\n\n---\n\n`224-232`: **Sanity-check `.required()` internals**\n\nThese checks still rely on internal classes. If the refactor ever swaps `ZodNonOptional` out, tests will break again.  \nConsider asserting against `.optionality === \"required\"` instead for future-proofing.\n\n---\n\n`434-447`: **Duplication test LGTM**\n\nGood guard to ensure types remain identical after shape spreading.\n\n</details>\n<details>\n<summary>packages/zod/tests/pickomit-interface.test.ts (1)</summary>\n\n`102-109`: **Catch-all optionality inference test is solid**\n\nThe type-level expectations using `expectTypeOf` are clear and stable – nice!\n\n</details>\n<details>\n<summary>packages/zod/tests/json-schema.test.ts (4)</summary>\n\n`1177-1201`: **Snapshot change: `$defs` + `$ref` looks correct**\n\nMoving the shared string schema to `$defs/__schema0` and re-using it via `$ref` is the right call when `reused:\"ref\"` is requested. Snapshot update looks good.\n\n---\n\n`1332-1340`: **New `_ref` coverage – 👍**\n\nGreat to see explicit tests ensuring description metadata bubbles out of wrappers.\n\n---\n\n`1342-1357`: **Lazy / optional / promise metadata propagation**\n\nSame as above – these tests guard a subtle area and will save us from regressions.\n\n---\n\n`1359-1429`: **Input vs Output JSON-Schema mismatch spotted**\n\nThe new test highlights differing `required` arrays between input & output modes – love it. One concern though: the `output` mode marks key `b` (plain optional) as not required (✅) but also upgrades `c` (defaulted) to required (✅). Behaviour seems consistent with the new logic in `to-json-schema.ts`; just keep an eye on user expectations.\n\n</details>\n<details>\n<summary>packages/core/src/to-json-schema.ts (2)</summary>\n\n`285-288`: **Good call: process `.type` instead of whole meta object**\n\nUsing `shape[key].type` avoids accidentally passing the metadata wrapper into recursion.\n\n---\n\n`685-686`: **Double-flatten call looks fine**\n\nHooking `flattenRef` for both the live schema and any extracted `$def` keeps them in sync. No issues.\n\n</details>\n<details>\n<summary>packages/mini/tests/interface.test.ts (1)</summary>\n\n`221-257`: **Large blocks of commented-out tests**\n\nWhole suites for `z.extend` have been disabled. That hides potential\nregressions (and we’ve already seen one in CI). Either fix the tests to\nmatch the new semantics or delete them entirely—commented code tends to\nrot.\n\n</details>\n<details>\n<summary>packages/core/src/schemas.ts (1)</summary>\n\n`3055-3072`: **Nice touch on the unified `opt` flag**\n\nThe new single-source-of-truth (`\"optional\" | \"defaulted\" | \"required\"`) cleans up the\nold `qin/qout` duality and makes type-level reasoning way easier. 👍\n\n</details>\n<details>\n<summary>packages/mini/src/schemas.ts (1)</summary>\n\n`896-905`: **`extend()` / `merge()` now bypass type-guard branches**\n\nWith the fallback to `util.extend(schema, shape)` the specialised handling for\n`ZodMiniInterface` vs `ZodMiniObject` is lost, meaning:\n\n* Passing an _instance_ instead of a raw shape silently falls through.\n* Shape key collisions aren’t checked.\n\nIf that’s intentional, awesome – but it’s worth double-checking because it\nchanges previous behaviour.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4271#pullrequestreview-2789151571",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4271",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4271#pullrequestreview-2789151571"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4271"
+            }
+          },
+          "submitted_at": "2025-04-24T01:56:46Z",
+          "commit_id": "2b18cea5a20f1fad713de8f19fd689854d0ec0af"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "apfelbox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1032411?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "apfelbox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1032411?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2475963238,
+      "number": 4267,
+      "state": "closed",
+      "created_at": "2025-04-23T11:45:09Z",
+      "merged_at": "2025-05-04T22:40:42Z",
+      "title": "V4(fix): generate json-schema with min/max(0)",
+      "user": {
+        "login": "PandaWorker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/57873412?v=4"
+      },
+      "labels": [],
+      "additions": 9,
+      "deletions": 9,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 10,
+      "commits": 4,
+      "reviews": [
+        {
+          "id": 2802652513,
+          "node_id": "PRR_kwDODqUnoM6nDRVh",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802652513",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802652513"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:12:46Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802654486,
+          "node_id": "PRR_kwDODqUnoM6nDR0W",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802654486",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802654486"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:13:15Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802655629,
+          "node_id": "PRR_kwDODqUnoM6nDSGN",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802655629",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802655629"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:13:27Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802656482,
+          "node_id": "PRR_kwDODqUnoM6nDSTi",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802656482",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802656482"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:13:36Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802658313,
+          "node_id": "PRR_kwDODqUnoM6nDSwJ",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802658313",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802658313"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:13:59Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802661130,
+          "node_id": "PRR_kwDODqUnoM6nDTcK",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802661130",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802661130"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:14:23Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802662463,
+          "node_id": "PRR_kwDODqUnoM6nDTw_",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802662463",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802662463"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:14:33Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802663995,
+          "node_id": "PRR_kwDODqUnoM6nDUI7",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802663995",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802663995"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:14:50Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802665031,
+          "node_id": "PRR_kwDODqUnoM6nDUZH",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802665031",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802665031"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:14:59Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2802666383,
+          "node_id": "PRR_kwDODqUnoM6nDUuP",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802666383",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2802666383"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T09:15:10Z",
+          "commit_id": "8dabddc2b9979a8e3bd973ee9118eccf38a0c467"
+        },
+        {
+          "id": 2804267879,
+          "node_id": "PRR_kwDODqUnoM6nJbtn",
+          "user": {
+            "login": "RobinTail",
+            "id": 13189514,
+            "node_id": "MDQ6VXNlcjEzMTg5NTE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?u=d63ece1af1162a6cb455e2218c8c82cdd97c5aad&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RobinTail",
+            "html_url": "https://github.com/RobinTail",
+            "followers_url": "https://api.github.com/users/RobinTail/followers",
+            "following_url": "https://api.github.com/users/RobinTail/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RobinTail/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RobinTail/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RobinTail/subscriptions",
+            "organizations_url": "https://api.github.com/users/RobinTail/orgs",
+            "repos_url": "https://api.github.com/users/RobinTail/repos",
+            "events_url": "https://api.github.com/users/RobinTail/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RobinTail/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2804267879",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4267",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4267#pullrequestreview-2804267879"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4267"
+            }
+          },
+          "submitted_at": "2025-04-29T16:13:53Z",
+          "commit_id": "cf410d3736e7d7ef4e77d46cd4eacfa539c80097"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RobinTail",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13189514?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2475728942,
+      "number": 4266,
+      "state": "closed",
+      "created_at": "2025-04-23T10:09:20Z",
+      "merged_at": null,
+      "title": "fix(transform): abort further processing when inner value is invalid",
+      "user": {
+        "login": "DASPRiD",
+        "avatar_url": "https://avatars.githubusercontent.com/u/233300?v=4"
+      },
+      "labels": [],
+      "additions": 36,
+      "deletions": 4,
+      "changed_files": 4,
+      "comments": 5,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "DASPRiD",
+            "avatar_url": "https://avatars.githubusercontent.com/u/233300?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2474555400,
+      "number": 4261,
+      "state": "closed",
+      "created_at": "2025-04-22T21:09:17Z",
+      "merged_at": "2025-05-03T02:23:13Z",
+      "title": "Add composable-functions as a library powered by Zod supporting v4",
+      "user": {
+        "login": "gustavoguichard",
+        "avatar_url": "https://avatars.githubusercontent.com/u/566971?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2473939065,
+      "number": 4260,
+      "state": "closed",
+      "created_at": "2025-04-22T15:32:03Z",
+      "merged_at": "2025-04-30T18:43:55Z",
+      "title": "Add support for `kubb` as part of the v4 upgrade",
+      "user": {
+        "login": "stijnvanhulle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5904681?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2472760618,
+      "number": 4257,
+      "state": "closed",
+      "created_at": "2025-04-22T07:07:06Z",
+      "merged_at": null,
+      "title": "#4238 Fix extended interfaces causing optional keys to break types",
+      "user": {
+        "login": "SeeJayy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5414663?v=4"
+      },
+      "labels": [],
+      "additions": 196,
+      "deletions": 5,
+      "changed_files": 4,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2472266863,
+      "number": 4256,
+      "state": "closed",
+      "created_at": "2025-04-22T00:25:36Z",
+      "merged_at": "2025-05-03T02:17:05Z",
+      "title": "chore: add `orval` to XtoZod ecosystems in v4",
+      "user": {
+        "login": "soartec-lab",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18366969?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2472178712,
+      "number": 4255,
+      "state": "closed",
+      "created_at": "2025-04-21T22:51:33Z",
+      "merged_at": "2025-04-21T22:52:41Z",
+      "title": "Improve handling of `.meta()`/`.describe()` in JSON Schema converter",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 808,
+      "deletions": 425,
+      "changed_files": 11,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2471969310,
+      "number": 4253,
+      "state": "closed",
+      "created_at": "2025-04-21T20:09:26Z",
+      "merged_at": "2025-05-13T20:27:31Z",
+      "title": "Languages: add German language",
+      "user": {
+        "login": "simon04",
+        "avatar_url": "https://avatars.githubusercontent.com/u/782446?v=4"
+      },
+      "labels": [],
+      "additions": 124,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2782158063,
+          "node_id": "PRR_kwDODqUnoM6l1Fzv",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "> [!CAUTION]\n> Inline review comments failed to post. This is likely due to GitHub's limits when posting large numbers of comments.  If you are seeing this consistently it is likely a permissions issue. Please check \"Moderation\" -> \"Code review limits\" under your organization settings.\n\n**Actionable comments posted: 9**\n\n<details>\n<summary>🔭 Outside diff range comments (1)</summary><blockquote>\n\n<details>\n<summary>CONTRIBUTING.md (1)</summary><blockquote>\n\n`30-63`: _🧹 Nitpick (assertive)_\n\n**Yarn → pnpm commands look solid, just a couple of niceties**\n\nThe pnpm replacements are spot-on—install, play, build, test, etc. A few optional nits:\n1. You could use `pnpm install` instead of `pnpm i` for clarity for folks new to pnpm.\n2. Double‑check that the `tests` directory path matches your actual workspace layout (it used to be `src/__tests__`).\n\nOtherwise, this aligns nicely with the broader migration.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~43-~43: Possible missing comma found.\nContext: ...needed extension. In the OSS version of VSCode the extension may be not available.  ##...\n\n(AI_HYDRA_LEO_MISSING_COMMA)\n\n---\n\n[style] ~43-~43: Consider changing the order of words to improve your wording.\nContext: ...OSS version of VSCode the extension may be not available.  ### Commands  **`pnpm build...\n\n(MD_NOT_BE)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>🛑 Comments failed to post (9)</summary><blockquote>\n\n<details>\n<summary>ERROR_HANDLING.md (2)</summary><blockquote>\n\n43-58: _🧹 Nitpick (assertive)_\n\n**Nice new `invalid_intersection_types` entry—tweak markdown formatting**  \nLove the new error code and `mergeErrorPath` field! As a quick nitpick, the table cells use raw `<br>` tags (markdownlint MD033). You can replace those with two spaces at end‑of‑line or nested lists for line breaks. Also, the link to the custom error map section should match the header’s anchor (lowercase, hyphens), e.g. `#customizing-errors-with-zoderrormap` instead of the current fragment.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[style] ~57-~57: As a shorter alternative for ‘able to’, consider using “can”.\nContext: ...hrow issues of any `ZodIssueCode`). You are able to pass in a `params` object here that is ...\n\n(BE_ABLE_TO)\n\n</details>\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n45-45: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n46-46: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n47-47: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n48-48: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n49-49: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n50-50: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n52-52: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n53-53: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n54-54: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n55-55: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n56-56: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Inline HTML\nElement: br\n\n(MD033, no-inline-html)\n\n---\n\n57-57: Link fragments should be valid\nExpected: #customizing-errors-with-zoderrormap; Actual: #Customizing-errors-with-ZodErrorMap\n\n(MD051, link-fragments)\n\n</details>\n\n</details>\n\n---\n\n188-197: _🧹 Nitpick (assertive)_\n\n**Tiny typo in Locales section**  \nIn the sentence “To set the deafult error map…”, “deafult” should be “default.”  \nApply this diff:\n```diff\n- To set the deafult error map based on your locale, you can import the error map from the `zod/locales` directory.\n+ To set the default error map based on your locale, you can import the error map from the `zod/locales` directory.\n```  \n\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n## Locales\n\nThere are locale-specific error maps built into Zod for various languages. To set the default error map based on your locale, you can import the error map from the `zod/locales` directory.\n\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n</blockquote></details>\n<details>\n<summary>.prettierrc.yaml (1)</summary><blockquote>\n\n6-6: _💡 Verification agent_\n\n<details>\n<summary>🧩 Analysis chain</summary>\n\n**Enable experimental ternaries in Prettier**  \nSweet! This unlocks ternary support – just verify our Prettier version (>= 3.6) supports `experimentalTernaries: true`.  \n   \nIf there’s a minimum version requirement, consider documenting it in the repo README or adding a CI check.\n\n---\n\n🏁 Script executed:\n\n```shell\n#!/bin/bash\nset -e\n\n# Find package.json in the repo\nPACKAGE_JSON=$(fd --type f --max-depth 3 --glob package.json | head -n 1)\n\nif [[ -z \"$PACKAGE_JSON\" ]]; then\n  echo \"No package.json found in the repo.\"\n  exit 0\nfi\n\necho \"Found package.json at: $PACKAGE_JSON\"\necho \"Looking for Prettier entry:\"\ngrep -R '\"prettier\"' \"$PACKAGE_JSON\" -A2 || echo \"No Prettier dependency declared.\"\n```\n\nLength of output: 388\n\n---\n\n\n\n</details>\n\n**Action Needed: Bump Prettier to ≥3.6 for experimentalTernaries**  \n\nYour package.json currently pins Prettier at `^3.5.3`, which doesn’t guarantee inclusion of the `experimentalTernaries` flag (added in v3.6.0). Please:\n\n• Update package.json:  \n```diff\n-  \"prettier\": \"^3.5.3\",\n+  \"prettier\": \"^3.6.0\",\n```  \n• Document the minimum Prettier version (>= 3.6.0) in your README or add a CI check to enforce it.  \n\n\n\n> Committable suggestion skipped: line range outside the PR's diff.\n\n</blockquote></details>\n<details>\n<summary>.changeset/README.md (1)</summary><blockquote>\n\n1-8: _🧹 Nitpick (assertive)_\n\n**Add onboarding README for Changesets**  \nGreat intro – it guides contributors to the CLI docs and common questions.  \n  \nConsider linking directly to `.changeset/config.json` (e.g., “See [.changeset/config.json] for default settings”) so folks know where to tweak defaults.\n\n</blockquote></details>\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n117-117: _🧹 Nitpick (assertive)_\n\n**Minor: Fix markdown link fragment**\n\nThere's a casing mismatch in the link fragment - it should be `#zodtype-with-zodtransform` (lowercase) to match the link target.\n\n```diff\n-  - [ZodType with ZodTransform](#zodtype-with-ZodTransform)\n+  - [ZodType with ZodTransform](#zodtype-with-zodtransform)\n```\n\n\n<!-- suggestion_start -->\n\n<details>\n<summary>📝 Committable suggestion</summary>\n\n> ‼️ **IMPORTANT**\n> Carefully review the code before committing. Ensure that it accurately replaces the highlighted code, contains no missing lines, and has no issues with indentation. Thoroughly test & benchmark the code to ensure it meets the requirements.\n\n`````suggestion\n  - [ZodType with ZodTransform](#zodtype-with-zodtransform)\n`````\n\n</details>\n\n<!-- suggestion_end -->\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n117-117: Link fragments should be valid\nExpected: #zodtype-with-zodtransform; Actual: #zodtype-with-ZodTransform\n\n(MD051, link-fragments)\n\n</details>\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/pull_request_template.md (1)</summary><blockquote>\n\n3-3: _🧹 Nitpick (assertive)_\n\n**Fix typo in contribution guidance.**  \nThe word “contribting” should be “contributing” for clarity.\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/test.yml (1)</summary><blockquote>\n\n25-29: _🧹 Nitpick (assertive)_\n\n**Consider refining the TS install step.**  \nUsing `pnpm add typescript@… -w` will mutate your workspace. For an ephemeral CI install, you might prefer `pnpm install typescript@…` without workspace flags.\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/release-beta.yaml (1)</summary><blockquote>\n\n1-4: _🧹 Nitpick (assertive)_\n\n**Cleanup header, quote Boolean key & trim trailing spaces**\n\nChill tweaks to keep the YAML linter happy:\n- Update the header comment to the actual path.\n- Quote the `on` key so YAML doesn’t treat “on” as a boolean.\n- Remove trailing spaces on lines 21, 26, and 32.\n\nHere’s a quick diff:\n```diff\n@@ -1,4 +1,4 @@\n-# .github/release.yml\n+# .github/workflows/release-beta.yaml\n\n-on:\n+\"on\":\n\n@@ -21,3 +21,2 @@\n-      \n+\n\n@@ -26,3 +26,2 @@\n-          \n+\n\n@@ -32,3 +32,2 @@\n-      \n+\n```\n\n\n\nAlso applies to: 21-21, 26-26, 32-32\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[warning] 4-4: truthy value should be one of [false, true]\n\n(truthy)\n\n</details>\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>.github/workflows/release.yml (1)</summary><blockquote>\n\n22-22: _🧹 Nitpick (assertive)_\n\n**Remove trailing spaces**\n\nYAML lint flagged trailing spaces here—let’s trim them to avoid CI warnings.\n\n\n\nAlso applies to: 51-51\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 YAMLlint (1.35.1)</summary>\n\n[error] 22-22: trailing spaces\n\n(trailing-spaces)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4253#pullrequestreview-2782158063",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4253",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4253#pullrequestreview-2782158063"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4253"
+            }
+          },
+          "submitted_at": "2025-04-21T20:12:52Z",
+          "commit_id": "f7843ac355d42c069b0764de7c52ed0417ef48c4"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Abdalrhman-Almarakeby",
+            "avatar_url": "https://avatars.githubusercontent.com/u/124980704?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2471522503,
+      "number": 4252,
+      "state": "closed",
+      "created_at": "2025-04-21T15:37:29Z",
+      "merged_at": "2025-04-21T18:13:05Z",
+      "title": "fix(docs): Grammatical error in Refinements",
+      "user": {
+        "login": "juangiordana",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43202?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:53+09:00"
+}

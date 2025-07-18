@@ -1,0 +1,343 @@
+{
+  "week": "2025-W06",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2323245736,
+      "number": 3976,
+      "state": "closed",
+      "created_at": "2025-02-07T22:42:03Z",
+      "merged_at": "2025-02-07T22:46:29Z",
+      "title": "Add Nitric to sponsors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 16,
+      "deletions": 4,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2323143177,
+      "number": 3975,
+      "state": "closed",
+      "created_at": "2025-02-07T21:20:58Z",
+      "merged_at": "2025-02-07T21:54:33Z",
+      "title": "Add CodeRabbit to sponsors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 52,
+      "deletions": 16,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 8,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2321510608,
+      "number": 3974,
+      "state": "closed",
+      "created_at": "2025-02-07T05:44:13Z",
+      "merged_at": "2025-04-16T00:37:43Z",
+      "title": "Fix broken logo link",
+      "user": {
+        "login": "kantuni",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6151409?v=4"
+      },
+      "labels": [],
+      "additions": 9,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "kantuni",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6151409?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2320096524,
+      "number": 3972,
+      "state": "open",
+      "created_at": "2025-02-06T14:41:43Z",
+      "merged_at": null,
+      "title": "feat: Add MAC Address validation (#3970)",
+      "user": {
+        "login": "sumit6499",
+        "avatar_url": "https://avatars.githubusercontent.com/u/70847200?v=4"
+      },
+      "labels": [],
+      "additions": 108,
+      "deletions": 4,
+      "changed_files": 4,
+      "comments": 6,
+      "review_comments": 3,
+      "commits": 4,
+      "reviews": [
+        {
+          "id": 2599671035,
+          "node_id": "PRR_kwDODqUnoM6a89T7",
+          "user": {
+            "login": "mknijnenberg",
+            "id": 2649958,
+            "node_id": "MDQ6VXNlcjI2NDk5NTg=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2649958?u=0adc51fc240a33bd3d4462a1c8b94e5328a2ce43&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mknijnenberg",
+            "html_url": "https://github.com/mknijnenberg",
+            "followers_url": "https://api.github.com/users/mknijnenberg/followers",
+            "following_url": "https://api.github.com/users/mknijnenberg/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mknijnenberg/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mknijnenberg/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mknijnenberg/subscriptions",
+            "organizations_url": "https://api.github.com/users/mknijnenberg/orgs",
+            "repos_url": "https://api.github.com/users/mknijnenberg/repos",
+            "events_url": "https://api.github.com/users/mknijnenberg/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mknijnenberg/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "CHANGES_REQUESTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2599671035",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3972",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2599671035"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3972"
+            }
+          },
+          "submitted_at": "2025-02-06T19:23:14Z",
+          "commit_id": "d2381c96370311df4fe3ec2cd5b79ca26ccbd0c8"
+        },
+        {
+          "id": 2618806885,
+          "node_id": "PRR_kwDODqUnoM6cF9Jl",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🔭 Outside diff range comments (1)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary><blockquote>\n\n`1-976`: _:warning: Potential issue_\n\n**Run Prettier to fix code style issues.**\n\nThe test pipeline indicates code style issues. Please run Prettier on the test file to ensure consistent formatting.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n[warning] 1-1: Code style issues found. Forgot to run Prettier?\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>🧹 Nitpick comments (5)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary><blockquote>\n\n`942-976`: **Consider enhancing the MAC validation test suite.**\n\nWhile the test cases are comprehensive, consider these improvements:\n\n1. Add case-insensitive validation tests\n2. Add comments explaining the test cases\n3. Include additional edge cases:\n   - Mixed case (e.g., \"00:1a:2B:3c:4D:5e\")\n   - Leading/trailing whitespace\n   - Invalid separators (e.g., \"00/1A/2B/3C/4D/5E\")\n\nHere's a suggested enhancement:\n\n```diff\n test(\"MAC validation\", () => {\n   const mac = z.string().mac();\n+  // Basic validation\n   expect(mac.safeParse(\"00:1A:2B:3C:4D:5E\").success).toBe(true);\n   expect(() => mac.parse(\"00:1A-2B:3C:4D:5E\")).toThrow();\n\n+  // Test cases for valid MAC addresses\n   const validMacs = [\n+    // Standard uppercase format with colons\n     \"00:1A:2B:3C:4D:5E\",\n     \"FF:FF:FF:FF:FF:FF\",\n+    // Standard uppercase format with hyphens\n     \"01-23-45-67-89-AB\",\n+    // Mixed case format\n+    \"00:1a:2B:3c:4D:5e\",\n+    // Lowercase format\n     \"0a:1b:2c:3d:4e:5f\",\n+    // With whitespace (if supported)\n+    \" 00:1A:2B:3C:4D:5E \",\n     // ... rest of the valid cases\n   ];\n\n+  // Test cases for invalid MAC addresses\n   const invalidMacs = [\n+    // Mixed separators\n     \"00:1A-2B:3C-4D:5E\",\n+    // No separators\n     \"001A2B3C4D5E\",\n+    // Too short\n     \"00:1A:2B:3C:4D\",\n+    // Too long\n     \"00:1A:2B:3C:4D:5E:FF\",\n+    // Invalid characters\n     \"00:1A:2B:3C:4D:GZ\",\n+    // Invalid separators\n+    \"00/1A/2B/3C/4D/5E\",\n     // ... rest of the invalid cases\n   ];\n\n   const macSchema = z.string().mac();\n   expect(validMacs.every((mac) => macSchema.safeParse(mac).success)).toBe(true);\n   expect(invalidMacs.every((mac) => macSchema.safeParse(mac).success)).toBe(false);\n });\n```\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (2)</summary><blockquote>\n\n`699-702`: **Improve MAC address regex readability and case-insensitivity.**\n\nThe MAC address regex pattern could be improved in the following ways:\n1. Add comments to explain the components\n2. Add case-insensitive flag\n3. Fix typo in comment (\"seperators\" → \"separators\")\n\nApply this diff to improve the regex pattern:\n\n```diff\n-// no support for mac without seperators\n-// enforces all seperators should be either ':' or '-'\n-const macRegex=/^([0-9A-Fa-f]{2}(:)){5}[0-9A-Fa-f]{2}$|^([0-9A-Fa-f]{2}(-)){5}[0-9A-Fa-f]{2}$/;\n+// No support for MAC addresses without separators\n+// Enforces all separators must be either ':' or '-'\n+const macRegex = /^([0-9A-Fa-f]{2}(:)){5}[0-9A-Fa-f]{2}$|^([0-9A-Fa-f]{2}(-)){5}[0-9A-Fa-f]{2}$/i;\n+// Explanation:\n+// ^                     Start of string\n+// [0-9A-Fa-f]{2}       Two hex digits\n+// (:)                   Colon separator (captured)\n+// {5}                   Repeat 5 times\n+// [0-9A-Fa-f]{2}       Final two hex digits\n+// $                     End of string\n+// |                     OR\n+// Same pattern but with hyphen separators\n```\n\n---\n\n`779-785`: **Simplify the MAC address validation function.**\n\nThe validation function can be simplified by directly returning the test result.\n\nApply this diff to simplify the function:\n\n```diff\n-function isValidMac(mac:string) {\n-  if (macRegex.test(mac)){\n-    return true;\n-  }\n-\n-  return false;\n-}\n+function isValidMac(mac: string): boolean {\n+  return macRegex.test(mac);\n+}\n```\n\n</blockquote></details>\n<details>\n<summary>README.md (2)</summary><blockquote>\n\n`813-813`: **MAC Address Validation Example Added**  \nThe example `z.string().mac(); // Validate 48-bit MAC` clearly illustrates the basic usage of the new MAC address validation method. Consider adding a brief note mentioning that the validator supports both colon-separated and dash-separated formats and that it applies case-insensitive matching to accommodate lower- and uppercase letters.\n\n---\n\n`977-988`: **Detailed MAC Addresses Section**  \nThe new \"MAC addresses\" section provides clear examples of how to validate standard 48-bit MAC addresses. The examples include:\n- Valid cases with both colon (`\"00:1A:2B:3C:4D:5E\"`) and dash (`\"98-76-54-32-10-FF\"`) separations.\n- Invalid cases, including the case with an extra segment (`\"00:1A:2B:3C:4D:5E:FF\"`) and a mixed separator format (`\"00:1A:2B-3C:4D:5E\"`).\n\nFor improved clarity, consider including a comment (or a link to the implementation) explaining the underlying regex—for example, highlighting that the regex is designed to be case-insensitive and only allows one consistent separator throughout the string. Also, ensure that the heading starts at the beginning of the line as required by markdown lint rules.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n977-977: Headings must start at the beginning of the line\nnull\n\n(MD023, heading-start-left)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between e376cda8e14d3caa09bc2148ffc668748118db6b and 97f55bf61b0742794dd839690866800e3eca74ad.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `README.md` (5 hunks)\n* `src/ZodError.ts` (1 hunks)\n* `src/__tests__/string.test.ts` (10 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 GitHub Actions: test</summary>\n\n<details>\n<summary>src/__tests__/string.test.ts</summary>\n\n[warning] 1-1: Code style issues found. Forgot to run Prettier?\n\n</details>\n<details>\n<summary>README.md</summary>\n\n[warning] 1-1: Code style issues found. Forgot to run Prettier?\n\n</details>\n\n</details>\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n<details>\n<summary>README.md</summary>\n\n977-977: Headings must start at the beginning of the line\nnull\n\n(MD023, heading-start-left)\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (8)</summary><blockquote>\n\n<details>\n<summary>src/ZodError.ts (1)</summary>\n\n`110-110`: **LGTM!**\n\nThe addition of \"mac\" to the `StringValidation` type is well-integrated with the existing validation types and follows the established pattern.\n\n</details>\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary>\n\n`467-566`: **LGTM!**\n\nThe isMac property checks are well-implemented and follow the established pattern for other string validation types. Each validation type correctly reports its isMac status.\n\n</details>\n<details>\n<summary>src/types.ts (4)</summary>\n\n`628-629`: **LGTM!**\n\nThe type definition for MAC address validation follows the established pattern for string validations.\n\n---\n\n`1089-1099`: **LGTM!**\n\nThe MAC address validation logic is well-integrated into the existing validation framework and follows the established pattern.\n\n---\n\n`1178-1180`: **LGTM!**\n\nThe mac() method is correctly implemented following the established pattern for string validation methods.\n\n---\n\n`1384-1386`: **LGTM!**\n\nThe isMac getter is correctly implemented following the established pattern for string validation getters.\n\n</details>\n<details>\n<summary>README.md (2)</summary>\n\n`78-79`: **New Table of Contents Entry for MAC Addresses**  \nThe addition of the \"MAC addresses\" link in the table of contents ensures that the new validation feature is easily discoverable. This update is clear and consistent with the surrounding entries.\n\n---\n\n`845-845`: **Custom Error Message for MAC Address Validation**  \nThe example `z.string().mac({ message: \"Invalid MAC address\" });` shows how to override the default error message. This is a good practice for enhancing usability.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2618806885",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3972",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2618806885"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3972"
+            }
+          },
+          "submitted_at": "2025-02-14T21:10:23Z",
+          "commit_id": "97f55bf61b0742794dd839690866800e3eca74ad"
+        },
+        {
+          "id": 2619645654,
+          "node_id": "PRR_kwDODqUnoM6cJJ7W",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (1)</summary><blockquote>\n\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`1002-1002`: **Markdown Heading Alignment**\n\nThe heading “### MAC addresses” on line 1002 appears to have leading whitespace. Please remove any extra spaces so that the heading starts at the beginning of the line in order to comply with markdownlint MD023.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n1002-1002: Headings must start at the beginning of the line\nnull\n\n(MD023, heading-start-left)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 97f55bf61b0742794dd839690866800e3eca74ad and 79163a30c39a51cde2bfbbc94d9a84d533c50b8f.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (2)</summary>\n\n* `README.md` (5 hunks)\n* `src/types.ts` (6 hunks)\n\n</details>\n\n<details>\n<summary>🚧 Files skipped from review as they are similar to previous changes (1)</summary>\n\n* src/types.ts\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n<details>\n<summary>README.md</summary>\n\n1002-1002: Headings must start at the beginning of the line\nnull\n\n(MD023, heading-start-left)\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (2)</summary><blockquote>\n\n<details>\n<summary>README.md (2)</summary>\n\n`78-79`: **TOC Update for MAC Addresses Feature**\n\nThe addition of the new TOC item “[MAC addresses](#mac-addresses)” (along with \"IP ranges (CIDR)\") aligns well with the PR objectives. Please verify that the anchor \"#mac-addresses\" correctly links to the corresponding section below.\n\n---\n\n`1006-1013`: **Comprehensive MAC Address Examples**\n\nThe code snippet clearly demonstrates the usage of the new `mac()` validation method. It shows valid cases with both colon-separated and dash-separated MAC addresses as well as failure cases for improper formats (extra group and mixed separator use).  \n  \n**Suggestion:** If not already implemented, consider explicitly noting (in the documentation or inline comments) that the validation is case-insensitive so that both uppercase and lowercase hexadecimal digits are accepted.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2619645654",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3972",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3972#pullrequestreview-2619645654"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3972"
+            }
+          },
+          "submitted_at": "2025-02-16T14:42:47Z",
+          "commit_id": "79163a30c39a51cde2bfbbc94d9a84d533c50b8f"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "sumit6499",
+            "avatar_url": "https://avatars.githubusercontent.com/u/70847200?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "alex-eri",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1091576?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "mknijnenberg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2649958?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "mknijnenberg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2649958?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "mknijnenberg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2649958?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2319997839,
+      "number": 3971,
+      "state": "closed",
+      "created_at": "2025-02-06T13:59:59Z",
+      "merged_at": "2025-02-11T20:04:24Z",
+      "title": "docs(X to Zod): Update url for runtyping",
+      "user": {
+        "login": "mknijnenberg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/2649958?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:33+09:00"
+}

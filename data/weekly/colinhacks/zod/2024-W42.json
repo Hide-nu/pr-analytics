@@ -1,0 +1,144 @@
+{
+  "week": "2024-W42",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2133630934,
+      "number": 3810,
+      "state": "open",
+      "created_at": "2024-10-19T12:40:37Z",
+      "merged_at": null,
+      "title": "fix record type with branded keys",
+      "user": {
+        "login": "netanelgilad",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3474905?v=4"
+      },
+      "labels": [],
+      "additions": 64,
+      "deletions": 2,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2133443847,
+      "number": 3809,
+      "state": "closed",
+      "created_at": "2024-10-19T07:07:32Z",
+      "merged_at": null,
+      "title": "fix: failed IP validation test",
+      "user": {
+        "login": "wataryooou",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2424714483,
+          "node_id": "PRR_kwDODqUnoM6QhjTz",
+          "user": {
+            "login": "m10rten",
+            "id": 57992191,
+            "node_id": "MDQ6VXNlcjU3OTkyMTkx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/57992191?u=905b53658455f179e5cc76a6d40ad8f560f1be6a&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/m10rten",
+            "html_url": "https://github.com/m10rten",
+            "followers_url": "https://api.github.com/users/m10rten/followers",
+            "following_url": "https://api.github.com/users/m10rten/following{/other_user}",
+            "gists_url": "https://api.github.com/users/m10rten/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/m10rten/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/m10rten/subscriptions",
+            "organizations_url": "https://api.github.com/users/m10rten/orgs",
+            "repos_url": "https://api.github.com/users/m10rten/repos",
+            "events_url": "https://api.github.com/users/m10rten/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/m10rten/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "Don't try to sneak in changes outside the PR's description (fix IP validation) 😆 ",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3809#pullrequestreview-2424714483",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3809",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3809#pullrequestreview-2424714483"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3809"
+            }
+          },
+          "submitted_at": "2024-11-08T19:19:05Z",
+          "commit_id": "189c1999402c310ea81994d6277b24c5ac8a3810"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "wataryooou",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13196870?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2126259394,
+      "number": 3800,
+      "state": "closed",
+      "created_at": "2024-10-15T21:15:35Z",
+      "merged_at": "2024-10-16T21:22:43Z",
+      "title": "Add 'schemql' in Powered by Zod",
+      "user": {
+        "login": "webda2l",
+        "avatar_url": "https://avatars.githubusercontent.com/u/517753?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:11+09:00"
+}

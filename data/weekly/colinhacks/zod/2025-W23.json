@@ -1,0 +1,485 @@
+{
+  "week": "2025-W23",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2576678077,
+      "number": 4649,
+      "state": "closed",
+      "created_at": "2025-06-08T13:17:17Z",
+      "merged_at": "2025-06-09T05:19:29Z",
+      "title": "Replace non existing error instance.",
+      "user": {
+        "login": "igmrrf",
+        "avatar_url": "https://avatars.githubusercontent.com/u/49701046?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2576491323,
+      "number": 4648,
+      "state": "closed",
+      "created_at": "2025-06-08T09:25:08Z",
+      "merged_at": "2025-06-10T03:18:10Z",
+      "title": "Fix adjectives in Japanese",
+      "user": {
+        "login": "naoty",
+        "avatar_url": "https://avatars.githubusercontent.com/u/413899?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 6,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2575620707,
+      "number": 4644,
+      "state": "closed",
+      "created_at": "2025-06-07T15:21:18Z",
+      "merged_at": null,
+      "title": "feat: added file type (v3)",
+      "user": {
+        "login": "obha",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7314116?v=4"
+      },
+      "labels": [],
+      "additions": 395,
+      "deletions": 3,
+      "changed_files": 10,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2575502460,
+      "number": 4643,
+      "state": "closed",
+      "created_at": "2025-06-07T13:38:57Z",
+      "merged_at": "2025-06-09T05:26:19Z",
+      "title": "chore: allow readonly arrays in `z.literal`",
+      "user": {
+        "login": "vladfrangu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17960496?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 62,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2575219281,
+      "number": 4640,
+      "state": "closed",
+      "created_at": "2025-06-07T08:22:47Z",
+      "merged_at": "2025-06-09T04:25:22Z",
+      "title": "docs: fix broken link in Zod Core errors docs",
+      "user": {
+        "login": "CarinaChenot",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16705167?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2573215021,
+      "number": 4636,
+      "state": "closed",
+      "created_at": "2025-06-06T11:15:08Z",
+      "merged_at": "2025-06-10T03:16:54Z",
+      "title": "v4: Preserve function types in `.meta()`",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 40,
+      "deletions": 4,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 5,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2572926622,
+      "number": 4635,
+      "state": "closed",
+      "created_at": "2025-06-06T09:08:00Z",
+      "merged_at": "2025-06-10T03:17:06Z",
+      "title": "Added Superforms for SvelteKit",
+      "user": {
+        "login": "ciscoheat",
+        "avatar_url": "https://avatars.githubusercontent.com/u/130450?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2572109118,
+      "number": 4632,
+      "state": "closed",
+      "created_at": "2025-06-06T00:55:31Z",
+      "merged_at": null,
+      "title": "—",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2572102563,
+      "number": 4631,
+      "state": "closed",
+      "created_at": "2025-06-06T00:52:14Z",
+      "merged_at": "2025-06-06T00:57:18Z",
+      "title": "Improve zod mini internals",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 235,
+      "deletions": 132,
+      "changed_files": 4,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2571972172,
+      "number": 4630,
+      "state": "closed",
+      "created_at": "2025-06-05T23:53:46Z",
+      "merged_at": "2025-06-06T00:00:44Z",
+      "title": "Fix json",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 49,
+      "deletions": 99,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2571688974,
+      "number": 4627,
+      "state": "closed",
+      "created_at": "2025-06-05T21:50:13Z",
+      "merged_at": "2025-06-06T06:54:26Z",
+      "title": "fix(util): cross realm IsPlainObject check",
+      "user": {
+        "login": "gislerro",
+        "avatar_url": "https://avatars.githubusercontent.com/u/63500142?v=4"
+      },
+      "labels": [],
+      "additions": 76,
+      "deletions": 55,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2568764687,
+      "number": 4622,
+      "state": "open",
+      "created_at": "2025-06-05T00:13:35Z",
+      "merged_at": null,
+      "title": "Improve JSON Schema",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 153,
+      "deletions": 142,
+      "changed_files": 18,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2566631366,
+      "number": 4617,
+      "state": "closed",
+      "created_at": "2025-06-04T09:00:11Z",
+      "merged_at": "2025-06-16T22:44:02Z",
+      "title": "fix(v4): add exact to length check issue",
+      "user": {
+        "login": "IRelaxxx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6482311?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 1,
+      "changed_files": 3,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "IRelaxxx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6482311?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2566449868,
+      "number": 4616,
+      "state": "closed",
+      "created_at": "2025-06-04T07:48:55Z",
+      "merged_at": null,
+      "title": "Added Superforms for SvelteKit",
+      "user": {
+        "login": "ciscoheat",
+        "avatar_url": "https://avatars.githubusercontent.com/u/130450?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "ciscoheat",
+            "avatar_url": "https://avatars.githubusercontent.com/u/130450?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2560620986,
+      "number": 4602,
+      "state": "closed",
+      "created_at": "2025-06-02T13:14:41Z",
+      "merged_at": "2025-06-02T20:55:58Z",
+      "title": "v4(toJSONSchema): Add `includes` position check",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 30,
+      "deletions": 5,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2559948255,
+      "number": 4601,
+      "state": "closed",
+      "created_at": "2025-06-02T09:35:32Z",
+      "merged_at": "2025-06-02T19:13:54Z",
+      "title": "docs: updated name and link of `regle` library",
+      "user": {
+        "login": "victorgarciaesgi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15092120?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 4,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2559786339,
+      "number": 4599,
+      "state": "closed",
+      "created_at": "2025-06-02T08:40:17Z",
+      "merged_at": "2025-06-03T21:47:06Z",
+      "title": "Restructure: mitigate excessively deep errors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 925,
+      "deletions": 500,
+      "changed_files": 16,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 13,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:17+09:00"
+}

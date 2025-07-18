@@ -1,0 +1,205 @@
+{
+  "week": "2024-W50",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2234308597,
+      "number": 3910,
+      "state": "open",
+      "created_at": "2024-12-13T18:09:17Z",
+      "merged_at": null,
+      "title": "Update type in test for upcoming intersection equality behavior change",
+      "user": {
+        "login": "MichaelMitchell-at",
+        "avatar_url": "https://avatars.githubusercontent.com/u/98767680?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2229340557,
+      "number": 3904,
+      "state": "closed",
+      "created_at": "2024-12-11T15:46:50Z",
+      "merged_at": null,
+      "title": "feat: implement markdoc static site generator with dark theme",
+      "user": {
+        "login": "devin-ai-integration[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/811515?v=4"
+      },
+      "labels": [],
+      "additions": 17463,
+      "deletions": 0,
+      "changed_files": 41,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "devin-ai-integration[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/811515?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2225250633,
+      "number": 3897,
+      "state": "closed",
+      "created_at": "2024-12-10T02:54:30Z",
+      "merged_at": "2024-12-11T01:52:58Z",
+      "title": "Bump find-my-way from 8.2.0 to 8.2.2",
+      "user": {
+        "login": "dependabot[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4"
+      },
+      "labels": [
+        {
+          "name": "dependencies",
+          "color": "0366d6"
+        }
+      ],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2225250413,
+      "number": 3896,
+      "state": "closed",
+      "created_at": "2024-12-10T02:54:19Z",
+      "merged_at": "2024-12-11T01:53:09Z",
+      "title": "Bump nanoid from 3.3.7 to 3.3.8",
+      "user": {
+        "login": "dependabot[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4"
+      },
+      "labels": [
+        {
+          "name": "dependencies",
+          "color": "0366d6"
+        }
+      ],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2225250075,
+      "number": 3895,
+      "state": "closed",
+      "created_at": "2024-12-10T02:53:56Z",
+      "merged_at": "2024-12-11T01:52:51Z",
+      "title": "Bump rollup from 2.79.1 to 2.79.2",
+      "user": {
+        "login": "dependabot[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4"
+      },
+      "labels": [
+        {
+          "name": "dependencies",
+          "color": "0366d6"
+        }
+      ],
+      "additions": 3,
+      "deletions": 3,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2222827713,
+      "number": 3893,
+      "state": "closed",
+      "created_at": "2024-12-09T06:56:00Z",
+      "merged_at": "2024-12-10T06:02:50Z",
+      "title": "feat: Add JWT string validator",
+      "user": {
+        "login": "Mokshit06",
+        "avatar_url": "https://avatars.githubusercontent.com/u/50412128?v=4"
+      },
+      "labels": [],
+      "additions": 148,
+      "deletions": 0,
+      "changed_files": 6,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:23+09:00"
+}

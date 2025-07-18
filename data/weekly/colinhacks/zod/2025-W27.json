@@ -1,0 +1,410 @@
+{
+  "week": "2025-W27",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2644446711,
+      "number": 4831,
+      "state": "closed",
+      "created_at": "2025-07-06T09:15:55Z",
+      "merged_at": "2025-07-08T09:09:54Z",
+      "title": "docs: fixed typo in the index.mdx",
+      "user": {
+        "login": "ikxin",
+        "avatar_url": "https://avatars.githubusercontent.com/u/54543761?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2642648128,
+      "number": 4829,
+      "state": "closed",
+      "created_at": "2025-07-05T02:41:38Z",
+      "merged_at": "2025-07-08T21:32:03Z",
+      "title": "Add zod-openapi libraries to v4",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 12,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2640699169,
+      "number": 4822,
+      "state": "closed",
+      "created_at": "2025-07-04T08:44:21Z",
+      "merged_at": "2025-07-04T08:53:01Z",
+      "title": "v3.25.73",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 634,
+      "deletions": 35,
+      "changed_files": 20,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 8,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2639473342,
+      "number": 4816,
+      "state": "closed",
+      "created_at": "2025-07-03T19:30:51Z",
+      "merged_at": null,
+      "title": "feat: redo destructuring",
+      "user": {
+        "login": "peterpeterparker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16886711?v=4"
+      },
+      "labels": [],
+      "additions": 25,
+      "deletions": 26,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2637660691,
+      "number": 4811,
+      "state": "open",
+      "created_at": "2025-07-03T07:40:00Z",
+      "merged_at": null,
+      "title": "Add JSON Schema draft-04 output",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 73,
+      "deletions": 16,
+      "changed_files": 4,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "kibertoad",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1847934?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "kibertoad",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1847934?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2637124957,
+      "number": 4808,
+      "state": "closed",
+      "created_at": "2025-07-03T02:50:16Z",
+      "merged_at": "2025-07-03T02:53:53Z",
+      "title": "Move source to `/src`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 57,
+      "deletions": 55,
+      "changed_files": 253,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 8,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2637004890,
+      "number": 4807,
+      "state": "closed",
+      "created_at": "2025-07-03T01:34:26Z",
+      "merged_at": "2025-07-03T01:40:48Z",
+      "title": "v3.25.70",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 94,
+      "deletions": 63,
+      "changed_files": 25,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 14,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2636968119,
+      "number": 4806,
+      "state": "closed",
+      "created_at": "2025-07-03T01:09:12Z",
+      "merged_at": "2025-07-03T01:10:40Z",
+      "title": "Add src dir",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 25,
+      "deletions": 21,
+      "changed_files": 243,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2636935308,
+      "number": 4805,
+      "state": "closed",
+      "created_at": "2025-07-03T00:49:21Z",
+      "merged_at": null,
+      "title": "Fix regex for boolean and number",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 19,
+      "deletions": 14,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2636932728,
+      "number": 4804,
+      "state": "closed",
+      "created_at": "2025-07-03T00:47:19Z",
+      "merged_at": "2025-07-03T00:47:36Z",
+      "title": "Fix Lambda typo",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [
+        {
+          "name": "codex",
+          "color": "ededed"
+        }
+      ],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2636485830,
+      "number": 4802,
+      "state": "closed",
+      "created_at": "2025-07-02T20:14:37Z",
+      "merged_at": "2025-07-02T20:16:33Z",
+      "title": "Add `exact` to `too_big`/`too_small` issue formats",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 7,
+      "deletions": 12,
+      "changed_files": 4,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2631483510,
+      "number": 4791,
+      "state": "closed",
+      "created_at": "2025-07-01T08:37:48Z",
+      "merged_at": "2025-07-02T20:29:57Z",
+      "title": "docs: Fix refine and transform link",
+      "user": {
+        "login": "hmatthieu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10002875?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 2,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2630379004,
+      "number": 4790,
+      "state": "closed",
+      "created_at": "2025-06-30T23:05:09Z",
+      "merged_at": "2025-07-02T20:29:31Z",
+      "title": "docs: add zod-jsonrpc to apiLibraries",
+      "user": {
+        "login": "danscan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1638987?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2627631414,
+      "number": 4785,
+      "state": "open",
+      "created_at": "2025-06-30T03:31:43Z",
+      "merged_at": null,
+      "title": "Add z.looseEnum for more permissive enum validation",
+      "user": {
+        "login": "marco-carvalho",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15821724?v=4"
+      },
+      "labels": [],
+      "additions": 351,
+      "deletions": 80,
+      "changed_files": 6,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "samchungy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "marco-carvalho",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15821724?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2627397294,
+      "number": 4784,
+      "state": "closed",
+      "created_at": "2025-06-30T00:15:58Z",
+      "merged_at": "2025-07-03T00:41:47Z",
+      "title": "Add `svelte-jsonschema-form` to form integrations",
+      "user": {
+        "login": "x0k",
+        "avatar_url": "https://avatars.githubusercontent.com/u/23502797?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:23+09:00"
+}

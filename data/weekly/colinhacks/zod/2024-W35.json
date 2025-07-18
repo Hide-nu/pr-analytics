@@ -1,0 +1,156 @@
+{
+  "week": "2024-W35",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2042243497,
+      "number": 3729,
+      "state": "closed",
+      "created_at": "2024-08-28T15:30:28Z",
+      "merged_at": "2024-09-03T22:48:52Z",
+      "title": "Fix GitHub link in README.",
+      "user": {
+        "login": "bryanrsmith",
+        "avatar_url": "https://avatars.githubusercontent.com/u/186704?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2041663389,
+      "number": 3728,
+      "state": "open",
+      "created_at": "2024-08-28T10:56:02Z",
+      "merged_at": null,
+      "title": "fix: use the custom error message correctly",
+      "user": {
+        "login": "sunnylost",
+        "avatar_url": "https://avatars.githubusercontent.com/u/693496?v=4"
+      },
+      "labels": [],
+      "additions": 13,
+      "deletions": 7,
+      "changed_files": 3,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2454504261,
+          "node_id": "PRR_kwDODqUnoM6STMNF",
+          "user": {
+            "login": "TadeoArtia",
+            "id": 70708314,
+            "node_id": "MDQ6VXNlcjcwNzA4MzE0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/70708314?u=58b4393b3dbd08dd1b9a2fde9a6f5ece2bf1361a&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/TadeoArtia",
+            "html_url": "https://github.com/TadeoArtia",
+            "followers_url": "https://api.github.com/users/TadeoArtia/followers",
+            "following_url": "https://api.github.com/users/TadeoArtia/following{/other_user}",
+            "gists_url": "https://api.github.com/users/TadeoArtia/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/TadeoArtia/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/TadeoArtia/subscriptions",
+            "organizations_url": "https://api.github.com/users/TadeoArtia/orgs",
+            "repos_url": "https://api.github.com/users/TadeoArtia/repos",
+            "events_url": "https://api.github.com/users/TadeoArtia/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/TadeoArtia/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "Great and much needed !",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3728#pullrequestreview-2454504261",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3728",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3728#pullrequestreview-2454504261"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3728"
+            }
+          },
+          "submitted_at": "2024-11-22T13:50:23Z",
+          "commit_id": "4b94fbc8a9c7ed35dbeeba672147f8e04fbac92a"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "StephanMeijer",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3169264?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "sunnylost",
+            "avatar_url": "https://avatars.githubusercontent.com/u/693496?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "LitoMore",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8186898?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2037665899,
+      "number": 3727,
+      "state": "open",
+      "created_at": "2024-08-26T15:22:27Z",
+      "merged_at": null,
+      "title": "fix(v3): dirty union bug",
+      "user": {
+        "login": "mmkal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15040698?v=4"
+      },
+      "labels": [],
+      "additions": 17,
+      "deletions": 14,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:01+09:00"
+}

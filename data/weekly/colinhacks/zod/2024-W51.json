@@ -1,0 +1,144 @@
+{
+  "week": "2024-W51",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2247516695,
+      "number": 3921,
+      "state": "closed",
+      "created_at": "2024-12-20T23:40:49Z",
+      "merged_at": "2025-01-24T07:41:11Z",
+      "title": "Add `zod-struct` to utilities for Zod",
+      "user": {
+        "login": "reesericci",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19589006?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "StefanTerdell",
+            "avatar_url": "https://avatars.githubusercontent.com/u/35991746?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2245297604,
+      "number": 3918,
+      "state": "open",
+      "created_at": "2024-12-19T18:43:55Z",
+      "merged_at": null,
+      "title": "`recordWithBrandedKeys` should not be `Partial`",
+      "user": {
+        "login": "AlexErrant",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109672176?v=4"
+      },
+      "labels": [],
+      "additions": 18,
+      "deletions": 2,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2241283663,
+      "number": 3916,
+      "state": "closed",
+      "created_at": "2024-12-18T04:30:36Z",
+      "merged_at": null,
+      "title": "Adding an additional validation using regex for the URL",
+      "user": {
+        "login": "andR3Scr1pTx86",
+        "avatar_url": "https://avatars.githubusercontent.com/u/189578110?v=4"
+      },
+      "labels": [],
+      "additions": 12,
+      "deletions": 2,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2240478904,
+      "number": 3914,
+      "state": "open",
+      "created_at": "2024-12-17T19:26:16Z",
+      "merged_at": null,
+      "title": "fix: string().email() does not validate successfully where emails have Ampersand (&) in them #3913",
+      "user": {
+        "login": "SunilChackoPS",
+        "avatar_url": "https://avatars.githubusercontent.com/u/182456486?v=4"
+      },
+      "labels": [],
+      "additions": 8,
+      "deletions": 1,
+      "changed_files": 2,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "andersk",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26471?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "SunilChackoPS",
+            "avatar_url": "https://avatars.githubusercontent.com/u/182456486?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:24+09:00"
+}

@@ -1,0 +1,300 @@
+{
+  "week": "2024-W52",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2253755735,
+      "number": 3926,
+      "state": "open",
+      "created_at": "2024-12-27T21:20:22Z",
+      "merged_at": null,
+      "title": "fix: replace es2019 class fields with local members to address #3611",
+      "user": {
+        "login": "alon-gb",
+        "avatar_url": "https://avatars.githubusercontent.com/u/187936509?v=4"
+      },
+      "labels": [],
+      "additions": 142,
+      "deletions": 24,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 4,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2524687343,
+          "node_id": "PRR_kwDODqUnoM6We6vv",
+          "user": {
+            "login": "nadavye",
+            "id": 15104980,
+            "node_id": "MDQ6VXNlcjE1MTA0OTgw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15104980?u=1253b6c1edee8096ac12b27ce3d001cd022cdc3e&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nadavye",
+            "html_url": "https://github.com/nadavye",
+            "followers_url": "https://api.github.com/users/nadavye/followers",
+            "following_url": "https://api.github.com/users/nadavye/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nadavye/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nadavye/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nadavye/subscriptions",
+            "organizations_url": "https://api.github.com/users/nadavye/orgs",
+            "repos_url": "https://api.github.com/users/nadavye/repos",
+            "events_url": "https://api.github.com/users/nadavye/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nadavye/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687343",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3926",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687343"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3926"
+            }
+          },
+          "submitted_at": "2024-12-28T09:12:43Z",
+          "commit_id": "4d43ff041aba2c99f4aad76f6e4d4b414e59a0ec"
+        },
+        {
+          "id": 2524687451,
+          "node_id": "PRR_kwDODqUnoM6We6xb",
+          "user": {
+            "login": "nadavye",
+            "id": 15104980,
+            "node_id": "MDQ6VXNlcjE1MTA0OTgw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15104980?u=1253b6c1edee8096ac12b27ce3d001cd022cdc3e&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nadavye",
+            "html_url": "https://github.com/nadavye",
+            "followers_url": "https://api.github.com/users/nadavye/followers",
+            "following_url": "https://api.github.com/users/nadavye/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nadavye/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nadavye/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nadavye/subscriptions",
+            "organizations_url": "https://api.github.com/users/nadavye/orgs",
+            "repos_url": "https://api.github.com/users/nadavye/repos",
+            "events_url": "https://api.github.com/users/nadavye/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nadavye/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687451",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3926",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687451"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3926"
+            }
+          },
+          "submitted_at": "2024-12-28T09:14:11Z",
+          "commit_id": "4d43ff041aba2c99f4aad76f6e4d4b414e59a0ec"
+        },
+        {
+          "id": 2524687537,
+          "node_id": "PRR_kwDODqUnoM6We6yx",
+          "user": {
+            "login": "nadavye",
+            "id": 15104980,
+            "node_id": "MDQ6VXNlcjE1MTA0OTgw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15104980?u=1253b6c1edee8096ac12b27ce3d001cd022cdc3e&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nadavye",
+            "html_url": "https://github.com/nadavye",
+            "followers_url": "https://api.github.com/users/nadavye/followers",
+            "following_url": "https://api.github.com/users/nadavye/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nadavye/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nadavye/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nadavye/subscriptions",
+            "organizations_url": "https://api.github.com/users/nadavye/orgs",
+            "repos_url": "https://api.github.com/users/nadavye/repos",
+            "events_url": "https://api.github.com/users/nadavye/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nadavye/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "Please see my comments",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687537",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3926",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524687537"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3926"
+            }
+          },
+          "submitted_at": "2024-12-28T09:15:09Z",
+          "commit_id": "4d43ff041aba2c99f4aad76f6e4d4b414e59a0ec"
+        },
+        {
+          "id": 2524715352,
+          "node_id": "PRR_kwDODqUnoM6WfBlY",
+          "user": {
+            "login": "alon-gb",
+            "id": 187936509,
+            "node_id": "U_kgDOCzOu_Q",
+            "avatar_url": "https://avatars.githubusercontent.com/u/187936509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alon-gb",
+            "html_url": "https://github.com/alon-gb",
+            "followers_url": "https://api.github.com/users/alon-gb/followers",
+            "following_url": "https://api.github.com/users/alon-gb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alon-gb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alon-gb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alon-gb/subscriptions",
+            "organizations_url": "https://api.github.com/users/alon-gb/orgs",
+            "repos_url": "https://api.github.com/users/alon-gb/repos",
+            "events_url": "https://api.github.com/users/alon-gb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alon-gb/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524715352",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3926",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524715352"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3926"
+            }
+          },
+          "submitted_at": "2024-12-28T13:33:22Z",
+          "commit_id": "4d43ff041aba2c99f4aad76f6e4d4b414e59a0ec"
+        },
+        {
+          "id": 2524715367,
+          "node_id": "PRR_kwDODqUnoM6WfBln",
+          "user": {
+            "login": "alon-gb",
+            "id": 187936509,
+            "node_id": "U_kgDOCzOu_Q",
+            "avatar_url": "https://avatars.githubusercontent.com/u/187936509?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alon-gb",
+            "html_url": "https://github.com/alon-gb",
+            "followers_url": "https://api.github.com/users/alon-gb/followers",
+            "following_url": "https://api.github.com/users/alon-gb/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alon-gb/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alon-gb/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alon-gb/subscriptions",
+            "organizations_url": "https://api.github.com/users/alon-gb/orgs",
+            "repos_url": "https://api.github.com/users/alon-gb/repos",
+            "events_url": "https://api.github.com/users/alon-gb/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alon-gb/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524715367",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3926",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3926#pullrequestreview-2524715367"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3926"
+            }
+          },
+          "submitted_at": "2024-12-28T13:33:29Z",
+          "commit_id": "4d43ff041aba2c99f4aad76f6e4d4b414e59a0ec"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "nadavye",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15104980?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "nadavye",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15104980?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "alon-gb",
+            "avatar_url": "https://avatars.githubusercontent.com/u/187936509?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "alon-gb",
+            "avatar_url": "https://avatars.githubusercontent.com/u/187936509?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2248588574,
+      "number": 3923,
+      "state": "closed",
+      "created_at": "2024-12-23T00:24:39Z",
+      "merged_at": null,
+      "title": "Test ci fail",
+      "user": {
+        "login": "olsenbudanur",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74462406?v=4"
+      },
+      "labels": [],
+      "additions": 26,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "olsenbudanur",
+            "avatar_url": "https://avatars.githubusercontent.com/u/74462406?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:25+09:00"
+}

@@ -1,0 +1,401 @@
+{
+  "week": "2024-W32",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2013505607,
+      "number": 3700,
+      "state": "open",
+      "created_at": "2024-08-10T17:06:42Z",
+      "merged_at": null,
+      "title": "fix: add types exports declaration for ./locales/*",
+      "user": {
+        "login": "disintegrator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/678548?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2013204416,
+      "number": 3699,
+      "state": "closed",
+      "created_at": "2024-08-10T01:06:28Z",
+      "merged_at": "2024-08-10T02:01:54Z",
+      "title": "Add Neon to sponsors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 39,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 4,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2012174532,
+      "number": 3697,
+      "state": "closed",
+      "created_at": "2024-08-09T10:55:05Z",
+      "merged_at": "2024-10-16T21:22:53Z",
+      "title": "docs: add zod-form-renderer to form integration docs",
+      "user": {
+        "login": "hackingharold",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86829799?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2010878604,
+      "number": 3693,
+      "state": "open",
+      "created_at": "2024-08-08T16:08:51Z",
+      "merged_at": null,
+      "title": "feat: added support multiple parameters in .startsWith() and .endsWith() in string for ticket #3683",
+      "user": {
+        "login": "Kumar06Lav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+      },
+      "labels": [],
+      "additions": 83,
+      "deletions": 20,
+      "changed_files": 7,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Kumar06Lav",
+            "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2010862117,
+      "number": 3692,
+      "state": "open",
+      "created_at": "2024-08-08T15:58:31Z",
+      "merged_at": null,
+      "title": "feat: added support for hostname method in z.string() #3589",
+      "user": {
+        "login": "Kumar06Lav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+      },
+      "labels": [],
+      "additions": 109,
+      "deletions": 2,
+      "changed_files": 11,
+      "comments": 7,
+      "review_comments": 3,
+      "commits": 2,
+      "reviews": [
+        {
+          "id": 2283903348,
+          "node_id": "PRR_kwDODqUnoM6IIZl0",
+          "user": {
+            "login": "AV3RG",
+            "id": 76780190,
+            "node_id": "MDQ6VXNlcjc2NzgwMTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76780190?u=f82db4c814499611898dc5ff81dc9bc673f48bce&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/AV3RG",
+            "html_url": "https://github.com/AV3RG",
+            "followers_url": "https://api.github.com/users/AV3RG/followers",
+            "following_url": "https://api.github.com/users/AV3RG/following{/other_user}",
+            "gists_url": "https://api.github.com/users/AV3RG/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/AV3RG/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/AV3RG/subscriptions",
+            "organizations_url": "https://api.github.com/users/AV3RG/orgs",
+            "repos_url": "https://api.github.com/users/AV3RG/repos",
+            "events_url": "https://api.github.com/users/AV3RG/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/AV3RG/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2283903348",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3692",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2283903348"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3692"
+            }
+          },
+          "submitted_at": "2024-09-05T19:21:11Z",
+          "commit_id": "342fc3236c12d5fae881b8d33fc609ddcdefb72e"
+        },
+        {
+          "id": 2351343394,
+          "node_id": "PRR_kwDODqUnoM6MJqci",
+          "user": {
+            "login": "Kumar06Lav",
+            "id": 177410754,
+            "node_id": "U_kgDOCpMSwg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Kumar06Lav",
+            "html_url": "https://github.com/Kumar06Lav",
+            "followers_url": "https://api.github.com/users/Kumar06Lav/followers",
+            "following_url": "https://api.github.com/users/Kumar06Lav/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Kumar06Lav/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Kumar06Lav/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Kumar06Lav/subscriptions",
+            "organizations_url": "https://api.github.com/users/Kumar06Lav/orgs",
+            "repos_url": "https://api.github.com/users/Kumar06Lav/repos",
+            "events_url": "https://api.github.com/users/Kumar06Lav/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Kumar06Lav/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2351343394",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3692",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2351343394"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3692"
+            }
+          },
+          "submitted_at": "2024-10-07T09:01:52Z",
+          "commit_id": "342fc3236c12d5fae881b8d33fc609ddcdefb72e"
+        },
+        {
+          "id": 2528803640,
+          "node_id": "PRR_kwDODqUnoM6Wuns4",
+          "user": {
+            "login": "hesamhoseinkhani",
+            "id": 163296204,
+            "node_id": "U_kgDOCbuzzA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/163296204?u=c2cc3010f6170a79c308305c902fa23404aed282&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hesamhoseinkhani",
+            "html_url": "https://github.com/hesamhoseinkhani",
+            "followers_url": "https://api.github.com/users/hesamhoseinkhani/followers",
+            "following_url": "https://api.github.com/users/hesamhoseinkhani/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hesamhoseinkhani/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hesamhoseinkhani/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hesamhoseinkhani/subscriptions",
+            "organizations_url": "https://api.github.com/users/hesamhoseinkhani/orgs",
+            "repos_url": "https://api.github.com/users/hesamhoseinkhani/repos",
+            "events_url": "https://api.github.com/users/hesamhoseinkhani/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hesamhoseinkhani/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "APPROVED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2528803640",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3692",
+          "author_association": "NONE",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3692#pullrequestreview-2528803640"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3692"
+            }
+          },
+          "submitted_at": "2025-01-03T09:47:14Z",
+          "commit_id": "8edc00fabb629229792b17051ef8debb6aa7b31b"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Kumar06Lav",
+            "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "itxtoledo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/21026675?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "wan-kong",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49053562?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RampantDespair",
+            "avatar_url": "https://avatars.githubusercontent.com/u/63611551?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "symysak",
+            "avatar_url": "https://avatars.githubusercontent.com/u/103905928?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "RampantDespair",
+            "avatar_url": "https://avatars.githubusercontent.com/u/63611551?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "AV3RG",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76780190?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "AV3RG",
+            "avatar_url": "https://avatars.githubusercontent.com/u/76780190?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Kumar06Lav",
+            "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2010368600,
+      "number": 3691,
+      "state": "open",
+      "created_at": "2024-08-08T11:56:10Z",
+      "merged_at": null,
+      "title": "fix: make transform short-circuit on returning z.NEVER",
+      "user": {
+        "login": "yasamoka",
+        "avatar_url": "https://avatars.githubusercontent.com/u/11059331?v=4"
+      },
+      "labels": [],
+      "additions": 326,
+      "deletions": 4,
+      "changed_files": 4,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "yasamoka",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11059331?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2006445052,
+      "number": 3690,
+      "state": "closed",
+      "created_at": "2024-08-06T16:35:57Z",
+      "merged_at": null,
+      "title": "feat:  added support multiple parameters in .startsWith() and .endsWith() in string for ticket #3683",
+      "user": {
+        "login": "Kumar06Lav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/177410754?v=4"
+      },
+      "labels": [],
+      "additions": 85,
+      "deletions": 26,
+      "changed_files": 7,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:26:58+09:00"
+}

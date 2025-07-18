@@ -1,0 +1,97 @@
+{
+  "week": "2024-W46",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2180568762,
+      "number": 3851,
+      "state": "closed",
+      "created_at": "2024-11-14T20:49:47Z",
+      "merged_at": "2024-12-10T01:25:20Z",
+      "title": "Add antd-zod form integration",
+      "user": {
+        "login": "MrBr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6218559?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2178575314,
+      "number": 3850,
+      "state": "closed",
+      "created_at": "2024-11-14T00:09:46Z",
+      "merged_at": "2024-12-10T02:53:01Z",
+      "title": "Implement Standard Schema spec",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 560,
+      "deletions": 6,
+      "changed_files": 9,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 6,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2174081405,
+      "number": 3846,
+      "state": "open",
+      "created_at": "2024-11-12T05:40:53Z",
+      "merged_at": null,
+      "title": "Add a fix for the vulnerability in zod literal validation message",
+      "user": {
+        "login": "ppml38",
+        "avatar_url": "https://avatars.githubusercontent.com/u/62295906?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 20,
+      "changed_files": 4,
+      "comments": 1,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:17+09:00"
+}

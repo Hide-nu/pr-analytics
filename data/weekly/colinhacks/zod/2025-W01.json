@@ -1,0 +1,45 @@
+{
+  "week": "2025-W01",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2260645230,
+      "number": 3934,
+      "state": "closed",
+      "created_at": "2025-01-05T07:28:44Z",
+      "merged_at": "2025-02-11T20:07:34Z",
+      "title": "docs: translate README to Korean",
+      "user": {
+        "login": "skyfe79",
+        "avatar_url": "https://avatars.githubusercontent.com/u/309935?v=4"
+      },
+      "labels": [],
+      "additions": 3152,
+      "deletions": 2,
+      "changed_files": 3,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:27:26+09:00"
+}

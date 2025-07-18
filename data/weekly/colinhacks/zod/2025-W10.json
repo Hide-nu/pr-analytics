@@ -1,0 +1,203 @@
+{
+  "week": "2025-W10",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2380489918,
+      "number": 4025,
+      "state": "closed",
+      "created_at": "2025-03-09T04:29:25Z",
+      "merged_at": "2025-03-28T02:01:43Z",
+      "title": "docs: update README_KO",
+      "user": {
+        "login": "haejunejung",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99087502?v=4"
+      },
+      "labels": [],
+      "additions": 30,
+      "deletions": 30,
+      "changed_files": 1,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2669313815,
+          "node_id": "PRR_kwDODqUnoM6fGn8X",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (2)</summary><blockquote>\n\n<details>\n<summary>README_KO.md (2)</summary><blockquote>\n\n`1224-1224`: **Consistent Inference on Object with Optional Field**\n\nThe change in  \n`type C = z.infer<typeof user>;`  \nclearly demonstrates how to extract the type from an object schema where a property is made optional. For improved clarity, you might consider renaming the inferred type (for example, to `UserType`), but as a documentation example this is acceptable.\n\n---\n\n`1789-1789`: **Note on Intersection Type Inference**\n\nThe change  \n`type c = z.infer<typeof c>;`  \ncorrectly infers the type (which, in this case, results in a `number`). One suggestion: since using the same identifier for both the variable and the inferred type (here \"c\") might be confusing, consider using a more descriptive name (for example, `type IntersectionResult = z.infer<typeof c>;`) in future documentation updates.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 850871defc2c98928f1c7e8e05e93d4a84ed3c5f and 1adcf72d8edd6ecc1de7828a03ed9085141b7da7.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README_KO.md` (30 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (12)</summary><blockquote>\n\n<details>\n<summary>README_KO.md (12)</summary>\n\n`652-652`: **Explicit Type Inference for User Schema**\n\nThe update from an implicit `z.infer` to an explicit `z.infer<typeof User>` clarifies that the inferred type is directly tied to the `User` schema. This change meets the PR objective for enhanced clarity and type safety in documentation.\n\n---\n\n`1068-1068`: **Explicit Type Inference for Date Schema**\n\nChanging the date schema’s type declaration to  \n`type DateSchema = z.infer<typeof dateSchema>;`  \nensures that the inferred type is explicitly linked to `dateSchema`. This improves the example’s clarity and aligns with the documentation update goals.\n\n---\n\n`1088-1088`: **Clarifying Inference for FishEnum**\n\nUpdating the fish enum definition to  \n`type FishEnum = z.infer<typeof FishEnum>;`  \nmakes the example explicit about the connection between the inferred type and its corresponding schema. This is consistent with the updated documentation standards.\n\n---\n\n`1152-1152`: **Precise Inference for Native Enum (FruitEnum)**\n\nThe modification to  \n`type FruitEnum = z.infer<typeof FruitEnum>;`  \nprovides an explicit link between the native enum schema and its inferred TypeScript type. This clear pattern enhances readability and correctness in the docs.\n\n---\n\n`1215-1215`: **Explicit Inference for Optional Schema Example**\n\nDefining  \n`type A = z.infer<typeof schema>;`  \nafter declaring an optional string schema exactly shows that the inferred type includes `undefined` (i.e. `string | undefined`). This explicitness is very helpful in documentation.\n\n---\n\n`1270-1270`: **Inference of Object Schema (Dog)**\n\nBy updating the extraction to  \n`type Dog = z.infer<typeof Dog>;`  \nthe example follows the established pattern. This explicit extraction reinforces how to derive the type from the schema, which is especially useful for new users.\n\n---\n\n`1320-1320`: **Explicit Inference in Merged Object Schema (Teacher)**\n\nThe updated declaration  \n`type Teacher = z.infer<typeof Teacher>;`  \nafter merging object schemas clearly shows how the final inferred type includes properties from both merged schemas. This pattern is both informative and consistent.\n\n---\n\n`1341-1341`: **Inference After Picking Object Properties**\n\nChanging the type extraction to  \n`type JustTheName = z.infer<typeof JustTheName>;`  \ndemonstrates the proper extraction from a schema created by the `.pick()` method. This enhances readability and consistency throughout the docs.\n\n---\n\n`1350-1350`: **Explicit Inference for Omitted Schema (NoIDRecipe)**\n\nThe revised declaration  \n`type NoIDRecipe = z.infer<typeof NoIDRecipe>;`  \nshows how to correctly infer the type from a schema that omits certain properties. This is a clear and useful update.\n\n---\n\n`1601-1601`: **Clear Tuple Type Inference (Athlete)**\n\nBy explicitly writing  \n`type Athlete = z.infer<typeof athleteSchema>;`  \nthe example now clearly shows how to extract the tuple type from the schema. This explicit approach greatly enhances clarity in documentation.\n\n---\n\n`1740-1740`: **Explicit Inference for Map Schema**\n\nUpdating the map schema type to  \n`type StringNumberMap = z.infer<typeof stringNumberMap>;`  \nexplicitly communicates that the inferred type is a `Map<string, number>`. This change is aligned with the new documentation guidelines.\n\n---\n\n`1750-1750`: **Clear Inference for Set Schema**\n\nChanging to  \n`type NumberSet = z.infer<typeof numberSet>;`  \nmakes it explicit that the inferred type is a `Set<number>`. This clear example enhances developer understanding.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4025#pullrequestreview-2669313815",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4025",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4025#pullrequestreview-2669313815"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4025"
+            }
+          },
+          "submitted_at": "2025-03-09T04:31:54Z",
+          "commit_id": "1adcf72d8edd6ecc1de7828a03ed9085141b7da7"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2378577384,
+      "number": 4021,
+      "state": "closed",
+      "created_at": "2025-03-07T13:01:04Z",
+      "merged_at": "2025-04-09T05:15:30Z",
+      "title": "update readme.md with zod-csv library",
+      "user": {
+        "login": "bartoszgolebiowski",
+        "avatar_url": "https://avatars.githubusercontent.com/u/39523638?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2667199084,
+          "node_id": "PRR_kwDODqUnoM6e-jps",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (1)</summary><blockquote>\n\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`610-610`: **Capitalization and Punctuation Consistency**  \nThe new entry reads:  \n`[‘zod-csv’](https://github.com/bartoszgolebiowski/zod-csv): Validation helpers for zod for parsing CSV data.`  \nFor clarity and to match the rest of the README, please consider capitalizing “zod” to “Zod” (i.e. “Validation helpers for Zod for parsing CSV data.”). Also, verify that the trailing punctuation is consistent with the surrounding entries.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~610-~610: Loose punctuation mark.\nContext: ...//github.com/bartoszgolebiowski/zod-csv): Validation helpers for zod for parsing ...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 850871defc2c98928f1c7e8e05e93d4a84ed3c5f and 36a9d1e23cb5fda225a915e8551d9d3be0132867.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (1)</summary>\n\n* `README.md` (1 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>README.md</summary>\n\n[uncategorized] ~610-~610: Loose punctuation mark.\nContext: ...//github.com/bartoszgolebiowski/zod-csv): Validation helpers for zod for parsing ...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4021#pullrequestreview-2667199084",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4021",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4021#pullrequestreview-2667199084"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4021"
+            }
+          },
+          "submitted_at": "2025-03-07T13:03:59Z",
+          "commit_id": "36a9d1e23cb5fda225a915e8551d9d3be0132867"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2374781511,
+      "number": 4020,
+      "state": "closed",
+      "created_at": "2025-03-05T22:27:57Z",
+      "merged_at": "2025-03-05T22:40:03Z",
+      "title": "Add Clerk fellowship mention",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 16,
+      "deletions": 4,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 16,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:49+09:00"
+}

@@ -1,0 +1,381 @@
+{
+  "week": "2025-W26",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2625568533,
+      "number": 4782,
+      "state": "closed",
+      "created_at": "2025-06-27T22:52:12Z",
+      "merged_at": "2025-07-03T21:38:54Z",
+      "title": "Docs: Warn about `id` uniqueness check on Metadata page",
+      "user": {
+        "login": "GiacoCorsiglia",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15148404?v=4"
+      },
+      "labels": [],
+      "additions": 3,
+      "deletions": 0,
+      "changed_files": 1,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2622222298,
+      "number": 4777,
+      "state": "closed",
+      "created_at": "2025-06-26T20:19:49Z",
+      "merged_at": "2025-07-02T07:43:43Z",
+      "title": "Switch to `zshy`",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 1088,
+      "deletions": 744,
+      "changed_files": 285,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 43,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2617102872,
+      "number": 4772,
+      "state": "closed",
+      "created_at": "2025-06-25T06:22:24Z",
+      "merged_at": null,
+      "title": "Consider optionality of union members",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 32,
+      "deletions": 0,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2617075550,
+      "number": 4771,
+      "state": "closed",
+      "created_at": "2025-06-25T06:06:25Z",
+      "merged_at": null,
+      "title": "Treat undefined as never",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 11,
+      "deletions": 6,
+      "changed_files": 3,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 3,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2617054272,
+      "number": 4770,
+      "state": "closed",
+      "created_at": "2025-06-25T05:55:45Z",
+      "merged_at": null,
+      "title": "Mark never as optional",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 15,
+      "deletions": 2,
+      "changed_files": 2,
+      "comments": 0,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [],
+      "review_comment_list": []
+    },
+    {
+      "id": 2617027826,
+      "number": 4769,
+      "state": "closed",
+      "created_at": "2025-06-25T05:39:04Z",
+      "merged_at": "2025-07-03T21:51:56Z",
+      "title": "Fix optionality of schemas",
+      "user": {
+        "login": "samchungy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+      },
+      "labels": [],
+      "additions": 112,
+      "deletions": 10,
+      "changed_files": 5,
+      "comments": 1,
+      "review_comments": 5,
+      "commits": 7,
+      "reviews": [
+        {
+          "id": 2984411781,
+          "node_id": "PRR_kwDODqUnoM6x4oKF",
+          "user": {
+            "login": "colinhacks",
+            "id": 3084745,
+            "node_id": "MDQ6VXNlcjMwODQ3NDU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?u=00ba705b6a5ceaa3b4c5f3582ddb944f891f8847&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/colinhacks",
+            "html_url": "https://github.com/colinhacks",
+            "followers_url": "https://api.github.com/users/colinhacks/followers",
+            "following_url": "https://api.github.com/users/colinhacks/following{/other_user}",
+            "gists_url": "https://api.github.com/users/colinhacks/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/colinhacks/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/colinhacks/subscriptions",
+            "organizations_url": "https://api.github.com/users/colinhacks/orgs",
+            "repos_url": "https://api.github.com/users/colinhacks/repos",
+            "events_url": "https://api.github.com/users/colinhacks/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/colinhacks/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984411781",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4769",
+          "author_association": "OWNER",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984411781"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4769"
+            }
+          },
+          "submitted_at": "2025-07-03T19:21:17Z",
+          "commit_id": "33785bc6c67d944ae331e2cb399ef5daf1aeeeb3"
+        },
+        {
+          "id": 2984957523,
+          "node_id": "PRR_kwDODqUnoM6x6tZT",
+          "user": {
+            "login": "samchungy",
+            "id": 18017094,
+            "node_id": "MDQ6VXNlcjE4MDE3MDk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?u=7335680de0030e00cc3b75429216550fc8dcfd54&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/samchungy",
+            "html_url": "https://github.com/samchungy",
+            "followers_url": "https://api.github.com/users/samchungy/followers",
+            "following_url": "https://api.github.com/users/samchungy/following{/other_user}",
+            "gists_url": "https://api.github.com/users/samchungy/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/samchungy/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/samchungy/subscriptions",
+            "organizations_url": "https://api.github.com/users/samchungy/orgs",
+            "repos_url": "https://api.github.com/users/samchungy/repos",
+            "events_url": "https://api.github.com/users/samchungy/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/samchungy/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984957523",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4769",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984957523"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4769"
+            }
+          },
+          "submitted_at": "2025-07-03T23:38:40Z",
+          "commit_id": "33785bc6c67d944ae331e2cb399ef5daf1aeeeb3"
+        },
+        {
+          "id": 2984962852,
+          "node_id": "PRR_kwDODqUnoM6x6usk",
+          "user": {
+            "login": "samchungy",
+            "id": 18017094,
+            "node_id": "MDQ6VXNlcjE4MDE3MDk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?u=7335680de0030e00cc3b75429216550fc8dcfd54&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/samchungy",
+            "html_url": "https://github.com/samchungy",
+            "followers_url": "https://api.github.com/users/samchungy/followers",
+            "following_url": "https://api.github.com/users/samchungy/following{/other_user}",
+            "gists_url": "https://api.github.com/users/samchungy/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/samchungy/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/samchungy/subscriptions",
+            "organizations_url": "https://api.github.com/users/samchungy/orgs",
+            "repos_url": "https://api.github.com/users/samchungy/repos",
+            "events_url": "https://api.github.com/users/samchungy/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/samchungy/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984962852",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4769",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984962852"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4769"
+            }
+          },
+          "submitted_at": "2025-07-03T23:42:06Z",
+          "commit_id": "33785bc6c67d944ae331e2cb399ef5daf1aeeeb3"
+        },
+        {
+          "id": 2984984368,
+          "node_id": "PRR_kwDODqUnoM6x6z8w",
+          "user": {
+            "login": "colinhacks",
+            "id": 3084745,
+            "node_id": "MDQ6VXNlcjMwODQ3NDU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?u=00ba705b6a5ceaa3b4c5f3582ddb944f891f8847&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/colinhacks",
+            "html_url": "https://github.com/colinhacks",
+            "followers_url": "https://api.github.com/users/colinhacks/followers",
+            "following_url": "https://api.github.com/users/colinhacks/following{/other_user}",
+            "gists_url": "https://api.github.com/users/colinhacks/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/colinhacks/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/colinhacks/subscriptions",
+            "organizations_url": "https://api.github.com/users/colinhacks/orgs",
+            "repos_url": "https://api.github.com/users/colinhacks/repos",
+            "events_url": "https://api.github.com/users/colinhacks/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/colinhacks/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984984368",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4769",
+          "author_association": "OWNER",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984984368"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4769"
+            }
+          },
+          "submitted_at": "2025-07-04T00:05:03Z",
+          "commit_id": "33785bc6c67d944ae331e2cb399ef5daf1aeeeb3"
+        },
+        {
+          "id": 2984987885,
+          "node_id": "PRR_kwDODqUnoM6x60zt",
+          "user": {
+            "login": "samchungy",
+            "id": 18017094,
+            "node_id": "MDQ6VXNlcjE4MDE3MDk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?u=7335680de0030e00cc3b75429216550fc8dcfd54&v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/samchungy",
+            "html_url": "https://github.com/samchungy",
+            "followers_url": "https://api.github.com/users/samchungy/followers",
+            "following_url": "https://api.github.com/users/samchungy/following{/other_user}",
+            "gists_url": "https://api.github.com/users/samchungy/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/samchungy/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/samchungy/subscriptions",
+            "organizations_url": "https://api.github.com/users/samchungy/orgs",
+            "repos_url": "https://api.github.com/users/samchungy/repos",
+            "events_url": "https://api.github.com/users/samchungy/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/samchungy/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984987885",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4769",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4769#pullrequestreview-2984987885"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4769"
+            }
+          },
+          "submitted_at": "2025-07-04T00:09:05Z",
+          "commit_id": "33785bc6c67d944ae331e2cb399ef5daf1aeeeb3"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "samchungy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "samchungy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "samchungy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/18017094?v=4"
+          }
+        }
+      ]
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:22+09:00"
+}

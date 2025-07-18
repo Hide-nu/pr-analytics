@@ -1,0 +1,490 @@
+{
+  "week": "2025-W08",
+  "repository": {
+    "owner": "colinhacks",
+    "name": "zod"
+  },
+  "prs": [
+    {
+      "id": 2351543077,
+      "number": 4005,
+      "state": "closed",
+      "created_at": "2025-02-22T18:52:35Z",
+      "merged_at": "2025-03-28T01:57:20Z",
+      "title": "docs: Remove outdated doc 'avoid coercions that throw uncaught errors'",
+      "user": {
+        "login": "catnipan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25340461?v=4"
+      },
+      "labels": [],
+      "additions": 2,
+      "deletions": 112,
+      "changed_files": 3,
+      "comments": 4,
+      "review_comments": 0,
+      "commits": 2,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "colinhacks",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "vercel[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2351385968,
+      "number": 4004,
+      "state": "open",
+      "created_at": "2025-02-22T16:50:55Z",
+      "merged_at": null,
+      "title": "Add Allow arbitrary character length in nanoid",
+      "user": {
+        "login": "oimo23",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18276888?v=4"
+      },
+      "labels": [],
+      "additions": 102,
+      "deletions": 10,
+      "changed_files": 4,
+      "comments": 3,
+      "review_comments": 2,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2635030976,
+          "node_id": "PRR_kwDODqUnoM6dD2HA",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 2**\n\n<details>\n<summary>🧹 Nitpick comments (3)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (1)</summary><blockquote>\n\n`884-885`: **Add length boundary checks when constructing the nanoid regex.**  \nAlthough the regex works when `check.value` is valid, there’s no safeguard against non-integer or negative values. Consider rejecting length values below 1 or above a reasonable upper bound to prevent unexpected behavior.\n\n</blockquote></details>\n<details>\n<summary>src/__tests__/string.test.ts (1)</summary><blockquote>\n\n`383-400`: **LGTM! Well-structured test implementation.**\n\nThe test case effectively validates the new functionality for arbitrary character length nanoid validation, including custom error message handling.\n\n\n**Consider adding more test cases for comprehensive coverage.**\n\nConsider adding tests for:\n1. Maximum length validation\n2. Invalid character validation\n3. Edge cases (empty string, null, undefined)\n\nApply this diff to add more test cases:\n\n```diff\n test(\"custom character length nanoid\", () => {\n   const nanoid64 = z.string().nanoid(64);\n   const valid64 =\n     \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_\";\n   nanoid64.parse(valid64);\n\n+  // Test maximum length validation\n+  const nanoid128 = z.string().nanoid(128);\n+  const valid128 = valid64 + valid64;\n+  nanoid128.parse(valid128);\n+\n+  // Test invalid characters\n+  const invalidChars = valid64.replace(\"a\", \"@\");\n+  expect(() => nanoid64.parse(invalidChars)).toThrow();\n+\n+  // Test edge cases\n+  expect(() => nanoid64.parse(\"\")).toThrow();\n+  expect(() => nanoid64.parse(null as any)).toThrow();\n+  expect(() => nanoid64.parse(undefined as any)).toThrow();\n\n   const nanoid64WithCustomError = z\n     .string()\n     .nanoid(64, { message: \"custom error\" });\n   nanoid64WithCustomError.parse(valid64);\n\n   const shortId = \"abc123\";\n   const result = nanoid64WithCustomError.safeParse(shortId);\n   expect(result.success).toEqual(false);\n   if (!result.success) {\n     expect(result.error.issues[0].message).toEqual(\"custom error\");\n   }\n });\n```\n\n</blockquote></details>\n<details>\n<summary>deno/lib/__tests__/string.test.ts (1)</summary><blockquote>\n\n`384-401`: **LGTM! Consider adding more test cases for comprehensive coverage.**\n\nThe test implementation is well-structured and covers the basic validation paths. However, consider adding test cases for:\n- Invalid characters in a 64-character string\n- Edge cases like empty string, null, undefined\n- Boundary values (63 and 65 characters)\n\n\nHere's a suggested expansion of the test cases:\n\n```diff\n test(\"custom character length nanoid\", () => {\n   const nanoid64 = z.string().nanoid(64);\n   const valid64 =\n     \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_\";\n   nanoid64.parse(valid64);\n\n   const nanoid64WithCustomError = z\n     .string()\n     .nanoid(64, { message: \"custom error\" });\n   nanoid64WithCustomError.parse(valid64);\n\n   const shortId = \"abc123\";\n   const result = nanoid64WithCustomError.safeParse(shortId);\n   expect(result.success).toEqual(false);\n   if (!result.success) {\n     expect(result.error.issues[0].message).toEqual(\"custom error\");\n   }\n+\n+  // Test invalid characters\n+  const invalidChars = valid64.replace(\"a\", \"@\");\n+  expect(nanoid64.safeParse(invalidChars).success).toEqual(false);\n+\n+  // Test boundary values\n+  const shortBy1 = valid64.slice(0, -1);\n+  expect(nanoid64.safeParse(shortBy1).success).toEqual(false);\n+\n+  const longBy1 = valid64 + \"A\";\n+  expect(nanoid64.safeParse(longBy1).success).toEqual(false);\n+\n+  // Test edge cases\n+  expect(nanoid64.safeParse(\"\").success).toEqual(false);\n+  expect(nanoid64.safeParse(undefined).success).toEqual(false);\n+  expect(nanoid64.safeParse(null).success).toEqual(false);\n });\n```\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between eea05ae3dab628e7a834397414e5145e935e418b and 3968e4e0f82134b25aad7b36b0527fe0e6daf567.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `deno/lib/__tests__/string.test.ts` (1 hunks)\n* `deno/lib/types.ts` (4 hunks)\n* `src/__tests__/string.test.ts` (1 hunks)\n* `src/types.ts` (4 hunks)\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (4)</summary><blockquote>\n\n<details>\n<summary>deno/lib/types.ts (1)</summary>\n\n`595-595`: **Recommend validating the `value` field for non-negative lengths.**  \nCurrently, there's no explicit check to ensure that `value` (representing the nanoid length) is positive. Consider validating that it meets a minimum requirement, e.g., `>= 1`, to avoid unintended behaviors.\n\n</details>\n<details>\n<summary>src/types.ts (3)</summary>\n\n`595-595`: **LGTM! Type definition updated to support arbitrary character length.**\n\nThe addition of the `value` property to the nanoid check type aligns with the PR objective and follows the pattern used by other string checks.\n\n---\n\n`644-646`: **LGTM! Well-implemented dynamic regex generator.**\n\nThe regex pattern correctly validates:\n- Alphanumeric characters plus underscore and hyphen\n- Case-insensitive matching\n- Exact length enforcement\n\n---\n\n`1122-1146`: **LGTM! Excellent implementation with backward compatibility.**\n\nThe implementation successfully:\n- Maintains backward compatibility with existing code using string parameter\n- Adds support for arbitrary length specification\n- Provides clear parameter overloads\n- Uses a sensible default length of 21\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/4004#pullrequestreview-2635030976",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/4004",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/4004#pullrequestreview-2635030976"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/4004"
+            }
+          },
+          "submitted_at": "2025-02-22T16:54:57Z",
+          "commit_id": "3968e4e0f82134b25aad7b36b0527fe0e6daf567"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "Kang-Jh",
+            "avatar_url": "https://avatars.githubusercontent.com/u/61770604?v=4"
+          }
+        }
+      ],
+      "review_comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2349024235,
+      "number": 4003,
+      "state": "closed",
+      "created_at": "2025-02-21T08:17:24Z",
+      "merged_at": "2025-02-21T08:18:51Z",
+      "title": "Fix headers",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 154,
+      "deletions": 154,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2348052053,
+      "number": 4001,
+      "state": "closed",
+      "created_at": "2025-02-20T20:37:36Z",
+      "merged_at": "2025-02-20T20:57:24Z",
+      "title": "Switch to featured sponsors",
+      "user": {
+        "login": "colinhacks",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3084745?v=4"
+      },
+      "labels": [],
+      "additions": 258,
+      "deletions": 146,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 19,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2346071468,
+      "number": 3999,
+      "state": "open",
+      "created_at": "2025-02-20T03:48:29Z",
+      "merged_at": null,
+      "title": "Add `.extend` to Zod enums",
+      "user": {
+        "login": "jeremy-code",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43259194?v=4"
+      },
+      "labels": [],
+      "additions": 30,
+      "deletions": 0,
+      "changed_files": 3,
+      "comments": 3,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2628648202,
+          "node_id": "PRR_kwDODqUnoM6crf0K",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (3)</summary><blockquote>\n\n<details>\n<summary>src/__tests__/enum.test.ts (1)</summary><blockquote>\n\n`44-53`: **LGTM! Consider adding more test cases for comprehensive coverage.**\n\nThe test correctly verifies the type inference for the extended enum. However, to ensure robust functionality, consider adding the following test cases:\n\n\n\n```typescript\ntest(\"extends - edge cases\", () => {\n  const BaseEnum = z.enum([\"A\", \"B\"]);\n  \n  // Test extending with empty array\n  const EmptyExtended = BaseEnum.extends([]);\n  util.assertEqual<z.infer<typeof EmptyExtended>, \"A\" | \"B\">(true);\n  \n  // Test extending with duplicate values\n  const DuplicateExtended = BaseEnum.extends([\"B\", \"C\"]);\n  util.assertEqual<z.infer<typeof DuplicateExtended>, \"A\" | \"B\" | \"C\">(true);\n  \n  // Test runtime behavior\n  expect(DuplicateExtended.options).toEqual([\"A\", \"B\", \"C\"]);\n  expect(() => DuplicateExtended.parse(\"D\")).toThrow();\n  \n  // Test error mapping\n  const ErrorMappedEnum = BaseEnum.extends([\"C\"], {\n    errorMap: () => ({ message: \"Invalid value!\" })\n  });\n  const result = ErrorMappedEnum.safeParse(\"D\");\n  expect(result.success).toBe(false);\n  if (!result.success) {\n    expect(result.error.issues[0].message).toBe(\"Invalid value!\");\n  }\n});\n```\n\n</blockquote></details>\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`4410-4418`: **Add JSDoc documentation for the new extends method.**\n\nThe implementation looks good but is missing documentation to explain its purpose and parameters.\n\nAdd JSDoc comments like this:\n\n```diff\n+  /**\n+   * Creates a new enum by extending the current enum with additional values.\n+   * @param values - Array of new values to add to the enum\n+   * @param newDef - Optional parameters to customize the new enum definition\n+   * @returns A new ZodEnum instance containing all values\n+   */\n  extends<const ToExtend extends readonly [string, ...string[]]>(\n    values: ToExtend,\n    newDef: RawCreateParams = this._def\n  ): ZodEnum<[...T, ...Writeable<ToExtend>]> {\n```\n\n</blockquote></details>\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`1170-1170`: **Markdown Styling: Emphasis Markers**\n\nThere are extra spaces inside the emphasis markers on the `.extends()` header. For a cleaner markdown style (per MD037), consider changing  \n`** `.extends()` **`  \nto  \n`**`.extends()`**`.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n---\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between e30870369d5b8f31ff4d0130d4439fd997deb523 and 65e0427b6f8c9ec198125960f592ae830a38f7f1.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (3)</summary>\n\n* `README.md` (1 hunks)\n* `src/__tests__/enum.test.ts` (1 hunks)\n* `src/types.ts` (1 hunks)\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n<details>\n<summary>README.md</summary>\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n---\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (2)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (1)</summary>\n\n`4410-4418`: **LGTM! The implementation is clean and type-safe.**\n\nThe implementation correctly extends the enum by:\n- Using proper type constraints\n- Efficiently combining arrays\n- Preserving the original definition\n- Allowing customization via optional params\n\n</details>\n<details>\n<summary>README.md (1)</summary>\n\n`1170-1178`: **Documentation Addition: Introducing the `.extends()` Method**\n\nThe new documentation clearly explains how to extend an existing enum with additional values. The example:\n```ts\nconst SalmonAndTrout = z.enum([\"Salmon\", \"Trout\"]);\nconst FishEnum = SalmonAndTrout.extends([\"Tuna\"]);\n```\nillustrates how users can create a superset enum. Please double-check that this example aligns precisely with the implementation in the type definitions (e.g., in `src/types.ts`) for consistency.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n---\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n</details>\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3999#pullrequestreview-2628648202",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3999",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3999#pullrequestreview-2628648202"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3999"
+            }
+          },
+          "submitted_at": "2025-02-20T03:50:55Z",
+          "commit_id": "65e0427b6f8c9ec198125960f592ae830a38f7f1"
+        },
+        {
+          "id": 2628653516,
+          "node_id": "PRR_kwDODqUnoM6crhHM",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (3)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (1)</summary><blockquote>\n\n`4410-4418`: **Add documentation for the new `.extend()` method.**\n\nThe implementation looks good but would benefit from JSDoc documentation explaining the purpose, parameters and return value.\n\nAdd documentation above the method:\n\n```diff\n+  /**\n+   * Creates a new enum by extending an existing enum with additional values\n+   * @param values - Array of new values to add to the enum\n+   * @param newDef - Optional parameters to override in the new enum\n+   * @returns A new ZodEnum instance containing all values\n+   */\n   extend<const ToExtend extends readonly [string, ...string[]]>(\n     values: ToExtend,\n     newDef: RawCreateParams = this._def\n   ): ZodEnum<[...T, ...Writeable<ToExtend>]> {\n```\n\n</blockquote></details>\n<details>\n<summary>README.md (2)</summary><blockquote>\n\n`1170-1171`: **Formatting Issue: Remove extra spaces in emphasis markers**  \nThere are extra spaces inside the emphasis markers in the new heading. To comply with markdown lint MD037 (no-space-in-emphasis), consider changing:\n  \n```diff\n-** `.extend()` **\n+**`.extend()`**\n```\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n---\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n</details>\n\n</details>\n\n---\n\n`1176-1177`: **Documentation Continuity**  \nThe transition from the `.extend()` example to the subsequent section on `.exclude/.extract()` is smooth. For clarity, consider adding a brief note that explains when one might use `.extend()` versus `.exclude`/`.extract` so that users can quickly decide the appropriate method for their use case.\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between 65e0427b6f8c9ec198125960f592ae830a38f7f1 and 3dd4a2898d75c56c582188e61bb775b7fbcbe908.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (3)</summary>\n\n* `README.md` (1 hunks)\n* `src/__tests__/enum.test.ts` (1 hunks)\n* `src/types.ts` (1 hunks)\n\n</details>\n\n<details>\n<summary>🚧 Files skipped from review as they are similar to previous changes (1)</summary>\n\n* src/__tests__/enum.test.ts\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 markdownlint-cli2 (0.17.2)</summary>\n\n<details>\n<summary>README.md</summary>\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n---\n\n1170-1170: Spaces inside emphasis markers\nnull\n\n(MD037, no-space-in-emphasis)\n\n</details>\n\n</details>\n\n</details>\n\n<details>\n<summary>🔇 Additional comments (2)</summary><blockquote>\n\n<details>\n<summary>src/types.ts (1)</summary>\n\n`4410-4418`: **LGTM! Implementation follows best practices.**\n\nThe implementation:\n- Maintains immutability by creating a new instance\n- Uses const generics for type safety\n- Preserves original definition parameters\n- Correctly merges the enum values\n\n</details>\n<details>\n<summary>README.md (1)</summary>\n\n`1171-1175`: **New Enum Extension Example**  \nThe new example clearly demonstrates how to extend an existing Zod enum using the newly introduced `.extend()` method. The code snippet—creating a `SalmonAndTrout` enum and then extending it with `\"Tuna\"`—is self-explanatory and aligns with the intended functionality described in the PR objectives.\n\n</details>\n\n</blockquote></details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3999#pullrequestreview-2628653516",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3999",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3999#pullrequestreview-2628653516"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3999"
+            }
+          },
+          "submitted_at": "2025-02-20T03:57:17Z",
+          "commit_id": "3dd4a2898d75c56c582188e61bb775b7fbcbe908"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "jeremy-code",
+            "avatar_url": "https://avatars.githubusercontent.com/u/43259194?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2340111794,
+      "number": 3995,
+      "state": "closed",
+      "created_at": "2025-02-17T16:04:06Z",
+      "merged_at": "2025-02-26T22:35:23Z",
+      "title": "docs: add GQLoom to ecosystem",
+      "user": {
+        "login": "xcfox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/46624780?v=4"
+      },
+      "labels": [],
+      "additions": 4,
+      "deletions": 0,
+      "changed_files": 4,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [
+        {
+          "id": 2621470860,
+          "node_id": "PRR_kwDODqUnoM6cQHiM",
+          "user": {
+            "login": "coderabbitai[bot]",
+            "id": 136622811,
+            "node_id": "BOT_kgDOCCSy2w",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/coderabbitai%5Bbot%5D",
+            "html_url": "https://github.com/apps/coderabbitai",
+            "followers_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/coderabbitai%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "body": "**Actionable comments posted: 0**\n\n<details>\n<summary>🧹 Nitpick comments (2)</summary><blockquote>\n\n<details>\n<summary>README.md (1)</summary><blockquote>\n\n`539-540`: **Enhance the GQLoom Entry Description**\n\nThe new entry for GQLoom has been added correctly with the appropriate link and a concise description. To further enhance clarity and better reflect the tool’s unique value—as highlighted in the PR objectives—consider expanding the description slightly (for example, by emphasizing its \"code-first\" approach and integration features with popular ORMs). Also, double-check that the punctuation and phrasing are consistent with the other entries in the list.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~539-~539: Loose punctuation mark.\nContext: ...](https://github.com/modevol-com/gqloom): Weave GraphQL schema and resolvers usin...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</blockquote></details>\n<details>\n<summary>deno/lib/README.md (1)</summary><blockquote>\n\n`539-539`: **New Ecosystem Entry for GQLoom Added**\n\nThe new entry for **GQLoom** integrates well into the Ecosystem list, providing a useful resource that showcases how Zod can be extended to generate GraphQL schema and resolvers. Consider reviewing the phrasing for consistency; for example, it might read more naturally as “Weave GraphQL schemas and resolvers using Zod” (note the plural “schemas”) to align with the common terminology in similar entries. Additionally, please double-check punctuation according to your style guide as a static analysis hint mentioned a loose punctuation mark near this addition.\n\n<details>\n<summary>🧰 Tools</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n[uncategorized] ~539-~539: Loose punctuation mark.\nContext: ...](https://github.com/modevol-com/gqloom): Weave GraphQL schema and resolvers usin...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</blockquote></details>\n\n</blockquote></details>\n\n<details>\n<summary>📜 Review details</summary>\n\n**Configuration used: CodeRabbit UI**\n**Review profile: CHILL**\n**Plan: Pro**\n\n<details>\n<summary>📥 Commits</summary>\n\nReviewing files that changed from the base of the PR and between e30870369d5b8f31ff4d0130d4439fd997deb523 and 651e8fe49706d5b1daf6a571c4f81727f5701e10.\n\n</details>\n\n<details>\n<summary>📒 Files selected for processing (4)</summary>\n\n* `README.md` (1 hunks)\n* `README_KO.md` (1 hunks)\n* `README_ZH.md` (1 hunks)\n* `deno/lib/README.md` (1 hunks)\n\n</details>\n\n<details>\n<summary>✅ Files skipped from review due to trivial changes (2)</summary>\n\n* README_KO.md\n* README_ZH.md\n\n</details>\n\n<details>\n<summary>🧰 Additional context used</summary>\n\n<details>\n<summary>🪛 LanguageTool</summary>\n\n<details>\n<summary>README.md</summary>\n\n[uncategorized] ~539-~539: Loose punctuation mark.\nContext: ...](https://github.com/modevol-com/gqloom): Weave GraphQL schema and resolvers usin...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n<details>\n<summary>deno/lib/README.md</summary>\n\n[uncategorized] ~539-~539: Loose punctuation mark.\nContext: ...](https://github.com/modevol-com/gqloom): Weave GraphQL schema and resolvers usin...\n\n(UNLIKELY_OPENING_PUNCTUATION)\n\n</details>\n\n</details>\n\n</details>\n\n</details>\n\n<!-- This is an auto-generated comment by CodeRabbit for review status -->",
+          "state": "COMMENTED",
+          "html_url": "https://github.com/colinhacks/zod/pull/3995#pullrequestreview-2621470860",
+          "pull_request_url": "https://api.github.com/repos/colinhacks/zod/pulls/3995",
+          "author_association": "CONTRIBUTOR",
+          "_links": {
+            "html": {
+              "href": "https://github.com/colinhacks/zod/pull/3995#pullrequestreview-2621470860"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/colinhacks/zod/pulls/3995"
+            }
+          },
+          "submitted_at": "2025-02-17T16:06:59Z",
+          "commit_id": "651e8fe49706d5b1daf6a571c4f81727f5701e10"
+        }
+      ],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2339473932,
+      "number": 3993,
+      "state": "closed",
+      "created_at": "2025-02-17T11:16:46Z",
+      "merged_at": null,
+      "title": "Update types.ts - Fixed email regex issue",
+      "user": {
+        "login": "GitHubKaan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/92580778?v=4"
+      },
+      "labels": [],
+      "additions": 1,
+      "deletions": 1,
+      "changed_files": 1,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    },
+    {
+      "id": 2339349788,
+      "number": 3991,
+      "state": "open",
+      "created_at": "2025-02-17T10:21:28Z",
+      "merged_at": null,
+      "title": "test: add back no printable characters test since is valid test",
+      "user": {
+        "login": "ShueiYang",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105015881?v=4"
+      },
+      "labels": [],
+      "additions": 6,
+      "deletions": 6,
+      "changed_files": 2,
+      "comments": 2,
+      "review_comments": 0,
+      "commits": 1,
+      "reviews": [],
+      "comment_list": [
+        {
+          "user": {
+            "login": "coderabbitai[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/347564?v=4"
+          }
+        },
+        {
+          "user": {
+            "login": "netlify[bot]",
+            "avatar_url": "https://avatars.githubusercontent.com/in/13473?v=4"
+          }
+        }
+      ],
+      "review_comment_list": []
+    }
+  ],
+  "collected_at": "2025-07-18T09:28:47+09:00"
+}
